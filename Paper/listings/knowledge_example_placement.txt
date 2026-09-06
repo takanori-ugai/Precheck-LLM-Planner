@@ -1,0 +1,7 @@
+The current states in the home are as follows: 
+The plum (9012) is ON the kitchentable (9013) and and is INSIDE the kitchen (9001).
+The kitchentable (9013) and is INSIDE the kitchen (9001).
+plum (9012) is ON the kitchentable (9013).
+The fridge (9014) is CLOSED and and is INSIDE the kitchen (9001).
+You are INSIDE the kitchen (9001).
+You are close to the plum (9012) and the kitchentable (9013).

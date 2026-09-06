@@ -1,0 +1,9 @@
+model,arm,n,conditions_satisfied,conditions_violated,unknown,invalid_format_or_object,task_success_rate
+gpt-4o-mini-2024-07-18,C0_fixed_candidate,8,0,8,0,0,not_measured
+gpt-4o-mini-2024-07-18,C1_llm_feedback,8,2,6,0,0,not_measured
+gpt-4o-mini-2024-07-18,C2_symbolic_feedback,8,7,1,0,0,not_measured
+gpt-4o-mini-2024-07-18,C4_neutral_revision,8,4,4,0,0,not_measured
+gpt-4o-2024-08-06,C0_fixed_candidate,8,0,8,0,0,not_measured
+gpt-4o-2024-08-06,C1_llm_feedback,8,3,4,0,1,not_measured
+gpt-4o-2024-08-06,C2_symbolic_feedback,8,7,1,0,0,not_measured
+gpt-4o-2024-08-06,C4_neutral_revision,8,2,1,0,5,not_measured

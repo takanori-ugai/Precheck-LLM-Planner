@@ -1,0 +1,71 @@
+\appendix
+\section{公開実装のプロンプトと知識変換}\label{app:implementation}
+
+本付録は公開Notebookの入力と処理を再構成する仕様であり，過去の実験の会話ログではない．参照したコード版と未回収の情報は\ref{sec5.provenance}に示した．以下のPython表記では\texttt{\textbackslash n}を改行とし，roleと文字列の組を順に並べたものをメッセージ配列とする．元の英語表現・余分な空白も，条件を変えないため修正していない．
+
+\subsection{全メッセージの組立て}\label{app:prompts}
+Listing~\ref{lst:prompt_spec}に，終了判定，行動生成，前提条件判定，違反条件特定，再生成の全入力を構成する関数を示す．\texttt{mode}はsingleまたはmulti，\texttt{env}は\ref{app:knowledge}の変換結果全文，\texttt{history}は成功実行した行動の列である．\texttt{example}は\texttt{example\_text}で得た選択事例の文字列であり，\texttt{pc}は\ref{app:conditions}の辞書とする．プロンプトにゴールJSONを渡す引数はない．
+
+\begin{table*}[tb]
+\caption{各呼び出しの役割・入力・履歴と分岐}\label{tab:prompt_calls}
+\centering\small
+\begin{tabular}{p{.17\textwidth}p{.47\textwidth}p{.25\textwidth}}
+\hline
+呼び出し & 入力メッセージ & 出力の利用 \\
+\hline
+完了判定 & system（末尾空白なし），user（環境＋判定指示＋タスク） & Endとの完全一致．参照列長0ではContinueとの完全一致も確認．\\
+行動生成Single & system（末尾空白なし），user（5要素を連結） & 生成した1行動を検証または実行．\\
+行動生成Multi & system（末尾空白あり），5個のuser（役割指示，許可操作・形式，事例，環境，タスク・成功履歴・次ステップ） & 1回の呼び出しから1行動を得る．\\
+前提条件判定 & user（環境＋判定文＋対象を代入した条件） & 部分文字列Yesを含めば充足．\\
+違反条件特定 & system（末尾空白あり），直前の判定入力userと出力assistant，追加問い合わせuser & 違反理由のフィードバックを作る．\\
+再生成 & system（末尾空白あり），行動生成時のuser群，候補assistant，理由user，再生成指示user & 1回だけ生成し，再検証せず実行．\\
+\hline
+\end{tabular}
+\end{table*}
+
+通常の未完了周回では，検証なしは完了判定と生成の2回，条件を充足する検証ありは3回，違反条件特定と再生成を行う場合は5回のLLM呼び出しとなる．操作名が条件辞書にない形式不正では，条件判定・違反特定を呼ばず再生成を行うため3回である．最初の完了判定で終了する周回は1回である．これは公開コードの呼び出し経路から数えた値で，通信層の再試行や過去結果の実測コストではない．
+
+本文のListing~\ref{prompt1}～\ref{prompt5}は構成要素を説明する表示である．正確なメッセージ境界・改行・単語は以下を参照する．特に違反理由と再生成指示は別々のuserメッセージとなり，前提条件の違反特定には行動生成時の履歴を渡していない．
+
+\lstinputlisting[basicstyle=\ttfamily\scriptsize,columns=fullflexible,caption={公開コードと照合した完全なプロンプト組立て仕様},label=lst:prompt_spec]{listings/prompt_spec.py}
+
+\subsection{前提条件辞書と代入規則}\label{app:conditions}
+Listing~\ref{lst:conditions}は公開JSONそのものである．操作文字列を空白で分割し，先頭の角括弧を除いた操作名で辞書を参照する．トークン数が5ならObject1とObject2へ対象名・IDの組を代入し，それ以外ではObjectへ最初の対象名・IDを代入する．未定義の操作名なら形式不正の再生成へ進むが，必要なトークンがない場合等の例外を捕捉して必ず修正する処理はない．
+
+この辞書の条件は固定した自然言語表現である．元資料からの作成手順やシミュレータとの網羅的な対応は未確認であり，規則の完全性を保証しない．
+
+\lstinputlisting[basicstyle=\ttfamily\scriptsize,columns=fullflexible,caption={公開されている8操作の前提条件辞書},label=lst:conditions]{../precondition.json}
+
+\subsection{知識抽出と自然言語化}\label{app:knowledge}
+抽出の処理順はAlgorithm~\ref{alg:extract}に示す．物体記録は状態配列，単一の支持物・容器・所属部屋，保持対象のリストを持つ．グラフのnodes・edgesの順序で走査し，単一値の欄は後から見つかった辺で上書きする．追加ノードが元の抽出集合にある場合にも，その記録を初期化して再走査する．エージェントの保持物は名前・IDの取得対象となるが，保持物を新たな抽出の起点として再帰展開するわけではない．
+
+\begin{algorithm*}[tb]
+\caption{公開コードの知識抽出}\label{alg:extract}
+\begin{algorithmic}[1]
+\Require 現在のグラフ$G$，指示から得た名詞・単数形候補$R$
+\State $O\gets$クラス名が$R$に含まれるノードの記録，$A\gets\emptyset$
+\For{$G$の各辺$(u,r,v)$を格納順に}
+  \If{$u\in O$}
+    \State ONなら支持物を記録し$v$を$A$へ追加（walk，floorは除外）
+    \State INSIDEなら4部屋クラスへの辺を所属部屋として記録
+    \State 部屋以外へのINSIDEなら容器を記録し$v$を$A$へ追加
+  \EndIf
+  \State $u,v\in O$かつ$r\in\{\mathrm{ON},\mathrm{INSIDE}\}$なら$v$の保持対象に$u$を追加
+\EndFor
+\State nodes順に$A$のノードを$O$へ追加（既存の記録も初期化）
+\For{$G$の各辺$(u,r,v)$を格納順に}
+  \State $u\in A$について支持物・容器・所属部屋を記録（$A$は追加拡張しない）
+  \State $v\in A,u\in O$かつ$r\in\{\mathrm{ON},\mathrm{INSIDE}\}$なら$v$の保持対象に$u$を追加
+\EndFor
+\State ID 1の出辺から左右の保持物，4部屋クラスへのINSIDE，$O$へのCLOSEを取得して$B$とする
+\State \Return $O,B$
+\end{algorithmic}
+\end{algorithm*}
+
+自然言語化の全関数をListing~\ref{lst:serialization}に示す．\texttt{objId\_dic}はIDからクラス名への辞書，\texttt{objProp\_dic}はIDから属性配列への辞書であり，初期化後のグラフから作成する．公開資料にはListing~\ref{state-change-task}・\ref{placement-task}の完全な実験時グラフと各時刻のプロンプトがないため，例えばID 173の所属部屋を本データJSONだけから確定することはできない．
+
+Listing~\ref{lst:knowledge_state}・\ref{lst:knowledge_placement}は，変換関数の振る舞いを示すために作成した\textbf{説明用の入力}に対する出力である．実際のVHシーンや過去実験を復元したものではなく，IDも9000番台の仮の値を用いる．入力は\texttt{knowledge\_example\_inputs.json}として公開する．状態例はキッチンのOFFのスイッチへの近接を，配置例はキッチンのテーブル上のplumと閉じたfridge，エージェントの近接関係を仮定する．ここには座標・壁面・同じ床面といった追加情報はない．出力中の重複した``and''等も公開変換関数の出力をそのまま保持した．
+
+\lstinputlisting[basicstyle=\ttfamily\scriptsize,columns=fullflexible,caption={説明用の状態知識の出力（実験ログではない）},label=lst:knowledge_state]{listings/knowledge_example_state.txt}
+\lstinputlisting[basicstyle=\ttfamily\scriptsize,columns=fullflexible,caption={説明用の配置知識の出力（実験ログではない）},label=lst:knowledge_placement]{listings/knowledge_example_placement.txt}
+\lstinputlisting[basicstyle=\ttfamily\scriptsize,columns=fullflexible,caption={両Notebookで共通する自然言語化関数の全文},label=lst:serialization]{listings/knowledge_serialization.py}

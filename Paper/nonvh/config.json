@@ -1,0 +1,59 @@
+{
+  "design": "new_static_component_pilot_not_VH_reexecution",
+  "models": [
+    "gpt-4o-mini-2024-07-18",
+    "gpt-4o-2024-08-06"
+  ],
+  "repeats": 3,
+  "temperature": 0,
+  "max_completion_tokens": 160,
+  "max_estimated_usd": 2.0,
+  "automatic_retries": 0,
+  "case_count": 44,
+  "repair_repeats": 1,
+  "repair_selection": "violate_1 for each of eight operations",
+  "repair_conditions": [
+    "C0_fixed_candidate",
+    "C1_llm_feedback",
+    "C2_symbolic_feedback",
+    "C4_neutral_revision"
+  ],
+  "prices_usd_per_million": {
+    "gpt-4o-mini-2024-07-18": [
+      0.15,
+      0.6
+    ],
+    "gpt-4o-2024-08-06": [
+      2.5,
+      10.0
+    ]
+  },
+  "price_sources": [
+    "https://developers.openai.com/api/docs/models/gpt-4o-mini",
+    "https://developers.openai.com/api/docs/models/gpt-4o"
+  ],
+  "price_checked_date": "2026-09-06",
+  "source_sha256": {
+    "scripts/nonvh_analysis.py": "4b91df7287d98c4eb8a24269e19d02b2416a8dcd424460c597e9cdc75dc61ee8",
+    "precondition.json": "427e1bec1a52df0f59f024335dc4bba8bd41dd8cab966694ba53fe606d19018d",
+    "Paper/listings/prompt_spec.py": "0bbe871ee8c6e339b07660caa94b517e04da95bf0392a00154eca803c356c57f",
+    "Paper/listings/knowledge_serialization.py": "a3ae937503d3df3f31e3d358232910a1c3ff9557256c92b3bae34156132607d1",
+    "Paper/analysis/retrieval_scores.json": "6ac29b9a3de704793b8a0392296b5b8fbfd92431fd313d0f9c3b0e20e4d3101f",
+    "Paper/analysis/task_inventory.csv": "db62faebf2a15210c1c38089a7b0e0f91cf64907b5e9a91aa8bcd0bba4e9bdcd",
+    "dataset/placement_task/example.json": "5f22e51905f3f6a907b1ff92a5da2ca6a8bc94a78bcee814c5c1125318fac74e",
+    "dataset/placement_task/test.json": "7cd51148ec9133878247f1e105cf5737f6ac7bc1e01900afe94a9d385347a43b",
+    "dataset/state_change_task/example.json": "8a81f3f5db8ffce3651783418bb8ed518620341abf5405eba44c03ec7666be16",
+    "dataset/state_change_task/test.json": "9917b2db79d86dd16756fce3e4acaac2f5c1fc62107a4e82cd42186bd038e128"
+  },
+  "cases_sha256": "fcee5b0b35316037de0bf01c6787763e27e9ff293deb5e6eb58dbee2815d7cd2",
+  "limits": [
+    "Not task success rate",
+    "No historical graphs or actual trajectories recovered",
+    "Finite synthetic close/held sets use closed-world labeling; omitted states are unknown",
+    "No human participants",
+    "No VH executability labels",
+    "No novelty conclusion",
+    "C4 matches regeneration count, not total check/feedback calls or tokens",
+    "Original prompt builders; synthetic graph facts and new state-only text, not original runtime inputs"
+  ]
+}

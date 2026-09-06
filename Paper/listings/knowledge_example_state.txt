@@ -1,0 +1,4 @@
+The current states in the home are as follows: 
+The lightswitch (9002) is OFF and and is INSIDE the kitchen (9001).
+You are INSIDE the kitchen (9001).
+You are close to the lightswitch (9002).

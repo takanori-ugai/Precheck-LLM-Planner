@@ -1,0 +1,185 @@
+%% 和文論文用のテンプレート
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% 1. 和文原稿
+%\documentstyle[originalpaper]{jsai}
+\documentclass[originalpaper,dvipdfmx]{jsaiart}     % 原著論文 Original Paper
+% \documentclass[shortpaper]{jsaiart}       % 速報論文 Short Paper
+% \documentclass[exploratorypaper]{jsaiart} % 萌芽論文 Exploratory Research Paper
+% \documentclass[Specialissue]{jsaiart}     % 特集 Special Issue
+% \documentclass[specialissue]{jsaiart}     % 小特集 Special Issue
+% \documentclass[interimreport]{jsaiart}    % 報告 An Interim Report
+% \documentclass[surveypaper]{jsaiart}      % 解説 Survey Paper
+% \documentclass[aimap]{jsaiart}            % AIマップ AI map
+% \documentclass[specialpaper]{jsaiart}     % 特集論文 Special Paper
+% \documentclass[invitedpaper]{jsaiart}     % 招待論文 Invited Paper
+%
+% %% 2023年 single-blind 化により [blind] オプションは無効化しました
+%
+
+%% ページ番号の指定，掲載時に学会の方で決定します．
+\setcounter{page}{1}
+% \setcounter{volpage}{1}
+
+\interfootnotelinepenalty=10000
+\usepackage[dvipdfmx]{graphicx}
+\usepackage{profile-2e}
+
+\usepackage{multirow}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{array} 
+\usepackage{bm}
+\usepackage{xcolor}
+\usepackage{colortbl}
+\usepackage[utf8]{inputenc}
+\usepackage{url}
+\usepackage[dvipdfmx,hidelinks]{hyperref}
+\usepackage{otf}
+\usepackage{remreset}
+\usepackage{pxjahyper}
+\usepackage{color,soul}
+\usepackage{algorithm}
+\usepackage{algpseudocode}
+\usepackage {varwidth}
+\newcommand{\HL}[1]{\textcolor{red}{#1}}
+%\newcommand{\HL}[1]{\textcolor{black}{#1}} %ハイライトなし
+\renewcommand{\algorithmicrequire}{\textbf{Input:}}
+\renewcommand{\algorithmicensure}{\textbf{Output:}}
+
+\usepackage{listings}
+
+\lstdefinestyle{mystyle}{
+  basicstyle={\ttfamily\small},
+  escapeinside={@}{@},
+  %moredelim=[is][\textcolor{red}{\textit}]{@}{@},
+  frame={tb},
+  breaklines=true,
+  columns=fixed,
+  numbers=left,
+  belowcaptionskip=10pt,
+  xrightmargin=0zw,
+  xleftmargin=1zw,
+  numberstyle={\scriptsize},
+  stepnumber=1,
+  numbersep=1zw,
+}
+\lstset{style=mystyle}
+
+\usepackage{seqsplit}
+
+\newcommand\highlightReference[1]{%
+  \expandafter\newcommand\csname highlightReference-#1\endcsname{}%
+}
+\usepackage{xpatch}
+\makeatletter
+\xapptocmd\@lbibitem{\hlbibitem{#2}}{}{}
+\makeatother
+\def\hlbibitem#1 #2\par{%
+  \expandafter\ifx\csname highlightReference-#1\endcsname\relax
+    #2\par
+  \else
+    \highlight{#2}\par
+  \fi
+}
+\usepackage{soul}
+\newcommand\highlight[1]{\textcolor{red}{#1}}
+
+%%% amsmathパッケージの注意点 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% \usepackpage{amsmath}
+% 数式番号の参照は \ref ではなく，\eqref を用いること
+% documentclass のオプションに fleqnを指定すること
+% 例: \documentclass[technicalpaper,fleqn]{jsaiart}
+
+\Vol{}
+\No{}\SubNo{C}
+\jtitle{家庭環境知識に基づく行動前提条件の検証を伴うLLMエージェントの逐次的行動計画生成}
+\etitle{Sequential Action Planning for LLM Agents with Verification of Action Preconditions Based on Home Environment Knowledge}
+
+\manyauthor % 著者が3名以下の場合はこの行を消すこと
+
+%%% 著者名の注意点 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% 所属先が同じ著者が連続する場合，その中の先頭の著者のみ \affiliation
+% を用い，残りの所属先には \sameaffiliation を使う
+% ただし，所属先が同じでも連続していない場合は \affliation を使う
+% 名前が長い場合は \name の代りに \longname を使う
+
+\author{%
+ \name{青山}{仁}{Jin Aoyama}
+ \affiliation{青山学院大学，産業技術総合研究所}%
+     {Aoyama Gakuin University, National Institute of Advanced Industrial Science and Technology}%
+     {}
+\and
+ \longname{チャクラボルティ}{シュデシナ}{Sudesna Chakraborty}
+ \affiliation{青山学院大学}%
+     {Aoyama Gakuin University}%
+     {}
+\and
+ \name{森田}{武史}{Takeshi Morita}
+ \sameaffiliation{morita@it.aoyama.ac.jp}
+\and
+ \name{江上}{周作}{Shusaku Egami}
+ \affiliation{産業技術総合研究所}%
+     {National Institute of Advanced Industrial Science and Technology}%
+     {}
+\and
+ \name{鵜飼}{孝典}{Takanori Ugai}
+ \affiliation{富士通株式会社，産業技術総合研究所}%
+     {Fujitsu Limited, National Institute of Advanced Industrial Science and Technology}%
+     {}
+\and
+ \name{福田}{賢一郎}{Ken Fukuda}
+ \affiliation{産業技術総合研究所}%
+     {National Institute of Advanced Industrial Science and Technology}%
+     {}
+}
+
+\begin{keyword}
+% キーワードとして，小文字（固有名詞や略語を除く）の英単語を2〜5個指定
+Task Planning, Large Language Model, Natural Language Processing, Embodied AI, Simulation
+\end{keyword}
+
+\begin{summary}
+% 「ショートノート」は 200 ワード，それ以外は200〜500 ワード
+% 以内の英文でsummaryを記す
+Advancements in artificial intelligence (AI) have driven increasing demand for Embodied AI agents capable of performing complex daily tasks in both real and virtual environments. A growing area of research explores using Large Language Models (LLMs) to enable these agents to generate action plans based on natural language instructions. LLMs offer several advantages, including interpreting diverse linguistic expressions, incorporating contextual understanding, and leveraging extensive knowledge and reasoning for high-quality task planning. Prior studies have demonstrated the effectiveness of LLM-based task planning; however, significant challenges remain in integrating environmental context, such as object states and their interrelationships.
+For instance, executing the instruction ``Turn on the TV'' typically involves approaching the TV and switching it on, an action often inferred through commonsense reasoning. However, more complex tasks, such as ``Turn on all lights,'' require identifying multiple objects, assessing their current states, and determining their unique identifiers - challenges that existing approaches fail to address adequately. Tasks requiring a detailed understanding of environmental states, such as object status and spatial relationships, remain largely unexplored.
+This study proposes a novel approach to household task planning that enhances LLM-based reasoning by explicitly incorporating the environmental state information. Unlike prior methods relying primarily on commonsense reasoning or visual inputs, this approach integrates object states and relationships to improve task execution accuracy. To evaluate the proposed approach, a specialized dataset of household tasks was developed to assess LLMs' reasoning capabilities regarding object states, identifiers, and spatial relationships. This dataset comprises two task categories: ``state change tasks,'' which require modifying the state of one or more objects, and ``placement tasks,'' which involve interpreting and reasoning about spatial configurations.  These tasks are intentionally designed with multiple objects and varied initial state conditions that cannot be resolved through commonsense reasoning alone.
+The proposed method combines simulator-derived environmental data with LLM-based planning to generate executable action sequences. A key innovation is an LLM-driven verification mechanism that ensures that environmental preconditions are met before each action is executed, dynamically adjusting the action plans when necessary. The experimental results using GPT-4o demonstrate strong performance, achieving an 89.4\% success rate on state change tasks and 81.6\% on placement tasks. Ablation studies confirm the crucial role of precondition verification in improving task success rates.
+
+\end{summary}
+
+\received{}{}{}
+\stuffincharge{}
+
+\begin{document}
+\maketitle
+
+\input{sec1}
+\input{sec2}
+\input{sec3}
+\input{sec4}
+\input{sec5}
+\input{sec6}
+
+\begin{acknowledgment}
+本研究成果の一部は，国立研究開発法人新エネルギー・産業 技術総合開発機構 (NEDO) の委託業務 (JPNP20006) の結果得られたものです．本研究の一部はJSPS科研費 23K11221，23K28377, 25K03232の助成を受けたものです．
+\end{acknowledgment}
+
+
+\bibliography{references}
+\bibliographystyle{jsai}
+
+\input{appendix-implementation}
+
+% 著者の姓と名の間は半角スペースで区切る
+% 略歴は200字以内
+\begin{biography}
+\profile{n}{青山 仁}{2023年青山学院大学理工学部情報テクノロジー学科卒業．同年7月から2025年3月まで，産業技術総合研究所リサーチアシスタント．同年同大学院理工学研究科前期博士課程修了．在学時に本研究に従事．現在に至る．}{aoyama}
+\profile{n}{チャクラボルティ シュデシナ}{2023年カナダのウェスタンオンタリオ大学医学部神経科学プログラム大学院博士課程修了．同年，ウェスタンオンタリオ大学Robart Research Institute客員研究員．2024年より青山学院大学理工学部情報テクノロジー学科助教．現在に至る．博士（神経科学）．脳MRI画像を用いた認知神経科学研究に従事．Organization for Human Brain Mapping会員．}{SC}
+\profile{m}{森田 武史}{2008年慶應義塾大学大学院理工学研究科後期博士課程修了．同年，日本学術振興会特別研究員(PD)．2009年慶應義塾大学大学院理工学研究科特別研究助教．2011年青山学院大学社会情報学部助手．2014年同助教．2015年慶應義塾大学理工学部管理工学科専任講師（有期）．2019年同准教授（有期）．2020年より青山学院大学理工学部情報テクノロジー学科准教授．2023年同教授．現在に至る．2022年より産業技術総合研究所人工知能研究センターの招聘研究員を兼任．博士（工学）．セマンティックWebとオントロジーに関する研究に従事．情報システム学会，ACM，日本データベース学会，電子情報通信学会，情報処理学会，言語処理学会の各会員．}{morita}
+\profile{m}{江上 周作}{2018年日本学術振興会特別研究員(DC2)．2019年電気通信大学大学院情報理工学研究科博士後期課程修了．同年海上・港湾・航空技術研究所研究員．2020年より産業技術総合研究所研究員．2023年より同研究所人工知能研究センター主任研究員．現在に至る．2019年より法政大学理工学部兼任講師，2023年より電気通信大学大学院情報理工学研究科連携准教授を兼任．博士（工学）．セマンティックWeb，オントロジー，知識グラフの構築と活用の研究に従事．2018年度，2022年度人工知能学会研究会優秀賞．2022年度同学会全国大会優秀賞．ISWC2021 Best Poster Award．言語処理学会，情報処理学会，IEEE，ACM，IAOAの各会員．}{egami}
+\profile{m}{鵜飼 孝典}{1992年3月東京工業大学大学院理工学研究科修士課程修了．2013年東京工業大学大学院情報理工学研究科博士課程修了.1992年より現在に至るまで富士通株式会社研究員. 博士(工学). 専門は知識グラフ，グラフ・ニューラル・ネットワーク，要求工学．ACM，情報処理学会の各会員．}{ugai}
+\profile{m}{福田 賢一郎}{2001年東京大学大学院理学系研究科情報科学専攻博士後期課程修了. 2000年日本学術振興会特別研究員，2001年より産業技術総合研究所 研究員. 2020年より同人工知能研究センター 研究チーム長, 現在に至る. 2023年より電気通信大学大学院情報理工学研究科連携教授を兼任，2024年より東北大学非常勤講師．博士（理学）．専門は知識表現，人工知能, サービス工学, バイオインフォマティクス．人間の日常生活, とりわけ人と環境, エージェント, サービスの間のインタラクションで構成される生活活動の知識表現, 実世界に埋め込まれる人工知能の研究に従事．2015年電気情報通信学会優秀研究賞，2016年情報処理学会優秀発表賞，2017年，2023年人工知能学会研究会優秀賞．HCII2021 Best Paper Award，ISWC2021 Best Poster Award．サービス学会，ACM，OMG Robotics DTFの各会員．}{fukuda}
+\end{biography}
+
+\end{document}

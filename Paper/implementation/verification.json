@@ -1,0 +1,12 @@
+{
+  "kind": "step3_documentation_verification_no_TeX_no_LLM_no_simulator",
+  "python_version": "3.12.3 (main, Jul 15 2026, 23:46:41) [GCC 13.3.0]",
+  "test_methods_passed": 14,
+  "paper_numeric_values_preserved": 90,
+  "original_non_paper_inputs_unchanged": true,
+  "synthetic_examples_are_historical_logs": false,
+  "limitations": [
+    "TeX/LaTeX execution omitted at user request",
+    "Historical per-step graphs and construction provenance remain unavailable"
+  ]
+}

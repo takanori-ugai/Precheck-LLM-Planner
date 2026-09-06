@@ -1,0 +1,4588 @@
+{
+  "metadata": {
+    "kind": "new_offline_reconstruction_not_historical_retrieval_log",
+    "model_id": "sentence-transformers/all-MiniLM-L6-v2",
+    "model_revision": "c9745ed1d9f207416be6d2e6f8de32d1f16199bf",
+    "model_files_sha256": {
+      "1_Pooling/config.json": "4be450dde3b0273bb9787637cfbd28fe04a7ba6ab9d36ac48e92b11e350ffc23",
+      "README.md": "7dfc82496ec33f906b5b0d6750c1e2397da6530c74d1ae3568c55bc2739125e7",
+      "config.json": "953f9c0d463486b10a6871cc2fd59f223b2c70184f49815e7efbcab5d8908b41",
+      "config_sentence_transformers.json": "061ca9d39661d6c6d6de5ba27f79a1cd5770ea247f8d46412a68a498dc5ac9f3",
+      "model.safetensors": "53aa51172d142c89d9012cce15ae4d6cc0ca6895895114379cacb4fab128d9db",
+      "modules.json": "84e40c8e006c9b1d6c122e02cba9b02458120b5fb0c87b746c41e0207cf642cf",
+      "sentence_bert_config.json": "fc1993fde0a95c24ec6c022539d41cf6e2f7c9721e5415d6fb6897472a9cd4b7",
+      "special_tokens_map.json": "303df45a03609e4ead04bc3dc1536d0ab19b5358db685b6f3da123d05ec200e3",
+      "tokenizer.json": "be50c3628f2bf5bb5e3a7f17b1f74611b2561a3a27eeab05e5aa30f411572037",
+      "tokenizer_config.json": "acb92769e8195aabd29b7b2137a9e6d6e25c476a4f15aa4355c233426c61576b",
+      "vocab.txt": "07eced375cec144d27c900241f3e339478dec958f92fddbc551f295c992038a3"
+    },
+    "source_sha256": {
+      "dataset/placement_task/example.json": "5f22e51905f3f6a907b1ff92a5da2ca6a8bc94a78bcee814c5c1125318fac74e",
+      "dataset/placement_task/test.json": "7cd51148ec9133878247f1e105cf5737f6ac7bc1e01900afe94a9d385347a43b",
+      "dataset/state_change_task/example.json": "8a81f3f5db8ffce3651783418bb8ed518620341abf5405eba44c03ec7666be16",
+      "dataset/state_change_task/test.json": "9917b2db79d86dd16756fce3e4acaac2f5c1fc62107a4e82cd42186bd038e128",
+      "single-prompt.ipynb": "074514ab57812927031caf51c97663e2b4fa479a11d39f4923930d40ebcba17a",
+      "multi-prompts.ipynb": "68cc07437abb4d80bde06bd900b108497ff3a33548427d63abdfd9eb8111506f"
+    },
+    "versions": {
+      "sentence-transformers": "5.2.0",
+      "transformers": "4.57.6",
+      "torch": "2.9.1",
+      "numpy": "1.26.4"
+    },
+    "device": "cpu",
+    "encode_batch_size": 1,
+    "tie_rule": "descending cosine; lexical task name on exact ties",
+    "historical_limitation": "Original model revision, dependency runtime and set order were not logged."
+  },
+  "pairs": [
+    {
+      "task_type": "state_change_task",
+      "test_task_name": "Turn off all computers",
+      "example_task_name": "Turn off all candles",
+      "cosine": 0.5131586790084839
+    },
+    {
+      "task_type": "state_change_task",
+      "test_task_name": "Turn off all computers",
+      "example_task_name": "Turn off all cellphones",
+      "cosine": 0.581680417060852
+    },
+    {
+      "task_type": "state_change_task",
+      "test_task_name": "Turn off all computers",
+      "example_task_name": "Turn off all faucets",
+      "cosine": 0.5643138885498047
+    },
+    {
+      "task_type": "state_change_task",
+      "test_task_name": "Turn off all computers",
+      "example_task_name": "Turn on all computers",
+      "cosine": 0.8592640161514282
+    },
+    {
+      "task_type": "state_change_task",
+      "test_task_name": "Turn off all computers",
+      "example_task_name": "Turn on all faucets",
+      "cosine": 0.45894116163253784
+    },
+    {
+      "task_type": "state_change_task",
+      "test_task_name": "Turn off all computers",
+      "example_task_name": "Turn on all tablelamps",
+      "cosine": 0.3371769189834595
+    },
+    {
+      "task_type": "state_change_task",
+      "test_task_name": "Turn off all lightswitches",
+      "example_task_name": "Turn off all candles",
+      "cosine": 0.5849753618240356
+    },
+    {
+      "task_type": "state_change_task",
+      "test_task_name": "Turn off all lightswitches",
+      "example_task_name": "Turn off all cellphones",
+      "cosine": 0.46563106775283813
+    },
+    {
+      "task_type": "state_change_task",
+      "test_task_name": "Turn off all lightswitches",
+      "example_task_name": "Turn off all faucets",
+      "cosine": 0.46797624230384827
+    },
+    {
+      "task_type": "state_change_task",
+      "test_task_name": "Turn off all lightswitches",
+      "example_task_name": "Turn on all computers",
+      "cosine": 0.4601632356643677
+    },
+    {
+      "task_type": "state_change_task",
+      "test_task_name": "Turn off all lightswitches",
+      "example_task_name": "Turn on all faucets",
+      "cosine": 0.4170824885368347
+    },
+    {
+      "task_type": "state_change_task",
+      "test_task_name": "Turn off all lightswitches",
+      "example_task_name": "Turn on all tablelamps",
+      "cosine": 0.5638211965560913
+    },
+    {
+      "task_type": "state_change_task",
+      "test_task_name": "Turn off all tablelamps",
+      "example_task_name": "Turn off all candles",
+      "cosine": 0.4964370131492615
+    },
+    {
+      "task_type": "state_change_task",
+      "test_task_name": "Turn off all tablelamps",
+      "example_task_name": "Turn off all cellphones",
+      "cosine": 0.45363759994506836
+    },
+    {
+      "task_type": "state_change_task",
+      "test_task_name": "Turn off all tablelamps",
+      "example_task_name": "Turn off all faucets",
+      "cosine": 0.45084327459335327
+    },
+    {
+      "task_type": "state_change_task",
+      "test_task_name": "Turn off all tablelamps",
+      "example_task_name": "Turn on all computers",
+      "cosine": 0.29659849405288696
+    },
+    {
+      "task_type": "state_change_task",
+      "test_task_name": "Turn off all tablelamps",
+      "example_task_name": "Turn on all faucets",
+      "cosine": 0.356049120426178
+    },
+    {
+      "task_type": "state_change_task",
+      "test_task_name": "Turn off all tablelamps",
+      "example_task_name": "Turn on all tablelamps",
+      "cosine": 0.9095948934555054
+    },
+    {
+      "task_type": "state_change_task",
+      "test_task_name": "Turn off all tvs",
+      "example_task_name": "Turn off all candles",
+      "cosine": 0.45816347002983093
+    },
+    {
+      "task_type": "state_change_task",
+      "test_task_name": "Turn off all tvs",
+      "example_task_name": "Turn off all cellphones",
+      "cosine": 0.4994624853134155
+    },
+    {
+      "task_type": "state_change_task",
+      "test_task_name": "Turn off all tvs",
+      "example_task_name": "Turn off all faucets",
+      "cosine": 0.48129743337631226
+    },
+    {
+      "task_type": "state_change_task",
+      "test_task_name": "Turn off all tvs",
+      "example_task_name": "Turn on all computers",
+      "cosine": 0.49108827114105225
+    },
+    {
+      "task_type": "state_change_task",
+      "test_task_name": "Turn off all tvs",
+      "example_task_name": "Turn on all faucets",
+      "cosine": 0.3928101658821106
+    },
+    {
+      "task_type": "state_change_task",
+      "test_task_name": "Turn off all tvs",
+      "example_task_name": "Turn on all tablelamps",
+      "cosine": 0.3822532892227173
+    },
+    {
+      "task_type": "state_change_task",
+      "test_task_name": "Turn on all lightswitches",
+      "example_task_name": "Turn off all candles",
+      "cosine": 0.5193465948104858
+    },
+    {
+      "task_type": "state_change_task",
+      "test_task_name": "Turn on all lightswitches",
+      "example_task_name": "Turn off all cellphones",
+      "cosine": 0.3894766569137573
+    },
+    {
+      "task_type": "state_change_task",
+      "test_task_name": "Turn on all lightswitches",
+      "example_task_name": "Turn off all faucets",
+      "cosine": 0.38628941774368286
+    },
+    {
+      "task_type": "state_change_task",
+      "test_task_name": "Turn on all lightswitches",
+      "example_task_name": "Turn on all computers",
+      "cosine": 0.5445488691329956
+    },
+    {
+      "task_type": "state_change_task",
+      "test_task_name": "Turn on all lightswitches",
+      "example_task_name": "Turn on all faucets",
+      "cosine": 0.4804110527038574
+    },
+    {
+      "task_type": "state_change_task",
+      "test_task_name": "Turn on all lightswitches",
+      "example_task_name": "Turn on all tablelamps",
+      "cosine": 0.6107883453369141
+    },
+    {
+      "task_type": "state_change_task",
+      "test_task_name": "Turn on all tvs",
+      "example_task_name": "Turn off all candles",
+      "cosine": 0.4064347445964813
+    },
+    {
+      "task_type": "state_change_task",
+      "test_task_name": "Turn on all tvs",
+      "example_task_name": "Turn off all cellphones",
+      "cosine": 0.4297104775905609
+    },
+    {
+      "task_type": "state_change_task",
+      "test_task_name": "Turn on all tvs",
+      "example_task_name": "Turn off all faucets",
+      "cosine": 0.4153762757778168
+    },
+    {
+      "task_type": "state_change_task",
+      "test_task_name": "Turn on all tvs",
+      "example_task_name": "Turn on all computers",
+      "cosine": 0.6019070744514465
+    },
+    {
+      "task_type": "state_change_task",
+      "test_task_name": "Turn on all tvs",
+      "example_task_name": "Turn on all faucets",
+      "cosine": 0.48697182536125183
+    },
+    {
+      "task_type": "state_change_task",
+      "test_task_name": "Turn on all tvs",
+      "example_task_name": "Turn on all tablelamps",
+      "cosine": 0.46107590198516846
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all alcohols in the microwave",
+      "example_task_name": "Put all apples in the fridge",
+      "cosine": 0.3789350390434265
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all alcohols in the microwave",
+      "example_task_name": "Put all apples in the microwave",
+      "cosine": 0.642462968826294
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all alcohols in the microwave",
+      "example_task_name": "Put all apples on the kitchentable",
+      "cosine": 0.4427209794521332
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all alcohols in the microwave",
+      "example_task_name": "Put all bananas on the kitchentable",
+      "cosine": 0.413800984621048
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all alcohols in the microwave",
+      "example_task_name": "Put all bellpeppers in the microwave",
+      "cosine": 0.6585888266563416
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all alcohols in the microwave",
+      "example_task_name": "Put all chips in the fridge",
+      "cosine": 0.45159804821014404
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all alcohols in the microwave",
+      "example_task_name": "Put all chips on the coffeetable",
+      "cosine": 0.4447236955165863
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all alcohols in the microwave",
+      "example_task_name": "Put all crackers on the coffeetable",
+      "cosine": 0.4216768741607666
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all alcohols in the microwave",
+      "example_task_name": "Put all cupcakes in the fridge",
+      "cosine": 0.33696794509887695
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all alcohols in the microwave",
+      "example_task_name": "Put all cupcakes on the kitchentable",
+      "cosine": 0.3791699707508087
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all alcohols in the microwave",
+      "example_task_name": "Put all juices in the microwave",
+      "cosine": 0.7385367751121521
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all alcohols in the microwave",
+      "example_task_name": "Put all juices on the coffeetable",
+      "cosine": 0.41913193464279175
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all alcohols in the microwave",
+      "example_task_name": "Put all milks in the fridge",
+      "cosine": 0.3943823575973511
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all alcohols in the microwave",
+      "example_task_name": "Put all milks on the kitchentable",
+      "cosine": 0.48905616998672485
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all alcohols in the microwave",
+      "example_task_name": "Put all peaches on the coffeetable",
+      "cosine": 0.39721566438674927
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all alcohols in the microwave",
+      "example_task_name": "Put all peaches on the oventray",
+      "cosine": 0.43169984221458435
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all alcohols in the microwave",
+      "example_task_name": "Put all plums on the coffeetable",
+      "cosine": 0.2972522974014282
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all alcohols in the microwave",
+      "example_task_name": "Put all plums on the kitchentable",
+      "cosine": 0.27191466093063354
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all alcohols in the microwave",
+      "example_task_name": "Put all plums on the oventray",
+      "cosine": 0.3733992576599121
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all alcohols on the kitchentable",
+      "example_task_name": "Put all apples in the fridge",
+      "cosine": 0.30719026923179626
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all alcohols on the kitchentable",
+      "example_task_name": "Put all apples in the microwave",
+      "cosine": 0.41286730766296387
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all alcohols on the kitchentable",
+      "example_task_name": "Put all apples on the kitchentable",
+      "cosine": 0.6622077822685242
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all alcohols on the kitchentable",
+      "example_task_name": "Put all bananas on the kitchentable",
+      "cosine": 0.5824116468429565
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all alcohols on the kitchentable",
+      "example_task_name": "Put all bellpeppers in the microwave",
+      "cosine": 0.41079384088516235
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all alcohols on the kitchentable",
+      "example_task_name": "Put all chips in the fridge",
+      "cosine": 0.359096497297287
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all alcohols on the kitchentable",
+      "example_task_name": "Put all chips on the coffeetable",
+      "cosine": 0.6108983755111694
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all alcohols on the kitchentable",
+      "example_task_name": "Put all crackers on the coffeetable",
+      "cosine": 0.5734724402427673
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all alcohols on the kitchentable",
+      "example_task_name": "Put all cupcakes in the fridge",
+      "cosine": 0.28542017936706543
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all alcohols on the kitchentable",
+      "example_task_name": "Put all cupcakes on the kitchentable",
+      "cosine": 0.6009794473648071
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all alcohols on the kitchentable",
+      "example_task_name": "Put all juices in the microwave",
+      "cosine": 0.49439525604248047
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all alcohols on the kitchentable",
+      "example_task_name": "Put all juices on the coffeetable",
+      "cosine": 0.6352982521057129
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all alcohols on the kitchentable",
+      "example_task_name": "Put all milks in the fridge",
+      "cosine": 0.2983172535896301
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all alcohols on the kitchentable",
+      "example_task_name": "Put all milks on the kitchentable",
+      "cosine": 0.6759195923805237
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all alcohols on the kitchentable",
+      "example_task_name": "Put all peaches on the coffeetable",
+      "cosine": 0.5527358055114746
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all alcohols on the kitchentable",
+      "example_task_name": "Put all peaches on the oventray",
+      "cosine": 0.3698318600654602
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all alcohols on the kitchentable",
+      "example_task_name": "Put all plums on the coffeetable",
+      "cosine": 0.49517732858657837
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all alcohols on the kitchentable",
+      "example_task_name": "Put all plums on the kitchentable",
+      "cosine": 0.5051612854003906
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all alcohols on the kitchentable",
+      "example_task_name": "Put all plums on the oventray",
+      "cosine": 0.3335916996002197
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all apples on the kitchencounter",
+      "example_task_name": "Put all apples in the fridge",
+      "cosine": 0.743765115737915
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all apples on the kitchencounter",
+      "example_task_name": "Put all apples in the microwave",
+      "cosine": 0.7359439134597778
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all apples on the kitchencounter",
+      "example_task_name": "Put all apples on the kitchentable",
+      "cosine": 0.8154546022415161
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all apples on the kitchencounter",
+      "example_task_name": "Put all bananas on the kitchentable",
+      "cosine": 0.5762470364570618
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all apples on the kitchencounter",
+      "example_task_name": "Put all bellpeppers in the microwave",
+      "cosine": 0.3898928761482239
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all apples on the kitchencounter",
+      "example_task_name": "Put all chips in the fridge",
+      "cosine": 0.43237894773483276
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all apples on the kitchencounter",
+      "example_task_name": "Put all chips on the coffeetable",
+      "cosine": 0.4006417393684387
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all apples on the kitchencounter",
+      "example_task_name": "Put all crackers on the coffeetable",
+      "cosine": 0.38160520792007446
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all apples on the kitchencounter",
+      "example_task_name": "Put all cupcakes in the fridge",
+      "cosine": 0.4030981659889221
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all apples on the kitchencounter",
+      "example_task_name": "Put all cupcakes on the kitchentable",
+      "cosine": 0.5113030672073364
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all apples on the kitchencounter",
+      "example_task_name": "Put all juices in the microwave",
+      "cosine": 0.47936922311782837
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all apples on the kitchencounter",
+      "example_task_name": "Put all juices on the coffeetable",
+      "cosine": 0.4211329221725464
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all apples on the kitchencounter",
+      "example_task_name": "Put all milks in the fridge",
+      "cosine": 0.3565160930156708
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all apples on the kitchencounter",
+      "example_task_name": "Put all milks on the kitchentable",
+      "cosine": 0.48599129915237427
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all apples on the kitchencounter",
+      "example_task_name": "Put all peaches on the coffeetable",
+      "cosine": 0.5337798595428467
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all apples on the kitchencounter",
+      "example_task_name": "Put all peaches on the oventray",
+      "cosine": 0.5496377348899841
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all apples on the kitchencounter",
+      "example_task_name": "Put all plums on the coffeetable",
+      "cosine": 0.40762245655059814
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all apples on the kitchencounter",
+      "example_task_name": "Put all plums on the kitchentable",
+      "cosine": 0.51023930311203
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all apples on the kitchencounter",
+      "example_task_name": "Put all plums on the oventray",
+      "cosine": 0.43635228276252747
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all bananas in the fridge",
+      "example_task_name": "Put all apples in the fridge",
+      "cosine": 0.6310110688209534
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all bananas in the fridge",
+      "example_task_name": "Put all apples in the microwave",
+      "cosine": 0.5124742984771729
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all bananas in the fridge",
+      "example_task_name": "Put all apples on the kitchentable",
+      "cosine": 0.4349331855773926
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all bananas in the fridge",
+      "example_task_name": "Put all bananas on the kitchentable",
+      "cosine": 0.7763677835464478
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all bananas in the fridge",
+      "example_task_name": "Put all bellpeppers in the microwave",
+      "cosine": 0.3755335211753845
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all bananas in the fridge",
+      "example_task_name": "Put all chips in the fridge",
+      "cosine": 0.4866633713245392
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all bananas in the fridge",
+      "example_task_name": "Put all chips on the coffeetable",
+      "cosine": 0.25413426756858826
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all bananas in the fridge",
+      "example_task_name": "Put all crackers on the coffeetable",
+      "cosine": 0.303195595741272
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all bananas in the fridge",
+      "example_task_name": "Put all cupcakes in the fridge",
+      "cosine": 0.475674569606781
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all bananas in the fridge",
+      "example_task_name": "Put all cupcakes on the kitchentable",
+      "cosine": 0.3130214810371399
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all bananas in the fridge",
+      "example_task_name": "Put all juices in the microwave",
+      "cosine": 0.44789695739746094
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all bananas in the fridge",
+      "example_task_name": "Put all juices on the coffeetable",
+      "cosine": 0.30523568391799927
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all bananas in the fridge",
+      "example_task_name": "Put all milks in the fridge",
+      "cosine": 0.6125121116638184
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all bananas in the fridge",
+      "example_task_name": "Put all milks on the kitchentable",
+      "cosine": 0.4141641855239868
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all bananas in the fridge",
+      "example_task_name": "Put all peaches on the coffeetable",
+      "cosine": 0.41226857900619507
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all bananas in the fridge",
+      "example_task_name": "Put all peaches on the oventray",
+      "cosine": 0.36681753396987915
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all bananas in the fridge",
+      "example_task_name": "Put all plums on the coffeetable",
+      "cosine": 0.31398314237594604
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all bananas in the fridge",
+      "example_task_name": "Put all plums on the kitchentable",
+      "cosine": 0.3371433615684509
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all bananas in the fridge",
+      "example_task_name": "Put all plums on the oventray",
+      "cosine": 0.2658877968788147
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all bananas in the microwave",
+      "example_task_name": "Put all apples in the fridge",
+      "cosine": 0.4992021918296814
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all bananas in the microwave",
+      "example_task_name": "Put all apples in the microwave",
+      "cosine": 0.7071243524551392
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all bananas in the microwave",
+      "example_task_name": "Put all apples on the kitchentable",
+      "cosine": 0.5057501792907715
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all bananas in the microwave",
+      "example_task_name": "Put all bananas on the kitchentable",
+      "cosine": 0.8097575902938843
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all bananas in the microwave",
+      "example_task_name": "Put all bellpeppers in the microwave",
+      "cosine": 0.6367419958114624
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all bananas in the microwave",
+      "example_task_name": "Put all chips in the fridge",
+      "cosine": 0.4056119918823242
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all bananas in the microwave",
+      "example_task_name": "Put all chips on the coffeetable",
+      "cosine": 0.3493490219116211
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all bananas in the microwave",
+      "example_task_name": "Put all crackers on the coffeetable",
+      "cosine": 0.3757300078868866
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all bananas in the microwave",
+      "example_task_name": "Put all cupcakes in the fridge",
+      "cosine": 0.38436853885650635
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all bananas in the microwave",
+      "example_task_name": "Put all cupcakes on the kitchentable",
+      "cosine": 0.38252758979797363
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all bananas in the microwave",
+      "example_task_name": "Put all juices in the microwave",
+      "cosine": 0.6698318719863892
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all bananas in the microwave",
+      "example_task_name": "Put all juices on the coffeetable",
+      "cosine": 0.3581840991973877
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all bananas in the microwave",
+      "example_task_name": "Put all milks in the fridge",
+      "cosine": 0.48968952894210815
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all bananas in the microwave",
+      "example_task_name": "Put all milks on the kitchentable",
+      "cosine": 0.49378201365470886
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all bananas in the microwave",
+      "example_task_name": "Put all peaches on the coffeetable",
+      "cosine": 0.4750722348690033
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all bananas in the microwave",
+      "example_task_name": "Put all peaches on the oventray",
+      "cosine": 0.4719223976135254
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all bananas in the microwave",
+      "example_task_name": "Put all plums on the coffeetable",
+      "cosine": 0.35049545764923096
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all bananas in the microwave",
+      "example_task_name": "Put all plums on the kitchentable",
+      "cosine": 0.3561933636665344
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all bananas in the microwave",
+      "example_task_name": "Put all plums on the oventray",
+      "cosine": 0.36550968885421753
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all bananas on the coffeetable",
+      "example_task_name": "Put all apples in the fridge",
+      "cosine": 0.4127938747406006
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all bananas on the coffeetable",
+      "example_task_name": "Put all apples in the microwave",
+      "cosine": 0.5007705092430115
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all bananas on the coffeetable",
+      "example_task_name": "Put all apples on the kitchentable",
+      "cosine": 0.6251033544540405
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all bananas on the coffeetable",
+      "example_task_name": "Put all bananas on the kitchentable",
+      "cosine": 0.8887988328933716
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all bananas on the coffeetable",
+      "example_task_name": "Put all bellpeppers in the microwave",
+      "cosine": 0.4352981746196747
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all bananas on the coffeetable",
+      "example_task_name": "Put all chips in the fridge",
+      "cosine": 0.2920988202095032
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all bananas on the coffeetable",
+      "example_task_name": "Put all chips on the coffeetable",
+      "cosine": 0.6463737487792969
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all bananas on the coffeetable",
+      "example_task_name": "Put all crackers on the coffeetable",
+      "cosine": 0.6630212068557739
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all bananas on the coffeetable",
+      "example_task_name": "Put all cupcakes in the fridge",
+      "cosine": 0.3619406819343567
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all bananas on the coffeetable",
+      "example_task_name": "Put all cupcakes on the kitchentable",
+      "cosine": 0.5475272536277771
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all bananas on the coffeetable",
+      "example_task_name": "Put all juices in the microwave",
+      "cosine": 0.4985639750957489
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all bananas on the coffeetable",
+      "example_task_name": "Put all juices on the coffeetable",
+      "cosine": 0.6972461938858032
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all bananas on the coffeetable",
+      "example_task_name": "Put all milks in the fridge",
+      "cosine": 0.4006413221359253
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all bananas on the coffeetable",
+      "example_task_name": "Put all milks on the kitchentable",
+      "cosine": 0.5981156826019287
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all bananas on the coffeetable",
+      "example_task_name": "Put all peaches on the coffeetable",
+      "cosine": 0.7282416224479675
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all bananas on the coffeetable",
+      "example_task_name": "Put all peaches on the oventray",
+      "cosine": 0.3881118595600128
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all bananas on the coffeetable",
+      "example_task_name": "Put all plums on the coffeetable",
+      "cosine": 0.6540869474411011
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all bananas on the coffeetable",
+      "example_task_name": "Put all plums on the kitchentable",
+      "cosine": 0.47776371240615845
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all bananas on the coffeetable",
+      "example_task_name": "Put all plums on the oventray",
+      "cosine": 0.3061479926109314
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all bananas on the desk",
+      "example_task_name": "Put all apples in the fridge",
+      "cosine": 0.4642829895019531
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all bananas on the desk",
+      "example_task_name": "Put all apples in the microwave",
+      "cosine": 0.4932090640068054
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all bananas on the desk",
+      "example_task_name": "Put all apples on the kitchentable",
+      "cosine": 0.5276978015899658
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all bananas on the desk",
+      "example_task_name": "Put all bananas on the kitchentable",
+      "cosine": 0.7828474044799805
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all bananas on the desk",
+      "example_task_name": "Put all bellpeppers in the microwave",
+      "cosine": 0.3453208804130554
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all bananas on the desk",
+      "example_task_name": "Put all chips in the fridge",
+      "cosine": 0.32529813051223755
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all bananas on the desk",
+      "example_task_name": "Put all chips on the coffeetable",
+      "cosine": 0.34423696994781494
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all bananas on the desk",
+      "example_task_name": "Put all crackers on the coffeetable",
+      "cosine": 0.3624108135700226
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all bananas on the desk",
+      "example_task_name": "Put all cupcakes in the fridge",
+      "cosine": 0.3661201596260071
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all bananas on the desk",
+      "example_task_name": "Put all cupcakes on the kitchentable",
+      "cosine": 0.4190892279148102
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all bananas on the desk",
+      "example_task_name": "Put all juices in the microwave",
+      "cosine": 0.3933018743991852
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all bananas on the desk",
+      "example_task_name": "Put all juices on the coffeetable",
+      "cosine": 0.3708575963973999
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all bananas on the desk",
+      "example_task_name": "Put all milks in the fridge",
+      "cosine": 0.35441625118255615
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all bananas on the desk",
+      "example_task_name": "Put all milks on the kitchentable",
+      "cosine": 0.40845003724098206
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all bananas on the desk",
+      "example_task_name": "Put all peaches on the coffeetable",
+      "cosine": 0.4769660234451294
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all bananas on the desk",
+      "example_task_name": "Put all peaches on the oventray",
+      "cosine": 0.3872429132461548
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all bananas on the desk",
+      "example_task_name": "Put all plums on the coffeetable",
+      "cosine": 0.3666907548904419
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all bananas on the desk",
+      "example_task_name": "Put all plums on the kitchentable",
+      "cosine": 0.3553162217140198
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all bananas on the desk",
+      "example_task_name": "Put all plums on the oventray",
+      "cosine": 0.2580316960811615
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all bananas on the kitchencounter",
+      "example_task_name": "Put all apples in the fridge",
+      "cosine": 0.4928811192512512
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all bananas on the kitchencounter",
+      "example_task_name": "Put all apples in the microwave",
+      "cosine": 0.5145542025566101
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all bananas on the kitchencounter",
+      "example_task_name": "Put all apples on the kitchentable",
+      "cosine": 0.5777876377105713
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all bananas on the kitchencounter",
+      "example_task_name": "Put all bananas on the kitchentable",
+      "cosine": 0.8634896874427795
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all bananas on the kitchencounter",
+      "example_task_name": "Put all bellpeppers in the microwave",
+      "cosine": 0.42386507987976074
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all bananas on the kitchencounter",
+      "example_task_name": "Put all chips in the fridge",
+      "cosine": 0.40649691224098206
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all bananas on the kitchencounter",
+      "example_task_name": "Put all chips on the coffeetable",
+      "cosine": 0.36543020606040955
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all bananas on the kitchencounter",
+      "example_task_name": "Put all crackers on the coffeetable",
+      "cosine": 0.4010961651802063
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all bananas on the kitchencounter",
+      "example_task_name": "Put all cupcakes in the fridge",
+      "cosine": 0.38399773836135864
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all bananas on the kitchencounter",
+      "example_task_name": "Put all cupcakes on the kitchentable",
+      "cosine": 0.46330422163009644
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all bananas on the kitchencounter",
+      "example_task_name": "Put all juices in the microwave",
+      "cosine": 0.45839375257492065
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all bananas on the kitchencounter",
+      "example_task_name": "Put all juices on the coffeetable",
+      "cosine": 0.3728563189506531
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all bananas on the kitchencounter",
+      "example_task_name": "Put all milks in the fridge",
+      "cosine": 0.4135715961456299
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all bananas on the kitchencounter",
+      "example_task_name": "Put all milks on the kitchentable",
+      "cosine": 0.49762582778930664
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all bananas on the kitchencounter",
+      "example_task_name": "Put all peaches on the coffeetable",
+      "cosine": 0.4921875596046448
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all bananas on the kitchencounter",
+      "example_task_name": "Put all peaches on the oventray",
+      "cosine": 0.4835968613624573
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all bananas on the kitchencounter",
+      "example_task_name": "Put all plums on the coffeetable",
+      "cosine": 0.39167386293411255
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all bananas on the kitchencounter",
+      "example_task_name": "Put all plums on the kitchentable",
+      "cosine": 0.46622294187545776
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all bananas on the kitchencounter",
+      "example_task_name": "Put all plums on the oventray",
+      "cosine": 0.37877652049064636
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all bananas on the oventray",
+      "example_task_name": "Put all apples in the fridge",
+      "cosine": 0.42987775802612305
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all bananas on the oventray",
+      "example_task_name": "Put all apples in the microwave",
+      "cosine": 0.5579720735549927
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all bananas on the oventray",
+      "example_task_name": "Put all apples on the kitchentable",
+      "cosine": 0.5156595706939697
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all bananas on the oventray",
+      "example_task_name": "Put all bananas on the kitchentable",
+      "cosine": 0.772074282169342
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all bananas on the oventray",
+      "example_task_name": "Put all bellpeppers in the microwave",
+      "cosine": 0.5389314293861389
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all bananas on the oventray",
+      "example_task_name": "Put all chips in the fridge",
+      "cosine": 0.4214129149913788
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all bananas on the oventray",
+      "example_task_name": "Put all chips on the coffeetable",
+      "cosine": 0.4053781032562256
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all bananas on the oventray",
+      "example_task_name": "Put all crackers on the coffeetable",
+      "cosine": 0.37220102548599243
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all bananas on the oventray",
+      "example_task_name": "Put all cupcakes in the fridge",
+      "cosine": 0.3619838356971741
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all bananas on the oventray",
+      "example_task_name": "Put all cupcakes on the kitchentable",
+      "cosine": 0.4315165877342224
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all bananas on the oventray",
+      "example_task_name": "Put all juices in the microwave",
+      "cosine": 0.5112767815589905
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all bananas on the oventray",
+      "example_task_name": "Put all juices on the coffeetable",
+      "cosine": 0.3550092279911041
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all bananas on the oventray",
+      "example_task_name": "Put all milks in the fridge",
+      "cosine": 0.30181989073753357
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all bananas on the oventray",
+      "example_task_name": "Put all milks on the kitchentable",
+      "cosine": 0.39388126134872437
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all bananas on the oventray",
+      "example_task_name": "Put all peaches on the coffeetable",
+      "cosine": 0.5005916357040405
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all bananas on the oventray",
+      "example_task_name": "Put all peaches on the oventray",
+      "cosine": 0.7534902095794678
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all bananas on the oventray",
+      "example_task_name": "Put all plums on the coffeetable",
+      "cosine": 0.3402155637741089
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all bananas on the oventray",
+      "example_task_name": "Put all plums on the kitchentable",
+      "cosine": 0.37326136231422424
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all bananas on the oventray",
+      "example_task_name": "Put all plums on the oventray",
+      "cosine": 0.6276845932006836
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all bellpeppers in the fridge",
+      "example_task_name": "Put all apples in the fridge",
+      "cosine": 0.49719810485839844
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all bellpeppers in the fridge",
+      "example_task_name": "Put all apples in the microwave",
+      "cosine": 0.40397483110427856
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all bellpeppers in the fridge",
+      "example_task_name": "Put all apples on the kitchentable",
+      "cosine": 0.35010725259780884
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all bellpeppers in the fridge",
+      "example_task_name": "Put all bananas on the kitchentable",
+      "cosine": 0.42343342304229736
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all bellpeppers in the fridge",
+      "example_task_name": "Put all bellpeppers in the microwave",
+      "cosine": 0.7915724515914917
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all bellpeppers in the fridge",
+      "example_task_name": "Put all chips in the fridge",
+      "cosine": 0.5910040140151978
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all bellpeppers in the fridge",
+      "example_task_name": "Put all chips on the coffeetable",
+      "cosine": 0.38610416650772095
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all bellpeppers in the fridge",
+      "example_task_name": "Put all crackers on the coffeetable",
+      "cosine": 0.381204217672348
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all bellpeppers in the fridge",
+      "example_task_name": "Put all cupcakes in the fridge",
+      "cosine": 0.52806556224823
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all bellpeppers in the fridge",
+      "example_task_name": "Put all cupcakes on the kitchentable",
+      "cosine": 0.3793414831161499
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all bellpeppers in the fridge",
+      "example_task_name": "Put all juices in the microwave",
+      "cosine": 0.5070404410362244
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all bellpeppers in the fridge",
+      "example_task_name": "Put all juices on the coffeetable",
+      "cosine": 0.4118396043777466
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all bellpeppers in the fridge",
+      "example_task_name": "Put all milks in the fridge",
+      "cosine": 0.5026929378509521
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all bellpeppers in the fridge",
+      "example_task_name": "Put all milks on the kitchentable",
+      "cosine": 0.3515959084033966
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all bellpeppers in the fridge",
+      "example_task_name": "Put all peaches on the coffeetable",
+      "cosine": 0.44622382521629333
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all bellpeppers in the fridge",
+      "example_task_name": "Put all peaches on the oventray",
+      "cosine": 0.45692938566207886
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all bellpeppers in the fridge",
+      "example_task_name": "Put all plums on the coffeetable",
+      "cosine": 0.4199119806289673
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all bellpeppers in the fridge",
+      "example_task_name": "Put all plums on the kitchentable",
+      "cosine": 0.41896799206733704
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all bellpeppers in the fridge",
+      "example_task_name": "Put all plums on the oventray",
+      "cosine": 0.4495212435722351
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all bellpeppers on the kitchencounter",
+      "example_task_name": "Put all apples in the fridge",
+      "cosine": 0.3282482624053955
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all bellpeppers on the kitchencounter",
+      "example_task_name": "Put all apples in the microwave",
+      "cosine": 0.36647093296051025
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all bellpeppers on the kitchencounter",
+      "example_task_name": "Put all apples on the kitchentable",
+      "cosine": 0.5115360021591187
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all bellpeppers on the kitchencounter",
+      "example_task_name": "Put all bananas on the kitchentable",
+      "cosine": 0.49113184213638306
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all bellpeppers on the kitchencounter",
+      "example_task_name": "Put all bellpeppers in the microwave",
+      "cosine": 0.6830224990844727
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all bellpeppers on the kitchencounter",
+      "example_task_name": "Put all chips in the fridge",
+      "cosine": 0.42231351137161255
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all bellpeppers on the kitchencounter",
+      "example_task_name": "Put all chips on the coffeetable",
+      "cosine": 0.4547693729400635
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all bellpeppers on the kitchencounter",
+      "example_task_name": "Put all crackers on the coffeetable",
+      "cosine": 0.43055015802383423
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all bellpeppers on the kitchencounter",
+      "example_task_name": "Put all cupcakes in the fridge",
+      "cosine": 0.3955099284648895
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all bellpeppers on the kitchencounter",
+      "example_task_name": "Put all cupcakes on the kitchentable",
+      "cosine": 0.5433454513549805
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all bellpeppers on the kitchencounter",
+      "example_task_name": "Put all juices in the microwave",
+      "cosine": 0.419736385345459
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all bellpeppers on the kitchencounter",
+      "example_task_name": "Put all juices on the coffeetable",
+      "cosine": 0.42181676626205444
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all bellpeppers on the kitchencounter",
+      "example_task_name": "Put all milks in the fridge",
+      "cosine": 0.2724090814590454
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all bellpeppers on the kitchencounter",
+      "example_task_name": "Put all milks on the kitchentable",
+      "cosine": 0.46123558282852173
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all bellpeppers on the kitchencounter",
+      "example_task_name": "Put all peaches on the coffeetable",
+      "cosine": 0.4790915250778198
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all bellpeppers on the kitchencounter",
+      "example_task_name": "Put all peaches on the oventray",
+      "cosine": 0.5357027053833008
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all bellpeppers on the kitchencounter",
+      "example_task_name": "Put all plums on the coffeetable",
+      "cosine": 0.4637671113014221
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all bellpeppers on the kitchencounter",
+      "example_task_name": "Put all plums on the kitchentable",
+      "cosine": 0.5467667579650879
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all bellpeppers on the kitchencounter",
+      "example_task_name": "Put all plums on the oventray",
+      "cosine": 0.5409976243972778
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all bellpeppers on the kitchentable",
+      "example_task_name": "Put all apples in the fridge",
+      "cosine": 0.2993731200695038
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all bellpeppers on the kitchentable",
+      "example_task_name": "Put all apples in the microwave",
+      "cosine": 0.3936770558357239
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all bellpeppers on the kitchentable",
+      "example_task_name": "Put all apples on the kitchentable",
+      "cosine": 0.6682937145233154
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all bellpeppers on the kitchentable",
+      "example_task_name": "Put all bananas on the kitchentable",
+      "cosine": 0.6494650840759277
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all bellpeppers on the kitchentable",
+      "example_task_name": "Put all bellpeppers in the microwave",
+      "cosine": 0.7055910229682922
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all bellpeppers on the kitchentable",
+      "example_task_name": "Put all chips in the fridge",
+      "cosine": 0.36525774002075195
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all bellpeppers on the kitchentable",
+      "example_task_name": "Put all chips on the coffeetable",
+      "cosine": 0.6151121854782104
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all bellpeppers on the kitchentable",
+      "example_task_name": "Put all crackers on the coffeetable",
+      "cosine": 0.5792993307113647
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all bellpeppers on the kitchentable",
+      "example_task_name": "Put all cupcakes in the fridge",
+      "cosine": 0.34515053033828735
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all bellpeppers on the kitchentable",
+      "example_task_name": "Put all cupcakes on the kitchentable",
+      "cosine": 0.6688814163208008
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all bellpeppers on the kitchentable",
+      "example_task_name": "Put all juices in the microwave",
+      "cosine": 0.4642125070095062
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all bellpeppers on the kitchentable",
+      "example_task_name": "Put all juices on the coffeetable",
+      "cosine": 0.6190786361694336
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all bellpeppers on the kitchentable",
+      "example_task_name": "Put all milks in the fridge",
+      "cosine": 0.25802916288375854
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all bellpeppers on the kitchentable",
+      "example_task_name": "Put all milks on the kitchentable",
+      "cosine": 0.632375955581665
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all bellpeppers on the kitchentable",
+      "example_task_name": "Put all peaches on the coffeetable",
+      "cosine": 0.6325576305389404
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all bellpeppers on the kitchentable",
+      "example_task_name": "Put all peaches on the oventray",
+      "cosine": 0.49355754256248474
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all bellpeppers on the kitchentable",
+      "example_task_name": "Put all plums on the coffeetable",
+      "cosine": 0.6198014616966248
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all bellpeppers on the kitchentable",
+      "example_task_name": "Put all plums on the kitchentable",
+      "cosine": 0.6618251800537109
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all bellpeppers on the kitchentable",
+      "example_task_name": "Put all plums on the oventray",
+      "cosine": 0.49757304787635803
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all chips in the microwave",
+      "example_task_name": "Put all apples in the fridge",
+      "cosine": 0.40176376700401306
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all chips in the microwave",
+      "example_task_name": "Put all apples in the microwave",
+      "cosine": 0.6360121965408325
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all chips in the microwave",
+      "example_task_name": "Put all apples on the kitchentable",
+      "cosine": 0.44519567489624023
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all chips in the microwave",
+      "example_task_name": "Put all bananas on the kitchentable",
+      "cosine": 0.40943580865859985
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all chips in the microwave",
+      "example_task_name": "Put all bellpeppers in the microwave",
+      "cosine": 0.6759386658668518
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all chips in the microwave",
+      "example_task_name": "Put all chips in the fridge",
+      "cosine": 0.8086038827896118
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all chips in the microwave",
+      "example_task_name": "Put all chips on the coffeetable",
+      "cosine": 0.6553126573562622
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all chips in the microwave",
+      "example_task_name": "Put all crackers on the coffeetable",
+      "cosine": 0.3965928256511688
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all chips in the microwave",
+      "example_task_name": "Put all cupcakes in the fridge",
+      "cosine": 0.43877139687538147
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all chips in the microwave",
+      "example_task_name": "Put all cupcakes on the kitchentable",
+      "cosine": 0.4379483759403229
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all chips in the microwave",
+      "example_task_name": "Put all juices in the microwave",
+      "cosine": 0.638617753982544
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all chips in the microwave",
+      "example_task_name": "Put all juices on the coffeetable",
+      "cosine": 0.29428577423095703
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all chips in the microwave",
+      "example_task_name": "Put all milks in the fridge",
+      "cosine": 0.3609884977340698
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all chips in the microwave",
+      "example_task_name": "Put all milks on the kitchentable",
+      "cosine": 0.4034719467163086
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all chips in the microwave",
+      "example_task_name": "Put all peaches on the coffeetable",
+      "cosine": 0.3499189019203186
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all chips in the microwave",
+      "example_task_name": "Put all peaches on the oventray",
+      "cosine": 0.4799290895462036
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all chips in the microwave",
+      "example_task_name": "Put all plums on the coffeetable",
+      "cosine": 0.2667742073535919
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all chips in the microwave",
+      "example_task_name": "Put all plums on the kitchentable",
+      "cosine": 0.29301023483276367
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all chips in the microwave",
+      "example_task_name": "Put all plums on the oventray",
+      "cosine": 0.42138779163360596
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all chips on the kitchentable",
+      "example_task_name": "Put all apples in the fridge",
+      "cosine": 0.350268691778183
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all chips on the kitchentable",
+      "example_task_name": "Put all apples in the microwave",
+      "cosine": 0.44632065296173096
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all chips on the kitchentable",
+      "example_task_name": "Put all apples on the kitchentable",
+      "cosine": 0.6903108358383179
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all chips on the kitchentable",
+      "example_task_name": "Put all bananas on the kitchentable",
+      "cosine": 0.6139338612556458
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all chips on the kitchentable",
+      "example_task_name": "Put all bellpeppers in the microwave",
+      "cosine": 0.4580259919166565
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all chips on the kitchentable",
+      "example_task_name": "Put all chips in the fridge",
+      "cosine": 0.7245342135429382
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all chips on the kitchentable",
+      "example_task_name": "Put all chips on the coffeetable",
+      "cosine": 0.8499681353569031
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all chips on the kitchentable",
+      "example_task_name": "Put all crackers on the coffeetable",
+      "cosine": 0.5639641880989075
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all chips on the kitchentable",
+      "example_task_name": "Put all cupcakes in the fridge",
+      "cosine": 0.38141417503356934
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all chips on the kitchentable",
+      "example_task_name": "Put all cupcakes on the kitchentable",
+      "cosine": 0.6630371809005737
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all chips on the kitchentable",
+      "example_task_name": "Put all juices in the microwave",
+      "cosine": 0.4325358271598816
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all chips on the kitchentable",
+      "example_task_name": "Put all juices on the coffeetable",
+      "cosine": 0.5218397974967957
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all chips on the kitchentable",
+      "example_task_name": "Put all milks in the fridge",
+      "cosine": 0.27367526292800903
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all chips on the kitchentable",
+      "example_task_name": "Put all milks on the kitchentable",
+      "cosine": 0.603728175163269
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all chips on the kitchentable",
+      "example_task_name": "Put all peaches on the coffeetable",
+      "cosine": 0.5463594198226929
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all chips on the kitchentable",
+      "example_task_name": "Put all peaches on the oventray",
+      "cosine": 0.46465325355529785
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all chips on the kitchentable",
+      "example_task_name": "Put all plums on the coffeetable",
+      "cosine": 0.47556620836257935
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all chips on the kitchentable",
+      "example_task_name": "Put all plums on the kitchentable",
+      "cosine": 0.5392134189605713
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all chips on the kitchentable",
+      "example_task_name": "Put all plums on the oventray",
+      "cosine": 0.40123555064201355
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all crackers in the fridge",
+      "example_task_name": "Put all apples in the fridge",
+      "cosine": 0.5201675891876221
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all crackers in the fridge",
+      "example_task_name": "Put all apples in the microwave",
+      "cosine": 0.4187139570713043
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all crackers in the fridge",
+      "example_task_name": "Put all apples on the kitchentable",
+      "cosine": 0.3571813106536865
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all crackers in the fridge",
+      "example_task_name": "Put all bananas on the kitchentable",
+      "cosine": 0.41283875703811646
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all crackers in the fridge",
+      "example_task_name": "Put all bellpeppers in the microwave",
+      "cosine": 0.42966604232788086
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all crackers in the fridge",
+      "example_task_name": "Put all chips in the fridge",
+      "cosine": 0.6247973442077637
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all crackers in the fridge",
+      "example_task_name": "Put all chips on the coffeetable",
+      "cosine": 0.36876195669174194
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all crackers in the fridge",
+      "example_task_name": "Put all crackers on the coffeetable",
+      "cosine": 0.6907979846000671
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all crackers in the fridge",
+      "example_task_name": "Put all cupcakes in the fridge",
+      "cosine": 0.4844752550125122
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all crackers in the fridge",
+      "example_task_name": "Put all cupcakes on the kitchentable",
+      "cosine": 0.307338684797287
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all crackers in the fridge",
+      "example_task_name": "Put all juices in the microwave",
+      "cosine": 0.44956567883491516
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all crackers in the fridge",
+      "example_task_name": "Put all juices on the coffeetable",
+      "cosine": 0.317335844039917
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all crackers in the fridge",
+      "example_task_name": "Put all milks in the fridge",
+      "cosine": 0.5877177715301514
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all crackers in the fridge",
+      "example_task_name": "Put all milks on the kitchentable",
+      "cosine": 0.4187207818031311
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all crackers in the fridge",
+      "example_task_name": "Put all peaches on the coffeetable",
+      "cosine": 0.36464786529541016
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all crackers in the fridge",
+      "example_task_name": "Put all peaches on the oventray",
+      "cosine": 0.3516465425491333
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all crackers in the fridge",
+      "example_task_name": "Put all plums on the coffeetable",
+      "cosine": 0.3518582582473755
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all crackers in the fridge",
+      "example_task_name": "Put all plums on the kitchentable",
+      "cosine": 0.3593517541885376
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all crackers in the fridge",
+      "example_task_name": "Put all plums on the oventray",
+      "cosine": 0.3511672616004944
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all crackers in the microwave",
+      "example_task_name": "Put all apples in the fridge",
+      "cosine": 0.3970085084438324
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all crackers in the microwave",
+      "example_task_name": "Put all apples in the microwave",
+      "cosine": 0.6074495911598206
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all crackers in the microwave",
+      "example_task_name": "Put all apples on the kitchentable",
+      "cosine": 0.4309518337249756
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all crackers in the microwave",
+      "example_task_name": "Put all bananas on the kitchentable",
+      "cosine": 0.4666369557380676
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all crackers in the microwave",
+      "example_task_name": "Put all bellpeppers in the microwave",
+      "cosine": 0.66508549451828
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all crackers in the microwave",
+      "example_task_name": "Put all chips in the fridge",
+      "cosine": 0.5057944655418396
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all crackers in the microwave",
+      "example_task_name": "Put all chips on the coffeetable",
+      "cosine": 0.4372295141220093
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all crackers in the microwave",
+      "example_task_name": "Put all crackers on the coffeetable",
+      "cosine": 0.7075386047363281
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all crackers in the microwave",
+      "example_task_name": "Put all cupcakes in the fridge",
+      "cosine": 0.38255977630615234
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all crackers in the microwave",
+      "example_task_name": "Put all cupcakes on the kitchentable",
+      "cosine": 0.3710901141166687
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all crackers in the microwave",
+      "example_task_name": "Put all juices in the microwave",
+      "cosine": 0.6440026164054871
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all crackers in the microwave",
+      "example_task_name": "Put all juices on the coffeetable",
+      "cosine": 0.33159831166267395
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all crackers in the microwave",
+      "example_task_name": "Put all milks in the fridge",
+      "cosine": 0.4468357563018799
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all crackers in the microwave",
+      "example_task_name": "Put all milks on the kitchentable",
+      "cosine": 0.4799075126647949
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all crackers in the microwave",
+      "example_task_name": "Put all peaches on the coffeetable",
+      "cosine": 0.39680835604667664
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all crackers in the microwave",
+      "example_task_name": "Put all peaches on the oventray",
+      "cosine": 0.4198688864707947
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all crackers in the microwave",
+      "example_task_name": "Put all plums on the coffeetable",
+      "cosine": 0.3633694648742676
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all crackers in the microwave",
+      "example_task_name": "Put all plums on the kitchentable",
+      "cosine": 0.355617880821228
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all crackers in the microwave",
+      "example_task_name": "Put all plums on the oventray",
+      "cosine": 0.41728439927101135
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all crackers on the kitchentable",
+      "example_task_name": "Put all apples in the fridge",
+      "cosine": 0.3283722400665283
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all crackers on the kitchentable",
+      "example_task_name": "Put all apples in the microwave",
+      "cosine": 0.40099066495895386
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all crackers on the kitchentable",
+      "example_task_name": "Put all apples on the kitchentable",
+      "cosine": 0.6291695833206177
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all crackers on the kitchentable",
+      "example_task_name": "Put all bananas on the kitchentable",
+      "cosine": 0.6200990080833435
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all crackers on the kitchentable",
+      "example_task_name": "Put all bellpeppers in the microwave",
+      "cosine": 0.4283282160758972
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all crackers on the kitchentable",
+      "example_task_name": "Put all chips in the fridge",
+      "cosine": 0.4185059070587158
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all crackers on the kitchentable",
+      "example_task_name": "Put all chips on the coffeetable",
+      "cosine": 0.590854287147522
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all crackers on the kitchentable",
+      "example_task_name": "Put all crackers on the coffeetable",
+      "cosine": 0.8729087710380554
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all crackers on the kitchentable",
+      "example_task_name": "Put all cupcakes in the fridge",
+      "cosine": 0.3158581554889679
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all crackers on the kitchentable",
+      "example_task_name": "Put all cupcakes on the kitchentable",
+      "cosine": 0.5592938661575317
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all crackers on the kitchentable",
+      "example_task_name": "Put all juices in the microwave",
+      "cosine": 0.42377030849456787
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all crackers on the kitchentable",
+      "example_task_name": "Put all juices on the coffeetable",
+      "cosine": 0.5274407863616943
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all crackers on the kitchentable",
+      "example_task_name": "Put all milks in the fridge",
+      "cosine": 0.3381348252296448
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all crackers on the kitchentable",
+      "example_task_name": "Put all milks on the kitchentable",
+      "cosine": 0.6387217044830322
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all crackers on the kitchentable",
+      "example_task_name": "Put all peaches on the coffeetable",
+      "cosine": 0.5507874488830566
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all crackers on the kitchentable",
+      "example_task_name": "Put all peaches on the oventray",
+      "cosine": 0.396223783493042
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all crackers on the kitchentable",
+      "example_task_name": "Put all plums on the coffeetable",
+      "cosine": 0.5379533767700195
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all crackers on the kitchentable",
+      "example_task_name": "Put all plums on the kitchentable",
+      "cosine": 0.5683190822601318
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all crackers on the kitchentable",
+      "example_task_name": "Put all plums on the oventray",
+      "cosine": 0.39467382431030273
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all creamybuns in the fridge",
+      "example_task_name": "Put all apples in the fridge",
+      "cosine": 0.4790663421154022
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all creamybuns in the fridge",
+      "example_task_name": "Put all apples in the microwave",
+      "cosine": 0.37386488914489746
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all creamybuns in the fridge",
+      "example_task_name": "Put all apples on the kitchentable",
+      "cosine": 0.3488624691963196
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all creamybuns in the fridge",
+      "example_task_name": "Put all bananas on the kitchentable",
+      "cosine": 0.4530327320098877
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all creamybuns in the fridge",
+      "example_task_name": "Put all bellpeppers in the microwave",
+      "cosine": 0.3695213198661804
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all creamybuns in the fridge",
+      "example_task_name": "Put all chips in the fridge",
+      "cosine": 0.4652845561504364
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all creamybuns in the fridge",
+      "example_task_name": "Put all chips on the coffeetable",
+      "cosine": 0.2987879514694214
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all creamybuns in the fridge",
+      "example_task_name": "Put all crackers on the coffeetable",
+      "cosine": 0.36894965171813965
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all creamybuns in the fridge",
+      "example_task_name": "Put all cupcakes in the fridge",
+      "cosine": 0.563821017742157
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all creamybuns in the fridge",
+      "example_task_name": "Put all cupcakes on the kitchentable",
+      "cosine": 0.41736486554145813
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all creamybuns in the fridge",
+      "example_task_name": "Put all juices in the microwave",
+      "cosine": 0.42006346583366394
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all creamybuns in the fridge",
+      "example_task_name": "Put all juices on the coffeetable",
+      "cosine": 0.35198551416397095
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all creamybuns in the fridge",
+      "example_task_name": "Put all milks in the fridge",
+      "cosine": 0.6745225191116333
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all creamybuns in the fridge",
+      "example_task_name": "Put all milks on the kitchentable",
+      "cosine": 0.557269811630249
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all creamybuns in the fridge",
+      "example_task_name": "Put all peaches on the coffeetable",
+      "cosine": 0.4242428243160248
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all creamybuns in the fridge",
+      "example_task_name": "Put all peaches on the oventray",
+      "cosine": 0.3129458427429199
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all creamybuns in the fridge",
+      "example_task_name": "Put all plums on the coffeetable",
+      "cosine": 0.41927433013916016
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all creamybuns in the fridge",
+      "example_task_name": "Put all plums on the kitchentable",
+      "cosine": 0.4522898197174072
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all creamybuns in the fridge",
+      "example_task_name": "Put all plums on the oventray",
+      "cosine": 0.32587510347366333
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all creamybuns in the microwave",
+      "example_task_name": "Put all apples in the fridge",
+      "cosine": 0.35911065340042114
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all creamybuns in the microwave",
+      "example_task_name": "Put all apples in the microwave",
+      "cosine": 0.5897551774978638
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all creamybuns in the microwave",
+      "example_task_name": "Put all apples on the kitchentable",
+      "cosine": 0.4296897053718567
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all creamybuns in the microwave",
+      "example_task_name": "Put all bananas on the kitchentable",
+      "cosine": 0.5096961259841919
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all creamybuns in the microwave",
+      "example_task_name": "Put all bellpeppers in the microwave",
+      "cosine": 0.6402214765548706
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all creamybuns in the microwave",
+      "example_task_name": "Put all chips in the fridge",
+      "cosine": 0.35369759798049927
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all creamybuns in the microwave",
+      "example_task_name": "Put all chips on the coffeetable",
+      "cosine": 0.36530742049217224
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all creamybuns in the microwave",
+      "example_task_name": "Put all crackers on the coffeetable",
+      "cosine": 0.41130316257476807
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all creamybuns in the microwave",
+      "example_task_name": "Put all cupcakes in the fridge",
+      "cosine": 0.4208991229534149
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all creamybuns in the microwave",
+      "example_task_name": "Put all cupcakes on the kitchentable",
+      "cosine": 0.45348209142684937
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all creamybuns in the microwave",
+      "example_task_name": "Put all juices in the microwave",
+      "cosine": 0.6308796405792236
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all creamybuns in the microwave",
+      "example_task_name": "Put all juices on the coffeetable",
+      "cosine": 0.35143038630485535
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all creamybuns in the microwave",
+      "example_task_name": "Put all milks in the fridge",
+      "cosine": 0.5083044171333313
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all creamybuns in the microwave",
+      "example_task_name": "Put all milks on the kitchentable",
+      "cosine": 0.6021682024002075
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all creamybuns in the microwave",
+      "example_task_name": "Put all peaches on the coffeetable",
+      "cosine": 0.45278528332710266
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all creamybuns in the microwave",
+      "example_task_name": "Put all peaches on the oventray",
+      "cosine": 0.4083139896392822
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all creamybuns in the microwave",
+      "example_task_name": "Put all plums on the coffeetable",
+      "cosine": 0.42228269577026367
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all creamybuns in the microwave",
+      "example_task_name": "Put all plums on the kitchentable",
+      "cosine": 0.44686731696128845
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all creamybuns in the microwave",
+      "example_task_name": "Put all plums on the oventray",
+      "cosine": 0.42017441987991333
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all creamybuns on the kitchentable",
+      "example_task_name": "Put all apples in the fridge",
+      "cosine": 0.31389153003692627
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all creamybuns on the kitchentable",
+      "example_task_name": "Put all apples in the microwave",
+      "cosine": 0.39776167273521423
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all creamybuns on the kitchentable",
+      "example_task_name": "Put all apples on the kitchentable",
+      "cosine": 0.6323424577713013
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all creamybuns on the kitchentable",
+      "example_task_name": "Put all bananas on the kitchentable",
+      "cosine": 0.658450722694397
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all creamybuns on the kitchentable",
+      "example_task_name": "Put all bellpeppers in the microwave",
+      "cosine": 0.3962118923664093
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all creamybuns on the kitchentable",
+      "example_task_name": "Put all chips in the fridge",
+      "cosine": 0.30206263065338135
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all creamybuns on the kitchentable",
+      "example_task_name": "Put all chips on the coffeetable",
+      "cosine": 0.5249375104904175
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all creamybuns on the kitchentable",
+      "example_task_name": "Put all crackers on the coffeetable",
+      "cosine": 0.5385903120040894
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all creamybuns on the kitchentable",
+      "example_task_name": "Put all cupcakes in the fridge",
+      "cosine": 0.38973259925842285
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all creamybuns on the kitchentable",
+      "example_task_name": "Put all cupcakes on the kitchentable",
+      "cosine": 0.6637578010559082
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all creamybuns on the kitchentable",
+      "example_task_name": "Put all juices in the microwave",
+      "cosine": 0.4336152970790863
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all creamybuns on the kitchentable",
+      "example_task_name": "Put all juices on the coffeetable",
+      "cosine": 0.5535025596618652
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all creamybuns on the kitchentable",
+      "example_task_name": "Put all milks in the fridge",
+      "cosine": 0.4179885983467102
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all creamybuns on the kitchentable",
+      "example_task_name": "Put all milks on the kitchentable",
+      "cosine": 0.7625018358230591
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all creamybuns on the kitchentable",
+      "example_task_name": "Put all peaches on the coffeetable",
+      "cosine": 0.6068819761276245
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all creamybuns on the kitchentable",
+      "example_task_name": "Put all peaches on the oventray",
+      "cosine": 0.38973283767700195
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all creamybuns on the kitchentable",
+      "example_task_name": "Put all plums on the coffeetable",
+      "cosine": 0.5844112634658813
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all creamybuns on the kitchentable",
+      "example_task_name": "Put all plums on the kitchentable",
+      "cosine": 0.6447380781173706
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all creamybuns on the kitchentable",
+      "example_task_name": "Put all plums on the oventray",
+      "cosine": 0.3876802623271942
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all cupcakes in the microwave",
+      "example_task_name": "Put all apples in the fridge",
+      "cosine": 0.38788795471191406
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all cupcakes in the microwave",
+      "example_task_name": "Put all apples in the microwave",
+      "cosine": 0.6199110746383667
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all cupcakes in the microwave",
+      "example_task_name": "Put all apples on the kitchentable",
+      "cosine": 0.4418768286705017
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all cupcakes in the microwave",
+      "example_task_name": "Put all bananas on the kitchentable",
+      "cosine": 0.4324660897254944
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all cupcakes in the microwave",
+      "example_task_name": "Put all bellpeppers in the microwave",
+      "cosine": 0.6356178522109985
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all cupcakes in the microwave",
+      "example_task_name": "Put all chips in the fridge",
+      "cosine": 0.46493977308273315
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all cupcakes in the microwave",
+      "example_task_name": "Put all chips on the coffeetable",
+      "cosine": 0.4506497383117676
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all cupcakes in the microwave",
+      "example_task_name": "Put all crackers on the coffeetable",
+      "cosine": 0.3867335319519043
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all cupcakes in the microwave",
+      "example_task_name": "Put all cupcakes in the fridge",
+      "cosine": 0.8067172765731812
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all cupcakes in the microwave",
+      "example_task_name": "Put all cupcakes on the kitchentable",
+      "cosine": 0.7639733552932739
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all cupcakes in the microwave",
+      "example_task_name": "Put all juices in the microwave",
+      "cosine": 0.6437156200408936
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all cupcakes in the microwave",
+      "example_task_name": "Put all juices on the coffeetable",
+      "cosine": 0.374824583530426
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all cupcakes in the microwave",
+      "example_task_name": "Put all milks in the fridge",
+      "cosine": 0.43375635147094727
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all cupcakes in the microwave",
+      "example_task_name": "Put all milks on the kitchentable",
+      "cosine": 0.48113998770713806
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all cupcakes in the microwave",
+      "example_task_name": "Put all peaches on the coffeetable",
+      "cosine": 0.4594809412956238
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all cupcakes in the microwave",
+      "example_task_name": "Put all peaches on the oventray",
+      "cosine": 0.47202637791633606
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all cupcakes in the microwave",
+      "example_task_name": "Put all plums on the coffeetable",
+      "cosine": 0.3516324460506439
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all cupcakes in the microwave",
+      "example_task_name": "Put all plums on the kitchentable",
+      "cosine": 0.3303643763065338
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all cupcakes in the microwave",
+      "example_task_name": "Put all plums on the oventray",
+      "cosine": 0.3944246470928192
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all cupcakes on the coffeetable",
+      "example_task_name": "Put all apples in the fridge",
+      "cosine": 0.2944241166114807
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all cupcakes on the coffeetable",
+      "example_task_name": "Put all apples in the microwave",
+      "cosine": 0.385506272315979
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all cupcakes on the coffeetable",
+      "example_task_name": "Put all apples on the kitchentable",
+      "cosine": 0.5601747035980225
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all cupcakes on the coffeetable",
+      "example_task_name": "Put all bananas on the kitchentable",
+      "cosine": 0.5226147770881653
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all cupcakes on the coffeetable",
+      "example_task_name": "Put all bellpeppers in the microwave",
+      "cosine": 0.39560800790786743
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all cupcakes on the coffeetable",
+      "example_task_name": "Put all chips in the fridge",
+      "cosine": 0.3359714150428772
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all cupcakes on the coffeetable",
+      "example_task_name": "Put all chips on the coffeetable",
+      "cosine": 0.727117657661438
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all cupcakes on the coffeetable",
+      "example_task_name": "Put all crackers on the coffeetable",
+      "cosine": 0.6566575169563293
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all cupcakes on the coffeetable",
+      "example_task_name": "Put all cupcakes in the fridge",
+      "cosine": 0.7292447090148926
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all cupcakes on the coffeetable",
+      "example_task_name": "Put all cupcakes on the kitchentable",
+      "cosine": 0.9010488986968994
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all cupcakes on the coffeetable",
+      "example_task_name": "Put all juices in the microwave",
+      "cosine": 0.4179961681365967
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all cupcakes on the coffeetable",
+      "example_task_name": "Put all juices on the coffeetable",
+      "cosine": 0.6977294683456421
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all cupcakes on the coffeetable",
+      "example_task_name": "Put all milks in the fridge",
+      "cosine": 0.33718883991241455
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all cupcakes on the coffeetable",
+      "example_task_name": "Put all milks on the kitchentable",
+      "cosine": 0.5811302065849304
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all cupcakes on the coffeetable",
+      "example_task_name": "Put all peaches on the coffeetable",
+      "cosine": 0.6986113786697388
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all cupcakes on the coffeetable",
+      "example_task_name": "Put all peaches on the oventray",
+      "cosine": 0.3719969093799591
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all cupcakes on the coffeetable",
+      "example_task_name": "Put all plums on the coffeetable",
+      "cosine": 0.6448559165000916
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all cupcakes on the coffeetable",
+      "example_task_name": "Put all plums on the kitchentable",
+      "cosine": 0.4491649270057678
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all cupcakes on the coffeetable",
+      "example_task_name": "Put all plums on the oventray",
+      "cosine": 0.2987189292907715
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all cupcakes on the desk",
+      "example_task_name": "Put all apples in the fridge",
+      "cosine": 0.34514114260673523
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all cupcakes on the desk",
+      "example_task_name": "Put all apples in the microwave",
+      "cosine": 0.3889284133911133
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all cupcakes on the desk",
+      "example_task_name": "Put all apples on the kitchentable",
+      "cosine": 0.45700007677078247
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all cupcakes on the desk",
+      "example_task_name": "Put all bananas on the kitchentable",
+      "cosine": 0.41757529973983765
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all cupcakes on the desk",
+      "example_task_name": "Put all bellpeppers in the microwave",
+      "cosine": 0.3382534980773926
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all cupcakes on the desk",
+      "example_task_name": "Put all chips in the fridge",
+      "cosine": 0.3866783678531647
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all cupcakes on the desk",
+      "example_task_name": "Put all chips on the coffeetable",
+      "cosine": 0.45696067810058594
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all cupcakes on the desk",
+      "example_task_name": "Put all crackers on the coffeetable",
+      "cosine": 0.38298299908638
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all cupcakes on the desk",
+      "example_task_name": "Put all cupcakes in the fridge",
+      "cosine": 0.7498782873153687
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all cupcakes on the desk",
+      "example_task_name": "Put all cupcakes on the kitchentable",
+      "cosine": 0.7782737016677856
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all cupcakes on the desk",
+      "example_task_name": "Put all juices in the microwave",
+      "cosine": 0.35071709752082825
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all cupcakes on the desk",
+      "example_task_name": "Put all juices on the coffeetable",
+      "cosine": 0.40810078382492065
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all cupcakes on the desk",
+      "example_task_name": "Put all milks in the fridge",
+      "cosine": 0.3297477662563324
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all cupcakes on the desk",
+      "example_task_name": "Put all milks on the kitchentable",
+      "cosine": 0.41442111134529114
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all cupcakes on the desk",
+      "example_task_name": "Put all peaches on the coffeetable",
+      "cosine": 0.45889922976493835
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all cupcakes on the desk",
+      "example_task_name": "Put all peaches on the oventray",
+      "cosine": 0.3706449866294861
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all cupcakes on the desk",
+      "example_task_name": "Put all plums on the coffeetable",
+      "cosine": 0.3823804259300232
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all cupcakes on the desk",
+      "example_task_name": "Put all plums on the kitchentable",
+      "cosine": 0.3294453024864197
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all cupcakes on the desk",
+      "example_task_name": "Put all plums on the oventray",
+      "cosine": 0.273561954498291
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all cupcakes on the kitchencounter",
+      "example_task_name": "Put all apples in the fridge",
+      "cosine": 0.3357502520084381
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all cupcakes on the kitchencounter",
+      "example_task_name": "Put all apples in the microwave",
+      "cosine": 0.3750050365924835
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all cupcakes on the kitchencounter",
+      "example_task_name": "Put all apples on the kitchentable",
+      "cosine": 0.47625014185905457
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all cupcakes on the kitchencounter",
+      "example_task_name": "Put all bananas on the kitchentable",
+      "cosine": 0.431638240814209
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all cupcakes on the kitchencounter",
+      "example_task_name": "Put all bellpeppers in the microwave",
+      "cosine": 0.3835304379463196
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all cupcakes on the kitchencounter",
+      "example_task_name": "Put all chips in the fridge",
+      "cosine": 0.42643386125564575
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all cupcakes on the kitchencounter",
+      "example_task_name": "Put all chips on the coffeetable",
+      "cosine": 0.461870938539505
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all cupcakes on the kitchencounter",
+      "example_task_name": "Put all crackers on the coffeetable",
+      "cosine": 0.39217856526374817
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all cupcakes on the kitchencounter",
+      "example_task_name": "Put all cupcakes in the fridge",
+      "cosine": 0.8047510981559753
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all cupcakes on the kitchencounter",
+      "example_task_name": "Put all cupcakes on the kitchentable",
+      "cosine": 0.8536933660507202
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all cupcakes on the kitchencounter",
+      "example_task_name": "Put all juices in the microwave",
+      "cosine": 0.380310595035553
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all cupcakes on the kitchencounter",
+      "example_task_name": "Put all juices on the coffeetable",
+      "cosine": 0.3905274569988251
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all cupcakes on the kitchencounter",
+      "example_task_name": "Put all milks in the fridge",
+      "cosine": 0.345946729183197
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all cupcakes on the kitchencounter",
+      "example_task_name": "Put all milks on the kitchentable",
+      "cosine": 0.4725584089756012
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all cupcakes on the kitchencounter",
+      "example_task_name": "Put all peaches on the coffeetable",
+      "cosine": 0.4627525806427002
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all cupcakes on the kitchencounter",
+      "example_task_name": "Put all peaches on the oventray",
+      "cosine": 0.4478123188018799
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all cupcakes on the kitchencounter",
+      "example_task_name": "Put all plums on the coffeetable",
+      "cosine": 0.3774970769882202
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all cupcakes on the kitchencounter",
+      "example_task_name": "Put all plums on the kitchentable",
+      "cosine": 0.41055235266685486
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all cupcakes on the kitchencounter",
+      "example_task_name": "Put all plums on the oventray",
+      "cosine": 0.36123645305633545
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all juices in the fridge",
+      "example_task_name": "Put all apples in the fridge",
+      "cosine": 0.6653808355331421
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all juices in the fridge",
+      "example_task_name": "Put all apples in the microwave",
+      "cosine": 0.5030847787857056
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all juices in the fridge",
+      "example_task_name": "Put all apples on the kitchentable",
+      "cosine": 0.44216054677963257
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all juices in the fridge",
+      "example_task_name": "Put all bananas on the kitchentable",
+      "cosine": 0.4067520499229431
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all juices in the fridge",
+      "example_task_name": "Put all bellpeppers in the microwave",
+      "cosine": 0.3908306360244751
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all juices in the fridge",
+      "example_task_name": "Put all chips in the fridge",
+      "cosine": 0.5541566610336304
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all juices in the fridge",
+      "example_task_name": "Put all chips on the coffeetable",
+      "cosine": 0.3371858596801758
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all juices in the fridge",
+      "example_task_name": "Put all crackers on the coffeetable",
+      "cosine": 0.33453527092933655
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all juices in the fridge",
+      "example_task_name": "Put all cupcakes in the fridge",
+      "cosine": 0.5271489024162292
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all juices in the fridge",
+      "example_task_name": "Put all cupcakes on the kitchentable",
+      "cosine": 0.34661105275154114
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all juices in the fridge",
+      "example_task_name": "Put all juices in the microwave",
+      "cosine": 0.7675208449363708
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all juices in the fridge",
+      "example_task_name": "Put all juices on the coffeetable",
+      "cosine": 0.677553653717041
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all juices in the fridge",
+      "example_task_name": "Put all milks in the fridge",
+      "cosine": 0.6156286001205444
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all juices in the fridge",
+      "example_task_name": "Put all milks on the kitchentable",
+      "cosine": 0.4284723401069641
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all juices in the fridge",
+      "example_task_name": "Put all peaches on the coffeetable",
+      "cosine": 0.5071208477020264
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all juices in the fridge",
+      "example_task_name": "Put all peaches on the oventray",
+      "cosine": 0.40441423654556274
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all juices in the fridge",
+      "example_task_name": "Put all plums on the coffeetable",
+      "cosine": 0.43077749013900757
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all juices in the fridge",
+      "example_task_name": "Put all plums on the kitchentable",
+      "cosine": 0.4211137294769287
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all juices in the fridge",
+      "example_task_name": "Put all plums on the oventray",
+      "cosine": 0.35941770672798157
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all milks in the microwave",
+      "example_task_name": "Put all apples in the fridge",
+      "cosine": 0.43531548976898193
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all milks in the microwave",
+      "example_task_name": "Put all apples in the microwave",
+      "cosine": 0.6560136079788208
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all milks in the microwave",
+      "example_task_name": "Put all apples on the kitchentable",
+      "cosine": 0.4267340898513794
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all milks in the microwave",
+      "example_task_name": "Put all bananas on the kitchentable",
+      "cosine": 0.45534950494766235
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all milks in the microwave",
+      "example_task_name": "Put all bellpeppers in the microwave",
+      "cosine": 0.6174293756484985
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all milks in the microwave",
+      "example_task_name": "Put all chips in the fridge",
+      "cosine": 0.3871958255767822
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all milks in the microwave",
+      "example_task_name": "Put all chips on the coffeetable",
+      "cosine": 0.34364062547683716
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all milks in the microwave",
+      "example_task_name": "Put all crackers on the coffeetable",
+      "cosine": 0.38208073377609253
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all milks in the microwave",
+      "example_task_name": "Put all cupcakes in the fridge",
+      "cosine": 0.4457204341888428
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all milks in the microwave",
+      "example_task_name": "Put all cupcakes on the kitchentable",
+      "cosine": 0.40229350328445435
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all milks in the microwave",
+      "example_task_name": "Put all juices in the microwave",
+      "cosine": 0.6912978887557983
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all milks in the microwave",
+      "example_task_name": "Put all juices on the coffeetable",
+      "cosine": 0.35464221239089966
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all milks in the microwave",
+      "example_task_name": "Put all milks in the fridge",
+      "cosine": 0.7915211915969849
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all milks in the microwave",
+      "example_task_name": "Put all milks on the kitchentable",
+      "cosine": 0.7534511089324951
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all milks in the microwave",
+      "example_task_name": "Put all peaches on the coffeetable",
+      "cosine": 0.40367454290390015
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all milks in the microwave",
+      "example_task_name": "Put all peaches on the oventray",
+      "cosine": 0.34053486585617065
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all milks in the microwave",
+      "example_task_name": "Put all plums on the coffeetable",
+      "cosine": 0.3732222318649292
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all milks in the microwave",
+      "example_task_name": "Put all plums on the kitchentable",
+      "cosine": 0.36682090163230896
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all milks in the microwave",
+      "example_task_name": "Put all plums on the oventray",
+      "cosine": 0.3486654758453369
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all milks on the coffeetable",
+      "example_task_name": "Put all apples in the fridge",
+      "cosine": 0.33819741010665894
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all milks on the coffeetable",
+      "example_task_name": "Put all apples in the microwave",
+      "cosine": 0.43770429491996765
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all milks on the coffeetable",
+      "example_task_name": "Put all apples on the kitchentable",
+      "cosine": 0.5604119896888733
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all milks on the coffeetable",
+      "example_task_name": "Put all bananas on the kitchentable",
+      "cosine": 0.5732241868972778
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all milks on the coffeetable",
+      "example_task_name": "Put all bellpeppers in the microwave",
+      "cosine": 0.40660059452056885
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all milks on the coffeetable",
+      "example_task_name": "Put all chips in the fridge",
+      "cosine": 0.2774738669395447
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all milks on the coffeetable",
+      "example_task_name": "Put all chips on the coffeetable",
+      "cosine": 0.6936330795288086
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all milks on the coffeetable",
+      "example_task_name": "Put all crackers on the coffeetable",
+      "cosine": 0.7228164672851562
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all milks on the coffeetable",
+      "example_task_name": "Put all cupcakes in the fridge",
+      "cosine": 0.43090003728866577
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all milks on the coffeetable",
+      "example_task_name": "Put all cupcakes on the kitchentable",
+      "cosine": 0.5985151529312134
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all milks on the coffeetable",
+      "example_task_name": "Put all juices in the microwave",
+      "cosine": 0.516291618347168
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all milks on the coffeetable",
+      "example_task_name": "Put all juices on the coffeetable",
+      "cosine": 0.7616146802902222
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all milks on the coffeetable",
+      "example_task_name": "Put all milks in the fridge",
+      "cosine": 0.6588666439056396
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all milks on the coffeetable",
+      "example_task_name": "Put all milks on the kitchentable",
+      "cosine": 0.8616828322410583
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all milks on the coffeetable",
+      "example_task_name": "Put all peaches on the coffeetable",
+      "cosine": 0.7168635129928589
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all milks on the coffeetable",
+      "example_task_name": "Put all peaches on the oventray",
+      "cosine": 0.2780536413192749
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all milks on the coffeetable",
+      "example_task_name": "Put all plums on the coffeetable",
+      "cosine": 0.7258982062339783
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all milks on the coffeetable",
+      "example_task_name": "Put all plums on the kitchentable",
+      "cosine": 0.5051421523094177
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all milks on the coffeetable",
+      "example_task_name": "Put all plums on the oventray",
+      "cosine": 0.27405115962028503
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all milks on the cuttingboard",
+      "example_task_name": "Put all apples in the fridge",
+      "cosine": 0.32489240169525146
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all milks on the cuttingboard",
+      "example_task_name": "Put all apples in the microwave",
+      "cosine": 0.38499915599823
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all milks on the cuttingboard",
+      "example_task_name": "Put all apples on the kitchentable",
+      "cosine": 0.42213737964630127
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all milks on the cuttingboard",
+      "example_task_name": "Put all bananas on the kitchentable",
+      "cosine": 0.445049911737442
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all milks on the cuttingboard",
+      "example_task_name": "Put all bellpeppers in the microwave",
+      "cosine": 0.30053815245628357
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all milks on the cuttingboard",
+      "example_task_name": "Put all chips in the fridge",
+      "cosine": 0.36065784096717834
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all milks on the cuttingboard",
+      "example_task_name": "Put all chips on the coffeetable",
+      "cosine": 0.3996521830558777
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all milks on the cuttingboard",
+      "example_task_name": "Put all crackers on the coffeetable",
+      "cosine": 0.3990897536277771
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all milks on the cuttingboard",
+      "example_task_name": "Put all cupcakes in the fridge",
+      "cosine": 0.40734750032424927
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all milks on the cuttingboard",
+      "example_task_name": "Put all cupcakes on the kitchentable",
+      "cosine": 0.4397146701812744
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all milks on the cuttingboard",
+      "example_task_name": "Put all juices in the microwave",
+      "cosine": 0.4299761652946472
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all milks on the cuttingboard",
+      "example_task_name": "Put all juices on the coffeetable",
+      "cosine": 0.3958202600479126
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all milks on the cuttingboard",
+      "example_task_name": "Put all milks in the fridge",
+      "cosine": 0.6777494549751282
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all milks on the cuttingboard",
+      "example_task_name": "Put all milks on the kitchentable",
+      "cosine": 0.7180633544921875
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all milks on the cuttingboard",
+      "example_task_name": "Put all peaches on the coffeetable",
+      "cosine": 0.40180158615112305
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all milks on the cuttingboard",
+      "example_task_name": "Put all peaches on the oventray",
+      "cosine": 0.2720421552658081
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all milks on the cuttingboard",
+      "example_task_name": "Put all plums on the coffeetable",
+      "cosine": 0.4490295648574829
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all milks on the cuttingboard",
+      "example_task_name": "Put all plums on the kitchentable",
+      "cosine": 0.4449531137943268
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all milks on the cuttingboard",
+      "example_task_name": "Put all plums on the oventray",
+      "cosine": 0.3117258548736572
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all milks on the desk",
+      "example_task_name": "Put all apples in the fridge",
+      "cosine": 0.4041053056716919
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all milks on the desk",
+      "example_task_name": "Put all apples in the microwave",
+      "cosine": 0.4467935264110565
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all milks on the desk",
+      "example_task_name": "Put all apples on the kitchentable",
+      "cosine": 0.44703423976898193
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all milks on the desk",
+      "example_task_name": "Put all bananas on the kitchentable",
+      "cosine": 0.4589451253414154
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all milks on the desk",
+      "example_task_name": "Put all bellpeppers in the microwave",
+      "cosine": 0.31833621859550476
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all milks on the desk",
+      "example_task_name": "Put all chips in the fridge",
+      "cosine": 0.3187243938446045
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all milks on the desk",
+      "example_task_name": "Put all chips on the coffeetable",
+      "cosine": 0.36888259649276733
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all milks on the desk",
+      "example_task_name": "Put all crackers on the coffeetable",
+      "cosine": 0.4149568974971771
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all milks on the desk",
+      "example_task_name": "Put all cupcakes in the fridge",
+      "cosine": 0.45884913206100464
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all milks on the desk",
+      "example_task_name": "Put all cupcakes on the kitchentable",
+      "cosine": 0.45469027757644653
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all milks on the desk",
+      "example_task_name": "Put all juices in the microwave",
+      "cosine": 0.4391038715839386
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all milks on the desk",
+      "example_task_name": "Put all juices on the coffeetable",
+      "cosine": 0.4292218089103699
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all milks on the desk",
+      "example_task_name": "Put all milks in the fridge",
+      "cosine": 0.7066254019737244
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all milks on the desk",
+      "example_task_name": "Put all milks on the kitchentable",
+      "cosine": 0.718846321105957
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all milks on the desk",
+      "example_task_name": "Put all peaches on the coffeetable",
+      "cosine": 0.4578419327735901
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all milks on the desk",
+      "example_task_name": "Put all peaches on the oventray",
+      "cosine": 0.2752656936645508
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all milks on the desk",
+      "example_task_name": "Put all plums on the coffeetable",
+      "cosine": 0.4419645071029663
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all milks on the desk",
+      "example_task_name": "Put all plums on the kitchentable",
+      "cosine": 0.38692009449005127
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all milks on the desk",
+      "example_task_name": "Put all plums on the oventray",
+      "cosine": 0.25778210163116455
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all milks on the kitchencounter",
+      "example_task_name": "Put all apples in the fridge",
+      "cosine": 0.4150710701942444
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all milks on the kitchencounter",
+      "example_task_name": "Put all apples in the microwave",
+      "cosine": 0.45410922169685364
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all milks on the kitchencounter",
+      "example_task_name": "Put all apples on the kitchentable",
+      "cosine": 0.5036656856536865
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all milks on the kitchencounter",
+      "example_task_name": "Put all bananas on the kitchentable",
+      "cosine": 0.5155913233757019
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all milks on the kitchencounter",
+      "example_task_name": "Put all bellpeppers in the microwave",
+      "cosine": 0.4077453017234802
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all milks on the kitchencounter",
+      "example_task_name": "Put all chips in the fridge",
+      "cosine": 0.3972111940383911
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all milks on the kitchencounter",
+      "example_task_name": "Put all chips on the coffeetable",
+      "cosine": 0.40158507227897644
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all milks on the kitchencounter",
+      "example_task_name": "Put all crackers on the coffeetable",
+      "cosine": 0.4428991377353668
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all milks on the kitchencounter",
+      "example_task_name": "Put all cupcakes in the fridge",
+      "cosine": 0.4710138440132141
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all milks on the kitchencounter",
+      "example_task_name": "Put all cupcakes on the kitchentable",
+      "cosine": 0.5223205089569092
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all milks on the kitchencounter",
+      "example_task_name": "Put all juices in the microwave",
+      "cosine": 0.5030202865600586
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all milks on the kitchencounter",
+      "example_task_name": "Put all juices on the coffeetable",
+      "cosine": 0.427595317363739
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all milks on the kitchencounter",
+      "example_task_name": "Put all milks in the fridge",
+      "cosine": 0.7572528123855591
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all milks on the kitchencounter",
+      "example_task_name": "Put all milks on the kitchentable",
+      "cosine": 0.8339710235595703
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all milks on the kitchencounter",
+      "example_task_name": "Put all peaches on the coffeetable",
+      "cosine": 0.4626406729221344
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all milks on the kitchencounter",
+      "example_task_name": "Put all peaches on the oventray",
+      "cosine": 0.37144935131073
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all milks on the kitchencounter",
+      "example_task_name": "Put all plums on the coffeetable",
+      "cosine": 0.45282793045043945
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all milks on the kitchencounter",
+      "example_task_name": "Put all plums on the kitchentable",
+      "cosine": 0.5085114240646362
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all milks on the kitchencounter",
+      "example_task_name": "Put all plums on the oventray",
+      "cosine": 0.3813989758491516
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all peaches in the fridge",
+      "example_task_name": "Put all apples in the fridge",
+      "cosine": 0.6929860711097717
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all peaches in the fridge",
+      "example_task_name": "Put all apples in the microwave",
+      "cosine": 0.5814486742019653
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all peaches in the fridge",
+      "example_task_name": "Put all apples on the kitchentable",
+      "cosine": 0.4816409945487976
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all peaches in the fridge",
+      "example_task_name": "Put all bananas on the kitchentable",
+      "cosine": 0.44140803813934326
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all peaches in the fridge",
+      "example_task_name": "Put all bellpeppers in the microwave",
+      "cosine": 0.4087687134742737
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all peaches in the fridge",
+      "example_task_name": "Put all chips in the fridge",
+      "cosine": 0.4878745675086975
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all peaches in the fridge",
+      "example_task_name": "Put all chips on the coffeetable",
+      "cosine": 0.24383673071861267
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all peaches in the fridge",
+      "example_task_name": "Put all crackers on the coffeetable",
+      "cosine": 0.2484697848558426
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all peaches in the fridge",
+      "example_task_name": "Put all cupcakes in the fridge",
+      "cosine": 0.4882126450538635
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all peaches in the fridge",
+      "example_task_name": "Put all cupcakes on the kitchentable",
+      "cosine": 0.32052454352378845
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all peaches in the fridge",
+      "example_task_name": "Put all juices in the microwave",
+      "cosine": 0.5053437352180481
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all peaches in the fridge",
+      "example_task_name": "Put all juices on the coffeetable",
+      "cosine": 0.38352200388908386
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all peaches in the fridge",
+      "example_task_name": "Put all milks in the fridge",
+      "cosine": 0.5469768047332764
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all peaches in the fridge",
+      "example_task_name": "Put all milks on the kitchentable",
+      "cosine": 0.36890268325805664
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all peaches in the fridge",
+      "example_task_name": "Put all peaches on the coffeetable",
+      "cosine": 0.7055116891860962
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all peaches in the fridge",
+      "example_task_name": "Put all peaches on the oventray",
+      "cosine": 0.7355716228485107
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all peaches in the fridge",
+      "example_task_name": "Put all plums on the coffeetable",
+      "cosine": 0.4199450612068176
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all peaches in the fridge",
+      "example_task_name": "Put all plums on the kitchentable",
+      "cosine": 0.493306040763855
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all peaches in the fridge",
+      "example_task_name": "Put all plums on the oventray",
+      "cosine": 0.4697346091270447
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all peaches in the microwave",
+      "example_task_name": "Put all apples in the fridge",
+      "cosine": 0.582320511341095
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all peaches in the microwave",
+      "example_task_name": "Put all apples in the microwave",
+      "cosine": 0.7549737691879272
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all peaches in the microwave",
+      "example_task_name": "Put all apples on the kitchentable",
+      "cosine": 0.5500251054763794
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all peaches in the microwave",
+      "example_task_name": "Put all bananas on the kitchentable",
+      "cosine": 0.5087405443191528
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all peaches in the microwave",
+      "example_task_name": "Put all bellpeppers in the microwave",
+      "cosine": 0.6376652717590332
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all peaches in the microwave",
+      "example_task_name": "Put all chips in the fridge",
+      "cosine": 0.41677024960517883
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all peaches in the microwave",
+      "example_task_name": "Put all chips on the coffeetable",
+      "cosine": 0.3256065845489502
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all peaches in the microwave",
+      "example_task_name": "Put all crackers on the coffeetable",
+      "cosine": 0.3160223960876465
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all peaches in the microwave",
+      "example_task_name": "Put all cupcakes in the fridge",
+      "cosine": 0.4128502905368805
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all peaches in the microwave",
+      "example_task_name": "Put all cupcakes on the kitchentable",
+      "cosine": 0.3834277093410492
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all peaches in the microwave",
+      "example_task_name": "Put all juices in the microwave",
+      "cosine": 0.683302104473114
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all peaches in the microwave",
+      "example_task_name": "Put all juices on the coffeetable",
+      "cosine": 0.4085248112678528
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all peaches in the microwave",
+      "example_task_name": "Put all milks in the fridge",
+      "cosine": 0.44975441694259644
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all peaches in the microwave",
+      "example_task_name": "Put all milks on the kitchentable",
+      "cosine": 0.4441092610359192
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all peaches in the microwave",
+      "example_task_name": "Put all peaches on the coffeetable",
+      "cosine": 0.7371182441711426
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all peaches in the microwave",
+      "example_task_name": "Put all peaches on the oventray",
+      "cosine": 0.8025043606758118
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all peaches in the microwave",
+      "example_task_name": "Put all plums on the coffeetable",
+      "cosine": 0.45094752311706543
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all peaches in the microwave",
+      "example_task_name": "Put all plums on the kitchentable",
+      "cosine": 0.512611985206604
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all peaches in the microwave",
+      "example_task_name": "Put all plums on the oventray",
+      "cosine": 0.5522401928901672
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all peaches on the kitchencounter",
+      "example_task_name": "Put all apples in the fridge",
+      "cosine": 0.5344855785369873
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all peaches on the kitchencounter",
+      "example_task_name": "Put all apples in the microwave",
+      "cosine": 0.5528433322906494
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all peaches on the kitchencounter",
+      "example_task_name": "Put all apples on the kitchentable",
+      "cosine": 0.6091874837875366
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all peaches on the kitchencounter",
+      "example_task_name": "Put all bananas on the kitchentable",
+      "cosine": 0.5448038578033447
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all peaches on the kitchencounter",
+      "example_task_name": "Put all bellpeppers in the microwave",
+      "cosine": 0.4560016989707947
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all peaches on the kitchencounter",
+      "example_task_name": "Put all chips in the fridge",
+      "cosine": 0.41897982358932495
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all peaches on the kitchencounter",
+      "example_task_name": "Put all chips on the coffeetable",
+      "cosine": 0.36226844787597656
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all peaches on the kitchencounter",
+      "example_task_name": "Put all crackers on the coffeetable",
+      "cosine": 0.3587096929550171
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all peaches on the kitchencounter",
+      "example_task_name": "Put all cupcakes in the fridge",
+      "cosine": 0.435844749212265
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all peaches on the kitchencounter",
+      "example_task_name": "Put all cupcakes on the kitchentable",
+      "cosine": 0.501976490020752
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all peaches on the kitchencounter",
+      "example_task_name": "Put all juices in the microwave",
+      "cosine": 0.4880163073539734
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all peaches on the kitchencounter",
+      "example_task_name": "Put all juices on the coffeetable",
+      "cosine": 0.42727118730545044
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all peaches on the kitchencounter",
+      "example_task_name": "Put all milks in the fridge",
+      "cosine": 0.3710448741912842
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all peaches on the kitchencounter",
+      "example_task_name": "Put all milks on the kitchentable",
+      "cosine": 0.4712381362915039
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all peaches on the kitchencounter",
+      "example_task_name": "Put all peaches on the coffeetable",
+      "cosine": 0.741974949836731
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all peaches on the kitchencounter",
+      "example_task_name": "Put all peaches on the oventray",
+      "cosine": 0.8023979663848877
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all peaches on the kitchencounter",
+      "example_task_name": "Put all plums on the coffeetable",
+      "cosine": 0.49281254410743713
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all peaches on the kitchencounter",
+      "example_task_name": "Put all plums on the kitchentable",
+      "cosine": 0.6138389706611633
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all peaches on the kitchencounter",
+      "example_task_name": "Put all plums on the oventray",
+      "cosine": 0.5738525390625
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all peaches on the kitchentable",
+      "example_task_name": "Put all apples in the fridge",
+      "cosine": 0.5163190364837646
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all peaches on the kitchentable",
+      "example_task_name": "Put all apples in the microwave",
+      "cosine": 0.5838571786880493
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all peaches on the kitchentable",
+      "example_task_name": "Put all apples on the kitchentable",
+      "cosine": 0.7665634155273438
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all peaches on the kitchentable",
+      "example_task_name": "Put all bananas on the kitchentable",
+      "cosine": 0.6933634877204895
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all peaches on the kitchentable",
+      "example_task_name": "Put all bellpeppers in the microwave",
+      "cosine": 0.4649360179901123
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all peaches on the kitchentable",
+      "example_task_name": "Put all chips in the fridge",
+      "cosine": 0.37786781787872314
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all peaches on the kitchentable",
+      "example_task_name": "Put all chips on the coffeetable",
+      "cosine": 0.5062432885169983
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all peaches on the kitchentable",
+      "example_task_name": "Put all crackers on the coffeetable",
+      "cosine": 0.49028968811035156
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all peaches on the kitchentable",
+      "example_task_name": "Put all cupcakes in the fridge",
+      "cosine": 0.39619842171669006
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all peaches on the kitchentable",
+      "example_task_name": "Put all cupcakes on the kitchentable",
+      "cosine": 0.6247164607048035
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all peaches on the kitchentable",
+      "example_task_name": "Put all juices in the microwave",
+      "cosine": 0.5319797992706299
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all peaches on the kitchentable",
+      "example_task_name": "Put all juices on the coffeetable",
+      "cosine": 0.607192873954773
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all peaches on the kitchentable",
+      "example_task_name": "Put all milks in the fridge",
+      "cosine": 0.3635699450969696
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all peaches on the kitchentable",
+      "example_task_name": "Put all milks on the kitchentable",
+      "cosine": 0.6352269053459167
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all peaches on the kitchentable",
+      "example_task_name": "Put all peaches on the coffeetable",
+      "cosine": 0.8913750648498535
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all peaches on the kitchentable",
+      "example_task_name": "Put all peaches on the oventray",
+      "cosine": 0.7798365354537964
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all peaches on the kitchentable",
+      "example_task_name": "Put all plums on the coffeetable",
+      "cosine": 0.6359171271324158
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all peaches on the kitchentable",
+      "example_task_name": "Put all plums on the kitchentable",
+      "cosine": 0.7309699058532715
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all peaches on the kitchentable",
+      "example_task_name": "Put all plums on the oventray",
+      "cosine": 0.5499348640441895
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all plums in the fridge",
+      "example_task_name": "Put all apples in the fridge",
+      "cosine": 0.5405988097190857
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all plums in the fridge",
+      "example_task_name": "Put all apples in the microwave",
+      "cosine": 0.3948385417461395
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all plums in the fridge",
+      "example_task_name": "Put all apples on the kitchentable",
+      "cosine": 0.33586835861206055
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all plums in the fridge",
+      "example_task_name": "Put all bananas on the kitchentable",
+      "cosine": 0.3253479599952698
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all plums in the fridge",
+      "example_task_name": "Put all bellpeppers in the microwave",
+      "cosine": 0.38970041275024414
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all plums in the fridge",
+      "example_task_name": "Put all chips in the fridge",
+      "cosine": 0.4476289451122284
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all plums in the fridge",
+      "example_task_name": "Put all chips on the coffeetable",
+      "cosine": 0.1973825991153717
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all plums in the fridge",
+      "example_task_name": "Put all crackers on the coffeetable",
+      "cosine": 0.24896210432052612
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all plums in the fridge",
+      "example_task_name": "Put all cupcakes in the fridge",
+      "cosine": 0.4420686960220337
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all plums in the fridge",
+      "example_task_name": "Put all cupcakes on the kitchentable",
+      "cosine": 0.24564076960086823
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all plums in the fridge",
+      "example_task_name": "Put all juices in the microwave",
+      "cosine": 0.4176405072212219
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all plums in the fridge",
+      "example_task_name": "Put all juices on the coffeetable",
+      "cosine": 0.3112894892692566
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all plums in the fridge",
+      "example_task_name": "Put all milks in the fridge",
+      "cosine": 0.5863668918609619
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all plums in the fridge",
+      "example_task_name": "Put all milks on the kitchentable",
+      "cosine": 0.35744190216064453
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all plums in the fridge",
+      "example_task_name": "Put all peaches on the coffeetable",
+      "cosine": 0.4306771457195282
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all plums in the fridge",
+      "example_task_name": "Put all peaches on the oventray",
+      "cosine": 0.3933430314064026
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all plums in the fridge",
+      "example_task_name": "Put all plums on the coffeetable",
+      "cosine": 0.6626298427581787
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all plums in the fridge",
+      "example_task_name": "Put all plums on the kitchentable",
+      "cosine": 0.7605376243591309
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all plums in the fridge",
+      "example_task_name": "Put all plums on the oventray",
+      "cosine": 0.6612854599952698
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all plums in the fryingpan",
+      "example_task_name": "Put all apples in the fridge",
+      "cosine": 0.36234718561172485
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all plums in the fryingpan",
+      "example_task_name": "Put all apples in the microwave",
+      "cosine": 0.35919955372810364
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all plums in the fryingpan",
+      "example_task_name": "Put all apples on the kitchentable",
+      "cosine": 0.3842829763889313
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all plums in the fryingpan",
+      "example_task_name": "Put all bananas on the kitchentable",
+      "cosine": 0.36978331208229065
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all plums in the fryingpan",
+      "example_task_name": "Put all bellpeppers in the microwave",
+      "cosine": 0.40921449661254883
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all plums in the fryingpan",
+      "example_task_name": "Put all chips in the fridge",
+      "cosine": 0.3842812180519104
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all plums in the fryingpan",
+      "example_task_name": "Put all chips on the coffeetable",
+      "cosine": 0.3144121766090393
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all plums in the fryingpan",
+      "example_task_name": "Put all crackers on the coffeetable",
+      "cosine": 0.2987096309661865
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all plums in the fryingpan",
+      "example_task_name": "Put all cupcakes in the fridge",
+      "cosine": 0.34610140323638916
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all plums in the fryingpan",
+      "example_task_name": "Put all cupcakes on the kitchentable",
+      "cosine": 0.34524279832839966
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all plums in the fryingpan",
+      "example_task_name": "Put all juices in the microwave",
+      "cosine": 0.43177980184555054
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all plums in the fryingpan",
+      "example_task_name": "Put all juices on the coffeetable",
+      "cosine": 0.38962292671203613
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all plums in the fryingpan",
+      "example_task_name": "Put all milks in the fridge",
+      "cosine": 0.3497929275035858
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all plums in the fryingpan",
+      "example_task_name": "Put all milks on the kitchentable",
+      "cosine": 0.35029447078704834
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all plums in the fryingpan",
+      "example_task_name": "Put all peaches on the coffeetable",
+      "cosine": 0.4484865069389343
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all plums in the fryingpan",
+      "example_task_name": "Put all peaches on the oventray",
+      "cosine": 0.4547892212867737
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all plums in the fryingpan",
+      "example_task_name": "Put all plums on the coffeetable",
+      "cosine": 0.6869625449180603
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all plums in the fryingpan",
+      "example_task_name": "Put all plums on the kitchentable",
+      "cosine": 0.7685154676437378
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all plums in the fryingpan",
+      "example_task_name": "Put all plums on the oventray",
+      "cosine": 0.7297161817550659
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all plums in the microwave",
+      "example_task_name": "Put all apples in the fridge",
+      "cosine": 0.44600459933280945
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all plums in the microwave",
+      "example_task_name": "Put all apples in the microwave",
+      "cosine": 0.6196686029434204
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all plums in the microwave",
+      "example_task_name": "Put all apples on the kitchentable",
+      "cosine": 0.4266550540924072
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all plums in the microwave",
+      "example_task_name": "Put all bananas on the kitchentable",
+      "cosine": 0.41025030612945557
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all plums in the microwave",
+      "example_task_name": "Put all bellpeppers in the microwave",
+      "cosine": 0.6642211675643921
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all plums in the microwave",
+      "example_task_name": "Put all chips in the fridge",
+      "cosine": 0.37917327880859375
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all plums in the microwave",
+      "example_task_name": "Put all chips on the coffeetable",
+      "cosine": 0.2879379093647003
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all plums in the microwave",
+      "example_task_name": "Put all crackers on the coffeetable",
+      "cosine": 0.32798701524734497
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all plums in the microwave",
+      "example_task_name": "Put all cupcakes in the fridge",
+      "cosine": 0.3558211922645569
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all plums in the microwave",
+      "example_task_name": "Put all cupcakes on the kitchentable",
+      "cosine": 0.3138848543167114
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all plums in the microwave",
+      "example_task_name": "Put all juices in the microwave",
+      "cosine": 0.6511947512626648
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all plums in the microwave",
+      "example_task_name": "Put all juices on the coffeetable",
+      "cosine": 0.348026841878891
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all plums in the microwave",
+      "example_task_name": "Put all milks in the fridge",
+      "cosine": 0.4768427014350891
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all plums in the microwave",
+      "example_task_name": "Put all milks on the kitchentable",
+      "cosine": 0.44672662019729614
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all plums in the microwave",
+      "example_task_name": "Put all peaches on the coffeetable",
+      "cosine": 0.4800916314125061
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all plums in the microwave",
+      "example_task_name": "Put all peaches on the oventray",
+      "cosine": 0.4945877194404602
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all plums in the microwave",
+      "example_task_name": "Put all plums on the coffeetable",
+      "cosine": 0.6842774152755737
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all plums in the microwave",
+      "example_task_name": "Put all plums on the kitchentable",
+      "cosine": 0.7624219059944153
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all plums in the microwave",
+      "example_task_name": "Put all plums on the oventray",
+      "cosine": 0.758360743522644
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all plums on the kitchencounter",
+      "example_task_name": "Put all apples in the fridge",
+      "cosine": 0.3718060851097107
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all plums on the kitchencounter",
+      "example_task_name": "Put all apples in the microwave",
+      "cosine": 0.35634416341781616
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all plums on the kitchencounter",
+      "example_task_name": "Put all apples on the kitchentable",
+      "cosine": 0.45472103357315063
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all plums on the kitchencounter",
+      "example_task_name": "Put all bananas on the kitchentable",
+      "cosine": 0.4107886254787445
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all plums on the kitchencounter",
+      "example_task_name": "Put all bellpeppers in the microwave",
+      "cosine": 0.38602563738822937
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all plums on the kitchencounter",
+      "example_task_name": "Put all chips in the fridge",
+      "cosine": 0.32667091488838196
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all plums on the kitchencounter",
+      "example_task_name": "Put all chips on the coffeetable",
+      "cosine": 0.2702699899673462
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all plums on the kitchencounter",
+      "example_task_name": "Put all crackers on the coffeetable",
+      "cosine": 0.31687217950820923
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all plums on the kitchencounter",
+      "example_task_name": "Put all cupcakes in the fridge",
+      "cosine": 0.3275609612464905
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all plums on the kitchencounter",
+      "example_task_name": "Put all cupcakes on the kitchentable",
+      "cosine": 0.3874366879463196
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all plums on the kitchencounter",
+      "example_task_name": "Put all juices in the microwave",
+      "cosine": 0.3844671845436096
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all plums on the kitchencounter",
+      "example_task_name": "Put all juices on the coffeetable",
+      "cosine": 0.3374759554862976
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all plums on the kitchencounter",
+      "example_task_name": "Put all milks in the fridge",
+      "cosine": 0.3600735664367676
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all plums on the kitchencounter",
+      "example_task_name": "Put all milks on the kitchentable",
+      "cosine": 0.4343149960041046
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all plums on the kitchencounter",
+      "example_task_name": "Put all peaches on the coffeetable",
+      "cosine": 0.4548889994621277
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all plums on the kitchencounter",
+      "example_task_name": "Put all peaches on the oventray",
+      "cosine": 0.46562719345092773
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all plums on the kitchencounter",
+      "example_task_name": "Put all plums on the coffeetable",
+      "cosine": 0.6993170976638794
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all plums on the kitchencounter",
+      "example_task_name": "Put all plums on the kitchentable",
+      "cosine": 0.8574708104133606
+    },
+    {
+      "task_type": "placement_task",
+      "test_task_name": "Put all plums on the kitchencounter",
+      "example_task_name": "Put all plums on the oventray",
+      "cosine": 0.7450121641159058
+    }
+  ]
+}

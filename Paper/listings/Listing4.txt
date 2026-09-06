@@ -1,0 +1,2 @@
+Which the preconditions are not met satisfied? Output only that.
+Preconditions: @\textcolor{red}{\textit{[ Preconditions ]}}@

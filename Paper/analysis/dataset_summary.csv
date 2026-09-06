@@ -1,0 +1,5 @@
+task_type,split,n,task_names,scenes,zero_reference_n,reference_n,reference_mean,reference_median,reference_q1,reference_q3,reference_min,reference_max,reference_sd_sample,reference_iqr,goal_count_n,goal_count_mean,goal_count_median,goal_count_q1,goal_count_q3,goal_count_min,goal_count_max,goal_count_sd_sample,goal_count_iqr
+state_change_task,test,312,6,"[1, 2, 3, 4, 5, 6, 7]",27,312,3.871794871794872,4.0,2.0,6.0,0,10,2.1717802756043634,4.0,312,3.871794871794872,4.0,4.0,4.0,2,5,0.9123514632606284,0.0
+state_change_task,example,152,6,"[1, 2, 3, 4, 5, 6, 7]",32,152,2.3684210526315788,2.0,2.0,4.0,0,8,1.6823360080724548,2.0,152,2.3684210526315788,2.0,2.0,3.0,2,4,0.6679434735007612,1.0
+placement_task,test,103,38,"[1, 2, 3, 4, 5, 6, 7]",2,103,9.174757281553399,8.0,8.0,9.0,0,25,3.451135603002888,1.0,103,2.3398058252427183,2.0,2.0,2.0,2,6,0.8694532658713529,0.0
+placement_task,example,51,19,"[1, 2, 3, 4, 5, 6, 7]",0,51,13.470588235294118,8.0,8.0,12.0,4,53,12.238223631191694,4.0,51,3.6470588235294117,2.0,2.0,3.0,2,13,3.559907467402852,1.0

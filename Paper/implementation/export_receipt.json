@@ -1,0 +1,13 @@
+{
+  "kind": "static_code_export_and_synthetic_serialization_examples",
+  "sha256": {
+    "single-prompt.ipynb": "074514ab57812927031caf51c97663e2b4fa479a11d39f4923930d40ebcba17a",
+    "multi-prompts.ipynb": "68cc07437abb4d80bde06bd900b108497ff3a33548427d63abdfd9eb8111506f",
+    "precondition.json": "427e1bec1a52df0f59f024335dc4bba8bd41dd8cab966694ba53fe606d19018d",
+    "Paper/listings/knowledge_example_inputs.json": "e0f472aa9ae98ab544e9fa8ba9746c478eaa3a2e9956cb82497137b439e4c9e7",
+    "Paper/listings/knowledge_example_placement.txt": "5d873b29569df75c91795839acc4cde1787c31d72bbc4c6caa13d227cf76e001",
+    "Paper/listings/knowledge_example_state.txt": "ca71837c18f02a162acd7e8775cc637bbc59f877f7a5276196e6c3c202b68e74",
+    "Paper/listings/knowledge_extraction.py": "c1343e8d010e68a65e4612cdfe1cb5839d45422b7e0f172aaf186b0100bfd273",
+    "Paper/listings/knowledge_serialization.py": "a3ae937503d3df3f31e3d358232910a1c3ff9557256c92b3bae34156132607d1"
+  }
+}

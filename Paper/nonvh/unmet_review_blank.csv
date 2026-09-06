@@ -1,0 +1,8 @@
+case_id,model,gold_violations,response,human_correctness_label,reviewer
+pc_WALK_violate_1,gpt-4o-mini-2024-07-18,"[""<apple> (101) is not held in your right hand or left hand.""]","The precondition that ""<apple> (101) is not held in your right hand or left hand"" is not satisfied.",,
+pc_WALK_violate_1,gpt-4o-2024-08-06,"[""<apple> (101) is not held in your right hand or left hand.""]",<apple> (101) is not held in your right hand.,,
+pc_SWITCHON_violate_1,gpt-4o-2024-08-06,"[""You are close to <lightswitch> (103).""]",You are close to <lightswitch> (103).,,
+pc_PUT_violate_1,gpt-4o-mini-2024-07-18,"[""You are holding <apple> (101) in your right hand or left hand.""]",You are not holding <apple> (101) in your right hand or left hand.,,
+pc_PUT_violate_1,gpt-4o-2024-08-06,"[""You are holding <apple> (101) in your right hand or left hand.""]",You are holding <apple> (101) in your right hand or left hand.,,
+pc_PUTIN_violate_1,gpt-4o-mini-2024-07-18,"[""You are holding <apple> (101) in your right hand or left hand.""]",You are holding <apple> (101) in your right hand or left hand.,,
+pc_PUTIN_violate_1,gpt-4o-2024-08-06,"[""You are holding <apple> (101) in your right hand or left hand.""]",You are holding <apple> (101) in your right hand or left hand.,,

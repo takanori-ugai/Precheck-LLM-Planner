@@ -1,0 +1,61 @@
+id,missing_location,target_id,required_state,state_text_retained,env,origin
+pc_SWITCHON_valid,False,103,OFF,True,"The current states in the home are as follows: 
+The apple (101) and is INSIDE the kitchen (900).
+The fridge (102) is CLOSED and and is INSIDE the kitchen (900).
+The lightswitch (103) is OFF and and is INSIDE the kitchen (900).
+The kitchentable (104) and is INSIDE the kitchen (900).
+You are INSIDE the kitchen (900).
+You are close to the apple (101) and the fridge (102) and the lightswitch (103) and the kitchentable (104).
+",synthetic_serializer_unit_probe
+pc_SWITCHON_valid,True,103,OFF,False,"The current states in the home are as follows: 
+The apple (101) and is INSIDE the kitchen (900).
+The fridge (102) is CLOSED and and is INSIDE the kitchen (900).
+The kitchentable (104) and is INSIDE the kitchen (900).
+You are INSIDE the kitchen (900).
+You are close to the apple (101) and the fridge (102) and the lightswitch (103) and the kitchentable (104).
+",synthetic_serializer_unit_probe
+pc_SWITCHOFF_valid,False,103,ON,True,"The current states in the home are as follows: 
+The apple (101) and is INSIDE the kitchen (900).
+The fridge (102) is CLOSED and and is INSIDE the kitchen (900).
+The lightswitch (103) is ON and and is INSIDE the kitchen (900).
+The kitchentable (104) and is INSIDE the kitchen (900).
+You are INSIDE the kitchen (900).
+You are close to the apple (101) and the fridge (102) and the lightswitch (103) and the kitchentable (104).
+",synthetic_serializer_unit_probe
+pc_SWITCHOFF_valid,True,103,ON,False,"The current states in the home are as follows: 
+The apple (101) and is INSIDE the kitchen (900).
+The fridge (102) is CLOSED and and is INSIDE the kitchen (900).
+The kitchentable (104) and is INSIDE the kitchen (900).
+You are INSIDE the kitchen (900).
+You are close to the apple (101) and the fridge (102) and the lightswitch (103) and the kitchentable (104).
+",synthetic_serializer_unit_probe
+pc_OPEN_valid,False,102,CLOSED,True,"The current states in the home are as follows: 
+The apple (101) and is INSIDE the kitchen (900).
+The fridge (102) is CLOSED and and is INSIDE the kitchen (900).
+The lightswitch (103) is OFF and and is INSIDE the kitchen (900).
+The kitchentable (104) and is INSIDE the kitchen (900).
+You are INSIDE the kitchen (900).
+You are close to the apple (101) and the fridge (102) and the lightswitch (103) and the kitchentable (104).
+",synthetic_serializer_unit_probe
+pc_OPEN_valid,True,102,CLOSED,False,"The current states in the home are as follows: 
+The apple (101) and is INSIDE the kitchen (900).
+The lightswitch (103) is OFF and and is INSIDE the kitchen (900).
+The kitchentable (104) and is INSIDE the kitchen (900).
+You are INSIDE the kitchen (900).
+You are close to the apple (101) and the fridge (102) and the lightswitch (103) and the kitchentable (104).
+",synthetic_serializer_unit_probe
+pc_CLOSE_valid,False,102,OPEN,True,"The current states in the home are as follows: 
+The apple (101) and is INSIDE the kitchen (900).
+The fridge (102) is OPEN and and is INSIDE the kitchen (900).
+The lightswitch (103) is OFF and and is INSIDE the kitchen (900).
+The kitchentable (104) and is INSIDE the kitchen (900).
+You are INSIDE the kitchen (900).
+You are close to the apple (101) and the fridge (102) and the lightswitch (103) and the kitchentable (104).
+",synthetic_serializer_unit_probe
+pc_CLOSE_valid,True,102,OPEN,False,"The current states in the home are as follows: 
+The apple (101) and is INSIDE the kitchen (900).
+The lightswitch (103) is OFF and and is INSIDE the kitchen (900).
+The kitchentable (104) and is INSIDE the kitchen (900).
+You are INSIDE the kitchen (900).
+You are close to the apple (101) and the fridge (102) and the lightswitch (103) and the kitchentable (104).
+",synthetic_serializer_unit_probe

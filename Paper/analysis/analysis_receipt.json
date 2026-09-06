@@ -1,0 +1,19 @@
+{
+  "kind": "derived_analysis_not_new_simulator_results",
+  "source_head": "de1fc8d31e0c96ded37b5517bae36203cc2fd6a5",
+  "source_manifest_sha256": "38073d0ba43cb10e998693aef7ac179c35c319a5a6352d87bbffa4710524dbd7",
+  "script_sha256": "9834d7d3fa4b90454f7d4c2f9f9793207c665724bc3a794452662afe0ba2c944",
+  "retrieval_scores_sha256": "6ac29b9a3de704793b8a0392296b5b8fbfd92431fd313d0f9c3b0e20e4d3101f",
+  "reconstruction_script_sha256": "569d4d3972dcb8df707eca0c3823fa067bf5329555b9cd31ea959dc64555e63c",
+  "python_version": "3.12.3 (main, Jul 15 2026, 23:46:41) [GCC 13.3.0]",
+  "bootstrap_seed": 20260906,
+  "bootstrap_repetitions": 4000,
+  "checks": {
+    "paper_values_match": 90,
+    "result_files": 18,
+    "result_rows": 3735,
+    "dataset_rows": 618,
+    "reconstructed_task_names": 44,
+    "input_json_unchanged": true
+  }
+}

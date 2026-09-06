@@ -1,0 +1,27 @@
+setting,value,source,cell_index_zero_based,status
+find_solution,find_solution=False,single-prompt.ipynb,2,current_code_not_verified_historical_runtime
+retrieval_encoder,sentence-transformers/all-MiniLM-L6-v2,single-prompt.ipynb,10,current_code_not_verified_historical_runtime
+model,gpt-4o-mini,single-prompt.ipynb,14,current_code_not_verified_historical_runtime
+temperature,0.0,single-prompt.ipynb,14,current_code_not_verified_historical_runtime
+maximum_attempts,"maximum_attempts = len(task[""action_scripts""]) * 2",single-prompt.ipynb,18,current_code_not_verified_historical_runtime
+saved_script_key,"""action_script"":action_script",single-prompt.ipynb,23,current_code_not_verified_historical_runtime
+saved_cell_output_count,0,single-prompt.ipynb,,observed_file
+find_solution,find_solution=False,multi-prompts.ipynb,2,current_code_not_verified_historical_runtime
+retrieval_encoder,sentence-transformers/all-MiniLM-L6-v2,multi-prompts.ipynb,10,current_code_not_verified_historical_runtime
+model,gpt-4o-mini,multi-prompts.ipynb,14,current_code_not_verified_historical_runtime
+temperature,0.0,multi-prompts.ipynb,14,current_code_not_verified_historical_runtime
+maximum_attempts,"maximum_attempts = len(task[""action_scripts""]) * 2",multi-prompts.ipynb,20,current_code_not_verified_historical_runtime
+evaluation_first_task_only,break,multi-prompts.ipynb,25,current_code_not_verified_historical_runtime
+saved_script_key,"""action_script"":action_script",multi-prompts.ipynb,25,current_code_not_verified_historical_runtime
+saved_cell_output_count,0,multi-prompts.ipynb,,observed_file
+dependency:huggingface-hub,0.15.1,requirements.txt,,declared_dependency_not_runtime_receipt
+dependency:langchain,0.1.16,requirements.txt,,declared_dependency_not_runtime_receipt
+dependency:langchain-openai,0.1.4,requirements.txt,,declared_dependency_not_runtime_receipt
+dependency:numpy,1.23.5,requirements.txt,,declared_dependency_not_runtime_receipt
+dependency:sentence-transformers,2.2.2,requirements.txt,,declared_dependency_not_runtime_receipt
+dependency:spacy,3.5.4,requirements.txt,,declared_dependency_not_runtime_receipt
+dependency:torch,2.0.1,requirements.txt,,declared_dependency_not_runtime_receipt
+dependency:transformers,4.33.3,requirements.txt,,declared_dependency_not_runtime_receipt
+paper_model_id,gpt-4o-mini-2024-07-18,Paper/sec5.tex,,paper_claim_not_saved_run_metadata
+paper_model_id,gpt-4o-2024-08-06,Paper/sec5.tex,,paper_claim_not_saved_run_metadata
+VirtualHome_version,2.3,README.md; Paper/sec4.tex,,documented_version_no_binary_hash

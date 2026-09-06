@@ -1,0 +1,358 @@
+case_id,model,repeat,kind,origin,gold,operation,variant,prediction_original_branch,strict_format,correct,response
+pc_WALK_valid,gpt-4o-mini-2024-07-18,0,precondition,synthetic,true,WALK,valid,true,True,True,Yes
+pc_WALK_valid,gpt-4o-2024-08-06,0,precondition,synthetic,true,WALK,valid,true,True,True,Yes
+pc_WALK_violate_1,gpt-4o-mini-2024-07-18,0,precondition,synthetic,false,WALK,violate_1,false,True,True,No
+pc_WALK_violate_1,gpt-4o-2024-08-06,0,precondition,synthetic,false,WALK,violate_1,false,True,True,No
+pc_GRAB_valid,gpt-4o-mini-2024-07-18,0,precondition,synthetic,true,GRAB,valid,true,True,True,Yes
+pc_GRAB_valid,gpt-4o-2024-08-06,0,precondition,synthetic,true,GRAB,valid,true,True,True,Yes
+pc_GRAB_violate_1,gpt-4o-mini-2024-07-18,0,precondition,synthetic,false,GRAB,violate_1,true,False,False,"To determine if the preconditions are satisfied, we need to analyze the current states:
+
+1. You are INSIDE the kitchen (900).
+2. The apple (101) is also INSIDE the kitchen (900).
+3. There is no information indicating that you are holding the apple (101) in either hand.
+
+Based on this information, we can conclude:
+
+- You are close to the apple (101) since both you and the apple are in the same location (the kitchen).
+- The apple (101) is not held in your right hand or left hand.
+
+Since both preconditions are satisfied, the output is:
+
+**Yes**"
+pc_GRAB_violate_1,gpt-4o-2024-08-06,0,precondition,synthetic,false,GRAB,violate_1,true,True,False,Yes
+pc_GRAB_violate_2,gpt-4o-mini-2024-07-18,0,precondition,synthetic,false,GRAB,violate_2,false,True,True,No
+pc_GRAB_violate_2,gpt-4o-2024-08-06,0,precondition,synthetic,false,GRAB,violate_2,false,True,True,No
+pc_SWITCHON_valid,gpt-4o-mini-2024-07-18,0,precondition,synthetic,true,SWITCHON,valid,true,True,True,Yes
+pc_SWITCHON_valid,gpt-4o-2024-08-06,0,precondition,synthetic,true,SWITCHON,valid,true,True,True,Yes
+pc_SWITCHON_violate_1,gpt-4o-mini-2024-07-18,0,precondition,synthetic,false,SWITCHON,violate_1,true,True,False,Yes
+pc_SWITCHON_violate_1,gpt-4o-2024-08-06,0,precondition,synthetic,false,SWITCHON,violate_1,false,True,True,No
+pc_SWITCHON_violate_2,gpt-4o-mini-2024-07-18,0,precondition,synthetic,false,SWITCHON,violate_2,false,True,True,No
+pc_SWITCHON_violate_2,gpt-4o-2024-08-06,0,precondition,synthetic,false,SWITCHON,violate_2,false,False,True,No.
+pc_SWITCHON_unknown,gpt-4o-mini-2024-07-18,0,precondition,synthetic,unknown,SWITCHON,unknown,false,True,,No
+pc_SWITCHON_unknown,gpt-4o-2024-08-06,0,precondition,synthetic,unknown,SWITCHON,unknown,false,False,,No.
+pc_SWITCHOFF_valid,gpt-4o-mini-2024-07-18,0,precondition,synthetic,true,SWITCHOFF,valid,true,True,True,Yes
+pc_SWITCHOFF_valid,gpt-4o-2024-08-06,0,precondition,synthetic,true,SWITCHOFF,valid,true,True,True,Yes
+pc_SWITCHOFF_violate_1,gpt-4o-mini-2024-07-18,0,precondition,synthetic,false,SWITCHOFF,violate_1,true,True,False,Yes
+pc_SWITCHOFF_violate_1,gpt-4o-2024-08-06,0,precondition,synthetic,false,SWITCHOFF,violate_1,true,True,False,Yes
+pc_SWITCHOFF_violate_2,gpt-4o-mini-2024-07-18,0,precondition,synthetic,false,SWITCHOFF,violate_2,false,True,True,No
+pc_SWITCHOFF_violate_2,gpt-4o-2024-08-06,0,precondition,synthetic,false,SWITCHOFF,violate_2,false,True,True,No
+pc_SWITCHOFF_unknown,gpt-4o-mini-2024-07-18,0,precondition,synthetic,unknown,SWITCHOFF,unknown,false,True,,No
+pc_SWITCHOFF_unknown,gpt-4o-2024-08-06,0,precondition,synthetic,unknown,SWITCHOFF,unknown,false,False,,No.
+pc_OPEN_valid,gpt-4o-mini-2024-07-18,0,precondition,synthetic,true,OPEN,valid,true,True,True,Yes
+pc_OPEN_valid,gpt-4o-2024-08-06,0,precondition,synthetic,true,OPEN,valid,true,True,True,Yes
+pc_OPEN_violate_1,gpt-4o-mini-2024-07-18,0,precondition,synthetic,false,OPEN,violate_1,true,True,False,Yes
+pc_OPEN_violate_1,gpt-4o-2024-08-06,0,precondition,synthetic,false,OPEN,violate_1,true,True,False,Yes
+pc_OPEN_violate_2,gpt-4o-mini-2024-07-18,0,precondition,synthetic,false,OPEN,violate_2,false,True,True,No
+pc_OPEN_violate_2,gpt-4o-2024-08-06,0,precondition,synthetic,false,OPEN,violate_2,false,True,True,No
+pc_OPEN_unknown,gpt-4o-mini-2024-07-18,0,precondition,synthetic,unknown,OPEN,unknown,false,True,,No
+pc_OPEN_unknown,gpt-4o-2024-08-06,0,precondition,synthetic,unknown,OPEN,unknown,false,True,,No
+pc_CLOSE_valid,gpt-4o-mini-2024-07-18,0,precondition,synthetic,true,CLOSE,valid,true,True,True,Yes
+pc_CLOSE_valid,gpt-4o-2024-08-06,0,precondition,synthetic,true,CLOSE,valid,true,True,True,Yes
+pc_CLOSE_violate_1,gpt-4o-mini-2024-07-18,0,precondition,synthetic,false,CLOSE,violate_1,true,True,False,Yes
+pc_CLOSE_violate_1,gpt-4o-2024-08-06,0,precondition,synthetic,false,CLOSE,violate_1,true,True,False,Yes
+pc_CLOSE_violate_2,gpt-4o-mini-2024-07-18,0,precondition,synthetic,false,CLOSE,violate_2,false,True,True,No
+pc_CLOSE_violate_2,gpt-4o-2024-08-06,0,precondition,synthetic,false,CLOSE,violate_2,false,True,True,No
+pc_CLOSE_unknown,gpt-4o-mini-2024-07-18,0,precondition,synthetic,unknown,CLOSE,unknown,false,True,,No
+pc_CLOSE_unknown,gpt-4o-2024-08-06,0,precondition,synthetic,unknown,CLOSE,unknown,false,True,,No
+pc_PUT_valid,gpt-4o-mini-2024-07-18,0,precondition,synthetic,true,PUT,valid,true,True,True,Yes
+pc_PUT_valid,gpt-4o-2024-08-06,0,precondition,synthetic,true,PUT,valid,true,True,True,Yes
+pc_PUT_violate_1,gpt-4o-mini-2024-07-18,0,precondition,synthetic,false,PUT,violate_1,false,True,True,No
+pc_PUT_violate_1,gpt-4o-2024-08-06,0,precondition,synthetic,false,PUT,violate_1,false,False,True,No.
+pc_PUT_violate_2,gpt-4o-mini-2024-07-18,0,precondition,synthetic,false,PUT,violate_2,true,False,False,"To determine if the preconditions are satisfied, we need to check the following:
+
+1. You are holding the apple (101) in your right hand (which is true).
+2. You are close to the kitchentable (104) (which is also true since you are inside the kitchen where the kitchentable is located).
+
+Since both conditions are satisfied, the output is:
+
+**Yes**"
+pc_PUT_violate_2,gpt-4o-2024-08-06,0,precondition,synthetic,false,PUT,violate_2,true,True,False,Yes
+pc_PUTIN_valid,gpt-4o-mini-2024-07-18,0,precondition,synthetic,true,PUTIN,valid,true,True,True,Yes
+pc_PUTIN_valid,gpt-4o-2024-08-06,0,precondition,synthetic,true,PUTIN,valid,true,True,True,Yes
+pc_PUTIN_violate_1,gpt-4o-mini-2024-07-18,0,precondition,synthetic,false,PUTIN,violate_1,false,False,True,"To determine if the current status satisfies the preconditions, let's analyze each one:
+
+1. **You are holding <apple> (101) in your right hand or left hand.**  
+   - The current state does not indicate that you are holding the apple; it only states that the apple is inside the kitchen and you are close to it. Therefore, this condition is **not satisfied**.
+
+2. **You are close to <fridge> (102).**  
+   - The current state indicates that you are close to the fridge. This condition is **satisfied**.
+
+3. **<fridge> (102) is not CLOSED.**  
+   - The current state indicates that the fridge is OPEN. This condition is **satisfied**.
+
+Since the first precondition is"
+pc_PUTIN_violate_1,gpt-4o-2024-08-06,0,precondition,synthetic,false,PUTIN,violate_1,false,False,True,No.
+pc_PUTIN_violate_2,gpt-4o-mini-2024-07-18,0,precondition,synthetic,false,PUTIN,violate_2,true,True,False,Yes
+pc_PUTIN_violate_2,gpt-4o-2024-08-06,0,precondition,synthetic,false,PUTIN,violate_2,true,True,False,Yes
+pc_PUTIN_violate_3,gpt-4o-mini-2024-07-18,0,precondition,synthetic,false,PUTIN,violate_3,false,True,True,No
+pc_PUTIN_violate_3,gpt-4o-2024-08-06,0,precondition,synthetic,false,PUTIN,violate_3,false,False,True,No.
+end_state_test_task1,gpt-4o-mini-2024-07-18,0,termination,dataset_state_only,End,,,End,True,True,End
+end_state_test_task1,gpt-4o-2024-08-06,0,termination,dataset_state_only,End,,,End,True,True,End
+end_state_test_task2,gpt-4o-mini-2024-07-18,0,termination,dataset_state_only,Continue,,,Continue,True,True,Continue
+end_state_test_task2,gpt-4o-2024-08-06,0,termination,dataset_state_only,Continue,,,Continue,True,True,Continue
+end_state_test_task17,gpt-4o-mini-2024-07-18,0,termination,dataset_state_only,End,,,End,True,True,End
+end_state_test_task17,gpt-4o-2024-08-06,0,termination,dataset_state_only,End,,,End,True,True,End
+end_state_test_task18,gpt-4o-mini-2024-07-18,0,termination,dataset_state_only,Continue,,,Continue,True,True,Continue
+end_state_test_task18,gpt-4o-2024-08-06,0,termination,dataset_state_only,Continue,,,Continue,True,True,Continue
+end_state_test_task21,gpt-4o-mini-2024-07-18,0,termination,dataset_state_only,Continue,,,Continue,True,True,Continue
+end_state_test_task21,gpt-4o-2024-08-06,0,termination,dataset_state_only,Continue,,,Continue,True,True,Continue
+end_state_test_task36,gpt-4o-mini-2024-07-18,0,termination,dataset_state_only,End,,,End,True,True,End
+end_state_test_task36,gpt-4o-2024-08-06,0,termination,dataset_state_only,End,,,End,True,True,End
+end_state_test_task37,gpt-4o-mini-2024-07-18,0,termination,dataset_state_only,Continue,,,Continue,True,True,Continue
+end_state_test_task37,gpt-4o-2024-08-06,0,termination,dataset_state_only,Continue,,,Continue,True,True,Continue
+end_state_test_task40,gpt-4o-mini-2024-07-18,0,termination,dataset_state_only,End,,,End,True,True,End
+end_state_test_task40,gpt-4o-2024-08-06,0,termination,dataset_state_only,End,,,End,True,True,End
+end_state_test_task41,gpt-4o-mini-2024-07-18,0,termination,dataset_state_only,Continue,,,Continue,True,True,Continue
+end_state_test_task41,gpt-4o-2024-08-06,0,termination,dataset_state_only,Continue,,,Continue,True,True,Continue
+end_state_test_task44,gpt-4o-mini-2024-07-18,0,termination,dataset_state_only,End,,,End,True,True,End
+end_state_test_task44,gpt-4o-2024-08-06,0,termination,dataset_state_only,End,,,End,True,True,End
+end_state_test_task45,gpt-4o-mini-2024-07-18,0,termination,dataset_state_only,Continue,,,Continue,True,True,Continue
+end_state_test_task45,gpt-4o-2024-08-06,0,termination,dataset_state_only,Continue,,,Continue,True,True,Continue
+end_state_test_task48,gpt-4o-mini-2024-07-18,0,termination,dataset_state_only,End,,,End,True,True,End
+end_state_test_task48,gpt-4o-2024-08-06,0,termination,dataset_state_only,End,,,End,True,True,End
+end_placement_0,gpt-4o-mini-2024-07-18,0,termination,synthetic,End,,,End,True,True,End
+end_placement_0,gpt-4o-2024-08-06,0,termination,synthetic,End,,,End,True,True,End
+end_placement_1,gpt-4o-mini-2024-07-18,0,termination,synthetic,Continue,,,End,True,False,End
+end_placement_1,gpt-4o-2024-08-06,0,termination,synthetic,Continue,,,Continue,True,True,Continue
+end_placement_2,gpt-4o-mini-2024-07-18,0,termination,synthetic,Continue,,,End,True,False,End
+end_placement_2,gpt-4o-2024-08-06,0,termination,synthetic,Continue,,,Continue,True,True,Continue
+end_placement_3,gpt-4o-mini-2024-07-18,0,termination,synthetic,End,,,End,True,True,End
+end_placement_3,gpt-4o-2024-08-06,0,termination,synthetic,End,,,End,True,True,End
+pc_WALK_valid,gpt-4o-mini-2024-07-18,1,precondition,synthetic,true,WALK,valid,true,True,True,Yes
+pc_WALK_valid,gpt-4o-2024-08-06,1,precondition,synthetic,true,WALK,valid,true,True,True,Yes
+pc_WALK_violate_1,gpt-4o-mini-2024-07-18,1,precondition,synthetic,false,WALK,violate_1,false,True,True,No
+pc_WALK_violate_1,gpt-4o-2024-08-06,1,precondition,synthetic,false,WALK,violate_1,false,True,True,No
+pc_GRAB_valid,gpt-4o-mini-2024-07-18,1,precondition,synthetic,true,GRAB,valid,true,True,True,Yes
+pc_GRAB_valid,gpt-4o-2024-08-06,1,precondition,synthetic,true,GRAB,valid,true,True,True,Yes
+pc_GRAB_violate_1,gpt-4o-mini-2024-07-18,1,precondition,synthetic,false,GRAB,violate_1,true,False,False,"To determine if the preconditions are satisfied, we need to analyze the current states:
+
+1. You are INSIDE the kitchen (900).
+2. The apple (101) is also INSIDE the kitchen (900).
+3. There is no information indicating that you are holding the apple (101) in either hand.
+
+Based on this information, we can conclude:
+
+- You are close to the apple (101) since both you and the apple are in the same location (the kitchen).
+- The apple (101) is not held in your right hand or left hand.
+
+Since both preconditions are satisfied, the output is:
+
+**Yes**"
+pc_GRAB_violate_1,gpt-4o-2024-08-06,1,precondition,synthetic,false,GRAB,violate_1,true,True,False,Yes
+pc_GRAB_violate_2,gpt-4o-mini-2024-07-18,1,precondition,synthetic,false,GRAB,violate_2,false,True,True,No
+pc_GRAB_violate_2,gpt-4o-2024-08-06,1,precondition,synthetic,false,GRAB,violate_2,false,True,True,No
+pc_SWITCHON_valid,gpt-4o-mini-2024-07-18,1,precondition,synthetic,true,SWITCHON,valid,true,True,True,Yes
+pc_SWITCHON_valid,gpt-4o-2024-08-06,1,precondition,synthetic,true,SWITCHON,valid,true,True,True,Yes
+pc_SWITCHON_violate_1,gpt-4o-mini-2024-07-18,1,precondition,synthetic,false,SWITCHON,violate_1,true,True,False,Yes
+pc_SWITCHON_violate_1,gpt-4o-2024-08-06,1,precondition,synthetic,false,SWITCHON,violate_1,true,True,False,Yes
+pc_SWITCHON_violate_2,gpt-4o-mini-2024-07-18,1,precondition,synthetic,false,SWITCHON,violate_2,false,True,True,No
+pc_SWITCHON_violate_2,gpt-4o-2024-08-06,1,precondition,synthetic,false,SWITCHON,violate_2,false,True,True,No
+pc_SWITCHON_unknown,gpt-4o-mini-2024-07-18,1,precondition,synthetic,unknown,SWITCHON,unknown,false,True,,No
+pc_SWITCHON_unknown,gpt-4o-2024-08-06,1,precondition,synthetic,unknown,SWITCHON,unknown,false,False,,No.
+pc_SWITCHOFF_valid,gpt-4o-mini-2024-07-18,1,precondition,synthetic,true,SWITCHOFF,valid,true,True,True,Yes
+pc_SWITCHOFF_valid,gpt-4o-2024-08-06,1,precondition,synthetic,true,SWITCHOFF,valid,true,True,True,Yes
+pc_SWITCHOFF_violate_1,gpt-4o-mini-2024-07-18,1,precondition,synthetic,false,SWITCHOFF,violate_1,true,True,False,Yes
+pc_SWITCHOFF_violate_1,gpt-4o-2024-08-06,1,precondition,synthetic,false,SWITCHOFF,violate_1,true,True,False,Yes
+pc_SWITCHOFF_violate_2,gpt-4o-mini-2024-07-18,1,precondition,synthetic,false,SWITCHOFF,violate_2,false,True,True,No
+pc_SWITCHOFF_violate_2,gpt-4o-2024-08-06,1,precondition,synthetic,false,SWITCHOFF,violate_2,false,True,True,No
+pc_SWITCHOFF_unknown,gpt-4o-mini-2024-07-18,1,precondition,synthetic,unknown,SWITCHOFF,unknown,false,True,,No
+pc_SWITCHOFF_unknown,gpt-4o-2024-08-06,1,precondition,synthetic,unknown,SWITCHOFF,unknown,false,False,,No.
+pc_OPEN_valid,gpt-4o-mini-2024-07-18,1,precondition,synthetic,true,OPEN,valid,true,True,True,Yes
+pc_OPEN_valid,gpt-4o-2024-08-06,1,precondition,synthetic,true,OPEN,valid,true,True,True,Yes
+pc_OPEN_violate_1,gpt-4o-mini-2024-07-18,1,precondition,synthetic,false,OPEN,violate_1,true,True,False,Yes
+pc_OPEN_violate_1,gpt-4o-2024-08-06,1,precondition,synthetic,false,OPEN,violate_1,true,True,False,Yes
+pc_OPEN_violate_2,gpt-4o-mini-2024-07-18,1,precondition,synthetic,false,OPEN,violate_2,false,True,True,No
+pc_OPEN_violate_2,gpt-4o-2024-08-06,1,precondition,synthetic,false,OPEN,violate_2,false,True,True,No
+pc_OPEN_unknown,gpt-4o-mini-2024-07-18,1,precondition,synthetic,unknown,OPEN,unknown,false,True,,No
+pc_OPEN_unknown,gpt-4o-2024-08-06,1,precondition,synthetic,unknown,OPEN,unknown,false,False,,No.
+pc_CLOSE_valid,gpt-4o-mini-2024-07-18,1,precondition,synthetic,true,CLOSE,valid,true,True,True,Yes
+pc_CLOSE_valid,gpt-4o-2024-08-06,1,precondition,synthetic,true,CLOSE,valid,true,True,True,Yes
+pc_CLOSE_violate_1,gpt-4o-mini-2024-07-18,1,precondition,synthetic,false,CLOSE,violate_1,true,True,False,Yes
+pc_CLOSE_violate_1,gpt-4o-2024-08-06,1,precondition,synthetic,false,CLOSE,violate_1,true,True,False,Yes
+pc_CLOSE_violate_2,gpt-4o-mini-2024-07-18,1,precondition,synthetic,false,CLOSE,violate_2,false,True,True,No
+pc_CLOSE_violate_2,gpt-4o-2024-08-06,1,precondition,synthetic,false,CLOSE,violate_2,false,True,True,No
+pc_CLOSE_unknown,gpt-4o-mini-2024-07-18,1,precondition,synthetic,unknown,CLOSE,unknown,false,True,,No
+pc_CLOSE_unknown,gpt-4o-2024-08-06,1,precondition,synthetic,unknown,CLOSE,unknown,false,True,,No
+pc_PUT_valid,gpt-4o-mini-2024-07-18,1,precondition,synthetic,true,PUT,valid,true,True,True,Yes
+pc_PUT_valid,gpt-4o-2024-08-06,1,precondition,synthetic,true,PUT,valid,true,True,True,Yes
+pc_PUT_violate_1,gpt-4o-mini-2024-07-18,1,precondition,synthetic,false,PUT,violate_1,false,True,True,No
+pc_PUT_violate_1,gpt-4o-2024-08-06,1,precondition,synthetic,false,PUT,violate_1,false,False,True,No.
+pc_PUT_violate_2,gpt-4o-mini-2024-07-18,1,precondition,synthetic,false,PUT,violate_2,true,False,False,"To determine if the preconditions are satisfied, we need to check the following:
+
+1. You are holding the apple (101) in your right hand. This condition is satisfied as stated in the current states.
+2. You are close to the kitchentable (104). Since you are inside the kitchen (900) and the kitchentable is also inside the kitchen, we can assume you are close to it.
+
+Both preconditions are satisfied.
+
+Therefore, the output is ""Yes""."
+pc_PUT_violate_2,gpt-4o-2024-08-06,1,precondition,synthetic,false,PUT,violate_2,true,True,False,Yes
+pc_PUTIN_valid,gpt-4o-mini-2024-07-18,1,precondition,synthetic,true,PUTIN,valid,true,True,True,Yes
+pc_PUTIN_valid,gpt-4o-2024-08-06,1,precondition,synthetic,true,PUTIN,valid,true,True,True,Yes
+pc_PUTIN_violate_1,gpt-4o-mini-2024-07-18,1,precondition,synthetic,false,PUTIN,violate_1,false,False,True,"To determine if the current status satisfies the preconditions, let's analyze each one:
+
+1. **You are holding <apple> (101) in your right hand or left hand.**  
+   - The current state does not indicate that you are holding the apple; it only states that you are close to it. Therefore, this condition is **not satisfied**.
+
+2. **You are close to <fridge> (102).**  
+   - The current state indicates that you are close to the fridge (102). This condition is **satisfied**.
+
+3. **<fridge> (102) is not CLOSED.**  
+   - The current state states that the fridge (102) is OPEN. This condition is **satisfied**.
+
+Since the first precondition is not satisfied"
+pc_PUTIN_violate_1,gpt-4o-2024-08-06,1,precondition,synthetic,false,PUTIN,violate_1,false,True,True,No
+pc_PUTIN_violate_2,gpt-4o-mini-2024-07-18,1,precondition,synthetic,false,PUTIN,violate_2,true,True,False,Yes
+pc_PUTIN_violate_2,gpt-4o-2024-08-06,1,precondition,synthetic,false,PUTIN,violate_2,true,True,False,Yes
+pc_PUTIN_violate_3,gpt-4o-mini-2024-07-18,1,precondition,synthetic,false,PUTIN,violate_3,false,True,True,No
+pc_PUTIN_violate_3,gpt-4o-2024-08-06,1,precondition,synthetic,false,PUTIN,violate_3,false,False,True,No.
+end_state_test_task1,gpt-4o-mini-2024-07-18,1,termination,dataset_state_only,End,,,End,True,True,End
+end_state_test_task1,gpt-4o-2024-08-06,1,termination,dataset_state_only,End,,,End,True,True,End
+end_state_test_task2,gpt-4o-mini-2024-07-18,1,termination,dataset_state_only,Continue,,,Continue,True,True,Continue
+end_state_test_task2,gpt-4o-2024-08-06,1,termination,dataset_state_only,Continue,,,Continue,True,True,Continue
+end_state_test_task17,gpt-4o-mini-2024-07-18,1,termination,dataset_state_only,End,,,End,True,True,End
+end_state_test_task17,gpt-4o-2024-08-06,1,termination,dataset_state_only,End,,,End,True,True,End
+end_state_test_task18,gpt-4o-mini-2024-07-18,1,termination,dataset_state_only,Continue,,,Continue,True,True,Continue
+end_state_test_task18,gpt-4o-2024-08-06,1,termination,dataset_state_only,Continue,,,Continue,True,True,Continue
+end_state_test_task21,gpt-4o-mini-2024-07-18,1,termination,dataset_state_only,Continue,,,Continue,True,True,Continue
+end_state_test_task21,gpt-4o-2024-08-06,1,termination,dataset_state_only,Continue,,,Continue,True,True,Continue
+end_state_test_task36,gpt-4o-mini-2024-07-18,1,termination,dataset_state_only,End,,,End,True,True,End
+end_state_test_task36,gpt-4o-2024-08-06,1,termination,dataset_state_only,End,,,End,True,True,End
+end_state_test_task37,gpt-4o-mini-2024-07-18,1,termination,dataset_state_only,Continue,,,Continue,True,True,Continue
+end_state_test_task37,gpt-4o-2024-08-06,1,termination,dataset_state_only,Continue,,,Continue,True,True,Continue
+end_state_test_task40,gpt-4o-mini-2024-07-18,1,termination,dataset_state_only,End,,,End,True,True,End
+end_state_test_task40,gpt-4o-2024-08-06,1,termination,dataset_state_only,End,,,End,True,True,End
+end_state_test_task41,gpt-4o-mini-2024-07-18,1,termination,dataset_state_only,Continue,,,Continue,True,True,Continue
+end_state_test_task41,gpt-4o-2024-08-06,1,termination,dataset_state_only,Continue,,,Continue,True,True,Continue
+end_state_test_task44,gpt-4o-mini-2024-07-18,1,termination,dataset_state_only,End,,,End,True,True,End
+end_state_test_task44,gpt-4o-2024-08-06,1,termination,dataset_state_only,End,,,End,True,True,End
+end_state_test_task45,gpt-4o-mini-2024-07-18,1,termination,dataset_state_only,Continue,,,Continue,True,True,Continue
+end_state_test_task45,gpt-4o-2024-08-06,1,termination,dataset_state_only,Continue,,,Continue,True,True,Continue
+end_state_test_task48,gpt-4o-mini-2024-07-18,1,termination,dataset_state_only,End,,,End,True,True,End
+end_state_test_task48,gpt-4o-2024-08-06,1,termination,dataset_state_only,End,,,End,True,True,End
+end_placement_0,gpt-4o-mini-2024-07-18,1,termination,synthetic,End,,,End,True,True,End
+end_placement_0,gpt-4o-2024-08-06,1,termination,synthetic,End,,,End,True,True,End
+end_placement_1,gpt-4o-mini-2024-07-18,1,termination,synthetic,Continue,,,End,True,False,End
+end_placement_1,gpt-4o-2024-08-06,1,termination,synthetic,Continue,,,Continue,True,True,Continue
+end_placement_2,gpt-4o-mini-2024-07-18,1,termination,synthetic,Continue,,,End,True,False,End
+end_placement_2,gpt-4o-2024-08-06,1,termination,synthetic,Continue,,,Continue,True,True,Continue
+end_placement_3,gpt-4o-mini-2024-07-18,1,termination,synthetic,End,,,End,True,True,End
+end_placement_3,gpt-4o-2024-08-06,1,termination,synthetic,End,,,End,True,True,End
+pc_WALK_valid,gpt-4o-mini-2024-07-18,2,precondition,synthetic,true,WALK,valid,true,True,True,Yes
+pc_WALK_valid,gpt-4o-2024-08-06,2,precondition,synthetic,true,WALK,valid,true,True,True,Yes
+pc_WALK_violate_1,gpt-4o-mini-2024-07-18,2,precondition,synthetic,false,WALK,violate_1,false,True,True,No
+pc_WALK_violate_1,gpt-4o-2024-08-06,2,precondition,synthetic,false,WALK,violate_1,false,True,True,No
+pc_GRAB_valid,gpt-4o-mini-2024-07-18,2,precondition,synthetic,true,GRAB,valid,true,True,True,Yes
+pc_GRAB_valid,gpt-4o-2024-08-06,2,precondition,synthetic,true,GRAB,valid,true,True,True,Yes
+pc_GRAB_violate_1,gpt-4o-mini-2024-07-18,2,precondition,synthetic,false,GRAB,violate_1,true,False,False,"To determine if the preconditions are satisfied, we need to analyze the current states:
+
+1. You are INSIDE the kitchen (900).
+2. The apple (101) is also INSIDE the kitchen (900).
+3. There is no information indicating that you are holding the apple (101) in either hand.
+
+Based on this information, we can conclude:
+
+- You are close to the apple (101) since both you and the apple are in the same location (the kitchen).
+- The apple (101) is not held in your right hand or left hand.
+
+Since both preconditions are satisfied, the output is:
+
+**Yes**"
+pc_GRAB_violate_1,gpt-4o-2024-08-06,2,precondition,synthetic,false,GRAB,violate_1,true,True,False,Yes
+pc_GRAB_violate_2,gpt-4o-mini-2024-07-18,2,precondition,synthetic,false,GRAB,violate_2,false,True,True,No
+pc_GRAB_violate_2,gpt-4o-2024-08-06,2,precondition,synthetic,false,GRAB,violate_2,false,True,True,No
+pc_SWITCHON_valid,gpt-4o-mini-2024-07-18,2,precondition,synthetic,true,SWITCHON,valid,true,True,True,Yes
+pc_SWITCHON_valid,gpt-4o-2024-08-06,2,precondition,synthetic,true,SWITCHON,valid,true,True,True,Yes
+pc_SWITCHON_violate_1,gpt-4o-mini-2024-07-18,2,precondition,synthetic,false,SWITCHON,violate_1,true,True,False,Yes
+pc_SWITCHON_violate_1,gpt-4o-2024-08-06,2,precondition,synthetic,false,SWITCHON,violate_1,false,True,True,No
+pc_SWITCHON_violate_2,gpt-4o-mini-2024-07-18,2,precondition,synthetic,false,SWITCHON,violate_2,false,True,True,No
+pc_SWITCHON_violate_2,gpt-4o-2024-08-06,2,precondition,synthetic,false,SWITCHON,violate_2,false,True,True,No
+pc_SWITCHON_unknown,gpt-4o-mini-2024-07-18,2,precondition,synthetic,unknown,SWITCHON,unknown,false,True,,No
+pc_SWITCHON_unknown,gpt-4o-2024-08-06,2,precondition,synthetic,unknown,SWITCHON,unknown,false,False,,No.
+pc_SWITCHOFF_valid,gpt-4o-mini-2024-07-18,2,precondition,synthetic,true,SWITCHOFF,valid,true,True,True,Yes
+pc_SWITCHOFF_valid,gpt-4o-2024-08-06,2,precondition,synthetic,true,SWITCHOFF,valid,true,True,True,Yes
+pc_SWITCHOFF_violate_1,gpt-4o-mini-2024-07-18,2,precondition,synthetic,false,SWITCHOFF,violate_1,true,True,False,Yes
+pc_SWITCHOFF_violate_1,gpt-4o-2024-08-06,2,precondition,synthetic,false,SWITCHOFF,violate_1,true,True,False,Yes
+pc_SWITCHOFF_violate_2,gpt-4o-mini-2024-07-18,2,precondition,synthetic,false,SWITCHOFF,violate_2,false,True,True,No
+pc_SWITCHOFF_violate_2,gpt-4o-2024-08-06,2,precondition,synthetic,false,SWITCHOFF,violate_2,false,True,True,No
+pc_SWITCHOFF_unknown,gpt-4o-mini-2024-07-18,2,precondition,synthetic,unknown,SWITCHOFF,unknown,false,True,,No
+pc_SWITCHOFF_unknown,gpt-4o-2024-08-06,2,precondition,synthetic,unknown,SWITCHOFF,unknown,false,False,,No.
+pc_OPEN_valid,gpt-4o-mini-2024-07-18,2,precondition,synthetic,true,OPEN,valid,true,True,True,Yes
+pc_OPEN_valid,gpt-4o-2024-08-06,2,precondition,synthetic,true,OPEN,valid,true,True,True,Yes
+pc_OPEN_violate_1,gpt-4o-mini-2024-07-18,2,precondition,synthetic,false,OPEN,violate_1,true,True,False,Yes
+pc_OPEN_violate_1,gpt-4o-2024-08-06,2,precondition,synthetic,false,OPEN,violate_1,true,True,False,Yes
+pc_OPEN_violate_2,gpt-4o-mini-2024-07-18,2,precondition,synthetic,false,OPEN,violate_2,false,True,True,No
+pc_OPEN_violate_2,gpt-4o-2024-08-06,2,precondition,synthetic,false,OPEN,violate_2,false,True,True,No
+pc_OPEN_unknown,gpt-4o-mini-2024-07-18,2,precondition,synthetic,unknown,OPEN,unknown,false,True,,No
+pc_OPEN_unknown,gpt-4o-2024-08-06,2,precondition,synthetic,unknown,OPEN,unknown,false,True,,No
+pc_CLOSE_valid,gpt-4o-mini-2024-07-18,2,precondition,synthetic,true,CLOSE,valid,true,True,True,Yes
+pc_CLOSE_valid,gpt-4o-2024-08-06,2,precondition,synthetic,true,CLOSE,valid,true,True,True,Yes
+pc_CLOSE_violate_1,gpt-4o-mini-2024-07-18,2,precondition,synthetic,false,CLOSE,violate_1,true,True,False,Yes
+pc_CLOSE_violate_1,gpt-4o-2024-08-06,2,precondition,synthetic,false,CLOSE,violate_1,true,True,False,Yes
+pc_CLOSE_violate_2,gpt-4o-mini-2024-07-18,2,precondition,synthetic,false,CLOSE,violate_2,false,True,True,No
+pc_CLOSE_violate_2,gpt-4o-2024-08-06,2,precondition,synthetic,false,CLOSE,violate_2,false,True,True,No
+pc_CLOSE_unknown,gpt-4o-mini-2024-07-18,2,precondition,synthetic,unknown,CLOSE,unknown,false,True,,No
+pc_CLOSE_unknown,gpt-4o-2024-08-06,2,precondition,synthetic,unknown,CLOSE,unknown,false,True,,No
+pc_PUT_valid,gpt-4o-mini-2024-07-18,2,precondition,synthetic,true,PUT,valid,true,True,True,Yes
+pc_PUT_valid,gpt-4o-2024-08-06,2,precondition,synthetic,true,PUT,valid,true,True,True,Yes
+pc_PUT_violate_1,gpt-4o-mini-2024-07-18,2,precondition,synthetic,false,PUT,violate_1,false,True,True,No
+pc_PUT_violate_1,gpt-4o-2024-08-06,2,precondition,synthetic,false,PUT,violate_1,false,False,True,No.
+pc_PUT_violate_2,gpt-4o-mini-2024-07-18,2,precondition,synthetic,false,PUT,violate_2,true,False,False,"To determine if the preconditions are satisfied, we need to check the following:
+
+1. You are holding the apple (101) in your right hand (which is true).
+2. You are close to the kitchentable (104) (which is also true since you are inside the kitchen where the kitchentable is located).
+
+Since both conditions are satisfied, the output is:
+
+**Yes**"
+pc_PUT_violate_2,gpt-4o-2024-08-06,2,precondition,synthetic,false,PUT,violate_2,true,True,False,Yes
+pc_PUTIN_valid,gpt-4o-mini-2024-07-18,2,precondition,synthetic,true,PUTIN,valid,true,True,True,Yes
+pc_PUTIN_valid,gpt-4o-2024-08-06,2,precondition,synthetic,true,PUTIN,valid,true,True,True,Yes
+pc_PUTIN_violate_1,gpt-4o-mini-2024-07-18,2,precondition,synthetic,false,PUTIN,violate_1,false,False,True,"To determine if the current status satisfies the preconditions, let's analyze each one:
+
+1. **You are holding <apple> (101) in your right hand or left hand.**  
+   - The current state does not indicate that you are holding the apple; it only states that you are close to it. Therefore, this condition is **not satisfied**.
+
+2. **You are close to <fridge> (102).**  
+   - The current state indicates that you are close to the fridge (102). This condition is **satisfied**.
+
+3. **<fridge> (102) is not CLOSED.**  
+   - The current state indicates that the fridge (102) is OPEN. This condition is **satisfied**.
+
+Since the first precondition is not satisfied"
+pc_PUTIN_violate_1,gpt-4o-2024-08-06,2,precondition,synthetic,false,PUTIN,violate_1,false,True,True,No
+pc_PUTIN_violate_2,gpt-4o-mini-2024-07-18,2,precondition,synthetic,false,PUTIN,violate_2,true,True,False,Yes
+pc_PUTIN_violate_2,gpt-4o-2024-08-06,2,precondition,synthetic,false,PUTIN,violate_2,true,True,False,Yes
+pc_PUTIN_violate_3,gpt-4o-mini-2024-07-18,2,precondition,synthetic,false,PUTIN,violate_3,false,True,True,No
+pc_PUTIN_violate_3,gpt-4o-2024-08-06,2,precondition,synthetic,false,PUTIN,violate_3,false,True,True,No
+end_state_test_task1,gpt-4o-mini-2024-07-18,2,termination,dataset_state_only,End,,,End,True,True,End
+end_state_test_task1,gpt-4o-2024-08-06,2,termination,dataset_state_only,End,,,End,True,True,End
+end_state_test_task2,gpt-4o-mini-2024-07-18,2,termination,dataset_state_only,Continue,,,Continue,True,True,Continue
+end_state_test_task2,gpt-4o-2024-08-06,2,termination,dataset_state_only,Continue,,,Continue,True,True,Continue
+end_state_test_task17,gpt-4o-mini-2024-07-18,2,termination,dataset_state_only,End,,,End,True,True,End
+end_state_test_task17,gpt-4o-2024-08-06,2,termination,dataset_state_only,End,,,End,True,True,End
+end_state_test_task18,gpt-4o-mini-2024-07-18,2,termination,dataset_state_only,Continue,,,Continue,True,True,Continue
+end_state_test_task18,gpt-4o-2024-08-06,2,termination,dataset_state_only,Continue,,,Continue,True,True,Continue
+end_state_test_task21,gpt-4o-mini-2024-07-18,2,termination,dataset_state_only,Continue,,,Continue,True,True,Continue
+end_state_test_task21,gpt-4o-2024-08-06,2,termination,dataset_state_only,Continue,,,Continue,True,True,Continue
+end_state_test_task36,gpt-4o-mini-2024-07-18,2,termination,dataset_state_only,End,,,End,True,True,End
+end_state_test_task36,gpt-4o-2024-08-06,2,termination,dataset_state_only,End,,,End,True,True,End
+end_state_test_task37,gpt-4o-mini-2024-07-18,2,termination,dataset_state_only,Continue,,,Continue,True,True,Continue
+end_state_test_task37,gpt-4o-2024-08-06,2,termination,dataset_state_only,Continue,,,Continue,True,True,Continue
+end_state_test_task40,gpt-4o-mini-2024-07-18,2,termination,dataset_state_only,End,,,End,True,True,End
+end_state_test_task40,gpt-4o-2024-08-06,2,termination,dataset_state_only,End,,,End,True,True,End
+end_state_test_task41,gpt-4o-mini-2024-07-18,2,termination,dataset_state_only,Continue,,,Continue,True,True,Continue
+end_state_test_task41,gpt-4o-2024-08-06,2,termination,dataset_state_only,Continue,,,Continue,True,True,Continue
+end_state_test_task44,gpt-4o-mini-2024-07-18,2,termination,dataset_state_only,End,,,End,True,True,End
+end_state_test_task44,gpt-4o-2024-08-06,2,termination,dataset_state_only,End,,,End,True,True,End
+end_state_test_task45,gpt-4o-mini-2024-07-18,2,termination,dataset_state_only,Continue,,,Continue,True,True,Continue
+end_state_test_task45,gpt-4o-2024-08-06,2,termination,dataset_state_only,Continue,,,Continue,True,True,Continue
+end_state_test_task48,gpt-4o-mini-2024-07-18,2,termination,dataset_state_only,End,,,End,True,True,End
+end_state_test_task48,gpt-4o-2024-08-06,2,termination,dataset_state_only,End,,,End,True,True,End
+end_placement_0,gpt-4o-mini-2024-07-18,2,termination,synthetic,End,,,End,True,True,End
+end_placement_0,gpt-4o-2024-08-06,2,termination,synthetic,End,,,End,True,True,End
+end_placement_1,gpt-4o-mini-2024-07-18,2,termination,synthetic,Continue,,,End,True,False,End
+end_placement_1,gpt-4o-2024-08-06,2,termination,synthetic,Continue,,,Continue,True,True,Continue
+end_placement_2,gpt-4o-mini-2024-07-18,2,termination,synthetic,Continue,,,End,True,False,End
+end_placement_2,gpt-4o-2024-08-06,2,termination,synthetic,Continue,,,Continue,True,True,Continue
+end_placement_3,gpt-4o-mini-2024-07-18,2,termination,synthetic,End,,,End,True,True,End
+end_placement_3,gpt-4o-2024-08-06,2,termination,synthetic,End,,,End,True,True,End

@@ -1,0 +1,3 @@
+# Local API credentials must never be committed.
+.env
+.env.local

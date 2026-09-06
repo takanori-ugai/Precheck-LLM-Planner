@@ -1,0 +1,10 @@
+{
+  "planned_component_calls": 264,
+  "missing_component_calls": [],
+  "missing_repair_outputs": [],
+  "successful_api_requests": 310,
+  "api_error_count": 1,
+  "vh_runs": 0,
+  "human_participants": 0,
+  "latex_runs": 0
+}

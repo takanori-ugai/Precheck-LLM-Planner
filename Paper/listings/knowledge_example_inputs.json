@@ -1,0 +1,73 @@
+{
+  "kind": "synthetic_serialization_example_not_VH_graph_or_experiment_log",
+  "object_names": {
+    "9001": "kitchen",
+    "9002": "lightswitch",
+    "9012": "plum",
+    "9013": "kitchentable",
+    "9014": "fridge"
+  },
+  "properties": {
+    "9002": [],
+    "9012": [],
+    "9013": [],
+    "9014": [
+      "CONTAINERS"
+    ]
+  },
+  "state_objects": {
+    "9002": {
+      "states": [
+        "OFF"
+      ],
+      "on": null,
+      "inside": null,
+      "location": 9001,
+      "hold": []
+    }
+  },
+  "placement_objects": {
+    "9012": {
+      "states": [],
+      "on": 9013,
+      "inside": null,
+      "location": 9001,
+      "hold": []
+    },
+    "9013": {
+      "states": [],
+      "on": null,
+      "inside": null,
+      "location": 9001,
+      "hold": [
+        9012
+      ]
+    },
+    "9014": {
+      "states": [
+        "CLOSED"
+      ],
+      "on": null,
+      "inside": null,
+      "location": 9001,
+      "hold": []
+    }
+  },
+  "state_agent": {
+    "close_to": [
+      9002
+    ],
+    "hold_rh": null,
+    "hold_lh": null,
+    "location": 9001
+  },
+  "placement_agent": {
+    "close_to": [
+      9012,
+      9013
+    ],
+    "hold_rh": null,
+    "hold_lh": null,
+    "location": 9001
+  }
+}

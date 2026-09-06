@@ -1,0 +1,1036 @@
+task_type,method,prompt,model_claimed,precheck,dimension,value,n,success_n,SR,mean_executed
+state_change_task,baseline/gpt-4o,baseline,gpt-4o,,task_name,Turn on all lightswitches,128,7,0.0546875,0
+state_change_task,baseline/gpt-4o,baseline,gpt-4o,,task_name,Turn on all tvs,12,3,0.25,0
+state_change_task,baseline/gpt-4o,baseline,gpt-4o,,task_name,Turn off all lightswitches,128,0,0,20
+state_change_task,baseline/gpt-4o,baseline,gpt-4o,,task_name,Turn off all tablelamps,20,0,0,20
+state_change_task,baseline/gpt-4o,baseline,gpt-4o,,task_name,Turn off all computers,12,0,0,16.5
+state_change_task,baseline/gpt-4o,baseline,gpt-4o,,task_name,Turn off all tvs,12,0,0,9.333333333333334
+state_change_task,baseline/gpt-4o,baseline,gpt-4o,,scene,1,48,2,0.041666666666666664,10.791666666666666
+state_change_task,baseline/gpt-4o,baseline,gpt-4o,,scene,2,40,1,0.025,10.95
+state_change_task,baseline/gpt-4o,baseline,gpt-4o,,scene,3,72,1,0.013888888888888888,11.11111111111111
+state_change_task,baseline/gpt-4o,baseline,gpt-4o,,scene,4,32,1,0.03125,10
+state_change_task,baseline/gpt-4o,baseline,gpt-4o,,scene,5,44,2,0.045454545454545456,10.227272727272727
+state_change_task,baseline/gpt-4o,baseline,gpt-4o,,scene,6,40,2,0.05,8.6
+state_change_task,baseline/gpt-4o,baseline,gpt-4o,,scene,7,36,1,0.027777777777777776,11.11111111111111
+state_change_task,baseline/gpt-4o,baseline,gpt-4o,,object,lightswitches,256,7,0.02734375,10
+state_change_task,baseline/gpt-4o,baseline,gpt-4o,,object,tvs,24,3,0.125,4.666666666666667
+state_change_task,baseline/gpt-4o,baseline,gpt-4o,,object,tablelamps,20,0,0,20
+state_change_task,baseline/gpt-4o,baseline,gpt-4o,,object,computers,12,0,0,16.5
+state_change_task,baseline/gpt-4o,baseline,gpt-4o,,destination,,312,10,0.03205128205128205,10.48076923076923
+state_change_task,baseline/gpt-4o,baseline,gpt-4o,,goal_count,4,192,6,0.03125,10
+state_change_task,baseline/gpt-4o,baseline,gpt-4o,,goal_count,2,48,3,0.0625,11.458333333333334
+state_change_task,baseline/gpt-4o,baseline,gpt-4o,,goal_count,5,64,1,0.015625,10
+state_change_task,baseline/gpt-4o,baseline,gpt-4o,,goal_count,3,8,0,0,20
+state_change_task,baseline/gpt-4o,baseline,gpt-4o,,required_state_changes,0,27,10,0.37037037037037035,11.555555555555555
+state_change_task,baseline/gpt-4o,baseline,gpt-4o,,required_state_changes,1,85,0,0,10.776470588235295
+state_change_task,baseline/gpt-4o,baseline,gpt-4o,,required_state_changes,2,107,0,0,10.299065420560748
+state_change_task,baseline/gpt-4o,baseline,gpt-4o,,required_state_changes,3,69,0,0,10.144927536231885
+state_change_task,baseline/gpt-4o,baseline,gpt-4o,,required_state_changes,4,22,0,0,10
+state_change_task,baseline/gpt-4o,baseline,gpt-4o,,required_state_changes,5,2,0,0,10
+state_change_task,baseline/gpt-4o,baseline,gpt-4o,,reference_length,0,27,10,0.37037037037037035,11.555555555555555
+state_change_task,baseline/gpt-4o,baseline,gpt-4o,,reference_length,2,85,0,0,10.776470588235295
+state_change_task,baseline/gpt-4o,baseline,gpt-4o,,reference_length,4,107,0,0,10.299065420560748
+state_change_task,baseline/gpt-4o,baseline,gpt-4o,,reference_length,6,69,0,0,10.144927536231885
+state_change_task,baseline/gpt-4o,baseline,gpt-4o,,reference_length,8,22,0,0,10
+state_change_task,baseline/gpt-4o,baseline,gpt-4o,,reference_length,10,2,0,0,10
+state_change_task,single-prompt/gpt-4o-mini/precheck,single-prompt,gpt-4o-mini,True,task_name,Turn on all lightswitches,128,102,0.796875,4.2421875
+state_change_task,single-prompt/gpt-4o-mini/precheck,single-prompt,gpt-4o-mini,True,task_name,Turn on all tvs,12,6,0.5,1.0833333333333333
+state_change_task,single-prompt/gpt-4o-mini/precheck,single-prompt,gpt-4o-mini,True,task_name,Turn off all lightswitches,128,64,0.5,6.5234375
+state_change_task,single-prompt/gpt-4o-mini/precheck,single-prompt,gpt-4o-mini,True,task_name,Turn off all tablelamps,20,8,0.4,1.5
+state_change_task,single-prompt/gpt-4o-mini/precheck,single-prompt,gpt-4o-mini,True,task_name,Turn off all computers,12,7,0.5833333333333334,2.3333333333333335
+state_change_task,single-prompt/gpt-4o-mini/precheck,single-prompt,gpt-4o-mini,True,task_name,Turn off all tvs,12,8,0.6666666666666666,2.6666666666666665
+state_change_task,single-prompt/gpt-4o-mini/precheck,single-prompt,gpt-4o-mini,True,scene,1,48,34,0.7083333333333334,3.75
+state_change_task,single-prompt/gpt-4o-mini/precheck,single-prompt,gpt-4o-mini,True,scene,2,40,25,0.625,4.575
+state_change_task,single-prompt/gpt-4o-mini/precheck,single-prompt,gpt-4o-mini,True,scene,3,72,35,0.4861111111111111,6.527777777777778
+state_change_task,single-prompt/gpt-4o-mini/precheck,single-prompt,gpt-4o-mini,True,scene,4,32,24,0.75,3.96875
+state_change_task,single-prompt/gpt-4o-mini/precheck,single-prompt,gpt-4o-mini,True,scene,5,44,23,0.5227272727272727,4.25
+state_change_task,single-prompt/gpt-4o-mini/precheck,single-prompt,gpt-4o-mini,True,scene,6,40,29,0.725,4.15
+state_change_task,single-prompt/gpt-4o-mini/precheck,single-prompt,gpt-4o-mini,True,scene,7,36,25,0.6944444444444444,4.666666666666667
+state_change_task,single-prompt/gpt-4o-mini/precheck,single-prompt,gpt-4o-mini,True,object,lightswitches,256,166,0.6484375,5.3828125
+state_change_task,single-prompt/gpt-4o-mini/precheck,single-prompt,gpt-4o-mini,True,object,tvs,24,14,0.5833333333333334,1.875
+state_change_task,single-prompt/gpt-4o-mini/precheck,single-prompt,gpt-4o-mini,True,object,tablelamps,20,8,0.4,1.5
+state_change_task,single-prompt/gpt-4o-mini/precheck,single-prompt,gpt-4o-mini,True,object,computers,12,7,0.5833333333333334,2.3333333333333335
+state_change_task,single-prompt/gpt-4o-mini/precheck,single-prompt,gpt-4o-mini,True,destination,,312,195,0.625,4.746794871794871
+state_change_task,single-prompt/gpt-4o-mini/precheck,single-prompt,gpt-4o-mini,True,goal_count,4,192,132,0.6875,4.796875
+state_change_task,single-prompt/gpt-4o-mini/precheck,single-prompt,gpt-4o-mini,True,goal_count,2,48,28,0.5833333333333334,1.875
+state_change_task,single-prompt/gpt-4o-mini/precheck,single-prompt,gpt-4o-mini,True,goal_count,5,64,34,0.53125,7.140625
+state_change_task,single-prompt/gpt-4o-mini/precheck,single-prompt,gpt-4o-mini,True,goal_count,3,8,1,0.125,1.625
+state_change_task,single-prompt/gpt-4o-mini/precheck,single-prompt,gpt-4o-mini,True,required_state_changes,0,27,23,0.8518518518518519,0
+state_change_task,single-prompt/gpt-4o-mini/precheck,single-prompt,gpt-4o-mini,True,required_state_changes,1,85,53,0.6235294117647059,2.3176470588235296
+state_change_task,single-prompt/gpt-4o-mini/precheck,single-prompt,gpt-4o-mini,True,required_state_changes,2,107,66,0.616822429906542,4.644859813084112
+state_change_task,single-prompt/gpt-4o-mini/precheck,single-prompt,gpt-4o-mini,True,required_state_changes,3,69,41,0.5942028985507246,7.869565217391305
+state_change_task,single-prompt/gpt-4o-mini/precheck,single-prompt,gpt-4o-mini,True,required_state_changes,4,22,11,0.5,10.681818181818182
+state_change_task,single-prompt/gpt-4o-mini/precheck,single-prompt,gpt-4o-mini,True,required_state_changes,5,2,1,0.5,4.5
+state_change_task,single-prompt/gpt-4o-mini/precheck,single-prompt,gpt-4o-mini,True,reference_length,0,27,23,0.8518518518518519,0
+state_change_task,single-prompt/gpt-4o-mini/precheck,single-prompt,gpt-4o-mini,True,reference_length,2,85,53,0.6235294117647059,2.3176470588235296
+state_change_task,single-prompt/gpt-4o-mini/precheck,single-prompt,gpt-4o-mini,True,reference_length,4,107,66,0.616822429906542,4.644859813084112
+state_change_task,single-prompt/gpt-4o-mini/precheck,single-prompt,gpt-4o-mini,True,reference_length,6,69,41,0.5942028985507246,7.869565217391305
+state_change_task,single-prompt/gpt-4o-mini/precheck,single-prompt,gpt-4o-mini,True,reference_length,8,22,11,0.5,10.681818181818182
+state_change_task,single-prompt/gpt-4o-mini/precheck,single-prompt,gpt-4o-mini,True,reference_length,10,2,1,0.5,4.5
+state_change_task,single-prompt/gpt-4o/precheck,single-prompt,gpt-4o,True,task_name,Turn on all lightswitches,128,124,0.96875,3.9453125
+state_change_task,single-prompt/gpt-4o/precheck,single-prompt,gpt-4o,True,task_name,Turn on all tvs,12,12,1,1.75
+state_change_task,single-prompt/gpt-4o/precheck,single-prompt,gpt-4o,True,task_name,Turn off all lightswitches,128,75,0.5859375,6
+state_change_task,single-prompt/gpt-4o/precheck,single-prompt,gpt-4o,True,task_name,Turn off all tablelamps,20,12,0.6,1.65
+state_change_task,single-prompt/gpt-4o/precheck,single-prompt,gpt-4o,True,task_name,Turn off all computers,12,12,1,1.8333333333333333
+state_change_task,single-prompt/gpt-4o/precheck,single-prompt,gpt-4o,True,task_name,Turn off all tvs,12,11,0.9166666666666666,1.5
+state_change_task,single-prompt/gpt-4o/precheck,single-prompt,gpt-4o,True,scene,1,48,38,0.7916666666666666,3.5833333333333335
+state_change_task,single-prompt/gpt-4o/precheck,single-prompt,gpt-4o,True,scene,2,40,21,0.525,5.075
+state_change_task,single-prompt/gpt-4o/precheck,single-prompt,gpt-4o,True,scene,3,72,58,0.8055555555555556,5.472222222222222
+state_change_task,single-prompt/gpt-4o/precheck,single-prompt,gpt-4o,True,scene,4,32,25,0.78125,4.53125
+state_change_task,single-prompt/gpt-4o/precheck,single-prompt,gpt-4o,True,scene,5,44,41,0.9318181818181818,2.977272727272727
+state_change_task,single-prompt/gpt-4o/precheck,single-prompt,gpt-4o,True,scene,6,40,33,0.825,3.875
+state_change_task,single-prompt/gpt-4o/precheck,single-prompt,gpt-4o,True,scene,7,36,30,0.8333333333333334,4.638888888888889
+state_change_task,single-prompt/gpt-4o/precheck,single-prompt,gpt-4o,True,object,lightswitches,256,199,0.77734375,4.97265625
+state_change_task,single-prompt/gpt-4o/precheck,single-prompt,gpt-4o,True,object,tvs,24,23,0.9583333333333334,1.625
+state_change_task,single-prompt/gpt-4o/precheck,single-prompt,gpt-4o,True,object,tablelamps,20,12,0.6,1.65
+state_change_task,single-prompt/gpt-4o/precheck,single-prompt,gpt-4o,True,object,computers,12,12,1,1.8333333333333333
+state_change_task,single-prompt/gpt-4o/precheck,single-prompt,gpt-4o,True,destination,,312,246,0.7884615384615384,4.381410256410256
+state_change_task,single-prompt/gpt-4o/precheck,single-prompt,gpt-4o,True,goal_count,4,192,146,0.7604166666666666,4.661458333333333
+state_change_task,single-prompt/gpt-4o/precheck,single-prompt,gpt-4o,True,goal_count,2,48,42,0.875,1.625
+state_change_task,single-prompt/gpt-4o/precheck,single-prompt,gpt-4o,True,goal_count,5,64,53,0.828125,5.90625
+state_change_task,single-prompt/gpt-4o/precheck,single-prompt,gpt-4o,True,goal_count,3,8,5,0.625,2
+state_change_task,single-prompt/gpt-4o/precheck,single-prompt,gpt-4o,True,required_state_changes,0,27,23,0.8518518518518519,0
+state_change_task,single-prompt/gpt-4o/precheck,single-prompt,gpt-4o,True,required_state_changes,1,85,62,0.7294117647058823,2.3058823529411763
+state_change_task,single-prompt/gpt-4o/precheck,single-prompt,gpt-4o,True,required_state_changes,2,107,84,0.7850467289719626,4.5327102803738315
+state_change_task,single-prompt/gpt-4o/precheck,single-prompt,gpt-4o,True,required_state_changes,3,69,57,0.8260869565217391,6.869565217391305
+state_change_task,single-prompt/gpt-4o/precheck,single-prompt,gpt-4o,True,required_state_changes,4,22,18,0.8181818181818182,8.681818181818182
+state_change_task,single-prompt/gpt-4o/precheck,single-prompt,gpt-4o,True,required_state_changes,5,2,2,1,10.5
+state_change_task,single-prompt/gpt-4o/precheck,single-prompt,gpt-4o,True,reference_length,0,27,23,0.8518518518518519,0
+state_change_task,single-prompt/gpt-4o/precheck,single-prompt,gpt-4o,True,reference_length,2,85,62,0.7294117647058823,2.3058823529411763
+state_change_task,single-prompt/gpt-4o/precheck,single-prompt,gpt-4o,True,reference_length,4,107,84,0.7850467289719626,4.5327102803738315
+state_change_task,single-prompt/gpt-4o/precheck,single-prompt,gpt-4o,True,reference_length,6,69,57,0.8260869565217391,6.869565217391305
+state_change_task,single-prompt/gpt-4o/precheck,single-prompt,gpt-4o,True,reference_length,8,22,18,0.8181818181818182,8.681818181818182
+state_change_task,single-prompt/gpt-4o/precheck,single-prompt,gpt-4o,True,reference_length,10,2,2,1,10.5
+state_change_task,multi-prompts/gpt-4o-mini/precheck,multi-prompts,gpt-4o-mini,True,task_name,Turn on all lightswitches,128,118,0.921875,4.4453125
+state_change_task,multi-prompts/gpt-4o-mini/precheck,multi-prompts,gpt-4o-mini,True,task_name,Turn on all tvs,12,9,0.75,1.6666666666666667
+state_change_task,multi-prompts/gpt-4o-mini/precheck,multi-prompts,gpt-4o-mini,True,task_name,Turn off all lightswitches,128,79,0.6171875,6.5546875
+state_change_task,multi-prompts/gpt-4o-mini/precheck,multi-prompts,gpt-4o-mini,True,task_name,Turn off all tablelamps,20,11,0.55,2.55
+state_change_task,multi-prompts/gpt-4o-mini/precheck,multi-prompts,gpt-4o-mini,True,task_name,Turn off all computers,12,9,0.75,1.9166666666666667
+state_change_task,multi-prompts/gpt-4o-mini/precheck,multi-prompts,gpt-4o-mini,True,task_name,Turn off all tvs,12,8,0.6666666666666666,2.6666666666666665
+state_change_task,multi-prompts/gpt-4o-mini/precheck,multi-prompts,gpt-4o-mini,True,scene,1,48,33,0.6875,3.875
+state_change_task,multi-prompts/gpt-4o-mini/precheck,multi-prompts,gpt-4o-mini,True,scene,2,40,27,0.675,4.725
+state_change_task,multi-prompts/gpt-4o-mini/precheck,multi-prompts,gpt-4o-mini,True,scene,3,72,53,0.7361111111111112,6.041666666666667
+state_change_task,multi-prompts/gpt-4o-mini/precheck,multi-prompts,gpt-4o-mini,True,scene,4,32,28,0.875,4.625
+state_change_task,multi-prompts/gpt-4o-mini/precheck,multi-prompts,gpt-4o-mini,True,scene,5,44,29,0.6590909090909091,4.909090909090909
+state_change_task,multi-prompts/gpt-4o-mini/precheck,multi-prompts,gpt-4o-mini,True,scene,6,40,35,0.875,4.475
+state_change_task,multi-prompts/gpt-4o-mini/precheck,multi-prompts,gpt-4o-mini,True,scene,7,36,29,0.8055555555555556,5.027777777777778
+state_change_task,multi-prompts/gpt-4o-mini/precheck,multi-prompts,gpt-4o-mini,True,object,lightswitches,256,197,0.76953125,5.5
+state_change_task,multi-prompts/gpt-4o-mini/precheck,multi-prompts,gpt-4o-mini,True,object,tvs,24,17,0.7083333333333334,2.1666666666666665
+state_change_task,multi-prompts/gpt-4o-mini/precheck,multi-prompts,gpt-4o-mini,True,object,tablelamps,20,11,0.55,2.55
+state_change_task,multi-prompts/gpt-4o-mini/precheck,multi-prompts,gpt-4o-mini,True,object,computers,12,9,0.75,1.9166666666666667
+state_change_task,multi-prompts/gpt-4o-mini/precheck,multi-prompts,gpt-4o-mini,True,destination,,312,234,0.75,4.916666666666667
+state_change_task,multi-prompts/gpt-4o-mini/precheck,multi-prompts,gpt-4o-mini,True,goal_count,4,192,148,0.7708333333333334,5.229166666666667
+state_change_task,multi-prompts/gpt-4o-mini/precheck,multi-prompts,gpt-4o-mini,True,goal_count,2,48,33,0.6875,1.9791666666666667
+state_change_task,multi-prompts/gpt-4o-mini/precheck,multi-prompts,gpt-4o-mini,True,goal_count,5,64,49,0.765625,6.3125
+state_change_task,multi-prompts/gpt-4o-mini/precheck,multi-prompts,gpt-4o-mini,True,goal_count,3,8,4,0.5,3.875
+state_change_task,multi-prompts/gpt-4o-mini/precheck,multi-prompts,gpt-4o-mini,True,required_state_changes,0,27,25,0.9259259259259259,0
+state_change_task,multi-prompts/gpt-4o-mini/precheck,multi-prompts,gpt-4o-mini,True,required_state_changes,1,85,61,0.7176470588235294,2.2705882352941176
+state_change_task,multi-prompts/gpt-4o-mini/precheck,multi-prompts,gpt-4o-mini,True,required_state_changes,2,107,84,0.7850467289719626,5.196261682242991
+state_change_task,multi-prompts/gpt-4o-mini/precheck,multi-prompts,gpt-4o-mini,True,required_state_changes,3,69,49,0.7101449275362319,7.956521739130435
+state_change_task,multi-prompts/gpt-4o-mini/precheck,multi-prompts,gpt-4o-mini,True,required_state_changes,4,22,14,0.6363636363636364,10.045454545454545
+state_change_task,multi-prompts/gpt-4o-mini/precheck,multi-prompts,gpt-4o-mini,True,required_state_changes,5,2,1,0.5,7.5
+state_change_task,multi-prompts/gpt-4o-mini/precheck,multi-prompts,gpt-4o-mini,True,reference_length,0,27,25,0.9259259259259259,0
+state_change_task,multi-prompts/gpt-4o-mini/precheck,multi-prompts,gpt-4o-mini,True,reference_length,2,85,61,0.7176470588235294,2.2705882352941176
+state_change_task,multi-prompts/gpt-4o-mini/precheck,multi-prompts,gpt-4o-mini,True,reference_length,4,107,84,0.7850467289719626,5.196261682242991
+state_change_task,multi-prompts/gpt-4o-mini/precheck,multi-prompts,gpt-4o-mini,True,reference_length,6,69,49,0.7101449275362319,7.956521739130435
+state_change_task,multi-prompts/gpt-4o-mini/precheck,multi-prompts,gpt-4o-mini,True,reference_length,8,22,14,0.6363636363636364,10.045454545454545
+state_change_task,multi-prompts/gpt-4o-mini/precheck,multi-prompts,gpt-4o-mini,True,reference_length,10,2,1,0.5,7.5
+state_change_task,multi-prompts/gpt-4o/precheck,multi-prompts,gpt-4o,True,task_name,Turn on all lightswitches,128,109,0.8515625,3.4921875
+state_change_task,multi-prompts/gpt-4o/precheck,multi-prompts,gpt-4o,True,task_name,Turn on all tvs,12,9,0.75,1.4166666666666667
+state_change_task,multi-prompts/gpt-4o/precheck,multi-prompts,gpt-4o,True,task_name,Turn off all lightswitches,128,128,1,4.0625
+state_change_task,multi-prompts/gpt-4o/precheck,multi-prompts,gpt-4o,True,task_name,Turn off all tablelamps,20,9,0.45,1.4
+state_change_task,multi-prompts/gpt-4o/precheck,multi-prompts,gpt-4o,True,task_name,Turn off all computers,12,12,1,2
+state_change_task,multi-prompts/gpt-4o/precheck,multi-prompts,gpt-4o,True,task_name,Turn off all tvs,12,12,1,1.8333333333333333
+state_change_task,multi-prompts/gpt-4o/precheck,multi-prompts,gpt-4o,True,scene,1,48,43,0.8958333333333334,2.8125
+state_change_task,multi-prompts/gpt-4o/precheck,multi-prompts,gpt-4o,True,scene,2,40,36,0.9,3.25
+state_change_task,multi-prompts/gpt-4o/precheck,multi-prompts,gpt-4o,True,scene,3,72,58,0.8055555555555556,4.166666666666667
+state_change_task,multi-prompts/gpt-4o/precheck,multi-prompts,gpt-4o,True,scene,4,32,29,0.90625,3.46875
+state_change_task,multi-prompts/gpt-4o/precheck,multi-prompts,gpt-4o,True,scene,5,44,41,0.9318181818181818,3.1363636363636362
+state_change_task,multi-prompts/gpt-4o/precheck,multi-prompts,gpt-4o,True,scene,6,40,39,0.975,3.125
+state_change_task,multi-prompts/gpt-4o/precheck,multi-prompts,gpt-4o,True,scene,7,36,33,0.9166666666666666,3.3055555555555554
+state_change_task,multi-prompts/gpt-4o/precheck,multi-prompts,gpt-4o,True,object,lightswitches,256,237,0.92578125,3.77734375
+state_change_task,multi-prompts/gpt-4o/precheck,multi-prompts,gpt-4o,True,object,tvs,24,21,0.875,1.625
+state_change_task,multi-prompts/gpt-4o/precheck,multi-prompts,gpt-4o,True,object,tablelamps,20,9,0.45,1.4
+state_change_task,multi-prompts/gpt-4o/precheck,multi-prompts,gpt-4o,True,object,computers,12,12,1,2
+state_change_task,multi-prompts/gpt-4o/precheck,multi-prompts,gpt-4o,True,destination,,312,279,0.8942307692307693,3.391025641025641
+state_change_task,multi-prompts/gpt-4o/precheck,multi-prompts,gpt-4o,True,goal_count,4,192,183,0.953125,3.5677083333333335
+state_change_task,multi-prompts/gpt-4o/precheck,multi-prompts,gpt-4o,True,goal_count,2,48,38,0.7916666666666666,1.5208333333333333
+state_change_task,multi-prompts/gpt-4o/precheck,multi-prompts,gpt-4o,True,goal_count,5,64,54,0.84375,4.40625
+state_change_task,multi-prompts/gpt-4o/precheck,multi-prompts,gpt-4o,True,goal_count,3,8,4,0.5,2.25
+state_change_task,multi-prompts/gpt-4o/precheck,multi-prompts,gpt-4o,True,required_state_changes,0,27,27,1,0
+state_change_task,multi-prompts/gpt-4o/precheck,multi-prompts,gpt-4o,True,required_state_changes,1,85,75,0.8823529411764706,1.6705882352941177
+state_change_task,multi-prompts/gpt-4o/precheck,multi-prompts,gpt-4o,True,required_state_changes,2,107,90,0.8411214953271028,3.411214953271028
+state_change_task,multi-prompts/gpt-4o/precheck,multi-prompts,gpt-4o,True,required_state_changes,3,69,64,0.927536231884058,5.449275362318841
+state_change_task,multi-prompts/gpt-4o/precheck,multi-prompts,gpt-4o,True,required_state_changes,4,22,21,0.9545454545454546,7.136363636363637
+state_change_task,multi-prompts/gpt-4o/precheck,multi-prompts,gpt-4o,True,required_state_changes,5,2,2,1,9
+state_change_task,multi-prompts/gpt-4o/precheck,multi-prompts,gpt-4o,True,reference_length,0,27,27,1,0
+state_change_task,multi-prompts/gpt-4o/precheck,multi-prompts,gpt-4o,True,reference_length,2,85,75,0.8823529411764706,1.6705882352941177
+state_change_task,multi-prompts/gpt-4o/precheck,multi-prompts,gpt-4o,True,reference_length,4,107,90,0.8411214953271028,3.411214953271028
+state_change_task,multi-prompts/gpt-4o/precheck,multi-prompts,gpt-4o,True,reference_length,6,69,64,0.927536231884058,5.449275362318841
+state_change_task,multi-prompts/gpt-4o/precheck,multi-prompts,gpt-4o,True,reference_length,8,22,21,0.9545454545454546,7.136363636363637
+state_change_task,multi-prompts/gpt-4o/precheck,multi-prompts,gpt-4o,True,reference_length,10,2,2,1,9
+state_change_task,single-prompt/gpt-4o-mini/no-precheck,single-prompt,gpt-4o-mini,False,task_name,Turn on all lightswitches,128,105,0.8203125,4.1953125
+state_change_task,single-prompt/gpt-4o-mini/no-precheck,single-prompt,gpt-4o-mini,False,task_name,Turn on all tvs,12,8,0.6666666666666666,1.25
+state_change_task,single-prompt/gpt-4o-mini/no-precheck,single-prompt,gpt-4o-mini,False,task_name,Turn off all lightswitches,128,58,0.453125,6.8515625
+state_change_task,single-prompt/gpt-4o-mini/no-precheck,single-prompt,gpt-4o-mini,False,task_name,Turn off all tablelamps,20,7,0.35,1.45
+state_change_task,single-prompt/gpt-4o-mini/no-precheck,single-prompt,gpt-4o-mini,False,task_name,Turn off all computers,12,5,0.4166666666666667,2.6666666666666665
+state_change_task,single-prompt/gpt-4o-mini/no-precheck,single-prompt,gpt-4o-mini,False,task_name,Turn off all tvs,12,9,0.75,2.5
+state_change_task,single-prompt/gpt-4o-mini/no-precheck,single-prompt,gpt-4o-mini,False,scene,1,48,30,0.625,4.1875
+state_change_task,single-prompt/gpt-4o-mini/no-precheck,single-prompt,gpt-4o-mini,False,scene,2,40,24,0.6,4.35
+state_change_task,single-prompt/gpt-4o-mini/no-precheck,single-prompt,gpt-4o-mini,False,scene,3,72,38,0.5277777777777778,6.444444444444445
+state_change_task,single-prompt/gpt-4o-mini/no-precheck,single-prompt,gpt-4o-mini,False,scene,4,32,22,0.6875,4.25
+state_change_task,single-prompt/gpt-4o-mini/no-precheck,single-prompt,gpt-4o-mini,False,scene,5,44,26,0.5909090909090909,4.568181818181818
+state_change_task,single-prompt/gpt-4o-mini/no-precheck,single-prompt,gpt-4o-mini,False,scene,6,40,29,0.725,4.375
+state_change_task,single-prompt/gpt-4o-mini/no-precheck,single-prompt,gpt-4o-mini,False,scene,7,36,23,0.6388888888888888,4.694444444444445
+state_change_task,single-prompt/gpt-4o-mini/no-precheck,single-prompt,gpt-4o-mini,False,object,lightswitches,256,163,0.63671875,5.5234375
+state_change_task,single-prompt/gpt-4o-mini/no-precheck,single-prompt,gpt-4o-mini,False,object,tvs,24,17,0.7083333333333334,1.875
+state_change_task,single-prompt/gpt-4o-mini/no-precheck,single-prompt,gpt-4o-mini,False,object,tablelamps,20,7,0.35,1.45
+state_change_task,single-prompt/gpt-4o-mini/no-precheck,single-prompt,gpt-4o-mini,False,object,computers,12,5,0.4166666666666667,2.6666666666666665
+state_change_task,single-prompt/gpt-4o-mini/no-precheck,single-prompt,gpt-4o-mini,False,destination,,312,192,0.6153846153846154,4.871794871794871
+state_change_task,single-prompt/gpt-4o-mini/no-precheck,single-prompt,gpt-4o-mini,False,goal_count,4,192,127,0.6614583333333334,5.03125
+state_change_task,single-prompt/gpt-4o-mini/no-precheck,single-prompt,gpt-4o-mini,False,goal_count,2,48,27,0.5625,1.875
+state_change_task,single-prompt/gpt-4o-mini/no-precheck,single-prompt,gpt-4o-mini,False,goal_count,5,64,36,0.5625,7
+state_change_task,single-prompt/gpt-4o-mini/no-precheck,single-prompt,gpt-4o-mini,False,goal_count,3,8,2,0.25,2
+state_change_task,single-prompt/gpt-4o-mini/no-precheck,single-prompt,gpt-4o-mini,False,required_state_changes,0,27,25,0.9259259259259259,0
+state_change_task,single-prompt/gpt-4o-mini/no-precheck,single-prompt,gpt-4o-mini,False,required_state_changes,1,85,44,0.5176470588235295,2.447058823529412
+state_change_task,single-prompt/gpt-4o-mini/no-precheck,single-prompt,gpt-4o-mini,False,required_state_changes,2,107,66,0.616822429906542,5
+state_change_task,single-prompt/gpt-4o-mini/no-precheck,single-prompt,gpt-4o-mini,False,required_state_changes,3,69,41,0.5942028985507246,7.869565217391305
+state_change_task,single-prompt/gpt-4o-mini/no-precheck,single-prompt,gpt-4o-mini,False,required_state_changes,4,22,15,0.6818181818181818,9.318181818181818
+state_change_task,single-prompt/gpt-4o-mini/no-precheck,single-prompt,gpt-4o-mini,False,required_state_changes,5,2,1,0.5,14.5
+state_change_task,single-prompt/gpt-4o-mini/no-precheck,single-prompt,gpt-4o-mini,False,reference_length,0,27,25,0.9259259259259259,0
+state_change_task,single-prompt/gpt-4o-mini/no-precheck,single-prompt,gpt-4o-mini,False,reference_length,2,85,44,0.5176470588235295,2.447058823529412
+state_change_task,single-prompt/gpt-4o-mini/no-precheck,single-prompt,gpt-4o-mini,False,reference_length,4,107,66,0.616822429906542,5
+state_change_task,single-prompt/gpt-4o-mini/no-precheck,single-prompt,gpt-4o-mini,False,reference_length,6,69,41,0.5942028985507246,7.869565217391305
+state_change_task,single-prompt/gpt-4o-mini/no-precheck,single-prompt,gpt-4o-mini,False,reference_length,8,22,15,0.6818181818181818,9.318181818181818
+state_change_task,single-prompt/gpt-4o-mini/no-precheck,single-prompt,gpt-4o-mini,False,reference_length,10,2,1,0.5,14.5
+state_change_task,single-prompt/gpt-4o/no-precheck,single-prompt,gpt-4o,False,task_name,Turn on all lightswitches,128,122,0.953125,3.7734375
+state_change_task,single-prompt/gpt-4o/no-precheck,single-prompt,gpt-4o,False,task_name,Turn on all tvs,12,12,1,1.75
+state_change_task,single-prompt/gpt-4o/no-precheck,single-prompt,gpt-4o,False,task_name,Turn off all lightswitches,128,72,0.5625,6.296875
+state_change_task,single-prompt/gpt-4o/no-precheck,single-prompt,gpt-4o,False,task_name,Turn off all tablelamps,20,9,0.45,1.45
+state_change_task,single-prompt/gpt-4o/no-precheck,single-prompt,gpt-4o,False,task_name,Turn off all computers,12,10,0.8333333333333334,2.25
+state_change_task,single-prompt/gpt-4o/no-precheck,single-prompt,gpt-4o,False,task_name,Turn off all tvs,12,12,1,1.8333333333333333
+state_change_task,single-prompt/gpt-4o/no-precheck,single-prompt,gpt-4o,False,scene,1,48,41,0.8541666666666666,3.5
+state_change_task,single-prompt/gpt-4o/no-precheck,single-prompt,gpt-4o,False,scene,2,40,21,0.525,5.025
+state_change_task,single-prompt/gpt-4o/no-precheck,single-prompt,gpt-4o,False,scene,3,72,54,0.75,5.472222222222222
+state_change_task,single-prompt/gpt-4o/no-precheck,single-prompt,gpt-4o,False,scene,4,32,29,0.90625,3.84375
+state_change_task,single-prompt/gpt-4o/no-precheck,single-prompt,gpt-4o,False,scene,5,44,39,0.8863636363636364,3.159090909090909
+state_change_task,single-prompt/gpt-4o/no-precheck,single-prompt,gpt-4o,False,scene,6,40,30,0.75,4.425
+state_change_task,single-prompt/gpt-4o/no-precheck,single-prompt,gpt-4o,False,scene,7,36,23,0.6388888888888888,5.166666666666667
+state_change_task,single-prompt/gpt-4o/no-precheck,single-prompt,gpt-4o,False,object,lightswitches,256,194,0.7578125,5.03515625
+state_change_task,single-prompt/gpt-4o/no-precheck,single-prompt,gpt-4o,False,object,tvs,24,24,1,1.7916666666666667
+state_change_task,single-prompt/gpt-4o/no-precheck,single-prompt,gpt-4o,False,object,tablelamps,20,9,0.45,1.45
+state_change_task,single-prompt/gpt-4o/no-precheck,single-prompt,gpt-4o,False,object,computers,12,10,0.8333333333333334,2.25
+state_change_task,single-prompt/gpt-4o/no-precheck,single-prompt,gpt-4o,False,destination,,312,237,0.7596153846153846,4.448717948717949
+state_change_task,single-prompt/gpt-4o/no-precheck,single-prompt,gpt-4o,False,goal_count,4,192,143,0.7447916666666666,4.723958333333333
+state_change_task,single-prompt/gpt-4o/no-precheck,single-prompt,gpt-4o,False,goal_count,2,48,40,0.8333333333333334,1.8125
+state_change_task,single-prompt/gpt-4o/no-precheck,single-prompt,gpt-4o,False,goal_count,5,64,51,0.796875,5.96875
+state_change_task,single-prompt/gpt-4o/no-precheck,single-prompt,gpt-4o,False,goal_count,3,8,3,0.375,1.5
+state_change_task,single-prompt/gpt-4o/no-precheck,single-prompt,gpt-4o,False,required_state_changes,0,27,23,0.8518518518518519,0
+state_change_task,single-prompt/gpt-4o/no-precheck,single-prompt,gpt-4o,False,required_state_changes,1,85,63,0.7411764705882353,2.2823529411764705
+state_change_task,single-prompt/gpt-4o/no-precheck,single-prompt,gpt-4o,False,required_state_changes,2,107,73,0.6822429906542056,4.728971962616822
+state_change_task,single-prompt/gpt-4o/no-precheck,single-prompt,gpt-4o,False,required_state_changes,3,69,57,0.8260869565217391,7.072463768115942
+state_change_task,single-prompt/gpt-4o/no-precheck,single-prompt,gpt-4o,False,required_state_changes,4,22,19,0.8636363636363636,8.272727272727273
+state_change_task,single-prompt/gpt-4o/no-precheck,single-prompt,gpt-4o,False,required_state_changes,5,2,2,1,9
+state_change_task,single-prompt/gpt-4o/no-precheck,single-prompt,gpt-4o,False,reference_length,0,27,23,0.8518518518518519,0
+state_change_task,single-prompt/gpt-4o/no-precheck,single-prompt,gpt-4o,False,reference_length,2,85,63,0.7411764705882353,2.2823529411764705
+state_change_task,single-prompt/gpt-4o/no-precheck,single-prompt,gpt-4o,False,reference_length,4,107,73,0.6822429906542056,4.728971962616822
+state_change_task,single-prompt/gpt-4o/no-precheck,single-prompt,gpt-4o,False,reference_length,6,69,57,0.8260869565217391,7.072463768115942
+state_change_task,single-prompt/gpt-4o/no-precheck,single-prompt,gpt-4o,False,reference_length,8,22,19,0.8636363636363636,8.272727272727273
+state_change_task,single-prompt/gpt-4o/no-precheck,single-prompt,gpt-4o,False,reference_length,10,2,2,1,9
+state_change_task,multi-prompts/gpt-4o-mini/no-precheck,multi-prompts,gpt-4o-mini,False,task_name,Turn on all lightswitches,128,122,0.953125,4.421875
+state_change_task,multi-prompts/gpt-4o-mini/no-precheck,multi-prompts,gpt-4o-mini,False,task_name,Turn on all tvs,12,12,1,1.8333333333333333
+state_change_task,multi-prompts/gpt-4o-mini/no-precheck,multi-prompts,gpt-4o-mini,False,task_name,Turn off all lightswitches,128,59,0.4609375,6.9609375
+state_change_task,multi-prompts/gpt-4o-mini/no-precheck,multi-prompts,gpt-4o-mini,False,task_name,Turn off all tablelamps,20,9,0.45,2.4
+state_change_task,multi-prompts/gpt-4o-mini/no-precheck,multi-prompts,gpt-4o-mini,False,task_name,Turn off all computers,12,7,0.5833333333333334,2.25
+state_change_task,multi-prompts/gpt-4o-mini/no-precheck,multi-prompts,gpt-4o-mini,False,task_name,Turn off all tvs,12,8,0.6666666666666666,2.5833333333333335
+state_change_task,multi-prompts/gpt-4o-mini/no-precheck,multi-prompts,gpt-4o-mini,False,scene,1,48,33,0.6875,4.145833333333333
+state_change_task,multi-prompts/gpt-4o-mini/no-precheck,multi-prompts,gpt-4o-mini,False,scene,2,40,26,0.65,4.075
+state_change_task,multi-prompts/gpt-4o-mini/no-precheck,multi-prompts,gpt-4o-mini,False,scene,3,72,54,0.75,6.305555555555555
+state_change_task,multi-prompts/gpt-4o-mini/no-precheck,multi-prompts,gpt-4o-mini,False,scene,4,32,22,0.6875,5.28125
+state_change_task,multi-prompts/gpt-4o-mini/no-precheck,multi-prompts,gpt-4o-mini,False,scene,5,44,25,0.5681818181818182,5.090909090909091
+state_change_task,multi-prompts/gpt-4o-mini/no-precheck,multi-prompts,gpt-4o-mini,False,scene,6,40,31,0.775,4.825
+state_change_task,multi-prompts/gpt-4o-mini/no-precheck,multi-prompts,gpt-4o-mini,False,scene,7,36,26,0.7222222222222222,5.083333333333333
+state_change_task,multi-prompts/gpt-4o-mini/no-precheck,multi-prompts,gpt-4o-mini,False,object,lightswitches,256,181,0.70703125,5.69140625
+state_change_task,multi-prompts/gpt-4o-mini/no-precheck,multi-prompts,gpt-4o-mini,False,object,tvs,24,20,0.8333333333333334,2.2083333333333335
+state_change_task,multi-prompts/gpt-4o-mini/no-precheck,multi-prompts,gpt-4o-mini,False,object,tablelamps,20,9,0.45,2.4
+state_change_task,multi-prompts/gpt-4o-mini/no-precheck,multi-prompts,gpt-4o-mini,False,object,computers,12,7,0.5833333333333334,2.25
+state_change_task,multi-prompts/gpt-4o-mini/no-precheck,multi-prompts,gpt-4o-mini,False,destination,,312,217,0.6955128205128205,5.080128205128205
+state_change_task,multi-prompts/gpt-4o-mini/no-precheck,multi-prompts,gpt-4o-mini,False,goal_count,4,192,130,0.6770833333333334,5.34375
+state_change_task,multi-prompts/gpt-4o-mini/no-precheck,multi-prompts,gpt-4o-mini,False,goal_count,2,48,33,0.6875,2.1875
+state_change_task,multi-prompts/gpt-4o-mini/no-precheck,multi-prompts,gpt-4o-mini,False,goal_count,5,64,51,0.796875,6.734375
+state_change_task,multi-prompts/gpt-4o-mini/no-precheck,multi-prompts,gpt-4o-mini,False,goal_count,3,8,3,0.375,2.875
+state_change_task,multi-prompts/gpt-4o-mini/no-precheck,multi-prompts,gpt-4o-mini,False,required_state_changes,0,27,23,0.8518518518518519,0
+state_change_task,multi-prompts/gpt-4o-mini/no-precheck,multi-prompts,gpt-4o-mini,False,required_state_changes,1,85,49,0.5764705882352941,2.5176470588235293
+state_change_task,multi-prompts/gpt-4o-mini/no-precheck,multi-prompts,gpt-4o-mini,False,required_state_changes,2,107,70,0.6542056074766355,5.4672897196261685
+state_change_task,multi-prompts/gpt-4o-mini/no-precheck,multi-prompts,gpt-4o-mini,False,required_state_changes,3,69,53,0.7681159420289855,8.18840579710145
+state_change_task,multi-prompts/gpt-4o-mini/no-precheck,multi-prompts,gpt-4o-mini,False,required_state_changes,4,22,21,0.9545454545454546,8.727272727272727
+state_change_task,multi-prompts/gpt-4o-mini/no-precheck,multi-prompts,gpt-4o-mini,False,required_state_changes,5,2,1,0.5,14.5
+state_change_task,multi-prompts/gpt-4o-mini/no-precheck,multi-prompts,gpt-4o-mini,False,reference_length,0,27,23,0.8518518518518519,0
+state_change_task,multi-prompts/gpt-4o-mini/no-precheck,multi-prompts,gpt-4o-mini,False,reference_length,2,85,49,0.5764705882352941,2.5176470588235293
+state_change_task,multi-prompts/gpt-4o-mini/no-precheck,multi-prompts,gpt-4o-mini,False,reference_length,4,107,70,0.6542056074766355,5.4672897196261685
+state_change_task,multi-prompts/gpt-4o-mini/no-precheck,multi-prompts,gpt-4o-mini,False,reference_length,6,69,53,0.7681159420289855,8.18840579710145
+state_change_task,multi-prompts/gpt-4o-mini/no-precheck,multi-prompts,gpt-4o-mini,False,reference_length,8,22,21,0.9545454545454546,8.727272727272727
+state_change_task,multi-prompts/gpt-4o-mini/no-precheck,multi-prompts,gpt-4o-mini,False,reference_length,10,2,1,0.5,14.5
+state_change_task,multi-prompts/gpt-4o/no-precheck,multi-prompts,gpt-4o,False,task_name,Turn on all lightswitches,128,106,0.828125,3.5546875
+state_change_task,multi-prompts/gpt-4o/no-precheck,multi-prompts,gpt-4o,False,task_name,Turn on all tvs,12,9,0.75,1.4166666666666667
+state_change_task,multi-prompts/gpt-4o/no-precheck,multi-prompts,gpt-4o,False,task_name,Turn off all lightswitches,128,127,0.9921875,4.25
+state_change_task,multi-prompts/gpt-4o/no-precheck,multi-prompts,gpt-4o,False,task_name,Turn off all tablelamps,20,9,0.45,1.25
+state_change_task,multi-prompts/gpt-4o/no-precheck,multi-prompts,gpt-4o,False,task_name,Turn off all computers,12,10,0.8333333333333334,2
+state_change_task,multi-prompts/gpt-4o/no-precheck,multi-prompts,gpt-4o,False,task_name,Turn off all tvs,12,11,0.9166666666666666,1.6666666666666667
+state_change_task,multi-prompts/gpt-4o/no-precheck,multi-prompts,gpt-4o,False,scene,1,48,40,0.8333333333333334,2.7291666666666665
+state_change_task,multi-prompts/gpt-4o/no-precheck,multi-prompts,gpt-4o,False,scene,2,40,34,0.85,3.45
+state_change_task,multi-prompts/gpt-4o/no-precheck,multi-prompts,gpt-4o,False,scene,3,72,56,0.7777777777777778,4.222222222222222
+state_change_task,multi-prompts/gpt-4o/no-precheck,multi-prompts,gpt-4o,False,scene,4,32,30,0.9375,3.8125
+state_change_task,multi-prompts/gpt-4o/no-precheck,multi-prompts,gpt-4o,False,scene,5,44,39,0.8863636363636364,3.1136363636363638
+state_change_task,multi-prompts/gpt-4o/no-precheck,multi-prompts,gpt-4o,False,scene,6,40,39,0.975,3.225
+state_change_task,multi-prompts/gpt-4o/no-precheck,multi-prompts,gpt-4o,False,scene,7,36,34,0.9444444444444444,3.4444444444444446
+state_change_task,multi-prompts/gpt-4o/no-precheck,multi-prompts,gpt-4o,False,object,lightswitches,256,233,0.91015625,3.90234375
+state_change_task,multi-prompts/gpt-4o/no-precheck,multi-prompts,gpt-4o,False,object,tvs,24,20,0.8333333333333334,1.5416666666666667
+state_change_task,multi-prompts/gpt-4o/no-precheck,multi-prompts,gpt-4o,False,object,tablelamps,20,9,0.45,1.25
+state_change_task,multi-prompts/gpt-4o/no-precheck,multi-prompts,gpt-4o,False,object,computers,12,10,0.8333333333333334,2
+state_change_task,multi-prompts/gpt-4o/no-precheck,multi-prompts,gpt-4o,False,destination,,312,272,0.8717948717948718,3.4775641025641026
+state_change_task,multi-prompts/gpt-4o/no-precheck,multi-prompts,gpt-4o,False,goal_count,4,192,182,0.9479166666666666,3.6822916666666665
+state_change_task,multi-prompts/gpt-4o/no-precheck,multi-prompts,gpt-4o,False,goal_count,2,48,34,0.7083333333333334,1.5416666666666667
+state_change_task,multi-prompts/gpt-4o/no-precheck,multi-prompts,gpt-4o,False,goal_count,5,64,51,0.796875,4.5625
+state_change_task,multi-prompts/gpt-4o/no-precheck,multi-prompts,gpt-4o,False,goal_count,3,8,5,0.625,1.5
+state_change_task,multi-prompts/gpt-4o/no-precheck,multi-prompts,gpt-4o,False,required_state_changes,0,27,27,1,0
+state_change_task,multi-prompts/gpt-4o/no-precheck,multi-prompts,gpt-4o,False,required_state_changes,1,85,68,0.8,1.7647058823529411
+state_change_task,multi-prompts/gpt-4o/no-precheck,multi-prompts,gpt-4o,False,required_state_changes,2,107,93,0.8691588785046729,3.5046728971962615
+state_change_task,multi-prompts/gpt-4o/no-precheck,multi-prompts,gpt-4o,False,required_state_changes,3,69,63,0.9130434782608695,5.550724637681159
+state_change_task,multi-prompts/gpt-4o/no-precheck,multi-prompts,gpt-4o,False,required_state_changes,4,22,20,0.9090909090909091,7.318181818181818
+state_change_task,multi-prompts/gpt-4o/no-precheck,multi-prompts,gpt-4o,False,required_state_changes,5,2,1,0.5,8
+state_change_task,multi-prompts/gpt-4o/no-precheck,multi-prompts,gpt-4o,False,reference_length,0,27,27,1,0
+state_change_task,multi-prompts/gpt-4o/no-precheck,multi-prompts,gpt-4o,False,reference_length,2,85,68,0.8,1.7647058823529411
+state_change_task,multi-prompts/gpt-4o/no-precheck,multi-prompts,gpt-4o,False,reference_length,4,107,93,0.8691588785046729,3.5046728971962615
+state_change_task,multi-prompts/gpt-4o/no-precheck,multi-prompts,gpt-4o,False,reference_length,6,69,63,0.9130434782608695,5.550724637681159
+state_change_task,multi-prompts/gpt-4o/no-precheck,multi-prompts,gpt-4o,False,reference_length,8,22,20,0.9090909090909091,7.318181818181818
+state_change_task,multi-prompts/gpt-4o/no-precheck,multi-prompts,gpt-4o,False,reference_length,10,2,1,0.5,8
+placement_task,baseline/gpt-4o,baseline,gpt-4o,,task_name,Put all cupcakes on the kitchencounter,1,0,0,20
+placement_task,baseline/gpt-4o,baseline,gpt-4o,,task_name,Put all bananas on the kitchencounter,1,0,0,20
+placement_task,baseline/gpt-4o,baseline,gpt-4o,,task_name,Put all bellpeppers on the kitchentable,1,0,0,13
+placement_task,baseline/gpt-4o,baseline,gpt-4o,,task_name,Put all bellpeppers on the kitchencounter,1,0,0,20
+placement_task,baseline/gpt-4o,baseline,gpt-4o,,task_name,Put all chips on the kitchentable,3,0,0,20
+placement_task,baseline/gpt-4o,baseline,gpt-4o,,task_name,Put all apples on the kitchencounter,1,0,0,20
+placement_task,baseline/gpt-4o,baseline,gpt-4o,,task_name,Put all peaches on the kitchentable,4,0,0,19.5
+placement_task,baseline/gpt-4o,baseline,gpt-4o,,task_name,Put all peaches on the kitchencounter,1,0,0,9
+placement_task,baseline/gpt-4o,baseline,gpt-4o,,task_name,Put all plums on the kitchencounter,1,0,0,20
+placement_task,baseline/gpt-4o,baseline,gpt-4o,,task_name,Put all cupcakes in the microwave,10,0,0,18
+placement_task,baseline/gpt-4o,baseline,gpt-4o,,task_name,Put all bananas in the fridge,6,0,0,20
+placement_task,baseline/gpt-4o,baseline,gpt-4o,,task_name,Put all bananas in the microwave,6,0,0,13.833333333333334
+placement_task,baseline/gpt-4o,baseline,gpt-4o,,task_name,Put all bellpeppers in the fridge,2,0,0,20
+placement_task,baseline/gpt-4o,baseline,gpt-4o,,task_name,Put all peaches in the fridge,6,0,0,0
+placement_task,baseline/gpt-4o,baseline,gpt-4o,,task_name,Put all peaches in the microwave,8,0,0,12
+placement_task,baseline/gpt-4o,baseline,gpt-4o,,task_name,Put all plums in the fridge,6,0,0,0
+placement_task,baseline/gpt-4o,baseline,gpt-4o,,task_name,Put all plums in the microwave,8,0,0,13.625
+placement_task,baseline/gpt-4o,baseline,gpt-4o,,task_name,Put all creamybuns on the kitchentable,2,0,0,20
+placement_task,baseline/gpt-4o,baseline,gpt-4o,,task_name,Put all creamybuns in the fridge,2,0,0,20
+placement_task,baseline/gpt-4o,baseline,gpt-4o,,task_name,Put all creamybuns in the microwave,4,0,0,20
+placement_task,baseline/gpt-4o,baseline,gpt-4o,,task_name,Put all chips in the microwave,4,0,0,20
+placement_task,baseline/gpt-4o,baseline,gpt-4o,,task_name,Put all milks on the coffeetable,1,0,0,20
+placement_task,baseline/gpt-4o,baseline,gpt-4o,,task_name,Put all bananas on the oventray,1,0,0,17
+placement_task,baseline/gpt-4o,baseline,gpt-4o,,task_name,Put all bananas on the coffeetable,1,0,0,20
+placement_task,baseline/gpt-4o,baseline,gpt-4o,,task_name,Put all cupcakes on the coffeetable,2,0,0,13
+placement_task,baseline/gpt-4o,baseline,gpt-4o,,task_name,Put all juices in the fridge,2,0,0,20
+placement_task,baseline/gpt-4o,baseline,gpt-4o,,task_name,Put all milks in the microwave,4,0,0,20
+placement_task,baseline/gpt-4o,baseline,gpt-4o,,task_name,Put all crackers on the kitchentable,1,0,0,20
+placement_task,baseline/gpt-4o,baseline,gpt-4o,,task_name,Put all plums in the fryingpan,1,0,0,13
+placement_task,baseline/gpt-4o,baseline,gpt-4o,,task_name,Put all crackers in the fridge,2,0,0,20
+placement_task,baseline/gpt-4o,baseline,gpt-4o,,task_name,Put all crackers in the microwave,2,0,0,15
+placement_task,baseline/gpt-4o,baseline,gpt-4o,,task_name,Put all cupcakes on the desk,1,0,0,20
+placement_task,baseline/gpt-4o,baseline,gpt-4o,,task_name,Put all bananas on the desk,1,0,0,20
+placement_task,baseline/gpt-4o,baseline,gpt-4o,,task_name,Put all milks on the kitchencounter,1,0,0,20
+placement_task,baseline/gpt-4o,baseline,gpt-4o,,task_name,Put all milks on the cuttingboard,1,0,0,20
+placement_task,baseline/gpt-4o,baseline,gpt-4o,,task_name,Put all milks on the desk,1,0,0,20
+placement_task,baseline/gpt-4o,baseline,gpt-4o,,task_name,Put all alcohols on the kitchentable,1,0,0,20
+placement_task,baseline/gpt-4o,baseline,gpt-4o,,task_name,Put all alcohols in the microwave,2,0,0,16
+placement_task,baseline/gpt-4o,baseline,gpt-4o,,scene,1,25,0,0,13.52
+placement_task,baseline/gpt-4o,baseline,gpt-4o,,scene,2,17,0,0,12.941176470588236
+placement_task,baseline/gpt-4o,baseline,gpt-4o,,scene,3,14,0,0,19.285714285714285
+placement_task,baseline/gpt-4o,baseline,gpt-4o,,scene,4,18,0,0,13.61111111111111
+placement_task,baseline/gpt-4o,baseline,gpt-4o,,scene,5,8,0,0,17.375
+placement_task,baseline/gpt-4o,baseline,gpt-4o,,scene,6,5,0,0,20
+placement_task,baseline/gpt-4o,baseline,gpt-4o,,scene,7,16,0,0,17.125
+placement_task,baseline/gpt-4o,baseline,gpt-4o,,object,cupcakes,14,0,0,17.571428571428573
+placement_task,baseline/gpt-4o,baseline,gpt-4o,,object,bananas,16,0,0,17.5
+placement_task,baseline/gpt-4o,baseline,gpt-4o,,object,bellpeppers,4,0,0,18.25
+placement_task,baseline/gpt-4o,baseline,gpt-4o,,object,chips,7,0,0,20
+placement_task,baseline/gpt-4o,baseline,gpt-4o,,object,apples,1,0,0,20
+placement_task,baseline/gpt-4o,baseline,gpt-4o,,object,peaches,19,0,0,9.631578947368421
+placement_task,baseline/gpt-4o,baseline,gpt-4o,,object,plums,16,0,0,8.875
+placement_task,baseline/gpt-4o,baseline,gpt-4o,,object,creamybuns,8,0,0,20
+placement_task,baseline/gpt-4o,baseline,gpt-4o,,object,milks,8,0,0,20
+placement_task,baseline/gpt-4o,baseline,gpt-4o,,object,juices,2,0,0,20
+placement_task,baseline/gpt-4o,baseline,gpt-4o,,object,crackers,5,0,0,18
+placement_task,baseline/gpt-4o,baseline,gpt-4o,,object,alcohols,3,0,0,17.333333333333332
+placement_task,baseline/gpt-4o,baseline,gpt-4o,,destination,kitchencounter,7,0,0,18.428571428571427
+placement_task,baseline/gpt-4o,baseline,gpt-4o,,destination,kitchentable,12,0,0,19.25
+placement_task,baseline/gpt-4o,baseline,gpt-4o,,destination,microwave,48,0,0,16.041666666666668
+placement_task,baseline/gpt-4o,baseline,gpt-4o,,destination,fridge,26,0,0,10.76923076923077
+placement_task,baseline/gpt-4o,baseline,gpt-4o,,destination,coffeetable,4,0,0,16.5
+placement_task,baseline/gpt-4o,baseline,gpt-4o,,destination,oventray,1,0,0,17
+placement_task,baseline/gpt-4o,baseline,gpt-4o,,destination,fryingpan,1,0,0,13
+placement_task,baseline/gpt-4o,baseline,gpt-4o,,destination,desk,3,0,0,20
+placement_task,baseline/gpt-4o,baseline,gpt-4o,,destination,cuttingboard,1,0,0,20
+placement_task,baseline/gpt-4o,baseline,gpt-4o,,goal_count,2,83,0,0,15.132530120481928
+placement_task,baseline/gpt-4o,baseline,gpt-4o,,goal_count,3,13,0,0,15.692307692307692
+placement_task,baseline/gpt-4o,baseline,gpt-4o,,goal_count,6,4,0,0,18.25
+placement_task,baseline/gpt-4o,baseline,gpt-4o,,goal_count,4,3,0,0,17.666666666666668
+placement_task,baseline/gpt-4o,baseline,gpt-4o,,required_state_changes,,103,0,0,15.398058252427184
+placement_task,baseline/gpt-4o,baseline,gpt-4o,,reference_length,8,53,0,0,15.339622641509434
+placement_task,baseline/gpt-4o,baseline,gpt-4o,,reference_length,12,6,0,0,15.666666666666666
+placement_task,baseline/gpt-4o,baseline,gpt-4o,,reference_length,24,2,0,0,16.5
+placement_task,baseline/gpt-4o,baseline,gpt-4o,,reference_length,0,2,0,0,20
+placement_task,baseline/gpt-4o,baseline,gpt-4o,,reference_length,9,30,0,0,15
+placement_task,baseline/gpt-4o,baseline,gpt-4o,,reference_length,13,5,0,0,14
+placement_task,baseline/gpt-4o,baseline,gpt-4o,,reference_length,25,1,0,0,20
+placement_task,baseline/gpt-4o,baseline,gpt-4o,,reference_length,4,2,0,0,13
+placement_task,baseline/gpt-4o,baseline,gpt-4o,,reference_length,16,1,0,0,20
+placement_task,baseline/gpt-4o,baseline,gpt-4o,,reference_length,17,1,0,0,20
+placement_task,single-prompt/gpt-4o-mini/precheck,single-prompt,gpt-4o-mini,True,task_name,Put all cupcakes on the kitchencounter,1,0,0,5
+placement_task,single-prompt/gpt-4o-mini/precheck,single-prompt,gpt-4o-mini,True,task_name,Put all bananas on the kitchencounter,1,0,0,9
+placement_task,single-prompt/gpt-4o-mini/precheck,single-prompt,gpt-4o-mini,True,task_name,Put all bellpeppers on the kitchentable,1,0,0,12
+placement_task,single-prompt/gpt-4o-mini/precheck,single-prompt,gpt-4o-mini,True,task_name,Put all bellpeppers on the kitchencounter,1,0,0,0
+placement_task,single-prompt/gpt-4o-mini/precheck,single-prompt,gpt-4o-mini,True,task_name,Put all chips on the kitchentable,3,2,0.6666666666666666,6.333333333333333
+placement_task,single-prompt/gpt-4o-mini/precheck,single-prompt,gpt-4o-mini,True,task_name,Put all apples on the kitchencounter,1,0,0,6
+placement_task,single-prompt/gpt-4o-mini/precheck,single-prompt,gpt-4o-mini,True,task_name,Put all peaches on the kitchentable,4,3,0.75,7
+placement_task,single-prompt/gpt-4o-mini/precheck,single-prompt,gpt-4o-mini,True,task_name,Put all peaches on the kitchencounter,1,1,1,7
+placement_task,single-prompt/gpt-4o-mini/precheck,single-prompt,gpt-4o-mini,True,task_name,Put all plums on the kitchencounter,1,0,0,6
+placement_task,single-prompt/gpt-4o-mini/precheck,single-prompt,gpt-4o-mini,True,task_name,Put all cupcakes in the microwave,10,5,0.5,8
+placement_task,single-prompt/gpt-4o-mini/precheck,single-prompt,gpt-4o-mini,True,task_name,Put all bananas in the fridge,6,6,1,8.666666666666666
+placement_task,single-prompt/gpt-4o-mini/precheck,single-prompt,gpt-4o-mini,True,task_name,Put all bananas in the microwave,6,0,0,6
+placement_task,single-prompt/gpt-4o-mini/precheck,single-prompt,gpt-4o-mini,True,task_name,Put all bellpeppers in the fridge,2,1,0.5,20.5
+placement_task,single-prompt/gpt-4o-mini/precheck,single-prompt,gpt-4o-mini,True,task_name,Put all peaches in the fridge,6,3,0.5,9
+placement_task,single-prompt/gpt-4o-mini/precheck,single-prompt,gpt-4o-mini,True,task_name,Put all peaches in the microwave,8,3,0.375,7.875
+placement_task,single-prompt/gpt-4o-mini/precheck,single-prompt,gpt-4o-mini,True,task_name,Put all plums in the fridge,6,4,0.6666666666666666,7
+placement_task,single-prompt/gpt-4o-mini/precheck,single-prompt,gpt-4o-mini,True,task_name,Put all plums in the microwave,8,5,0.625,7.5
+placement_task,single-prompt/gpt-4o-mini/precheck,single-prompt,gpt-4o-mini,True,task_name,Put all creamybuns on the kitchentable,2,0,0,4
+placement_task,single-prompt/gpt-4o-mini/precheck,single-prompt,gpt-4o-mini,True,task_name,Put all creamybuns in the fridge,2,0,0,5.5
+placement_task,single-prompt/gpt-4o-mini/precheck,single-prompt,gpt-4o-mini,True,task_name,Put all creamybuns in the microwave,4,0,0,2.75
+placement_task,single-prompt/gpt-4o-mini/precheck,single-prompt,gpt-4o-mini,True,task_name,Put all chips in the microwave,4,2,0.5,6.25
+placement_task,single-prompt/gpt-4o-mini/precheck,single-prompt,gpt-4o-mini,True,task_name,Put all milks on the coffeetable,1,0,0,16
+placement_task,single-prompt/gpt-4o-mini/precheck,single-prompt,gpt-4o-mini,True,task_name,Put all bananas on the oventray,1,0,0,2
+placement_task,single-prompt/gpt-4o-mini/precheck,single-prompt,gpt-4o-mini,True,task_name,Put all bananas on the coffeetable,1,0,0,14
+placement_task,single-prompt/gpt-4o-mini/precheck,single-prompt,gpt-4o-mini,True,task_name,Put all cupcakes on the coffeetable,2,1,0.5,4
+placement_task,single-prompt/gpt-4o-mini/precheck,single-prompt,gpt-4o-mini,True,task_name,Put all juices in the fridge,2,2,1,8
+placement_task,single-prompt/gpt-4o-mini/precheck,single-prompt,gpt-4o-mini,True,task_name,Put all milks in the microwave,4,4,1,8.5
+placement_task,single-prompt/gpt-4o-mini/precheck,single-prompt,gpt-4o-mini,True,task_name,Put all crackers on the kitchentable,1,0,0,8
+placement_task,single-prompt/gpt-4o-mini/precheck,single-prompt,gpt-4o-mini,True,task_name,Put all plums in the fryingpan,1,0,0,5
+placement_task,single-prompt/gpt-4o-mini/precheck,single-prompt,gpt-4o-mini,True,task_name,Put all crackers in the fridge,2,0,0,4.5
+placement_task,single-prompt/gpt-4o-mini/precheck,single-prompt,gpt-4o-mini,True,task_name,Put all crackers in the microwave,2,1,0.5,6.5
+placement_task,single-prompt/gpt-4o-mini/precheck,single-prompt,gpt-4o-mini,True,task_name,Put all cupcakes on the desk,1,0,0,4
+placement_task,single-prompt/gpt-4o-mini/precheck,single-prompt,gpt-4o-mini,True,task_name,Put all bananas on the desk,1,1,1,7
+placement_task,single-prompt/gpt-4o-mini/precheck,single-prompt,gpt-4o-mini,True,task_name,Put all milks on the kitchencounter,1,0,0,0
+placement_task,single-prompt/gpt-4o-mini/precheck,single-prompt,gpt-4o-mini,True,task_name,Put all milks on the cuttingboard,1,1,1,8
+placement_task,single-prompt/gpt-4o-mini/precheck,single-prompt,gpt-4o-mini,True,task_name,Put all milks on the desk,1,1,1,8
+placement_task,single-prompt/gpt-4o-mini/precheck,single-prompt,gpt-4o-mini,True,task_name,Put all alcohols on the kitchentable,1,1,1,8
+placement_task,single-prompt/gpt-4o-mini/precheck,single-prompt,gpt-4o-mini,True,task_name,Put all alcohols in the microwave,2,1,0.5,7.5
+placement_task,single-prompt/gpt-4o-mini/precheck,single-prompt,gpt-4o-mini,True,scene,1,25,15,0.6,9.12
+placement_task,single-prompt/gpt-4o-mini/precheck,single-prompt,gpt-4o-mini,True,scene,2,17,5,0.29411764705882354,5.882352941176471
+placement_task,single-prompt/gpt-4o-mini/precheck,single-prompt,gpt-4o-mini,True,scene,3,14,6,0.42857142857142855,7.785714285714286
+placement_task,single-prompt/gpt-4o-mini/precheck,single-prompt,gpt-4o-mini,True,scene,4,18,5,0.2777777777777778,7.111111111111111
+placement_task,single-prompt/gpt-4o-mini/precheck,single-prompt,gpt-4o-mini,True,scene,5,8,3,0.375,6.125
+placement_task,single-prompt/gpt-4o-mini/precheck,single-prompt,gpt-4o-mini,True,scene,6,5,4,0.8,6.6
+placement_task,single-prompt/gpt-4o-mini/precheck,single-prompt,gpt-4o-mini,True,scene,7,16,10,0.625,6.4375
+placement_task,single-prompt/gpt-4o-mini/precheck,single-prompt,gpt-4o-mini,True,object,cupcakes,14,6,0.42857142857142855,6.928571428571429
+placement_task,single-prompt/gpt-4o-mini/precheck,single-prompt,gpt-4o-mini,True,object,bananas,16,7,0.4375,7.5
+placement_task,single-prompt/gpt-4o-mini/precheck,single-prompt,gpt-4o-mini,True,object,bellpeppers,4,1,0.25,13.25
+placement_task,single-prompt/gpt-4o-mini/precheck,single-prompt,gpt-4o-mini,True,object,chips,7,4,0.5714285714285714,6.285714285714286
+placement_task,single-prompt/gpt-4o-mini/precheck,single-prompt,gpt-4o-mini,True,object,apples,1,0,0,6
+placement_task,single-prompt/gpt-4o-mini/precheck,single-prompt,gpt-4o-mini,True,object,peaches,19,10,0.5263157894736842,8
+placement_task,single-prompt/gpt-4o-mini/precheck,single-prompt,gpt-4o-mini,True,object,plums,16,9,0.5625,7.0625
+placement_task,single-prompt/gpt-4o-mini/precheck,single-prompt,gpt-4o-mini,True,object,creamybuns,8,0,0,3.75
+placement_task,single-prompt/gpt-4o-mini/precheck,single-prompt,gpt-4o-mini,True,object,milks,8,6,0.75,8.25
+placement_task,single-prompt/gpt-4o-mini/precheck,single-prompt,gpt-4o-mini,True,object,juices,2,2,1,8
+placement_task,single-prompt/gpt-4o-mini/precheck,single-prompt,gpt-4o-mini,True,object,crackers,5,1,0.2,6
+placement_task,single-prompt/gpt-4o-mini/precheck,single-prompt,gpt-4o-mini,True,object,alcohols,3,2,0.6666666666666666,7.666666666666667
+placement_task,single-prompt/gpt-4o-mini/precheck,single-prompt,gpt-4o-mini,True,destination,kitchencounter,7,1,0.14285714285714285,4.714285714285714
+placement_task,single-prompt/gpt-4o-mini/precheck,single-prompt,gpt-4o-mini,True,destination,kitchentable,12,6,0.5,6.916666666666667
+placement_task,single-prompt/gpt-4o-mini/precheck,single-prompt,gpt-4o-mini,True,destination,microwave,48,21,0.4375,7.020833333333333
+placement_task,single-prompt/gpt-4o-mini/precheck,single-prompt,gpt-4o-mini,True,destination,fridge,26,16,0.6153846153846154,8.653846153846153
+placement_task,single-prompt/gpt-4o-mini/precheck,single-prompt,gpt-4o-mini,True,destination,coffeetable,4,1,0.25,9.5
+placement_task,single-prompt/gpt-4o-mini/precheck,single-prompt,gpt-4o-mini,True,destination,oventray,1,0,0,2
+placement_task,single-prompt/gpt-4o-mini/precheck,single-prompt,gpt-4o-mini,True,destination,fryingpan,1,0,0,5
+placement_task,single-prompt/gpt-4o-mini/precheck,single-prompt,gpt-4o-mini,True,destination,desk,3,2,0.6666666666666666,6.333333333333333
+placement_task,single-prompt/gpt-4o-mini/precheck,single-prompt,gpt-4o-mini,True,destination,cuttingboard,1,1,1,8
+placement_task,single-prompt/gpt-4o-mini/precheck,single-prompt,gpt-4o-mini,True,goal_count,2,83,45,0.5421686746987951,6.783132530120482
+placement_task,single-prompt/gpt-4o-mini/precheck,single-prompt,gpt-4o-mini,True,goal_count,3,13,2,0.15384615384615385,8.692307692307692
+placement_task,single-prompt/gpt-4o-mini/precheck,single-prompt,gpt-4o-mini,True,goal_count,6,4,1,0.25,13.25
+placement_task,single-prompt/gpt-4o-mini/precheck,single-prompt,gpt-4o-mini,True,goal_count,4,3,0,0,7
+placement_task,single-prompt/gpt-4o-mini/precheck,single-prompt,gpt-4o-mini,True,required_state_changes,,103,48,0.46601941747572817,7.281553398058253
+placement_task,single-prompt/gpt-4o-mini/precheck,single-prompt,gpt-4o-mini,True,reference_length,8,53,28,0.5283018867924528,6.509433962264151
+placement_task,single-prompt/gpt-4o-mini/precheck,single-prompt,gpt-4o-mini,True,reference_length,12,6,1,0.16666666666666666,9.666666666666666
+placement_task,single-prompt/gpt-4o-mini/precheck,single-prompt,gpt-4o-mini,True,reference_length,24,2,1,0.5,18
+placement_task,single-prompt/gpt-4o-mini/precheck,single-prompt,gpt-4o-mini,True,reference_length,0,2,0,0,0
+placement_task,single-prompt/gpt-4o-mini/precheck,single-prompt,gpt-4o-mini,True,reference_length,9,30,16,0.5333333333333333,7.3
+placement_task,single-prompt/gpt-4o-mini/precheck,single-prompt,gpt-4o-mini,True,reference_length,13,5,1,0.2,9.4
+placement_task,single-prompt/gpt-4o-mini/precheck,single-prompt,gpt-4o-mini,True,reference_length,25,1,0,0,17
+placement_task,single-prompt/gpt-4o-mini/precheck,single-prompt,gpt-4o-mini,True,reference_length,4,2,1,0.5,4
+placement_task,single-prompt/gpt-4o-mini/precheck,single-prompt,gpt-4o-mini,True,reference_length,16,1,0,0,8
+placement_task,single-prompt/gpt-4o-mini/precheck,single-prompt,gpt-4o-mini,True,reference_length,17,1,0,0,12
+placement_task,single-prompt/gpt-4o/precheck,single-prompt,gpt-4o,True,task_name,Put all cupcakes on the kitchencounter,1,0,0,4
+placement_task,single-prompt/gpt-4o/precheck,single-prompt,gpt-4o,True,task_name,Put all bananas on the kitchencounter,1,0,0,10
+placement_task,single-prompt/gpt-4o/precheck,single-prompt,gpt-4o,True,task_name,Put all bellpeppers on the kitchentable,1,0,0,19
+placement_task,single-prompt/gpt-4o/precheck,single-prompt,gpt-4o,True,task_name,Put all bellpeppers on the kitchencounter,1,0,0,0
+placement_task,single-prompt/gpt-4o/precheck,single-prompt,gpt-4o,True,task_name,Put all chips on the kitchentable,3,3,1,7.333333333333333
+placement_task,single-prompt/gpt-4o/precheck,single-prompt,gpt-4o,True,task_name,Put all apples on the kitchencounter,1,1,1,8
+placement_task,single-prompt/gpt-4o/precheck,single-prompt,gpt-4o,True,task_name,Put all peaches on the kitchentable,4,3,0.75,11
+placement_task,single-prompt/gpt-4o/precheck,single-prompt,gpt-4o,True,task_name,Put all peaches on the kitchencounter,1,1,1,8
+placement_task,single-prompt/gpt-4o/precheck,single-prompt,gpt-4o,True,task_name,Put all plums on the kitchencounter,1,1,1,8
+placement_task,single-prompt/gpt-4o/precheck,single-prompt,gpt-4o,True,task_name,Put all cupcakes in the microwave,10,10,1,10.3
+placement_task,single-prompt/gpt-4o/precheck,single-prompt,gpt-4o,True,task_name,Put all bananas in the fridge,6,6,1,8
+placement_task,single-prompt/gpt-4o/precheck,single-prompt,gpt-4o,True,task_name,Put all bananas in the microwave,6,4,0.6666666666666666,9.166666666666666
+placement_task,single-prompt/gpt-4o/precheck,single-prompt,gpt-4o,True,task_name,Put all bellpeppers in the fridge,2,2,1,14
+placement_task,single-prompt/gpt-4o/precheck,single-prompt,gpt-4o,True,task_name,Put all peaches in the fridge,6,5,0.8333333333333334,9
+placement_task,single-prompt/gpt-4o/precheck,single-prompt,gpt-4o,True,task_name,Put all peaches in the microwave,8,4,0.5,8.5
+placement_task,single-prompt/gpt-4o/precheck,single-prompt,gpt-4o,True,task_name,Put all plums in the fridge,6,5,0.8333333333333334,7.833333333333333
+placement_task,single-prompt/gpt-4o/precheck,single-prompt,gpt-4o,True,task_name,Put all plums in the microwave,8,6,0.75,7.75
+placement_task,single-prompt/gpt-4o/precheck,single-prompt,gpt-4o,True,task_name,Put all creamybuns on the kitchentable,2,2,1,7.5
+placement_task,single-prompt/gpt-4o/precheck,single-prompt,gpt-4o,True,task_name,Put all creamybuns in the fridge,2,1,0.5,6
+placement_task,single-prompt/gpt-4o/precheck,single-prompt,gpt-4o,True,task_name,Put all creamybuns in the microwave,4,3,0.75,8.25
+placement_task,single-prompt/gpt-4o/precheck,single-prompt,gpt-4o,True,task_name,Put all chips in the microwave,4,3,0.75,8
+placement_task,single-prompt/gpt-4o/precheck,single-prompt,gpt-4o,True,task_name,Put all milks on the coffeetable,1,0,0,2
+placement_task,single-prompt/gpt-4o/precheck,single-prompt,gpt-4o,True,task_name,Put all bananas on the oventray,1,0,0,2
+placement_task,single-prompt/gpt-4o/precheck,single-prompt,gpt-4o,True,task_name,Put all bananas on the coffeetable,1,0,0,2
+placement_task,single-prompt/gpt-4o/precheck,single-prompt,gpt-4o,True,task_name,Put all cupcakes on the coffeetable,2,1,0.5,2
+placement_task,single-prompt/gpt-4o/precheck,single-prompt,gpt-4o,True,task_name,Put all juices in the fridge,2,2,1,8
+placement_task,single-prompt/gpt-4o/precheck,single-prompt,gpt-4o,True,task_name,Put all milks in the microwave,4,3,0.75,6.25
+placement_task,single-prompt/gpt-4o/precheck,single-prompt,gpt-4o,True,task_name,Put all crackers on the kitchentable,1,1,1,9
+placement_task,single-prompt/gpt-4o/precheck,single-prompt,gpt-4o,True,task_name,Put all plums in the fryingpan,1,0,0,4
+placement_task,single-prompt/gpt-4o/precheck,single-prompt,gpt-4o,True,task_name,Put all crackers in the fridge,2,2,1,7.5
+placement_task,single-prompt/gpt-4o/precheck,single-prompt,gpt-4o,True,task_name,Put all crackers in the microwave,2,1,0.5,5
+placement_task,single-prompt/gpt-4o/precheck,single-prompt,gpt-4o,True,task_name,Put all cupcakes on the desk,1,0,0,11
+placement_task,single-prompt/gpt-4o/precheck,single-prompt,gpt-4o,True,task_name,Put all bananas on the desk,1,1,1,8
+placement_task,single-prompt/gpt-4o/precheck,single-prompt,gpt-4o,True,task_name,Put all milks on the kitchencounter,1,0,0,0
+placement_task,single-prompt/gpt-4o/precheck,single-prompt,gpt-4o,True,task_name,Put all milks on the cuttingboard,1,1,1,9
+placement_task,single-prompt/gpt-4o/precheck,single-prompt,gpt-4o,True,task_name,Put all milks on the desk,1,1,1,8
+placement_task,single-prompt/gpt-4o/precheck,single-prompt,gpt-4o,True,task_name,Put all alcohols on the kitchentable,1,1,1,8
+placement_task,single-prompt/gpt-4o/precheck,single-prompt,gpt-4o,True,task_name,Put all alcohols in the microwave,2,2,1,9.5
+placement_task,single-prompt/gpt-4o/precheck,single-prompt,gpt-4o,True,scene,1,25,20,0.8,9.2
+placement_task,single-prompt/gpt-4o/precheck,single-prompt,gpt-4o,True,scene,2,17,13,0.7647058823529411,7.823529411764706
+placement_task,single-prompt/gpt-4o/precheck,single-prompt,gpt-4o,True,scene,3,14,8,0.5714285714285714,6.642857142857143
+placement_task,single-prompt/gpt-4o/precheck,single-prompt,gpt-4o,True,scene,4,18,12,0.6666666666666666,7.333333333333333
+placement_task,single-prompt/gpt-4o/precheck,single-prompt,gpt-4o,True,scene,5,8,6,0.75,8.75
+placement_task,single-prompt/gpt-4o/precheck,single-prompt,gpt-4o,True,scene,6,5,4,0.8,6.8
+placement_task,single-prompt/gpt-4o/precheck,single-prompt,gpt-4o,True,scene,7,16,13,0.8125,8.75
+placement_task,single-prompt/gpt-4o/precheck,single-prompt,gpt-4o,True,object,cupcakes,14,11,0.7857142857142857,8.714285714285714
+placement_task,single-prompt/gpt-4o/precheck,single-prompt,gpt-4o,True,object,bananas,16,11,0.6875,7.8125
+placement_task,single-prompt/gpt-4o/precheck,single-prompt,gpt-4o,True,object,bellpeppers,4,2,0.5,11.75
+placement_task,single-prompt/gpt-4o/precheck,single-prompt,gpt-4o,True,object,chips,7,6,0.8571428571428571,7.714285714285714
+placement_task,single-prompt/gpt-4o/precheck,single-prompt,gpt-4o,True,object,apples,1,1,1,8
+placement_task,single-prompt/gpt-4o/precheck,single-prompt,gpt-4o,True,object,peaches,19,13,0.6842105263157895,9.157894736842104
+placement_task,single-prompt/gpt-4o/precheck,single-prompt,gpt-4o,True,object,plums,16,12,0.75,7.5625
+placement_task,single-prompt/gpt-4o/precheck,single-prompt,gpt-4o,True,object,creamybuns,8,6,0.75,7.5
+placement_task,single-prompt/gpt-4o/precheck,single-prompt,gpt-4o,True,object,milks,8,5,0.625,5.5
+placement_task,single-prompt/gpt-4o/precheck,single-prompt,gpt-4o,True,object,juices,2,2,1,8
+placement_task,single-prompt/gpt-4o/precheck,single-prompt,gpt-4o,True,object,crackers,5,4,0.8,6.8
+placement_task,single-prompt/gpt-4o/precheck,single-prompt,gpt-4o,True,object,alcohols,3,3,1,9
+placement_task,single-prompt/gpt-4o/precheck,single-prompt,gpt-4o,True,destination,kitchencounter,7,3,0.42857142857142855,5.428571428571429
+placement_task,single-prompt/gpt-4o/precheck,single-prompt,gpt-4o,True,destination,kitchentable,12,10,0.8333333333333334,9.75
+placement_task,single-prompt/gpt-4o/precheck,single-prompt,gpt-4o,True,destination,microwave,48,36,0.75,8.479166666666666
+placement_task,single-prompt/gpt-4o/precheck,single-prompt,gpt-4o,True,destination,fridge,26,23,0.8846153846153846,8.461538461538462
+placement_task,single-prompt/gpt-4o/precheck,single-prompt,gpt-4o,True,destination,coffeetable,4,1,0.25,2
+placement_task,single-prompt/gpt-4o/precheck,single-prompt,gpt-4o,True,destination,oventray,1,0,0,2
+placement_task,single-prompt/gpt-4o/precheck,single-prompt,gpt-4o,True,destination,fryingpan,1,0,0,4
+placement_task,single-prompt/gpt-4o/precheck,single-prompt,gpt-4o,True,destination,desk,3,2,0.6666666666666666,9
+placement_task,single-prompt/gpt-4o/precheck,single-prompt,gpt-4o,True,destination,cuttingboard,1,1,1,9
+placement_task,single-prompt/gpt-4o/precheck,single-prompt,gpt-4o,True,goal_count,2,83,64,0.7710843373493976,7.433734939759036
+placement_task,single-prompt/gpt-4o/precheck,single-prompt,gpt-4o,True,goal_count,3,13,8,0.6153846153846154,10.307692307692308
+placement_task,single-prompt/gpt-4o/precheck,single-prompt,gpt-4o,True,goal_count,6,4,2,0.5,11.75
+placement_task,single-prompt/gpt-4o/precheck,single-prompt,gpt-4o,True,goal_count,4,3,2,0.6666666666666666,11.333333333333334
+placement_task,single-prompt/gpt-4o/precheck,single-prompt,gpt-4o,True,required_state_changes,,103,76,0.7378640776699029,8.077669902912621
+placement_task,single-prompt/gpt-4o/precheck,single-prompt,gpt-4o,True,reference_length,8,53,40,0.7547169811320755,7.245283018867925
+placement_task,single-prompt/gpt-4o/precheck,single-prompt,gpt-4o,True,reference_length,12,6,4,0.6666666666666666,10
+placement_task,single-prompt/gpt-4o/precheck,single-prompt,gpt-4o,True,reference_length,24,2,1,0.5,16
+placement_task,single-prompt/gpt-4o/precheck,single-prompt,gpt-4o,True,reference_length,0,2,0,0,0
+placement_task,single-prompt/gpt-4o/precheck,single-prompt,gpt-4o,True,reference_length,9,30,24,0.8,8.366666666666667
+placement_task,single-prompt/gpt-4o/precheck,single-prompt,gpt-4o,True,reference_length,13,5,3,0.6,10.6
+placement_task,single-prompt/gpt-4o/precheck,single-prompt,gpt-4o,True,reference_length,25,1,1,1,15
+placement_task,single-prompt/gpt-4o/precheck,single-prompt,gpt-4o,True,reference_length,4,2,1,0.5,2
+placement_task,single-prompt/gpt-4o/precheck,single-prompt,gpt-4o,True,reference_length,16,1,1,1,16
+placement_task,single-prompt/gpt-4o/precheck,single-prompt,gpt-4o,True,reference_length,17,1,1,1,17
+placement_task,multi-prompts/gpt-4o-mini/precheck,multi-prompts,gpt-4o-mini,True,task_name,Put all cupcakes on the kitchencounter,1,0,0,1
+placement_task,multi-prompts/gpt-4o-mini/precheck,multi-prompts,gpt-4o-mini,True,task_name,Put all bananas on the kitchencounter,1,0,0,7
+placement_task,multi-prompts/gpt-4o-mini/precheck,multi-prompts,gpt-4o-mini,True,task_name,Put all bellpeppers on the kitchentable,1,0,0,12
+placement_task,multi-prompts/gpt-4o-mini/precheck,multi-prompts,gpt-4o-mini,True,task_name,Put all bellpeppers on the kitchencounter,1,1,1,0
+placement_task,multi-prompts/gpt-4o-mini/precheck,multi-prompts,gpt-4o-mini,True,task_name,Put all chips on the kitchentable,3,3,1,6.666666666666667
+placement_task,multi-prompts/gpt-4o-mini/precheck,multi-prompts,gpt-4o-mini,True,task_name,Put all apples on the kitchencounter,1,1,1,8
+placement_task,multi-prompts/gpt-4o-mini/precheck,multi-prompts,gpt-4o-mini,True,task_name,Put all peaches on the kitchentable,4,2,0.5,6
+placement_task,multi-prompts/gpt-4o-mini/precheck,multi-prompts,gpt-4o-mini,True,task_name,Put all peaches on the kitchencounter,1,1,1,8
+placement_task,multi-prompts/gpt-4o-mini/precheck,multi-prompts,gpt-4o-mini,True,task_name,Put all plums on the kitchencounter,1,1,1,7
+placement_task,multi-prompts/gpt-4o-mini/precheck,multi-prompts,gpt-4o-mini,True,task_name,Put all cupcakes in the microwave,10,4,0.4,6.4
+placement_task,multi-prompts/gpt-4o-mini/precheck,multi-prompts,gpt-4o-mini,True,task_name,Put all bananas in the fridge,6,4,0.6666666666666666,7.166666666666667
+placement_task,multi-prompts/gpt-4o-mini/precheck,multi-prompts,gpt-4o-mini,True,task_name,Put all bananas in the microwave,6,0,0,6
+placement_task,multi-prompts/gpt-4o-mini/precheck,multi-prompts,gpt-4o-mini,True,task_name,Put all bellpeppers in the fridge,2,1,0.5,12.5
+placement_task,multi-prompts/gpt-4o-mini/precheck,multi-prompts,gpt-4o-mini,True,task_name,Put all peaches in the fridge,6,1,0.16666666666666666,6.833333333333333
+placement_task,multi-prompts/gpt-4o-mini/precheck,multi-prompts,gpt-4o-mini,True,task_name,Put all peaches in the microwave,8,1,0.125,7.375
+placement_task,multi-prompts/gpt-4o-mini/precheck,multi-prompts,gpt-4o-mini,True,task_name,Put all plums in the fridge,6,2,0.3333333333333333,6.166666666666667
+placement_task,multi-prompts/gpt-4o-mini/precheck,multi-prompts,gpt-4o-mini,True,task_name,Put all plums in the microwave,8,5,0.625,7.5
+placement_task,multi-prompts/gpt-4o-mini/precheck,multi-prompts,gpt-4o-mini,True,task_name,Put all creamybuns on the kitchentable,2,1,0.5,5.5
+placement_task,multi-prompts/gpt-4o-mini/precheck,multi-prompts,gpt-4o-mini,True,task_name,Put all creamybuns in the fridge,2,1,0.5,6.5
+placement_task,multi-prompts/gpt-4o-mini/precheck,multi-prompts,gpt-4o-mini,True,task_name,Put all creamybuns in the microwave,4,0,0,2.75
+placement_task,multi-prompts/gpt-4o-mini/precheck,multi-prompts,gpt-4o-mini,True,task_name,Put all chips in the microwave,4,2,0.5,6.5
+placement_task,multi-prompts/gpt-4o-mini/precheck,multi-prompts,gpt-4o-mini,True,task_name,Put all milks on the coffeetable,1,0,0,1
+placement_task,multi-prompts/gpt-4o-mini/precheck,multi-prompts,gpt-4o-mini,True,task_name,Put all bananas on the oventray,1,0,0,2
+placement_task,multi-prompts/gpt-4o-mini/precheck,multi-prompts,gpt-4o-mini,True,task_name,Put all bananas on the coffeetable,1,0,0,16
+placement_task,multi-prompts/gpt-4o-mini/precheck,multi-prompts,gpt-4o-mini,True,task_name,Put all cupcakes on the coffeetable,2,1,0.5,1.5
+placement_task,multi-prompts/gpt-4o-mini/precheck,multi-prompts,gpt-4o-mini,True,task_name,Put all juices in the fridge,2,2,1,8.5
+placement_task,multi-prompts/gpt-4o-mini/precheck,multi-prompts,gpt-4o-mini,True,task_name,Put all milks in the microwave,4,3,0.75,7.75
+placement_task,multi-prompts/gpt-4o-mini/precheck,multi-prompts,gpt-4o-mini,True,task_name,Put all crackers on the kitchentable,1,0,0,16
+placement_task,multi-prompts/gpt-4o-mini/precheck,multi-prompts,gpt-4o-mini,True,task_name,Put all plums in the fryingpan,1,0,0,4
+placement_task,multi-prompts/gpt-4o-mini/precheck,multi-prompts,gpt-4o-mini,True,task_name,Put all crackers in the fridge,2,0,0,4
+placement_task,multi-prompts/gpt-4o-mini/precheck,multi-prompts,gpt-4o-mini,True,task_name,Put all crackers in the microwave,2,1,0.5,6.5
+placement_task,multi-prompts/gpt-4o-mini/precheck,multi-prompts,gpt-4o-mini,True,task_name,Put all cupcakes on the desk,1,0,0,1
+placement_task,multi-prompts/gpt-4o-mini/precheck,multi-prompts,gpt-4o-mini,True,task_name,Put all bananas on the desk,1,0,0,3
+placement_task,multi-prompts/gpt-4o-mini/precheck,multi-prompts,gpt-4o-mini,True,task_name,Put all milks on the kitchencounter,1,0,0,0
+placement_task,multi-prompts/gpt-4o-mini/precheck,multi-prompts,gpt-4o-mini,True,task_name,Put all milks on the cuttingboard,1,1,1,7
+placement_task,multi-prompts/gpt-4o-mini/precheck,multi-prompts,gpt-4o-mini,True,task_name,Put all milks on the desk,1,1,1,8
+placement_task,multi-prompts/gpt-4o-mini/precheck,multi-prompts,gpt-4o-mini,True,task_name,Put all alcohols on the kitchentable,1,1,1,8
+placement_task,multi-prompts/gpt-4o-mini/precheck,multi-prompts,gpt-4o-mini,True,task_name,Put all alcohols in the microwave,2,1,0.5,6.5
+placement_task,multi-prompts/gpt-4o-mini/precheck,multi-prompts,gpt-4o-mini,True,scene,1,25,12,0.48,7.32
+placement_task,multi-prompts/gpt-4o-mini/precheck,multi-prompts,gpt-4o-mini,True,scene,2,17,5,0.29411764705882354,5.705882352941177
+placement_task,multi-prompts/gpt-4o-mini/precheck,multi-prompts,gpt-4o-mini,True,scene,3,14,5,0.35714285714285715,6.214285714285714
+placement_task,multi-prompts/gpt-4o-mini/precheck,multi-prompts,gpt-4o-mini,True,scene,4,18,4,0.2222222222222222,6.722222222222222
+placement_task,multi-prompts/gpt-4o-mini/precheck,multi-prompts,gpt-4o-mini,True,scene,5,8,3,0.375,5.625
+placement_task,multi-prompts/gpt-4o-mini/precheck,multi-prompts,gpt-4o-mini,True,scene,6,5,4,0.8,6.4
+placement_task,multi-prompts/gpt-4o-mini/precheck,multi-prompts,gpt-4o-mini,True,scene,7,16,9,0.5625,6.1875
+placement_task,multi-prompts/gpt-4o-mini/precheck,multi-prompts,gpt-4o-mini,True,object,cupcakes,14,5,0.35714285714285715,4.928571428571429
+placement_task,multi-prompts/gpt-4o-mini/precheck,multi-prompts,gpt-4o-mini,True,object,bananas,16,4,0.25,6.6875
+placement_task,multi-prompts/gpt-4o-mini/precheck,multi-prompts,gpt-4o-mini,True,object,bellpeppers,4,2,0.5,9.25
+placement_task,multi-prompts/gpt-4o-mini/precheck,multi-prompts,gpt-4o-mini,True,object,chips,7,5,0.7142857142857143,6.571428571428571
+placement_task,multi-prompts/gpt-4o-mini/precheck,multi-prompts,gpt-4o-mini,True,object,apples,1,1,1,8
+placement_task,multi-prompts/gpt-4o-mini/precheck,multi-prompts,gpt-4o-mini,True,object,peaches,19,5,0.2631578947368421,6.947368421052632
+placement_task,multi-prompts/gpt-4o-mini/precheck,multi-prompts,gpt-4o-mini,True,object,plums,16,8,0.5,6.75
+placement_task,multi-prompts/gpt-4o-mini/precheck,multi-prompts,gpt-4o-mini,True,object,creamybuns,8,2,0.25,4.375
+placement_task,multi-prompts/gpt-4o-mini/precheck,multi-prompts,gpt-4o-mini,True,object,milks,8,5,0.625,5.875
+placement_task,multi-prompts/gpt-4o-mini/precheck,multi-prompts,gpt-4o-mini,True,object,juices,2,2,1,8.5
+placement_task,multi-prompts/gpt-4o-mini/precheck,multi-prompts,gpt-4o-mini,True,object,crackers,5,1,0.2,7.4
+placement_task,multi-prompts/gpt-4o-mini/precheck,multi-prompts,gpt-4o-mini,True,object,alcohols,3,2,0.6666666666666666,7
+placement_task,multi-prompts/gpt-4o-mini/precheck,multi-prompts,gpt-4o-mini,True,destination,kitchencounter,7,4,0.5714285714285714,4.428571428571429
+placement_task,multi-prompts/gpt-4o-mini/precheck,multi-prompts,gpt-4o-mini,True,destination,kitchentable,12,7,0.5833333333333334,7.583333333333333
+placement_task,multi-prompts/gpt-4o-mini/precheck,multi-prompts,gpt-4o-mini,True,destination,microwave,48,17,0.3541666666666667,6.520833333333333
+placement_task,multi-prompts/gpt-4o-mini/precheck,multi-prompts,gpt-4o-mini,True,destination,fridge,26,11,0.4230769230769231,7.076923076923077
+placement_task,multi-prompts/gpt-4o-mini/precheck,multi-prompts,gpt-4o-mini,True,destination,coffeetable,4,1,0.25,5
+placement_task,multi-prompts/gpt-4o-mini/precheck,multi-prompts,gpt-4o-mini,True,destination,oventray,1,0,0,2
+placement_task,multi-prompts/gpt-4o-mini/precheck,multi-prompts,gpt-4o-mini,True,destination,fryingpan,1,0,0,4
+placement_task,multi-prompts/gpt-4o-mini/precheck,multi-prompts,gpt-4o-mini,True,destination,desk,3,1,0.3333333333333333,4
+placement_task,multi-prompts/gpt-4o-mini/precheck,multi-prompts,gpt-4o-mini,True,destination,cuttingboard,1,1,1,7
+placement_task,multi-prompts/gpt-4o-mini/precheck,multi-prompts,gpt-4o-mini,True,goal_count,2,83,39,0.46987951807228917,6.240963855421687
+placement_task,multi-prompts/gpt-4o-mini/precheck,multi-prompts,gpt-4o-mini,True,goal_count,3,13,1,0.07692307692307693,7.384615384615385
+placement_task,multi-prompts/gpt-4o-mini/precheck,multi-prompts,gpt-4o-mini,True,goal_count,6,4,2,0.5,9.25
+placement_task,multi-prompts/gpt-4o-mini/precheck,multi-prompts,gpt-4o-mini,True,goal_count,4,3,0,0,4.333333333333333
+placement_task,multi-prompts/gpt-4o-mini/precheck,multi-prompts,gpt-4o-mini,True,required_state_changes,,103,42,0.4077669902912621,6.446601941747573
+placement_task,multi-prompts/gpt-4o-mini/precheck,multi-prompts,gpt-4o-mini,True,reference_length,8,53,25,0.4716981132075472,5.849056603773585
+placement_task,multi-prompts/gpt-4o-mini/precheck,multi-prompts,gpt-4o-mini,True,reference_length,12,6,0,0,7.333333333333333
+placement_task,multi-prompts/gpt-4o-mini/precheck,multi-prompts,gpt-4o-mini,True,reference_length,24,2,0,0,11
+placement_task,multi-prompts/gpt-4o-mini/precheck,multi-prompts,gpt-4o-mini,True,reference_length,0,2,1,0.5,0
+placement_task,multi-prompts/gpt-4o-mini/precheck,multi-prompts,gpt-4o-mini,True,reference_length,9,30,13,0.43333333333333335,7
+placement_task,multi-prompts/gpt-4o-mini/precheck,multi-prompts,gpt-4o-mini,True,reference_length,13,5,1,0.2,9.4
+placement_task,multi-prompts/gpt-4o-mini/precheck,multi-prompts,gpt-4o-mini,True,reference_length,25,1,1,1,15
+placement_task,multi-prompts/gpt-4o-mini/precheck,multi-prompts,gpt-4o-mini,True,reference_length,4,2,1,0.5,1.5
+placement_task,multi-prompts/gpt-4o-mini/precheck,multi-prompts,gpt-4o-mini,True,reference_length,16,1,0,0,8
+placement_task,multi-prompts/gpt-4o-mini/precheck,multi-prompts,gpt-4o-mini,True,reference_length,17,1,0,0,5
+placement_task,multi-prompts/gpt-4o/precheck,multi-prompts,gpt-4o,True,task_name,Put all cupcakes on the kitchencounter,1,0,0,4
+placement_task,multi-prompts/gpt-4o/precheck,multi-prompts,gpt-4o,True,task_name,Put all bananas on the kitchencounter,1,1,1,17
+placement_task,multi-prompts/gpt-4o/precheck,multi-prompts,gpt-4o,True,task_name,Put all bellpeppers on the kitchentable,1,0,0,41
+placement_task,multi-prompts/gpt-4o/precheck,multi-prompts,gpt-4o,True,task_name,Put all bellpeppers on the kitchencounter,1,0,0,0
+placement_task,multi-prompts/gpt-4o/precheck,multi-prompts,gpt-4o,True,task_name,Put all chips on the kitchentable,3,3,1,7.333333333333333
+placement_task,multi-prompts/gpt-4o/precheck,multi-prompts,gpt-4o,True,task_name,Put all apples on the kitchencounter,1,1,1,8
+placement_task,multi-prompts/gpt-4o/precheck,multi-prompts,gpt-4o,True,task_name,Put all peaches on the kitchentable,4,4,1,9.5
+placement_task,multi-prompts/gpt-4o/precheck,multi-prompts,gpt-4o,True,task_name,Put all peaches on the kitchencounter,1,1,1,8
+placement_task,multi-prompts/gpt-4o/precheck,multi-prompts,gpt-4o,True,task_name,Put all plums on the kitchencounter,1,0,0,3
+placement_task,multi-prompts/gpt-4o/precheck,multi-prompts,gpt-4o,True,task_name,Put all cupcakes in the microwave,10,10,1,10.5
+placement_task,multi-prompts/gpt-4o/precheck,multi-prompts,gpt-4o,True,task_name,Put all bananas in the fridge,6,6,1,8.166666666666666
+placement_task,multi-prompts/gpt-4o/precheck,multi-prompts,gpt-4o,True,task_name,Put all bananas in the microwave,6,6,1,9.5
+placement_task,multi-prompts/gpt-4o/precheck,multi-prompts,gpt-4o,True,task_name,Put all bellpeppers in the fridge,2,2,1,14
+placement_task,multi-prompts/gpt-4o/precheck,multi-prompts,gpt-4o,True,task_name,Put all peaches in the fridge,6,6,1,9.333333333333334
+placement_task,multi-prompts/gpt-4o/precheck,multi-prompts,gpt-4o,True,task_name,Put all peaches in the microwave,8,6,0.75,9.125
+placement_task,multi-prompts/gpt-4o/precheck,multi-prompts,gpt-4o,True,task_name,Put all plums in the fridge,6,6,1,8.666666666666666
+placement_task,multi-prompts/gpt-4o/precheck,multi-prompts,gpt-4o,True,task_name,Put all plums in the microwave,8,7,0.875,8.25
+placement_task,multi-prompts/gpt-4o/precheck,multi-prompts,gpt-4o,True,task_name,Put all creamybuns on the kitchentable,2,2,1,8
+placement_task,multi-prompts/gpt-4o/precheck,multi-prompts,gpt-4o,True,task_name,Put all creamybuns in the fridge,2,2,1,7.5
+placement_task,multi-prompts/gpt-4o/precheck,multi-prompts,gpt-4o,True,task_name,Put all creamybuns in the microwave,4,4,1,8.75
+placement_task,multi-prompts/gpt-4o/precheck,multi-prompts,gpt-4o,True,task_name,Put all chips in the microwave,4,3,0.75,7.25
+placement_task,multi-prompts/gpt-4o/precheck,multi-prompts,gpt-4o,True,task_name,Put all milks on the coffeetable,1,0,0,2
+placement_task,multi-prompts/gpt-4o/precheck,multi-prompts,gpt-4o,True,task_name,Put all bananas on the oventray,1,0,0,1
+placement_task,multi-prompts/gpt-4o/precheck,multi-prompts,gpt-4o,True,task_name,Put all bananas on the coffeetable,1,0,0,1
+placement_task,multi-prompts/gpt-4o/precheck,multi-prompts,gpt-4o,True,task_name,Put all cupcakes on the coffeetable,2,1,0.5,3
+placement_task,multi-prompts/gpt-4o/precheck,multi-prompts,gpt-4o,True,task_name,Put all juices in the fridge,2,2,1,8
+placement_task,multi-prompts/gpt-4o/precheck,multi-prompts,gpt-4o,True,task_name,Put all milks in the microwave,4,3,0.75,5.5
+placement_task,multi-prompts/gpt-4o/precheck,multi-prompts,gpt-4o,True,task_name,Put all crackers on the kitchentable,1,0,0,0
+placement_task,multi-prompts/gpt-4o/precheck,multi-prompts,gpt-4o,True,task_name,Put all plums in the fryingpan,1,0,0,4
+placement_task,multi-prompts/gpt-4o/precheck,multi-prompts,gpt-4o,True,task_name,Put all crackers in the fridge,2,2,1,9.5
+placement_task,multi-prompts/gpt-4o/precheck,multi-prompts,gpt-4o,True,task_name,Put all crackers in the microwave,2,2,1,7
+placement_task,multi-prompts/gpt-4o/precheck,multi-prompts,gpt-4o,True,task_name,Put all cupcakes on the desk,1,0,0,1
+placement_task,multi-prompts/gpt-4o/precheck,multi-prompts,gpt-4o,True,task_name,Put all bananas on the desk,1,0,0,2
+placement_task,multi-prompts/gpt-4o/precheck,multi-prompts,gpt-4o,True,task_name,Put all milks on the kitchencounter,1,0,0,0
+placement_task,multi-prompts/gpt-4o/precheck,multi-prompts,gpt-4o,True,task_name,Put all milks on the cuttingboard,1,1,1,10
+placement_task,multi-prompts/gpt-4o/precheck,multi-prompts,gpt-4o,True,task_name,Put all milks on the desk,1,1,1,8
+placement_task,multi-prompts/gpt-4o/precheck,multi-prompts,gpt-4o,True,task_name,Put all alcohols on the kitchentable,1,1,1,7
+placement_task,multi-prompts/gpt-4o/precheck,multi-prompts,gpt-4o,True,task_name,Put all alcohols in the microwave,2,1,0.5,8.5
+placement_task,multi-prompts/gpt-4o/precheck,multi-prompts,gpt-4o,True,scene,1,25,21,0.84,10.4
+placement_task,multi-prompts/gpt-4o/precheck,multi-prompts,gpt-4o,True,scene,2,17,16,0.9411764705882353,8.411764705882353
+placement_task,multi-prompts/gpt-4o/precheck,multi-prompts,gpt-4o,True,scene,3,14,9,0.6428571428571429,6.642857142857143
+placement_task,multi-prompts/gpt-4o/precheck,multi-prompts,gpt-4o,True,scene,4,18,13,0.7222222222222222,7.555555555555555
+placement_task,multi-prompts/gpt-4o/precheck,multi-prompts,gpt-4o,True,scene,5,8,6,0.75,7
+placement_task,multi-prompts/gpt-4o/precheck,multi-prompts,gpt-4o,True,scene,6,5,4,0.8,6.6
+placement_task,multi-prompts/gpt-4o/precheck,multi-prompts,gpt-4o,True,scene,7,16,15,0.9375,8.1875
+placement_task,multi-prompts/gpt-4o/precheck,multi-prompts,gpt-4o,True,object,cupcakes,14,11,0.7857142857142857,8.285714285714286
+placement_task,multi-prompts/gpt-4o/precheck,multi-prompts,gpt-4o,True,object,bananas,16,13,0.8125,7.9375
+placement_task,multi-prompts/gpt-4o/precheck,multi-prompts,gpt-4o,True,object,bellpeppers,4,2,0.5,17.25
+placement_task,multi-prompts/gpt-4o/precheck,multi-prompts,gpt-4o,True,object,chips,7,6,0.8571428571428571,7.285714285714286
+placement_task,multi-prompts/gpt-4o/precheck,multi-prompts,gpt-4o,True,object,apples,1,1,1,8
+placement_task,multi-prompts/gpt-4o/precheck,multi-prompts,gpt-4o,True,object,peaches,19,17,0.8947368421052632,9.210526315789474
+placement_task,multi-prompts/gpt-4o/precheck,multi-prompts,gpt-4o,True,object,plums,16,13,0.8125,7.8125
+placement_task,multi-prompts/gpt-4o/precheck,multi-prompts,gpt-4o,True,object,creamybuns,8,8,1,8.25
+placement_task,multi-prompts/gpt-4o/precheck,multi-prompts,gpt-4o,True,object,milks,8,5,0.625,5.25
+placement_task,multi-prompts/gpt-4o/precheck,multi-prompts,gpt-4o,True,object,juices,2,2,1,8
+placement_task,multi-prompts/gpt-4o/precheck,multi-prompts,gpt-4o,True,object,crackers,5,4,0.8,6.6
+placement_task,multi-prompts/gpt-4o/precheck,multi-prompts,gpt-4o,True,object,alcohols,3,2,0.6666666666666666,8
+placement_task,multi-prompts/gpt-4o/precheck,multi-prompts,gpt-4o,True,destination,kitchencounter,7,3,0.42857142857142855,5.714285714285714
+placement_task,multi-prompts/gpt-4o/precheck,multi-prompts,gpt-4o,True,destination,kitchentable,12,10,0.8333333333333334,10.333333333333334
+placement_task,multi-prompts/gpt-4o/precheck,multi-prompts,gpt-4o,True,destination,microwave,48,42,0.875,8.708333333333334
+placement_task,multi-prompts/gpt-4o/precheck,multi-prompts,gpt-4o,True,destination,fridge,26,26,1,9.038461538461538
+placement_task,multi-prompts/gpt-4o/precheck,multi-prompts,gpt-4o,True,destination,coffeetable,4,1,0.25,2.25
+placement_task,multi-prompts/gpt-4o/precheck,multi-prompts,gpt-4o,True,destination,oventray,1,0,0,1
+placement_task,multi-prompts/gpt-4o/precheck,multi-prompts,gpt-4o,True,destination,fryingpan,1,0,0,4
+placement_task,multi-prompts/gpt-4o/precheck,multi-prompts,gpt-4o,True,destination,desk,3,1,0.3333333333333333,3.6666666666666665
+placement_task,multi-prompts/gpt-4o/precheck,multi-prompts,gpt-4o,True,destination,cuttingboard,1,1,1,10
+placement_task,multi-prompts/gpt-4o/precheck,multi-prompts,gpt-4o,True,goal_count,2,83,70,0.8433734939759037,7.337349397590361
+placement_task,multi-prompts/gpt-4o/precheck,multi-prompts,gpt-4o,True,goal_count,3,13,10,0.7692307692307693,10.538461538461538
+placement_task,multi-prompts/gpt-4o/precheck,multi-prompts,gpt-4o,True,goal_count,6,4,2,0.5,17.25
+placement_task,multi-prompts/gpt-4o/precheck,multi-prompts,gpt-4o,True,goal_count,4,3,2,0.6666666666666666,12.333333333333334
+placement_task,multi-prompts/gpt-4o/precheck,multi-prompts,gpt-4o,True,required_state_changes,,103,84,0.8155339805825242,8.271844660194175
+placement_task,multi-prompts/gpt-4o/precheck,multi-prompts,gpt-4o,True,reference_length,8,53,44,0.8301886792452831,6.943396226415095
+placement_task,multi-prompts/gpt-4o/precheck,multi-prompts,gpt-4o,True,reference_length,12,6,5,0.8333333333333334,11.333333333333334
+placement_task,multi-prompts/gpt-4o/precheck,multi-prompts,gpt-4o,True,reference_length,24,2,1,0.5,27
+placement_task,multi-prompts/gpt-4o/precheck,multi-prompts,gpt-4o,True,reference_length,0,2,0,0,0
+placement_task,multi-prompts/gpt-4o/precheck,multi-prompts,gpt-4o,True,reference_length,9,30,26,0.8666666666666667,8.3
+placement_task,multi-prompts/gpt-4o/precheck,multi-prompts,gpt-4o,True,reference_length,13,5,4,0.8,11.6
+placement_task,multi-prompts/gpt-4o/precheck,multi-prompts,gpt-4o,True,reference_length,25,1,1,1,15
+placement_task,multi-prompts/gpt-4o/precheck,multi-prompts,gpt-4o,True,reference_length,4,2,1,0.5,3
+placement_task,multi-prompts/gpt-4o/precheck,multi-prompts,gpt-4o,True,reference_length,16,1,1,1,16
+placement_task,multi-prompts/gpt-4o/precheck,multi-prompts,gpt-4o,True,reference_length,17,1,1,1,18
+placement_task,single-prompt/gpt-4o-mini/no-precheck,single-prompt,gpt-4o-mini,False,task_name,Put all cupcakes on the kitchencounter,1,0,0,5
+placement_task,single-prompt/gpt-4o-mini/no-precheck,single-prompt,gpt-4o-mini,False,task_name,Put all bananas on the kitchencounter,1,0,0,8
+placement_task,single-prompt/gpt-4o-mini/no-precheck,single-prompt,gpt-4o-mini,False,task_name,Put all bellpeppers on the kitchentable,1,0,0,12
+placement_task,single-prompt/gpt-4o-mini/no-precheck,single-prompt,gpt-4o-mini,False,task_name,Put all bellpeppers on the kitchencounter,1,1,1,0
+placement_task,single-prompt/gpt-4o-mini/no-precheck,single-prompt,gpt-4o-mini,False,task_name,Put all chips on the kitchentable,3,2,0.6666666666666666,6
+placement_task,single-prompt/gpt-4o-mini/no-precheck,single-prompt,gpt-4o-mini,False,task_name,Put all apples on the kitchencounter,1,0,0,6
+placement_task,single-prompt/gpt-4o-mini/no-precheck,single-prompt,gpt-4o-mini,False,task_name,Put all peaches on the kitchentable,4,3,0.75,7
+placement_task,single-prompt/gpt-4o-mini/no-precheck,single-prompt,gpt-4o-mini,False,task_name,Put all peaches on the kitchencounter,1,1,1,7
+placement_task,single-prompt/gpt-4o-mini/no-precheck,single-prompt,gpt-4o-mini,False,task_name,Put all plums on the kitchencounter,1,1,1,7
+placement_task,single-prompt/gpt-4o-mini/no-precheck,single-prompt,gpt-4o-mini,False,task_name,Put all cupcakes in the microwave,10,5,0.5,8.5
+placement_task,single-prompt/gpt-4o-mini/no-precheck,single-prompt,gpt-4o-mini,False,task_name,Put all bananas in the fridge,6,5,0.8333333333333334,7.5
+placement_task,single-prompt/gpt-4o-mini/no-precheck,single-prompt,gpt-4o-mini,False,task_name,Put all bananas in the microwave,6,1,0.16666666666666666,5.5
+placement_task,single-prompt/gpt-4o-mini/no-precheck,single-prompt,gpt-4o-mini,False,task_name,Put all bellpeppers in the fridge,2,0,0,16.5
+placement_task,single-prompt/gpt-4o-mini/no-precheck,single-prompt,gpt-4o-mini,False,task_name,Put all peaches in the fridge,6,1,0.16666666666666666,6.666666666666667
+placement_task,single-prompt/gpt-4o-mini/no-precheck,single-prompt,gpt-4o-mini,False,task_name,Put all peaches in the microwave,8,4,0.5,6.75
+placement_task,single-prompt/gpt-4o-mini/no-precheck,single-prompt,gpt-4o-mini,False,task_name,Put all plums in the fridge,6,3,0.5,5.333333333333333
+placement_task,single-prompt/gpt-4o-mini/no-precheck,single-prompt,gpt-4o-mini,False,task_name,Put all plums in the microwave,8,7,0.875,7
+placement_task,single-prompt/gpt-4o-mini/no-precheck,single-prompt,gpt-4o-mini,False,task_name,Put all creamybuns on the kitchentable,2,0,0,4.5
+placement_task,single-prompt/gpt-4o-mini/no-precheck,single-prompt,gpt-4o-mini,False,task_name,Put all creamybuns in the fridge,2,0,0,4
+placement_task,single-prompt/gpt-4o-mini/no-precheck,single-prompt,gpt-4o-mini,False,task_name,Put all creamybuns in the microwave,4,0,0,5
+placement_task,single-prompt/gpt-4o-mini/no-precheck,single-prompt,gpt-4o-mini,False,task_name,Put all chips in the microwave,4,3,0.75,7.5
+placement_task,single-prompt/gpt-4o-mini/no-precheck,single-prompt,gpt-4o-mini,False,task_name,Put all milks on the coffeetable,1,0,0,16
+placement_task,single-prompt/gpt-4o-mini/no-precheck,single-prompt,gpt-4o-mini,False,task_name,Put all bananas on the oventray,1,0,0,2
+placement_task,single-prompt/gpt-4o-mini/no-precheck,single-prompt,gpt-4o-mini,False,task_name,Put all bananas on the coffeetable,1,0,0,4
+placement_task,single-prompt/gpt-4o-mini/no-precheck,single-prompt,gpt-4o-mini,False,task_name,Put all cupcakes on the coffeetable,2,1,0.5,2
+placement_task,single-prompt/gpt-4o-mini/no-precheck,single-prompt,gpt-4o-mini,False,task_name,Put all juices in the fridge,2,2,1,8.5
+placement_task,single-prompt/gpt-4o-mini/no-precheck,single-prompt,gpt-4o-mini,False,task_name,Put all milks in the microwave,4,3,0.75,6
+placement_task,single-prompt/gpt-4o-mini/no-precheck,single-prompt,gpt-4o-mini,False,task_name,Put all crackers on the kitchentable,1,0,0,4
+placement_task,single-prompt/gpt-4o-mini/no-precheck,single-prompt,gpt-4o-mini,False,task_name,Put all plums in the fryingpan,1,0,0,5
+placement_task,single-prompt/gpt-4o-mini/no-precheck,single-prompt,gpt-4o-mini,False,task_name,Put all crackers in the fridge,2,0,0,3.5
+placement_task,single-prompt/gpt-4o-mini/no-precheck,single-prompt,gpt-4o-mini,False,task_name,Put all crackers in the microwave,2,1,0.5,6
+placement_task,single-prompt/gpt-4o-mini/no-precheck,single-prompt,gpt-4o-mini,False,task_name,Put all cupcakes on the desk,1,0,0,4
+placement_task,single-prompt/gpt-4o-mini/no-precheck,single-prompt,gpt-4o-mini,False,task_name,Put all bananas on the desk,1,1,1,7
+placement_task,single-prompt/gpt-4o-mini/no-precheck,single-prompt,gpt-4o-mini,False,task_name,Put all milks on the kitchencounter,1,0,0,0
+placement_task,single-prompt/gpt-4o-mini/no-precheck,single-prompt,gpt-4o-mini,False,task_name,Put all milks on the cuttingboard,1,1,1,7
+placement_task,single-prompt/gpt-4o-mini/no-precheck,single-prompt,gpt-4o-mini,False,task_name,Put all milks on the desk,1,1,1,8
+placement_task,single-prompt/gpt-4o-mini/no-precheck,single-prompt,gpt-4o-mini,False,task_name,Put all alcohols on the kitchentable,1,1,1,7
+placement_task,single-prompt/gpt-4o-mini/no-precheck,single-prompt,gpt-4o-mini,False,task_name,Put all alcohols in the microwave,2,1,0.5,7.5
+placement_task,single-prompt/gpt-4o-mini/no-precheck,single-prompt,gpt-4o-mini,False,scene,1,25,15,0.6,7.96
+placement_task,single-prompt/gpt-4o-mini/no-precheck,single-prompt,gpt-4o-mini,False,scene,2,17,5,0.29411764705882354,5.176470588235294
+placement_task,single-prompt/gpt-4o-mini/no-precheck,single-prompt,gpt-4o-mini,False,scene,3,14,5,0.35714285714285715,6.571428571428571
+placement_task,single-prompt/gpt-4o-mini/no-precheck,single-prompt,gpt-4o-mini,False,scene,4,18,6,0.3333333333333333,6.166666666666667
+placement_task,single-prompt/gpt-4o-mini/no-precheck,single-prompt,gpt-4o-mini,False,scene,5,8,3,0.375,5.625
+placement_task,single-prompt/gpt-4o-mini/no-precheck,single-prompt,gpt-4o-mini,False,scene,6,5,4,0.8,6.4
+placement_task,single-prompt/gpt-4o-mini/no-precheck,single-prompt,gpt-4o-mini,False,scene,7,16,11,0.6875,7
+placement_task,single-prompt/gpt-4o-mini/no-precheck,single-prompt,gpt-4o-mini,False,object,cupcakes,14,6,0.42857142857142855,7
+placement_task,single-prompt/gpt-4o-mini/no-precheck,single-prompt,gpt-4o-mini,False,object,bananas,16,7,0.4375,6.1875
+placement_task,single-prompt/gpt-4o-mini/no-precheck,single-prompt,gpt-4o-mini,False,object,bellpeppers,4,1,0.25,11.25
+placement_task,single-prompt/gpt-4o-mini/no-precheck,single-prompt,gpt-4o-mini,False,object,chips,7,5,0.7142857142857143,6.857142857142857
+placement_task,single-prompt/gpt-4o-mini/no-precheck,single-prompt,gpt-4o-mini,False,object,apples,1,0,0,6
+placement_task,single-prompt/gpt-4o-mini/no-precheck,single-prompt,gpt-4o-mini,False,object,peaches,19,9,0.47368421052631576,6.7894736842105265
+placement_task,single-prompt/gpt-4o-mini/no-precheck,single-prompt,gpt-4o-mini,False,object,plums,16,11,0.6875,6.25
+placement_task,single-prompt/gpt-4o-mini/no-precheck,single-prompt,gpt-4o-mini,False,object,creamybuns,8,0,0,4.625
+placement_task,single-prompt/gpt-4o-mini/no-precheck,single-prompt,gpt-4o-mini,False,object,milks,8,5,0.625,6.875
+placement_task,single-prompt/gpt-4o-mini/no-precheck,single-prompt,gpt-4o-mini,False,object,juices,2,2,1,8.5
+placement_task,single-prompt/gpt-4o-mini/no-precheck,single-prompt,gpt-4o-mini,False,object,crackers,5,1,0.2,4.6
+placement_task,single-prompt/gpt-4o-mini/no-precheck,single-prompt,gpt-4o-mini,False,object,alcohols,3,2,0.6666666666666666,7.333333333333333
+placement_task,single-prompt/gpt-4o-mini/no-precheck,single-prompt,gpt-4o-mini,False,destination,kitchencounter,7,3,0.42857142857142855,4.714285714285714
+placement_task,single-prompt/gpt-4o-mini/no-precheck,single-prompt,gpt-4o-mini,False,destination,kitchentable,12,6,0.5,6.5
+placement_task,single-prompt/gpt-4o-mini/no-precheck,single-prompt,gpt-4o-mini,False,destination,microwave,48,25,0.5208333333333334,6.854166666666667
+placement_task,single-prompt/gpt-4o-mini/no-precheck,single-prompt,gpt-4o-mini,False,destination,fridge,26,11,0.4230769230769231,7
+placement_task,single-prompt/gpt-4o-mini/no-precheck,single-prompt,gpt-4o-mini,False,destination,coffeetable,4,1,0.25,6
+placement_task,single-prompt/gpt-4o-mini/no-precheck,single-prompt,gpt-4o-mini,False,destination,oventray,1,0,0,2
+placement_task,single-prompt/gpt-4o-mini/no-precheck,single-prompt,gpt-4o-mini,False,destination,fryingpan,1,0,0,5
+placement_task,single-prompt/gpt-4o-mini/no-precheck,single-prompt,gpt-4o-mini,False,destination,desk,3,2,0.6666666666666666,6.333333333333333
+placement_task,single-prompt/gpt-4o-mini/no-precheck,single-prompt,gpt-4o-mini,False,destination,cuttingboard,1,1,1,7
+placement_task,single-prompt/gpt-4o-mini/no-precheck,single-prompt,gpt-4o-mini,False,goal_count,2,83,46,0.5542168674698795,6.0843373493975905
+placement_task,single-prompt/gpt-4o-mini/no-precheck,single-prompt,gpt-4o-mini,False,goal_count,3,13,2,0.15384615384615385,7.923076923076923
+placement_task,single-prompt/gpt-4o-mini/no-precheck,single-prompt,gpt-4o-mini,False,goal_count,6,4,1,0.25,11.25
+placement_task,single-prompt/gpt-4o-mini/no-precheck,single-prompt,gpt-4o-mini,False,goal_count,4,3,0,0,8.666666666666666
+placement_task,single-prompt/gpt-4o-mini/no-precheck,single-prompt,gpt-4o-mini,False,required_state_changes,,103,49,0.47572815533980584,6.592233009708738
+placement_task,single-prompt/gpt-4o-mini/no-precheck,single-prompt,gpt-4o-mini,False,reference_length,8,53,29,0.5471698113207547,6.0754716981132075
+placement_task,single-prompt/gpt-4o-mini/no-precheck,single-prompt,gpt-4o-mini,False,reference_length,12,6,0,0,7.333333333333333
+placement_task,single-prompt/gpt-4o-mini/no-precheck,single-prompt,gpt-4o-mini,False,reference_length,24,2,0,0,14
+placement_task,single-prompt/gpt-4o-mini/no-precheck,single-prompt,gpt-4o-mini,False,reference_length,0,2,1,0.5,0
+placement_task,single-prompt/gpt-4o-mini/no-precheck,single-prompt,gpt-4o-mini,False,reference_length,9,30,16,0.5333333333333333,6.266666666666667
+placement_task,single-prompt/gpt-4o-mini/no-precheck,single-prompt,gpt-4o-mini,False,reference_length,13,5,2,0.4,10.2
+placement_task,single-prompt/gpt-4o-mini/no-precheck,single-prompt,gpt-4o-mini,False,reference_length,25,1,0,0,17
+placement_task,single-prompt/gpt-4o-mini/no-precheck,single-prompt,gpt-4o-mini,False,reference_length,4,2,1,0.5,2
+placement_task,single-prompt/gpt-4o-mini/no-precheck,single-prompt,gpt-4o-mini,False,reference_length,16,1,0,0,8
+placement_task,single-prompt/gpt-4o-mini/no-precheck,single-prompt,gpt-4o-mini,False,reference_length,17,1,0,0,17
+placement_task,single-prompt/gpt-4o/no-precheck,single-prompt,gpt-4o,False,task_name,Put all cupcakes on the kitchencounter,1,0,0,3
+placement_task,single-prompt/gpt-4o/no-precheck,single-prompt,gpt-4o,False,task_name,Put all bananas on the kitchencounter,1,0,0,4
+placement_task,single-prompt/gpt-4o/no-precheck,single-prompt,gpt-4o,False,task_name,Put all bellpeppers on the kitchentable,1,0,0,13
+placement_task,single-prompt/gpt-4o/no-precheck,single-prompt,gpt-4o,False,task_name,Put all bellpeppers on the kitchencounter,1,0,0,0
+placement_task,single-prompt/gpt-4o/no-precheck,single-prompt,gpt-4o,False,task_name,Put all chips on the kitchentable,3,3,1,6.333333333333333
+placement_task,single-prompt/gpt-4o/no-precheck,single-prompt,gpt-4o,False,task_name,Put all apples on the kitchencounter,1,1,1,8
+placement_task,single-prompt/gpt-4o/no-precheck,single-prompt,gpt-4o,False,task_name,Put all peaches on the kitchentable,4,4,1,10
+placement_task,single-prompt/gpt-4o/no-precheck,single-prompt,gpt-4o,False,task_name,Put all peaches on the kitchencounter,1,1,1,8
+placement_task,single-prompt/gpt-4o/no-precheck,single-prompt,gpt-4o,False,task_name,Put all plums on the kitchencounter,1,0,0,3
+placement_task,single-prompt/gpt-4o/no-precheck,single-prompt,gpt-4o,False,task_name,Put all cupcakes in the microwave,10,9,0.9,10.2
+placement_task,single-prompt/gpt-4o/no-precheck,single-prompt,gpt-4o,False,task_name,Put all bananas in the fridge,6,6,1,8.166666666666666
+placement_task,single-prompt/gpt-4o/no-precheck,single-prompt,gpt-4o,False,task_name,Put all bananas in the microwave,6,6,1,11
+placement_task,single-prompt/gpt-4o/no-precheck,single-prompt,gpt-4o,False,task_name,Put all bellpeppers in the fridge,2,1,0.5,7.5
+placement_task,single-prompt/gpt-4o/no-precheck,single-prompt,gpt-4o,False,task_name,Put all peaches in the fridge,6,4,0.6666666666666666,7.833333333333333
+placement_task,single-prompt/gpt-4o/no-precheck,single-prompt,gpt-4o,False,task_name,Put all peaches in the microwave,8,2,0.25,8.875
+placement_task,single-prompt/gpt-4o/no-precheck,single-prompt,gpt-4o,False,task_name,Put all plums in the fridge,6,4,0.6666666666666666,6.166666666666667
+placement_task,single-prompt/gpt-4o/no-precheck,single-prompt,gpt-4o,False,task_name,Put all plums in the microwave,8,7,0.875,8.25
+placement_task,single-prompt/gpt-4o/no-precheck,single-prompt,gpt-4o,False,task_name,Put all creamybuns on the kitchentable,2,1,0.5,6
+placement_task,single-prompt/gpt-4o/no-precheck,single-prompt,gpt-4o,False,task_name,Put all creamybuns in the fridge,2,1,0.5,4.5
+placement_task,single-prompt/gpt-4o/no-precheck,single-prompt,gpt-4o,False,task_name,Put all creamybuns in the microwave,4,2,0.5,4.75
+placement_task,single-prompt/gpt-4o/no-precheck,single-prompt,gpt-4o,False,task_name,Put all chips in the microwave,4,3,0.75,6
+placement_task,single-prompt/gpt-4o/no-precheck,single-prompt,gpt-4o,False,task_name,Put all milks on the coffeetable,1,0,0,2
+placement_task,single-prompt/gpt-4o/no-precheck,single-prompt,gpt-4o,False,task_name,Put all bananas on the oventray,1,0,0,2
+placement_task,single-prompt/gpt-4o/no-precheck,single-prompt,gpt-4o,False,task_name,Put all bananas on the coffeetable,1,0,0,2
+placement_task,single-prompt/gpt-4o/no-precheck,single-prompt,gpt-4o,False,task_name,Put all cupcakes on the coffeetable,2,1,0.5,2
+placement_task,single-prompt/gpt-4o/no-precheck,single-prompt,gpt-4o,False,task_name,Put all juices in the fridge,2,2,1,8
+placement_task,single-prompt/gpt-4o/no-precheck,single-prompt,gpt-4o,False,task_name,Put all milks in the microwave,4,4,1,7.75
+placement_task,single-prompt/gpt-4o/no-precheck,single-prompt,gpt-4o,False,task_name,Put all crackers on the kitchentable,1,1,1,8
+placement_task,single-prompt/gpt-4o/no-precheck,single-prompt,gpt-4o,False,task_name,Put all plums in the fryingpan,1,0,0,3
+placement_task,single-prompt/gpt-4o/no-precheck,single-prompt,gpt-4o,False,task_name,Put all crackers in the fridge,2,1,0.5,4
+placement_task,single-prompt/gpt-4o/no-precheck,single-prompt,gpt-4o,False,task_name,Put all crackers in the microwave,2,1,0.5,6
+placement_task,single-prompt/gpt-4o/no-precheck,single-prompt,gpt-4o,False,task_name,Put all cupcakes on the desk,1,0,0,8
+placement_task,single-prompt/gpt-4o/no-precheck,single-prompt,gpt-4o,False,task_name,Put all bananas on the desk,1,0,0,4
+placement_task,single-prompt/gpt-4o/no-precheck,single-prompt,gpt-4o,False,task_name,Put all milks on the kitchencounter,1,0,0,0
+placement_task,single-prompt/gpt-4o/no-precheck,single-prompt,gpt-4o,False,task_name,Put all milks on the cuttingboard,1,1,1,8
+placement_task,single-prompt/gpt-4o/no-precheck,single-prompt,gpt-4o,False,task_name,Put all milks on the desk,1,1,1,8
+placement_task,single-prompt/gpt-4o/no-precheck,single-prompt,gpt-4o,False,task_name,Put all alcohols on the kitchentable,1,1,1,7
+placement_task,single-prompt/gpt-4o/no-precheck,single-prompt,gpt-4o,False,task_name,Put all alcohols in the microwave,2,2,1,8
+placement_task,single-prompt/gpt-4o/no-precheck,single-prompt,gpt-4o,False,scene,1,25,18,0.72,8.88
+placement_task,single-prompt/gpt-4o/no-precheck,single-prompt,gpt-4o,False,scene,2,17,12,0.7058823529411765,6.647058823529412
+placement_task,single-prompt/gpt-4o/no-precheck,single-prompt,gpt-4o,False,scene,3,14,9,0.6428571428571429,7.214285714285714
+placement_task,single-prompt/gpt-4o/no-precheck,single-prompt,gpt-4o,False,scene,4,18,9,0.5,6.055555555555555
+placement_task,single-prompt/gpt-4o/no-precheck,single-prompt,gpt-4o,False,scene,5,8,6,0.75,7.5
+placement_task,single-prompt/gpt-4o/no-precheck,single-prompt,gpt-4o,False,scene,6,5,4,0.8,6.4
+placement_task,single-prompt/gpt-4o/no-precheck,single-prompt,gpt-4o,False,scene,7,16,12,0.75,7.3125
+placement_task,single-prompt/gpt-4o/no-precheck,single-prompt,gpt-4o,False,object,cupcakes,14,10,0.7142857142857143,8.357142857142858
+placement_task,single-prompt/gpt-4o/no-precheck,single-prompt,gpt-4o,False,object,bananas,16,12,0.75,7.9375
+placement_task,single-prompt/gpt-4o/no-precheck,single-prompt,gpt-4o,False,object,bellpeppers,4,1,0.25,7
+placement_task,single-prompt/gpt-4o/no-precheck,single-prompt,gpt-4o,False,object,chips,7,6,0.8571428571428571,6.142857142857143
+placement_task,single-prompt/gpt-4o/no-precheck,single-prompt,gpt-4o,False,object,apples,1,1,1,8
+placement_task,single-prompt/gpt-4o/no-precheck,single-prompt,gpt-4o,False,object,peaches,19,11,0.5789473684210527,8.736842105263158
+placement_task,single-prompt/gpt-4o/no-precheck,single-prompt,gpt-4o,False,object,plums,16,11,0.6875,6.8125
+placement_task,single-prompt/gpt-4o/no-precheck,single-prompt,gpt-4o,False,object,creamybuns,8,4,0.5,5
+placement_task,single-prompt/gpt-4o/no-precheck,single-prompt,gpt-4o,False,object,milks,8,6,0.75,6.125
+placement_task,single-prompt/gpt-4o/no-precheck,single-prompt,gpt-4o,False,object,juices,2,2,1,8
+placement_task,single-prompt/gpt-4o/no-precheck,single-prompt,gpt-4o,False,object,crackers,5,3,0.6,5.6
+placement_task,single-prompt/gpt-4o/no-precheck,single-prompt,gpt-4o,False,object,alcohols,3,3,1,7.666666666666667
+placement_task,single-prompt/gpt-4o/no-precheck,single-prompt,gpt-4o,False,destination,kitchencounter,7,2,0.2857142857142857,3.7142857142857144
+placement_task,single-prompt/gpt-4o/no-precheck,single-prompt,gpt-4o,False,destination,kitchentable,12,10,0.8333333333333334,8.25
+placement_task,single-prompt/gpt-4o/no-precheck,single-prompt,gpt-4o,False,destination,microwave,48,36,0.75,8.479166666666666
+placement_task,single-prompt/gpt-4o/no-precheck,single-prompt,gpt-4o,False,destination,fridge,26,19,0.7307692307692307,6.961538461538462
+placement_task,single-prompt/gpt-4o/no-precheck,single-prompt,gpt-4o,False,destination,coffeetable,4,1,0.25,2
+placement_task,single-prompt/gpt-4o/no-precheck,single-prompt,gpt-4o,False,destination,oventray,1,0,0,2
+placement_task,single-prompt/gpt-4o/no-precheck,single-prompt,gpt-4o,False,destination,fryingpan,1,0,0,3
+placement_task,single-prompt/gpt-4o/no-precheck,single-prompt,gpt-4o,False,destination,desk,3,1,0.3333333333333333,6.666666666666667
+placement_task,single-prompt/gpt-4o/no-precheck,single-prompt,gpt-4o,False,destination,cuttingboard,1,1,1,8
+placement_task,single-prompt/gpt-4o/no-precheck,single-prompt,gpt-4o,False,goal_count,2,83,61,0.7349397590361446,6.759036144578313
+placement_task,single-prompt/gpt-4o/no-precheck,single-prompt,gpt-4o,False,goal_count,3,13,7,0.5384615384615384,10.153846153846153
+placement_task,single-prompt/gpt-4o/no-precheck,single-prompt,gpt-4o,False,goal_count,6,4,1,0.25,7
+placement_task,single-prompt/gpt-4o/no-precheck,single-prompt,gpt-4o,False,goal_count,4,3,1,0.3333333333333333,11
+placement_task,single-prompt/gpt-4o/no-precheck,single-prompt,gpt-4o,False,required_state_changes,,103,70,0.6796116504854369,7.320388349514563
+placement_task,single-prompt/gpt-4o/no-precheck,single-prompt,gpt-4o,False,reference_length,8,53,38,0.7169811320754716,6.754716981132075
+placement_task,single-prompt/gpt-4o/no-precheck,single-prompt,gpt-4o,False,reference_length,12,6,3,0.5,10.333333333333334
+placement_task,single-prompt/gpt-4o/no-precheck,single-prompt,gpt-4o,False,reference_length,24,2,0,0,6.5
+placement_task,single-prompt/gpt-4o/no-precheck,single-prompt,gpt-4o,False,reference_length,0,2,0,0,0
+placement_task,single-prompt/gpt-4o/no-precheck,single-prompt,gpt-4o,False,reference_length,9,30,23,0.7666666666666667,7.266666666666667
+placement_task,single-prompt/gpt-4o/no-precheck,single-prompt,gpt-4o,False,reference_length,13,5,3,0.6,10.4
+placement_task,single-prompt/gpt-4o/no-precheck,single-prompt,gpt-4o,False,reference_length,25,1,1,1,15
+placement_task,single-prompt/gpt-4o/no-precheck,single-prompt,gpt-4o,False,reference_length,4,2,1,0.5,2
+placement_task,single-prompt/gpt-4o/no-precheck,single-prompt,gpt-4o,False,reference_length,16,1,0,0,15
+placement_task,single-prompt/gpt-4o/no-precheck,single-prompt,gpt-4o,False,reference_length,17,1,1,1,17
+placement_task,multi-prompts/gpt-4o-mini/no-precheck,multi-prompts,gpt-4o-mini,False,task_name,Put all cupcakes on the kitchencounter,1,0,0,1
+placement_task,multi-prompts/gpt-4o-mini/no-precheck,multi-prompts,gpt-4o-mini,False,task_name,Put all bananas on the kitchencounter,1,0,0,8
+placement_task,multi-prompts/gpt-4o-mini/no-precheck,multi-prompts,gpt-4o-mini,False,task_name,Put all bellpeppers on the kitchentable,1,0,0,9
+placement_task,multi-prompts/gpt-4o-mini/no-precheck,multi-prompts,gpt-4o-mini,False,task_name,Put all bellpeppers on the kitchencounter,1,1,1,0
+placement_task,multi-prompts/gpt-4o-mini/no-precheck,multi-prompts,gpt-4o-mini,False,task_name,Put all chips on the kitchentable,3,3,1,6.666666666666667
+placement_task,multi-prompts/gpt-4o-mini/no-precheck,multi-prompts,gpt-4o-mini,False,task_name,Put all apples on the kitchencounter,1,1,1,8
+placement_task,multi-prompts/gpt-4o-mini/no-precheck,multi-prompts,gpt-4o-mini,False,task_name,Put all peaches on the kitchentable,4,2,0.5,6.25
+placement_task,multi-prompts/gpt-4o-mini/no-precheck,multi-prompts,gpt-4o-mini,False,task_name,Put all peaches on the kitchencounter,1,1,1,8
+placement_task,multi-prompts/gpt-4o-mini/no-precheck,multi-prompts,gpt-4o-mini,False,task_name,Put all plums on the kitchencounter,1,1,1,7
+placement_task,multi-prompts/gpt-4o-mini/no-precheck,multi-prompts,gpt-4o-mini,False,task_name,Put all cupcakes in the microwave,10,4,0.4,7.8
+placement_task,multi-prompts/gpt-4o-mini/no-precheck,multi-prompts,gpt-4o-mini,False,task_name,Put all bananas in the fridge,6,4,0.6666666666666666,6.5
+placement_task,multi-prompts/gpt-4o-mini/no-precheck,multi-prompts,gpt-4o-mini,False,task_name,Put all bananas in the microwave,6,2,0.3333333333333333,6.5
+placement_task,multi-prompts/gpt-4o-mini/no-precheck,multi-prompts,gpt-4o-mini,False,task_name,Put all bellpeppers in the fridge,2,0,0,9
+placement_task,multi-prompts/gpt-4o-mini/no-precheck,multi-prompts,gpt-4o-mini,False,task_name,Put all peaches in the fridge,6,1,0.16666666666666666,6.5
+placement_task,multi-prompts/gpt-4o-mini/no-precheck,multi-prompts,gpt-4o-mini,False,task_name,Put all peaches in the microwave,8,3,0.375,5.875
+placement_task,multi-prompts/gpt-4o-mini/no-precheck,multi-prompts,gpt-4o-mini,False,task_name,Put all plums in the fridge,6,3,0.5,5.833333333333333
+placement_task,multi-prompts/gpt-4o-mini/no-precheck,multi-prompts,gpt-4o-mini,False,task_name,Put all plums in the microwave,8,6,0.75,6.875
+placement_task,multi-prompts/gpt-4o-mini/no-precheck,multi-prompts,gpt-4o-mini,False,task_name,Put all creamybuns on the kitchentable,2,0,0,4.5
+placement_task,multi-prompts/gpt-4o-mini/no-precheck,multi-prompts,gpt-4o-mini,False,task_name,Put all creamybuns in the fridge,2,0,0,6
+placement_task,multi-prompts/gpt-4o-mini/no-precheck,multi-prompts,gpt-4o-mini,False,task_name,Put all creamybuns in the microwave,4,0,0,2
+placement_task,multi-prompts/gpt-4o-mini/no-precheck,multi-prompts,gpt-4o-mini,False,task_name,Put all chips in the microwave,4,2,0.5,6.75
+placement_task,multi-prompts/gpt-4o-mini/no-precheck,multi-prompts,gpt-4o-mini,False,task_name,Put all milks on the coffeetable,1,0,0,14
+placement_task,multi-prompts/gpt-4o-mini/no-precheck,multi-prompts,gpt-4o-mini,False,task_name,Put all bananas on the oventray,1,0,0,3
+placement_task,multi-prompts/gpt-4o-mini/no-precheck,multi-prompts,gpt-4o-mini,False,task_name,Put all bananas on the coffeetable,1,0,0,3
+placement_task,multi-prompts/gpt-4o-mini/no-precheck,multi-prompts,gpt-4o-mini,False,task_name,Put all cupcakes on the coffeetable,2,1,0.5,1.5
+placement_task,multi-prompts/gpt-4o-mini/no-precheck,multi-prompts,gpt-4o-mini,False,task_name,Put all juices in the fridge,2,2,1,7.5
+placement_task,multi-prompts/gpt-4o-mini/no-precheck,multi-prompts,gpt-4o-mini,False,task_name,Put all milks in the microwave,4,4,1,8
+placement_task,multi-prompts/gpt-4o-mini/no-precheck,multi-prompts,gpt-4o-mini,False,task_name,Put all crackers on the kitchentable,1,0,0,7
+placement_task,multi-prompts/gpt-4o-mini/no-precheck,multi-prompts,gpt-4o-mini,False,task_name,Put all plums in the fryingpan,1,0,0,4
+placement_task,multi-prompts/gpt-4o-mini/no-precheck,multi-prompts,gpt-4o-mini,False,task_name,Put all crackers in the fridge,2,0,0,4
+placement_task,multi-prompts/gpt-4o-mini/no-precheck,multi-prompts,gpt-4o-mini,False,task_name,Put all crackers in the microwave,2,0,0,4
+placement_task,multi-prompts/gpt-4o-mini/no-precheck,multi-prompts,gpt-4o-mini,False,task_name,Put all cupcakes on the desk,1,0,0,1
+placement_task,multi-prompts/gpt-4o-mini/no-precheck,multi-prompts,gpt-4o-mini,False,task_name,Put all bananas on the desk,1,0,0,4
+placement_task,multi-prompts/gpt-4o-mini/no-precheck,multi-prompts,gpt-4o-mini,False,task_name,Put all milks on the kitchencounter,1,0,0,0
+placement_task,multi-prompts/gpt-4o-mini/no-precheck,multi-prompts,gpt-4o-mini,False,task_name,Put all milks on the cuttingboard,1,1,1,8
+placement_task,multi-prompts/gpt-4o-mini/no-precheck,multi-prompts,gpt-4o-mini,False,task_name,Put all milks on the desk,1,1,1,8
+placement_task,multi-prompts/gpt-4o-mini/no-precheck,multi-prompts,gpt-4o-mini,False,task_name,Put all alcohols on the kitchentable,1,1,1,8
+placement_task,multi-prompts/gpt-4o-mini/no-precheck,multi-prompts,gpt-4o-mini,False,task_name,Put all alcohols in the microwave,2,1,0.5,7
+placement_task,multi-prompts/gpt-4o-mini/no-precheck,multi-prompts,gpt-4o-mini,False,scene,1,25,13,0.52,6.88
+placement_task,multi-prompts/gpt-4o-mini/no-precheck,multi-prompts,gpt-4o-mini,False,scene,2,17,5,0.29411764705882354,5.294117647058823
+placement_task,multi-prompts/gpt-4o-mini/no-precheck,multi-prompts,gpt-4o-mini,False,scene,3,14,7,0.5,6.857142857142857
+placement_task,multi-prompts/gpt-4o-mini/no-precheck,multi-prompts,gpt-4o-mini,False,scene,4,18,4,0.2222222222222222,5.5
+placement_task,multi-prompts/gpt-4o-mini/no-precheck,multi-prompts,gpt-4o-mini,False,scene,5,8,3,0.375,5.625
+placement_task,multi-prompts/gpt-4o-mini/no-precheck,multi-prompts,gpt-4o-mini,False,scene,6,5,4,0.8,6.6
+placement_task,multi-prompts/gpt-4o-mini/no-precheck,multi-prompts,gpt-4o-mini,False,scene,7,16,9,0.5625,6.0625
+placement_task,multi-prompts/gpt-4o-mini/no-precheck,multi-prompts,gpt-4o-mini,False,object,cupcakes,14,5,0.35714285714285715,5.928571428571429
+placement_task,multi-prompts/gpt-4o-mini/no-precheck,multi-prompts,gpt-4o-mini,False,object,bananas,16,6,0.375,6
+placement_task,multi-prompts/gpt-4o-mini/no-precheck,multi-prompts,gpt-4o-mini,False,object,bellpeppers,4,1,0.25,6.75
+placement_task,multi-prompts/gpt-4o-mini/no-precheck,multi-prompts,gpt-4o-mini,False,object,chips,7,5,0.7142857142857143,6.714285714285714
+placement_task,multi-prompts/gpt-4o-mini/no-precheck,multi-prompts,gpt-4o-mini,False,object,apples,1,1,1,8
+placement_task,multi-prompts/gpt-4o-mini/no-precheck,multi-prompts,gpt-4o-mini,False,object,peaches,19,7,0.3684210526315789,6.2631578947368425
+placement_task,multi-prompts/gpt-4o-mini/no-precheck,multi-prompts,gpt-4o-mini,False,object,plums,16,10,0.625,6.3125
+placement_task,multi-prompts/gpt-4o-mini/no-precheck,multi-prompts,gpt-4o-mini,False,object,creamybuns,8,0,0,3.625
+placement_task,multi-prompts/gpt-4o-mini/no-precheck,multi-prompts,gpt-4o-mini,False,object,milks,8,6,0.75,7.75
+placement_task,multi-prompts/gpt-4o-mini/no-precheck,multi-prompts,gpt-4o-mini,False,object,juices,2,2,1,7.5
+placement_task,multi-prompts/gpt-4o-mini/no-precheck,multi-prompts,gpt-4o-mini,False,object,crackers,5,0,0,4.6
+placement_task,multi-prompts/gpt-4o-mini/no-precheck,multi-prompts,gpt-4o-mini,False,object,alcohols,3,2,0.6666666666666666,7.333333333333333
+placement_task,multi-prompts/gpt-4o-mini/no-precheck,multi-prompts,gpt-4o-mini,False,destination,kitchencounter,7,4,0.5714285714285714,4.571428571428571
+placement_task,multi-prompts/gpt-4o-mini/no-precheck,multi-prompts,gpt-4o-mini,False,destination,kitchentable,12,6,0.5,6.5
+placement_task,multi-prompts/gpt-4o-mini/no-precheck,multi-prompts,gpt-4o-mini,False,destination,microwave,48,22,0.4583333333333333,6.416666666666667
+placement_task,multi-prompts/gpt-4o-mini/no-precheck,multi-prompts,gpt-4o-mini,False,destination,fridge,26,10,0.38461538461538464,6.384615384615385
+placement_task,multi-prompts/gpt-4o-mini/no-precheck,multi-prompts,gpt-4o-mini,False,destination,coffeetable,4,1,0.25,5
+placement_task,multi-prompts/gpt-4o-mini/no-precheck,multi-prompts,gpt-4o-mini,False,destination,oventray,1,0,0,3
+placement_task,multi-prompts/gpt-4o-mini/no-precheck,multi-prompts,gpt-4o-mini,False,destination,fryingpan,1,0,0,4
+placement_task,multi-prompts/gpt-4o-mini/no-precheck,multi-prompts,gpt-4o-mini,False,destination,desk,3,1,0.3333333333333333,4.333333333333333
+placement_task,multi-prompts/gpt-4o-mini/no-precheck,multi-prompts,gpt-4o-mini,False,destination,cuttingboard,1,1,1,8
+placement_task,multi-prompts/gpt-4o-mini/no-precheck,multi-prompts,gpt-4o-mini,False,goal_count,2,83,42,0.5060240963855421,5.879518072289157
+placement_task,multi-prompts/gpt-4o-mini/no-precheck,multi-prompts,gpt-4o-mini,False,goal_count,3,13,1,0.07692307692307693,7
+placement_task,multi-prompts/gpt-4o-mini/no-precheck,multi-prompts,gpt-4o-mini,False,goal_count,6,4,1,0.25,6.75
+placement_task,multi-prompts/gpt-4o-mini/no-precheck,multi-prompts,gpt-4o-mini,False,goal_count,4,3,1,0.3333333333333333,8.666666666666666
+placement_task,multi-prompts/gpt-4o-mini/no-precheck,multi-prompts,gpt-4o-mini,False,required_state_changes,,103,45,0.4368932038834951,6.135922330097087
+placement_task,multi-prompts/gpt-4o-mini/no-precheck,multi-prompts,gpt-4o-mini,False,reference_length,8,53,24,0.4528301886792453,5.660377358490566
+placement_task,multi-prompts/gpt-4o-mini/no-precheck,multi-prompts,gpt-4o-mini,False,reference_length,12,6,0,0,6.666666666666667
+placement_task,multi-prompts/gpt-4o-mini/no-precheck,multi-prompts,gpt-4o-mini,False,reference_length,24,2,0,0,8
+placement_task,multi-prompts/gpt-4o-mini/no-precheck,multi-prompts,gpt-4o-mini,False,reference_length,0,2,1,0.5,0
+placement_task,multi-prompts/gpt-4o-mini/no-precheck,multi-prompts,gpt-4o-mini,False,reference_length,9,30,17,0.5666666666666667,6.333333333333333
+placement_task,multi-prompts/gpt-4o-mini/no-precheck,multi-prompts,gpt-4o-mini,False,reference_length,13,5,1,0.2,9.2
+placement_task,multi-prompts/gpt-4o-mini/no-precheck,multi-prompts,gpt-4o-mini,False,reference_length,25,1,0,0,11
+placement_task,multi-prompts/gpt-4o-mini/no-precheck,multi-prompts,gpt-4o-mini,False,reference_length,4,2,1,0.5,1.5
+placement_task,multi-prompts/gpt-4o-mini/no-precheck,multi-prompts,gpt-4o-mini,False,reference_length,16,1,1,1,17
+placement_task,multi-prompts/gpt-4o-mini/no-precheck,multi-prompts,gpt-4o-mini,False,reference_length,17,1,0,0,9
+placement_task,multi-prompts/gpt-4o/no-precheck,multi-prompts,gpt-4o,False,task_name,Put all cupcakes on the kitchencounter,1,0,0,4
+placement_task,multi-prompts/gpt-4o/no-precheck,multi-prompts,gpt-4o,False,task_name,Put all bananas on the kitchencounter,1,0,0,5
+placement_task,multi-prompts/gpt-4o/no-precheck,multi-prompts,gpt-4o,False,task_name,Put all bellpeppers on the kitchentable,1,0,0,48
+placement_task,multi-prompts/gpt-4o/no-precheck,multi-prompts,gpt-4o,False,task_name,Put all bellpeppers on the kitchencounter,1,0,0,0
+placement_task,multi-prompts/gpt-4o/no-precheck,multi-prompts,gpt-4o,False,task_name,Put all chips on the kitchentable,3,3,1,6
+placement_task,multi-prompts/gpt-4o/no-precheck,multi-prompts,gpt-4o,False,task_name,Put all apples on the kitchencounter,1,1,1,8
+placement_task,multi-prompts/gpt-4o/no-precheck,multi-prompts,gpt-4o,False,task_name,Put all peaches on the kitchentable,4,4,1,8.25
+placement_task,multi-prompts/gpt-4o/no-precheck,multi-prompts,gpt-4o,False,task_name,Put all peaches on the kitchencounter,1,1,1,8
+placement_task,multi-prompts/gpt-4o/no-precheck,multi-prompts,gpt-4o,False,task_name,Put all plums on the kitchencounter,1,1,1,8
+placement_task,multi-prompts/gpt-4o/no-precheck,multi-prompts,gpt-4o,False,task_name,Put all cupcakes in the microwave,10,10,1,9.8
+placement_task,multi-prompts/gpt-4o/no-precheck,multi-prompts,gpt-4o,False,task_name,Put all bananas in the fridge,6,6,1,8.166666666666666
+placement_task,multi-prompts/gpt-4o/no-precheck,multi-prompts,gpt-4o,False,task_name,Put all bananas in the microwave,6,6,1,8.833333333333334
+placement_task,multi-prompts/gpt-4o/no-precheck,multi-prompts,gpt-4o,False,task_name,Put all bellpeppers in the fridge,2,2,1,15
+placement_task,multi-prompts/gpt-4o/no-precheck,multi-prompts,gpt-4o,False,task_name,Put all peaches in the fridge,6,6,1,9
+placement_task,multi-prompts/gpt-4o/no-precheck,multi-prompts,gpt-4o,False,task_name,Put all peaches in the microwave,8,6,0.75,9.375
+placement_task,multi-prompts/gpt-4o/no-precheck,multi-prompts,gpt-4o,False,task_name,Put all plums in the fridge,6,6,1,7.833333333333333
+placement_task,multi-prompts/gpt-4o/no-precheck,multi-prompts,gpt-4o,False,task_name,Put all plums in the microwave,8,5,0.625,7.25
+placement_task,multi-prompts/gpt-4o/no-precheck,multi-prompts,gpt-4o,False,task_name,Put all creamybuns on the kitchentable,2,2,1,7.5
+placement_task,multi-prompts/gpt-4o/no-precheck,multi-prompts,gpt-4o,False,task_name,Put all creamybuns in the fridge,2,2,1,7.5
+placement_task,multi-prompts/gpt-4o/no-precheck,multi-prompts,gpt-4o,False,task_name,Put all creamybuns in the microwave,4,3,0.75,6.75
+placement_task,multi-prompts/gpt-4o/no-precheck,multi-prompts,gpt-4o,False,task_name,Put all chips in the microwave,4,3,0.75,6
+placement_task,multi-prompts/gpt-4o/no-precheck,multi-prompts,gpt-4o,False,task_name,Put all milks on the coffeetable,1,0,0,2
+placement_task,multi-prompts/gpt-4o/no-precheck,multi-prompts,gpt-4o,False,task_name,Put all bananas on the oventray,1,0,0,2
+placement_task,multi-prompts/gpt-4o/no-precheck,multi-prompts,gpt-4o,False,task_name,Put all bananas on the coffeetable,1,0,0,1
+placement_task,multi-prompts/gpt-4o/no-precheck,multi-prompts,gpt-4o,False,task_name,Put all cupcakes on the coffeetable,2,1,0.5,5.5
+placement_task,multi-prompts/gpt-4o/no-precheck,multi-prompts,gpt-4o,False,task_name,Put all juices in the fridge,2,2,1,7
+placement_task,multi-prompts/gpt-4o/no-precheck,multi-prompts,gpt-4o,False,task_name,Put all milks in the microwave,4,3,0.75,5.25
+placement_task,multi-prompts/gpt-4o/no-precheck,multi-prompts,gpt-4o,False,task_name,Put all crackers on the kitchentable,1,1,1,8
+placement_task,multi-prompts/gpt-4o/no-precheck,multi-prompts,gpt-4o,False,task_name,Put all plums in the fryingpan,1,0,0,3
+placement_task,multi-prompts/gpt-4o/no-precheck,multi-prompts,gpt-4o,False,task_name,Put all crackers in the fridge,2,1,0.5,3
+placement_task,multi-prompts/gpt-4o/no-precheck,multi-prompts,gpt-4o,False,task_name,Put all crackers in the microwave,2,2,1,6.5
+placement_task,multi-prompts/gpt-4o/no-precheck,multi-prompts,gpt-4o,False,task_name,Put all cupcakes on the desk,1,0,0,1
+placement_task,multi-prompts/gpt-4o/no-precheck,multi-prompts,gpt-4o,False,task_name,Put all bananas on the desk,1,0,0,2
+placement_task,multi-prompts/gpt-4o/no-precheck,multi-prompts,gpt-4o,False,task_name,Put all milks on the kitchencounter,1,0,0,0
+placement_task,multi-prompts/gpt-4o/no-precheck,multi-prompts,gpt-4o,False,task_name,Put all milks on the cuttingboard,1,1,1,7
+placement_task,multi-prompts/gpt-4o/no-precheck,multi-prompts,gpt-4o,False,task_name,Put all milks on the desk,1,1,1,8
+placement_task,multi-prompts/gpt-4o/no-precheck,multi-prompts,gpt-4o,False,task_name,Put all alcohols on the kitchentable,1,1,1,8
+placement_task,multi-prompts/gpt-4o/no-precheck,multi-prompts,gpt-4o,False,task_name,Put all alcohols in the microwave,2,2,1,8
+placement_task,multi-prompts/gpt-4o/no-precheck,multi-prompts,gpt-4o,False,scene,1,25,21,0.84,10.4
+placement_task,multi-prompts/gpt-4o/no-precheck,multi-prompts,gpt-4o,False,scene,2,17,14,0.8235294117647058,7.470588235294118
+placement_task,multi-prompts/gpt-4o/no-precheck,multi-prompts,gpt-4o,False,scene,3,14,9,0.6428571428571429,6.642857142857143
+placement_task,multi-prompts/gpt-4o/no-precheck,multi-prompts,gpt-4o,False,scene,4,18,13,0.7222222222222222,6.777777777777778
+placement_task,multi-prompts/gpt-4o/no-precheck,multi-prompts,gpt-4o,False,scene,5,8,6,0.75,5.875
+placement_task,multi-prompts/gpt-4o/no-precheck,multi-prompts,gpt-4o,False,scene,6,5,4,0.8,5.8
+placement_task,multi-prompts/gpt-4o/no-precheck,multi-prompts,gpt-4o,False,scene,7,16,15,0.9375,7.625
+placement_task,multi-prompts/gpt-4o/no-precheck,multi-prompts,gpt-4o,False,object,cupcakes,14,11,0.7857142857142857,8.142857142857142
+placement_task,multi-prompts/gpt-4o/no-precheck,multi-prompts,gpt-4o,False,object,bananas,16,12,0.75,7
+placement_task,multi-prompts/gpt-4o/no-precheck,multi-prompts,gpt-4o,False,object,bellpeppers,4,2,0.5,19.5
+placement_task,multi-prompts/gpt-4o/no-precheck,multi-prompts,gpt-4o,False,object,chips,7,6,0.8571428571428571,6
+placement_task,multi-prompts/gpt-4o/no-precheck,multi-prompts,gpt-4o,False,object,apples,1,1,1,8
+placement_task,multi-prompts/gpt-4o/no-precheck,multi-prompts,gpt-4o,False,object,peaches,19,17,0.8947368421052632,8.947368421052632
+placement_task,multi-prompts/gpt-4o/no-precheck,multi-prompts,gpt-4o,False,object,plums,16,12,0.75,7.25
+placement_task,multi-prompts/gpt-4o/no-precheck,multi-prompts,gpt-4o,False,object,creamybuns,8,7,0.875,7.125
+placement_task,multi-prompts/gpt-4o/no-precheck,multi-prompts,gpt-4o,False,object,milks,8,5,0.625,4.75
+placement_task,multi-prompts/gpt-4o/no-precheck,multi-prompts,gpt-4o,False,object,juices,2,2,1,7
+placement_task,multi-prompts/gpt-4o/no-precheck,multi-prompts,gpt-4o,False,object,crackers,5,4,0.8,5.4
+placement_task,multi-prompts/gpt-4o/no-precheck,multi-prompts,gpt-4o,False,object,alcohols,3,3,1,8
+placement_task,multi-prompts/gpt-4o/no-precheck,multi-prompts,gpt-4o,False,destination,kitchencounter,7,3,0.42857142857142855,4.714285714285714
+placement_task,multi-prompts/gpt-4o/no-precheck,multi-prompts,gpt-4o,False,destination,kitchentable,12,11,0.9166666666666666,10.833333333333334
+placement_task,multi-prompts/gpt-4o/no-precheck,multi-prompts,gpt-4o,False,destination,microwave,48,40,0.8333333333333334,8.020833333333334
+placement_task,multi-prompts/gpt-4o/no-precheck,multi-prompts,gpt-4o,False,destination,fridge,26,25,0.9615384615384616,8.26923076923077
+placement_task,multi-prompts/gpt-4o/no-precheck,multi-prompts,gpt-4o,False,destination,coffeetable,4,1,0.25,3.5
+placement_task,multi-prompts/gpt-4o/no-precheck,multi-prompts,gpt-4o,False,destination,oventray,1,0,0,2
+placement_task,multi-prompts/gpt-4o/no-precheck,multi-prompts,gpt-4o,False,destination,fryingpan,1,0,0,3
+placement_task,multi-prompts/gpt-4o/no-precheck,multi-prompts,gpt-4o,False,destination,desk,3,1,0.3333333333333333,3.6666666666666665
+placement_task,multi-prompts/gpt-4o/no-precheck,multi-prompts,gpt-4o,False,destination,cuttingboard,1,1,1,7
+placement_task,multi-prompts/gpt-4o/no-precheck,multi-prompts,gpt-4o,False,goal_count,2,83,69,0.8313253012048193,6.831325301204819
+placement_task,multi-prompts/gpt-4o/no-precheck,multi-prompts,gpt-4o,False,goal_count,3,13,9,0.6923076923076923,8.923076923076923
+placement_task,multi-prompts/gpt-4o/no-precheck,multi-prompts,gpt-4o,False,goal_count,6,4,2,0.5,19.5
+placement_task,multi-prompts/gpt-4o/no-precheck,multi-prompts,gpt-4o,False,goal_count,4,3,2,0.6666666666666666,13
+placement_task,multi-prompts/gpt-4o/no-precheck,multi-prompts,gpt-4o,False,required_state_changes,,103,82,0.7961165048543689,7.766990291262136
+placement_task,multi-prompts/gpt-4o/no-precheck,multi-prompts,gpt-4o,False,reference_length,8,53,44,0.8301886792452831,6.490566037735849
+placement_task,multi-prompts/gpt-4o/no-precheck,multi-prompts,gpt-4o,False,reference_length,12,6,4,0.6666666666666666,8.666666666666666
+placement_task,multi-prompts/gpt-4o/no-precheck,multi-prompts,gpt-4o,False,reference_length,24,2,1,0.5,30.5
+placement_task,multi-prompts/gpt-4o/no-precheck,multi-prompts,gpt-4o,False,reference_length,0,2,0,0,0
+placement_task,multi-prompts/gpt-4o/no-precheck,multi-prompts,gpt-4o,False,reference_length,9,30,25,0.8333333333333334,7.633333333333334
+placement_task,multi-prompts/gpt-4o/no-precheck,multi-prompts,gpt-4o,False,reference_length,13,5,4,0.8,10.8
+placement_task,multi-prompts/gpt-4o/no-precheck,multi-prompts,gpt-4o,False,reference_length,25,1,1,1,17
+placement_task,multi-prompts/gpt-4o/no-precheck,multi-prompts,gpt-4o,False,reference_length,4,2,1,0.5,5.5
+placement_task,multi-prompts/gpt-4o/no-precheck,multi-prompts,gpt-4o,False,reference_length,16,1,1,1,16
+placement_task,multi-prompts/gpt-4o/no-precheck,multi-prompts,gpt-4o,False,reference_length,17,1,1,1,16

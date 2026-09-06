@@ -1,0 +1,91 @@
+task_type,method,metric,paper,recomputed,match
+state_change_task,baseline/gpt-4o,SR,0.032,0.032,True
+state_change_task,baseline/gpt-4o,AEFR,0.0,0.0,True
+state_change_task,baseline/gpt-4o,FRRMA,0.535,0.535,True
+state_change_task,baseline/gpt-4o,ETFR,0.433,0.433,True
+state_change_task,baseline/gpt-4o,Average Steps,10.481,10.481,True
+state_change_task,single-prompt/gpt-4o-mini/precheck,SR,0.625,0.625,True
+state_change_task,single-prompt/gpt-4o-mini/precheck,AEFR,0.026,0.026,True
+state_change_task,single-prompt/gpt-4o-mini/precheck,FRRMA,0.231,0.231,True
+state_change_task,single-prompt/gpt-4o-mini/precheck,ETFR,0.119,0.119,True
+state_change_task,single-prompt/gpt-4o-mini/precheck,Average Steps,4.747,4.747,True
+state_change_task,single-prompt/gpt-4o/precheck,SR,0.788,0.788,True
+state_change_task,single-prompt/gpt-4o/precheck,AEFR,0.016,0.016,True
+state_change_task,single-prompt/gpt-4o/precheck,FRRMA,0.173,0.173,True
+state_change_task,single-prompt/gpt-4o/precheck,ETFR,0.022,0.022,True
+state_change_task,single-prompt/gpt-4o/precheck,Average Steps,4.381,4.381,True
+state_change_task,multi-prompts/gpt-4o-mini/precheck,SR,0.75,0.75,True
+state_change_task,multi-prompts/gpt-4o-mini/precheck,AEFR,0.045,0.045,True
+state_change_task,multi-prompts/gpt-4o-mini/precheck,FRRMA,0.183,0.183,True
+state_change_task,multi-prompts/gpt-4o-mini/precheck,ETFR,0.022,0.022,True
+state_change_task,multi-prompts/gpt-4o-mini/precheck,Average Steps,4.917,4.917,True
+state_change_task,multi-prompts/gpt-4o/precheck,SR,0.894,0.894,True
+state_change_task,multi-prompts/gpt-4o/precheck,AEFR,0.019,0.019,True
+state_change_task,multi-prompts/gpt-4o/precheck,FRRMA,0.0,0.0,True
+state_change_task,multi-prompts/gpt-4o/precheck,ETFR,0.087,0.087,True
+state_change_task,multi-prompts/gpt-4o/precheck,Average Steps,3.391,3.391,True
+state_change_task,single-prompt/gpt-4o-mini/no-precheck,SR,0.615,0.615,True
+state_change_task,single-prompt/gpt-4o-mini/no-precheck,AEFR,0.003,0.003,True
+state_change_task,single-prompt/gpt-4o-mini/no-precheck,FRRMA,0.253,0.253,True
+state_change_task,single-prompt/gpt-4o-mini/no-precheck,ETFR,0.128,0.128,True
+state_change_task,single-prompt/gpt-4o-mini/no-precheck,Average Steps,4.872,4.872,True
+state_change_task,single-prompt/gpt-4o/no-precheck,SR,0.76,0.76,True
+state_change_task,single-prompt/gpt-4o/no-precheck,AEFR,0.016,0.016,True
+state_change_task,single-prompt/gpt-4o/no-precheck,FRRMA,0.189,0.189,True
+state_change_task,single-prompt/gpt-4o/no-precheck,ETFR,0.035,0.035,True
+state_change_task,single-prompt/gpt-4o/no-precheck,Average Steps,4.449,4.449,True
+state_change_task,multi-prompts/gpt-4o-mini/no-precheck,SR,0.696,0.696,True
+state_change_task,multi-prompts/gpt-4o-mini/no-precheck,AEFR,0.016,0.016,True
+state_change_task,multi-prompts/gpt-4o-mini/no-precheck,FRRMA,0.253,0.253,True
+state_change_task,multi-prompts/gpt-4o-mini/no-precheck,ETFR,0.035,0.035,True
+state_change_task,multi-prompts/gpt-4o-mini/no-precheck,Average Steps,5.08,5.08,True
+state_change_task,multi-prompts/gpt-4o/no-precheck,SR,0.872,0.872,True
+state_change_task,multi-prompts/gpt-4o/no-precheck,AEFR,0.01,0.01,True
+state_change_task,multi-prompts/gpt-4o/no-precheck,FRRMA,0.016,0.016,True
+state_change_task,multi-prompts/gpt-4o/no-precheck,ETFR,0.103,0.103,True
+state_change_task,multi-prompts/gpt-4o/no-precheck,Average Steps,3.478,3.478,True
+placement_task,baseline/gpt-4o,SR,0.0,0.0,True
+placement_task,baseline/gpt-4o,AEFR,0.01,0.01,True
+placement_task,baseline/gpt-4o,FRRMA,0.573,0.573,True
+placement_task,baseline/gpt-4o,ETFR,0.417,0.417,True
+placement_task,baseline/gpt-4o,Average Steps,15.398,15.398,True
+placement_task,single-prompt/gpt-4o-mini/precheck,SR,0.466,0.466,True
+placement_task,single-prompt/gpt-4o-mini/precheck,AEFR,0.146,0.146,True
+placement_task,single-prompt/gpt-4o-mini/precheck,FRRMA,0.029,0.029,True
+placement_task,single-prompt/gpt-4o-mini/precheck,ETFR,0.359,0.359,True
+placement_task,single-prompt/gpt-4o-mini/precheck,Average Steps,7.282,7.282,True
+placement_task,single-prompt/gpt-4o/precheck,SR,0.738,0.738,True
+placement_task,single-prompt/gpt-4o/precheck,AEFR,0.117,0.117,True
+placement_task,single-prompt/gpt-4o/precheck,FRRMA,0.029,0.029,True
+placement_task,single-prompt/gpt-4o/precheck,ETFR,0.117,0.117,True
+placement_task,single-prompt/gpt-4o/precheck,Average Steps,8.078,8.078,True
+placement_task,multi-prompts/gpt-4o-mini/precheck,SR,0.408,0.408,True
+placement_task,multi-prompts/gpt-4o-mini/precheck,AEFR,0.117,0.117,True
+placement_task,multi-prompts/gpt-4o-mini/precheck,FRRMA,0.029,0.029,True
+placement_task,multi-prompts/gpt-4o-mini/precheck,ETFR,0.447,0.447,True
+placement_task,multi-prompts/gpt-4o-mini/precheck,Average Steps,6.447,6.447,True
+placement_task,multi-prompts/gpt-4o/precheck,SR,0.816,0.816,True
+placement_task,multi-prompts/gpt-4o/precheck,AEFR,0.117,0.117,True
+placement_task,multi-prompts/gpt-4o/precheck,FRRMA,0.019,0.019,True
+placement_task,multi-prompts/gpt-4o/precheck,ETFR,0.049,0.049,True
+placement_task,multi-prompts/gpt-4o/precheck,Average Steps,8.272,8.272,True
+placement_task,single-prompt/gpt-4o-mini/no-precheck,SR,0.476,0.476,True
+placement_task,single-prompt/gpt-4o-mini/no-precheck,AEFR,0.117,0.117,True
+placement_task,single-prompt/gpt-4o-mini/no-precheck,FRRMA,0.019,0.019,True
+placement_task,single-prompt/gpt-4o-mini/no-precheck,ETFR,0.388,0.388,True
+placement_task,single-prompt/gpt-4o-mini/no-precheck,Average Steps,6.592,6.592,True
+placement_task,single-prompt/gpt-4o/no-precheck,SR,0.68,0.68,True
+placement_task,single-prompt/gpt-4o/no-precheck,AEFR,0.165,0.165,True
+placement_task,single-prompt/gpt-4o/no-precheck,FRRMA,0.029,0.029,True
+placement_task,single-prompt/gpt-4o/no-precheck,ETFR,0.126,0.126,True
+placement_task,single-prompt/gpt-4o/no-precheck,Average Steps,7.32,7.32,True
+placement_task,multi-prompts/gpt-4o-mini/no-precheck,SR,0.437,0.437,True
+placement_task,multi-prompts/gpt-4o-mini/no-precheck,AEFR,0.126,0.126,True
+placement_task,multi-prompts/gpt-4o-mini/no-precheck,FRRMA,0.01,0.01,True
+placement_task,multi-prompts/gpt-4o-mini/no-precheck,ETFR,0.427,0.427,True
+placement_task,multi-prompts/gpt-4o-mini/no-precheck,Average Steps,6.136,6.136,True
+placement_task,multi-prompts/gpt-4o/no-precheck,SR,0.796,0.796,True
+placement_task,multi-prompts/gpt-4o/no-precheck,AEFR,0.117,0.117,True
+placement_task,multi-prompts/gpt-4o/no-precheck,FRRMA,0.029,0.029,True
+placement_task,multi-prompts/gpt-4o/no-precheck,ETFR,0.058,0.058,True
+placement_task,multi-prompts/gpt-4o/no-precheck,Average Steps,7.767,7.767,True

@@ -1,0 +1,1963 @@
+[
+  {
+    "id": "pc_WALK_valid",
+    "kind": "precondition",
+    "origin": "synthetic",
+    "operation": "WALK",
+    "variant": "valid",
+    "facts": {
+      "states": {
+        "101": [],
+        "102": [
+          "CLOSED"
+        ],
+        "103": [
+          "OFF"
+        ],
+        "104": []
+      },
+      "held": [],
+      "close": [
+        101,
+        102,
+        103,
+        104
+      ]
+    },
+    "env": "The current states in the home are as follows: \nThe apple (101) and is INSIDE the kitchen (900).\nThe fridge (102) is CLOSED and and is INSIDE the kitchen (900).\nThe lightswitch (103) is OFF and and is INSIDE the kitchen (900).\nThe kitchentable (104) and is INSIDE the kitchen (900).\nYou are INSIDE the kitchen (900).\nYou are close to the apple (101) and the fridge (102) and the lightswitch (103) and the kitchentable (104).\n",
+    "action": "[WALK] <apple> (101)",
+    "gold": "true",
+    "oracle": {
+      "label": "true",
+      "atoms": [
+        true
+      ],
+      "violations": []
+    },
+    "messages": [
+      [
+        "user",
+        "The current states in the home are as follows: \nThe apple (101) and is INSIDE the kitchen (900).\nThe fridge (102) is CLOSED and and is INSIDE the kitchen (900).\nThe lightswitch (103) is OFF and and is INSIDE the kitchen (900).\nThe kitchentable (104) and is INSIDE the kitchen (900).\nYou are INSIDE the kitchen (900).\nYou are close to the apple (101) and the fridge (102) and the lightswitch (103) and the kitchentable (104).\n\nIf the current status satisfies the preconditions, output \"Yes\"; otherwise, output \"No\".\nPreconditions:\n<apple> (101) is not held in your right hand or left hand.\n"
+      ]
+    ]
+  },
+  {
+    "id": "pc_WALK_violate_1",
+    "kind": "precondition",
+    "origin": "synthetic",
+    "operation": "WALK",
+    "variant": "violate_1",
+    "facts": {
+      "states": {
+        "101": [],
+        "102": [
+          "CLOSED"
+        ],
+        "103": [
+          "OFF"
+        ],
+        "104": []
+      },
+      "held": [
+        101
+      ],
+      "close": [
+        101,
+        102,
+        103,
+        104
+      ]
+    },
+    "env": "The current states in the home are as follows: \nThe apple (101) and is INSIDE the kitchen (900).\nThe fridge (102) is CLOSED and and is INSIDE the kitchen (900).\nThe lightswitch (103) is OFF and and is INSIDE the kitchen (900).\nThe kitchentable (104) and is INSIDE the kitchen (900).\nYou are INSIDE the kitchen (900).\nYou are holding the apple (101) in your right hand.\nYou are close to the apple (101) and the fridge (102) and the lightswitch (103) and the kitchentable (104).\n",
+    "action": "[WALK] <apple> (101)",
+    "gold": "false",
+    "oracle": {
+      "label": "false",
+      "atoms": [
+        false
+      ],
+      "violations": [
+        "<apple> (101) is not held in your right hand or left hand."
+      ]
+    },
+    "messages": [
+      [
+        "user",
+        "The current states in the home are as follows: \nThe apple (101) and is INSIDE the kitchen (900).\nThe fridge (102) is CLOSED and and is INSIDE the kitchen (900).\nThe lightswitch (103) is OFF and and is INSIDE the kitchen (900).\nThe kitchentable (104) and is INSIDE the kitchen (900).\nYou are INSIDE the kitchen (900).\nYou are holding the apple (101) in your right hand.\nYou are close to the apple (101) and the fridge (102) and the lightswitch (103) and the kitchentable (104).\n\nIf the current status satisfies the preconditions, output \"Yes\"; otherwise, output \"No\".\nPreconditions:\n<apple> (101) is not held in your right hand or left hand.\n"
+      ]
+    ]
+  },
+  {
+    "id": "pc_GRAB_valid",
+    "kind": "precondition",
+    "origin": "synthetic",
+    "operation": "GRAB",
+    "variant": "valid",
+    "facts": {
+      "states": {
+        "101": [],
+        "102": [
+          "CLOSED"
+        ],
+        "103": [
+          "OFF"
+        ],
+        "104": []
+      },
+      "held": [],
+      "close": [
+        101,
+        102,
+        103,
+        104
+      ]
+    },
+    "env": "The current states in the home are as follows: \nThe apple (101) and is INSIDE the kitchen (900).\nThe fridge (102) is CLOSED and and is INSIDE the kitchen (900).\nThe lightswitch (103) is OFF and and is INSIDE the kitchen (900).\nThe kitchentable (104) and is INSIDE the kitchen (900).\nYou are INSIDE the kitchen (900).\nYou are close to the apple (101) and the fridge (102) and the lightswitch (103) and the kitchentable (104).\n",
+    "action": "[GRAB] <apple> (101)",
+    "gold": "true",
+    "oracle": {
+      "label": "true",
+      "atoms": [
+        true,
+        true
+      ],
+      "violations": []
+    },
+    "messages": [
+      [
+        "user",
+        "The current states in the home are as follows: \nThe apple (101) and is INSIDE the kitchen (900).\nThe fridge (102) is CLOSED and and is INSIDE the kitchen (900).\nThe lightswitch (103) is OFF and and is INSIDE the kitchen (900).\nThe kitchentable (104) and is INSIDE the kitchen (900).\nYou are INSIDE the kitchen (900).\nYou are close to the apple (101) and the fridge (102) and the lightswitch (103) and the kitchentable (104).\n\nIf the current status satisfies the preconditions, output \"Yes\"; otherwise, output \"No\".\nPreconditions:\nYou are close to <apple> (101).\n<apple> (101) is not held in your right hand or left hand.\n"
+      ]
+    ]
+  },
+  {
+    "id": "pc_GRAB_violate_1",
+    "kind": "precondition",
+    "origin": "synthetic",
+    "operation": "GRAB",
+    "variant": "violate_1",
+    "facts": {
+      "states": {
+        "101": [],
+        "102": [
+          "CLOSED"
+        ],
+        "103": [
+          "OFF"
+        ],
+        "104": []
+      },
+      "held": [],
+      "close": []
+    },
+    "env": "The current states in the home are as follows: \nThe apple (101) and is INSIDE the kitchen (900).\nThe fridge (102) is CLOSED and and is INSIDE the kitchen (900).\nThe lightswitch (103) is OFF and and is INSIDE the kitchen (900).\nThe kitchentable (104) and is INSIDE the kitchen (900).\nYou are INSIDE the kitchen (900).\n",
+    "action": "[GRAB] <apple> (101)",
+    "gold": "false",
+    "oracle": {
+      "label": "false",
+      "atoms": [
+        false,
+        true
+      ],
+      "violations": [
+        "You are close to <apple> (101)."
+      ]
+    },
+    "messages": [
+      [
+        "user",
+        "The current states in the home are as follows: \nThe apple (101) and is INSIDE the kitchen (900).\nThe fridge (102) is CLOSED and and is INSIDE the kitchen (900).\nThe lightswitch (103) is OFF and and is INSIDE the kitchen (900).\nThe kitchentable (104) and is INSIDE the kitchen (900).\nYou are INSIDE the kitchen (900).\n\nIf the current status satisfies the preconditions, output \"Yes\"; otherwise, output \"No\".\nPreconditions:\nYou are close to <apple> (101).\n<apple> (101) is not held in your right hand or left hand.\n"
+      ]
+    ]
+  },
+  {
+    "id": "pc_GRAB_violate_2",
+    "kind": "precondition",
+    "origin": "synthetic",
+    "operation": "GRAB",
+    "variant": "violate_2",
+    "facts": {
+      "states": {
+        "101": [],
+        "102": [
+          "CLOSED"
+        ],
+        "103": [
+          "OFF"
+        ],
+        "104": []
+      },
+      "held": [
+        101
+      ],
+      "close": [
+        101,
+        102,
+        103,
+        104
+      ]
+    },
+    "env": "The current states in the home are as follows: \nThe apple (101) and is INSIDE the kitchen (900).\nThe fridge (102) is CLOSED and and is INSIDE the kitchen (900).\nThe lightswitch (103) is OFF and and is INSIDE the kitchen (900).\nThe kitchentable (104) and is INSIDE the kitchen (900).\nYou are INSIDE the kitchen (900).\nYou are holding the apple (101) in your right hand.\nYou are close to the apple (101) and the fridge (102) and the lightswitch (103) and the kitchentable (104).\n",
+    "action": "[GRAB] <apple> (101)",
+    "gold": "false",
+    "oracle": {
+      "label": "false",
+      "atoms": [
+        true,
+        false
+      ],
+      "violations": [
+        "<apple> (101) is not held in your right hand or left hand."
+      ]
+    },
+    "messages": [
+      [
+        "user",
+        "The current states in the home are as follows: \nThe apple (101) and is INSIDE the kitchen (900).\nThe fridge (102) is CLOSED and and is INSIDE the kitchen (900).\nThe lightswitch (103) is OFF and and is INSIDE the kitchen (900).\nThe kitchentable (104) and is INSIDE the kitchen (900).\nYou are INSIDE the kitchen (900).\nYou are holding the apple (101) in your right hand.\nYou are close to the apple (101) and the fridge (102) and the lightswitch (103) and the kitchentable (104).\n\nIf the current status satisfies the preconditions, output \"Yes\"; otherwise, output \"No\".\nPreconditions:\nYou are close to <apple> (101).\n<apple> (101) is not held in your right hand or left hand.\n"
+      ]
+    ]
+  },
+  {
+    "id": "pc_SWITCHON_valid",
+    "kind": "precondition",
+    "origin": "synthetic",
+    "operation": "SWITCHON",
+    "variant": "valid",
+    "facts": {
+      "states": {
+        "101": [],
+        "102": [
+          "CLOSED"
+        ],
+        "103": [
+          "OFF"
+        ],
+        "104": []
+      },
+      "held": [],
+      "close": [
+        101,
+        102,
+        103,
+        104
+      ]
+    },
+    "env": "The current states in the home are as follows: \nThe apple (101) and is INSIDE the kitchen (900).\nThe fridge (102) is CLOSED and and is INSIDE the kitchen (900).\nThe lightswitch (103) is OFF and and is INSIDE the kitchen (900).\nThe kitchentable (104) and is INSIDE the kitchen (900).\nYou are INSIDE the kitchen (900).\nYou are close to the apple (101) and the fridge (102) and the lightswitch (103) and the kitchentable (104).\n",
+    "action": "[SWITCHON] <lightswitch> (103)",
+    "gold": "true",
+    "oracle": {
+      "label": "true",
+      "atoms": [
+        true,
+        true
+      ],
+      "violations": []
+    },
+    "messages": [
+      [
+        "user",
+        "The current states in the home are as follows: \nThe apple (101) and is INSIDE the kitchen (900).\nThe fridge (102) is CLOSED and and is INSIDE the kitchen (900).\nThe lightswitch (103) is OFF and and is INSIDE the kitchen (900).\nThe kitchentable (104) and is INSIDE the kitchen (900).\nYou are INSIDE the kitchen (900).\nYou are close to the apple (101) and the fridge (102) and the lightswitch (103) and the kitchentable (104).\n\nIf the current status satisfies the preconditions, output \"Yes\"; otherwise, output \"No\".\nPreconditions:\nYou are close to <lightswitch> (103).\n<lightswitch> (103) is OFF.\n"
+      ]
+    ]
+  },
+  {
+    "id": "pc_SWITCHON_violate_1",
+    "kind": "precondition",
+    "origin": "synthetic",
+    "operation": "SWITCHON",
+    "variant": "violate_1",
+    "facts": {
+      "states": {
+        "101": [],
+        "102": [
+          "CLOSED"
+        ],
+        "103": [
+          "OFF"
+        ],
+        "104": []
+      },
+      "held": [],
+      "close": []
+    },
+    "env": "The current states in the home are as follows: \nThe apple (101) and is INSIDE the kitchen (900).\nThe fridge (102) is CLOSED and and is INSIDE the kitchen (900).\nThe lightswitch (103) is OFF and and is INSIDE the kitchen (900).\nThe kitchentable (104) and is INSIDE the kitchen (900).\nYou are INSIDE the kitchen (900).\n",
+    "action": "[SWITCHON] <lightswitch> (103)",
+    "gold": "false",
+    "oracle": {
+      "label": "false",
+      "atoms": [
+        false,
+        true
+      ],
+      "violations": [
+        "You are close to <lightswitch> (103)."
+      ]
+    },
+    "messages": [
+      [
+        "user",
+        "The current states in the home are as follows: \nThe apple (101) and is INSIDE the kitchen (900).\nThe fridge (102) is CLOSED and and is INSIDE the kitchen (900).\nThe lightswitch (103) is OFF and and is INSIDE the kitchen (900).\nThe kitchentable (104) and is INSIDE the kitchen (900).\nYou are INSIDE the kitchen (900).\n\nIf the current status satisfies the preconditions, output \"Yes\"; otherwise, output \"No\".\nPreconditions:\nYou are close to <lightswitch> (103).\n<lightswitch> (103) is OFF.\n"
+      ]
+    ]
+  },
+  {
+    "id": "pc_SWITCHON_violate_2",
+    "kind": "precondition",
+    "origin": "synthetic",
+    "operation": "SWITCHON",
+    "variant": "violate_2",
+    "facts": {
+      "states": {
+        "101": [],
+        "102": [
+          "CLOSED"
+        ],
+        "103": [
+          "ON"
+        ],
+        "104": []
+      },
+      "held": [],
+      "close": [
+        101,
+        102,
+        103,
+        104
+      ]
+    },
+    "env": "The current states in the home are as follows: \nThe apple (101) and is INSIDE the kitchen (900).\nThe fridge (102) is CLOSED and and is INSIDE the kitchen (900).\nThe lightswitch (103) is ON and and is INSIDE the kitchen (900).\nThe kitchentable (104) and is INSIDE the kitchen (900).\nYou are INSIDE the kitchen (900).\nYou are close to the apple (101) and the fridge (102) and the lightswitch (103) and the kitchentable (104).\n",
+    "action": "[SWITCHON] <lightswitch> (103)",
+    "gold": "false",
+    "oracle": {
+      "label": "false",
+      "atoms": [
+        true,
+        false
+      ],
+      "violations": [
+        "<lightswitch> (103) is OFF."
+      ]
+    },
+    "messages": [
+      [
+        "user",
+        "The current states in the home are as follows: \nThe apple (101) and is INSIDE the kitchen (900).\nThe fridge (102) is CLOSED and and is INSIDE the kitchen (900).\nThe lightswitch (103) is ON and and is INSIDE the kitchen (900).\nThe kitchentable (104) and is INSIDE the kitchen (900).\nYou are INSIDE the kitchen (900).\nYou are close to the apple (101) and the fridge (102) and the lightswitch (103) and the kitchentable (104).\n\nIf the current status satisfies the preconditions, output \"Yes\"; otherwise, output \"No\".\nPreconditions:\nYou are close to <lightswitch> (103).\n<lightswitch> (103) is OFF.\n"
+      ]
+    ]
+  },
+  {
+    "id": "pc_SWITCHON_unknown",
+    "kind": "precondition",
+    "origin": "synthetic",
+    "operation": "SWITCHON",
+    "variant": "unknown",
+    "facts": {
+      "states": {
+        "101": [],
+        "102": [
+          "CLOSED"
+        ],
+        "103": null,
+        "104": []
+      },
+      "held": [],
+      "close": [
+        101,
+        102,
+        103,
+        104
+      ]
+    },
+    "env": "The current states in the home are as follows: \nThe apple (101) and is INSIDE the kitchen (900).\nThe fridge (102) is CLOSED and and is INSIDE the kitchen (900).\nThe lightswitch (103) and is INSIDE the kitchen (900).\nThe kitchentable (104) and is INSIDE the kitchen (900).\nYou are INSIDE the kitchen (900).\nYou are close to the apple (101) and the fridge (102) and the lightswitch (103) and the kitchentable (104).\n",
+    "action": "[SWITCHON] <lightswitch> (103)",
+    "gold": "unknown",
+    "oracle": {
+      "label": "unknown",
+      "atoms": [
+        true,
+        null
+      ],
+      "violations": []
+    },
+    "messages": [
+      [
+        "user",
+        "The current states in the home are as follows: \nThe apple (101) and is INSIDE the kitchen (900).\nThe fridge (102) is CLOSED and and is INSIDE the kitchen (900).\nThe lightswitch (103) and is INSIDE the kitchen (900).\nThe kitchentable (104) and is INSIDE the kitchen (900).\nYou are INSIDE the kitchen (900).\nYou are close to the apple (101) and the fridge (102) and the lightswitch (103) and the kitchentable (104).\n\nIf the current status satisfies the preconditions, output \"Yes\"; otherwise, output \"No\".\nPreconditions:\nYou are close to <lightswitch> (103).\n<lightswitch> (103) is OFF.\n"
+      ]
+    ]
+  },
+  {
+    "id": "pc_SWITCHOFF_valid",
+    "kind": "precondition",
+    "origin": "synthetic",
+    "operation": "SWITCHOFF",
+    "variant": "valid",
+    "facts": {
+      "states": {
+        "101": [],
+        "102": [
+          "CLOSED"
+        ],
+        "103": [
+          "ON"
+        ],
+        "104": []
+      },
+      "held": [],
+      "close": [
+        101,
+        102,
+        103,
+        104
+      ]
+    },
+    "env": "The current states in the home are as follows: \nThe apple (101) and is INSIDE the kitchen (900).\nThe fridge (102) is CLOSED and and is INSIDE the kitchen (900).\nThe lightswitch (103) is ON and and is INSIDE the kitchen (900).\nThe kitchentable (104) and is INSIDE the kitchen (900).\nYou are INSIDE the kitchen (900).\nYou are close to the apple (101) and the fridge (102) and the lightswitch (103) and the kitchentable (104).\n",
+    "action": "[SWITCHOFF] <lightswitch> (103)",
+    "gold": "true",
+    "oracle": {
+      "label": "true",
+      "atoms": [
+        true,
+        true
+      ],
+      "violations": []
+    },
+    "messages": [
+      [
+        "user",
+        "The current states in the home are as follows: \nThe apple (101) and is INSIDE the kitchen (900).\nThe fridge (102) is CLOSED and and is INSIDE the kitchen (900).\nThe lightswitch (103) is ON and and is INSIDE the kitchen (900).\nThe kitchentable (104) and is INSIDE the kitchen (900).\nYou are INSIDE the kitchen (900).\nYou are close to the apple (101) and the fridge (102) and the lightswitch (103) and the kitchentable (104).\n\nIf the current status satisfies the preconditions, output \"Yes\"; otherwise, output \"No\".\nPreconditions:\nYou are close to <lightswitch> (103).\n<lightswitch> (103) is ON.\n"
+      ]
+    ]
+  },
+  {
+    "id": "pc_SWITCHOFF_violate_1",
+    "kind": "precondition",
+    "origin": "synthetic",
+    "operation": "SWITCHOFF",
+    "variant": "violate_1",
+    "facts": {
+      "states": {
+        "101": [],
+        "102": [
+          "CLOSED"
+        ],
+        "103": [
+          "ON"
+        ],
+        "104": []
+      },
+      "held": [],
+      "close": []
+    },
+    "env": "The current states in the home are as follows: \nThe apple (101) and is INSIDE the kitchen (900).\nThe fridge (102) is CLOSED and and is INSIDE the kitchen (900).\nThe lightswitch (103) is ON and and is INSIDE the kitchen (900).\nThe kitchentable (104) and is INSIDE the kitchen (900).\nYou are INSIDE the kitchen (900).\n",
+    "action": "[SWITCHOFF] <lightswitch> (103)",
+    "gold": "false",
+    "oracle": {
+      "label": "false",
+      "atoms": [
+        false,
+        true
+      ],
+      "violations": [
+        "You are close to <lightswitch> (103)."
+      ]
+    },
+    "messages": [
+      [
+        "user",
+        "The current states in the home are as follows: \nThe apple (101) and is INSIDE the kitchen (900).\nThe fridge (102) is CLOSED and and is INSIDE the kitchen (900).\nThe lightswitch (103) is ON and and is INSIDE the kitchen (900).\nThe kitchentable (104) and is INSIDE the kitchen (900).\nYou are INSIDE the kitchen (900).\n\nIf the current status satisfies the preconditions, output \"Yes\"; otherwise, output \"No\".\nPreconditions:\nYou are close to <lightswitch> (103).\n<lightswitch> (103) is ON.\n"
+      ]
+    ]
+  },
+  {
+    "id": "pc_SWITCHOFF_violate_2",
+    "kind": "precondition",
+    "origin": "synthetic",
+    "operation": "SWITCHOFF",
+    "variant": "violate_2",
+    "facts": {
+      "states": {
+        "101": [],
+        "102": [
+          "CLOSED"
+        ],
+        "103": [
+          "OFF"
+        ],
+        "104": []
+      },
+      "held": [],
+      "close": [
+        101,
+        102,
+        103,
+        104
+      ]
+    },
+    "env": "The current states in the home are as follows: \nThe apple (101) and is INSIDE the kitchen (900).\nThe fridge (102) is CLOSED and and is INSIDE the kitchen (900).\nThe lightswitch (103) is OFF and and is INSIDE the kitchen (900).\nThe kitchentable (104) and is INSIDE the kitchen (900).\nYou are INSIDE the kitchen (900).\nYou are close to the apple (101) and the fridge (102) and the lightswitch (103) and the kitchentable (104).\n",
+    "action": "[SWITCHOFF] <lightswitch> (103)",
+    "gold": "false",
+    "oracle": {
+      "label": "false",
+      "atoms": [
+        true,
+        false
+      ],
+      "violations": [
+        "<lightswitch> (103) is ON."
+      ]
+    },
+    "messages": [
+      [
+        "user",
+        "The current states in the home are as follows: \nThe apple (101) and is INSIDE the kitchen (900).\nThe fridge (102) is CLOSED and and is INSIDE the kitchen (900).\nThe lightswitch (103) is OFF and and is INSIDE the kitchen (900).\nThe kitchentable (104) and is INSIDE the kitchen (900).\nYou are INSIDE the kitchen (900).\nYou are close to the apple (101) and the fridge (102) and the lightswitch (103) and the kitchentable (104).\n\nIf the current status satisfies the preconditions, output \"Yes\"; otherwise, output \"No\".\nPreconditions:\nYou are close to <lightswitch> (103).\n<lightswitch> (103) is ON.\n"
+      ]
+    ]
+  },
+  {
+    "id": "pc_SWITCHOFF_unknown",
+    "kind": "precondition",
+    "origin": "synthetic",
+    "operation": "SWITCHOFF",
+    "variant": "unknown",
+    "facts": {
+      "states": {
+        "101": [],
+        "102": [
+          "CLOSED"
+        ],
+        "103": null,
+        "104": []
+      },
+      "held": [],
+      "close": [
+        101,
+        102,
+        103,
+        104
+      ]
+    },
+    "env": "The current states in the home are as follows: \nThe apple (101) and is INSIDE the kitchen (900).\nThe fridge (102) is CLOSED and and is INSIDE the kitchen (900).\nThe lightswitch (103) and is INSIDE the kitchen (900).\nThe kitchentable (104) and is INSIDE the kitchen (900).\nYou are INSIDE the kitchen (900).\nYou are close to the apple (101) and the fridge (102) and the lightswitch (103) and the kitchentable (104).\n",
+    "action": "[SWITCHOFF] <lightswitch> (103)",
+    "gold": "unknown",
+    "oracle": {
+      "label": "unknown",
+      "atoms": [
+        true,
+        null
+      ],
+      "violations": []
+    },
+    "messages": [
+      [
+        "user",
+        "The current states in the home are as follows: \nThe apple (101) and is INSIDE the kitchen (900).\nThe fridge (102) is CLOSED and and is INSIDE the kitchen (900).\nThe lightswitch (103) and is INSIDE the kitchen (900).\nThe kitchentable (104) and is INSIDE the kitchen (900).\nYou are INSIDE the kitchen (900).\nYou are close to the apple (101) and the fridge (102) and the lightswitch (103) and the kitchentable (104).\n\nIf the current status satisfies the preconditions, output \"Yes\"; otherwise, output \"No\".\nPreconditions:\nYou are close to <lightswitch> (103).\n<lightswitch> (103) is ON.\n"
+      ]
+    ]
+  },
+  {
+    "id": "pc_OPEN_valid",
+    "kind": "precondition",
+    "origin": "synthetic",
+    "operation": "OPEN",
+    "variant": "valid",
+    "facts": {
+      "states": {
+        "101": [],
+        "102": [
+          "CLOSED"
+        ],
+        "103": [
+          "OFF"
+        ],
+        "104": []
+      },
+      "held": [],
+      "close": [
+        101,
+        102,
+        103,
+        104
+      ]
+    },
+    "env": "The current states in the home are as follows: \nThe apple (101) and is INSIDE the kitchen (900).\nThe fridge (102) is CLOSED and and is INSIDE the kitchen (900).\nThe lightswitch (103) is OFF and and is INSIDE the kitchen (900).\nThe kitchentable (104) and is INSIDE the kitchen (900).\nYou are INSIDE the kitchen (900).\nYou are close to the apple (101) and the fridge (102) and the lightswitch (103) and the kitchentable (104).\n",
+    "action": "[OPEN] <fridge> (102)",
+    "gold": "true",
+    "oracle": {
+      "label": "true",
+      "atoms": [
+        true,
+        true
+      ],
+      "violations": []
+    },
+    "messages": [
+      [
+        "user",
+        "The current states in the home are as follows: \nThe apple (101) and is INSIDE the kitchen (900).\nThe fridge (102) is CLOSED and and is INSIDE the kitchen (900).\nThe lightswitch (103) is OFF and and is INSIDE the kitchen (900).\nThe kitchentable (104) and is INSIDE the kitchen (900).\nYou are INSIDE the kitchen (900).\nYou are close to the apple (101) and the fridge (102) and the lightswitch (103) and the kitchentable (104).\n\nIf the current status satisfies the preconditions, output \"Yes\"; otherwise, output \"No\".\nPreconditions:\nYou are close to <fridge> (102).\n<fridge> (102) is CLOSED.\n"
+      ]
+    ]
+  },
+  {
+    "id": "pc_OPEN_violate_1",
+    "kind": "precondition",
+    "origin": "synthetic",
+    "operation": "OPEN",
+    "variant": "violate_1",
+    "facts": {
+      "states": {
+        "101": [],
+        "102": [
+          "CLOSED"
+        ],
+        "103": [
+          "OFF"
+        ],
+        "104": []
+      },
+      "held": [],
+      "close": []
+    },
+    "env": "The current states in the home are as follows: \nThe apple (101) and is INSIDE the kitchen (900).\nThe fridge (102) is CLOSED and and is INSIDE the kitchen (900).\nThe lightswitch (103) is OFF and and is INSIDE the kitchen (900).\nThe kitchentable (104) and is INSIDE the kitchen (900).\nYou are INSIDE the kitchen (900).\n",
+    "action": "[OPEN] <fridge> (102)",
+    "gold": "false",
+    "oracle": {
+      "label": "false",
+      "atoms": [
+        false,
+        true
+      ],
+      "violations": [
+        "You are close to <fridge> (102)."
+      ]
+    },
+    "messages": [
+      [
+        "user",
+        "The current states in the home are as follows: \nThe apple (101) and is INSIDE the kitchen (900).\nThe fridge (102) is CLOSED and and is INSIDE the kitchen (900).\nThe lightswitch (103) is OFF and and is INSIDE the kitchen (900).\nThe kitchentable (104) and is INSIDE the kitchen (900).\nYou are INSIDE the kitchen (900).\n\nIf the current status satisfies the preconditions, output \"Yes\"; otherwise, output \"No\".\nPreconditions:\nYou are close to <fridge> (102).\n<fridge> (102) is CLOSED.\n"
+      ]
+    ]
+  },
+  {
+    "id": "pc_OPEN_violate_2",
+    "kind": "precondition",
+    "origin": "synthetic",
+    "operation": "OPEN",
+    "variant": "violate_2",
+    "facts": {
+      "states": {
+        "101": [],
+        "102": [
+          "OPEN"
+        ],
+        "103": [
+          "OFF"
+        ],
+        "104": []
+      },
+      "held": [],
+      "close": [
+        101,
+        102,
+        103,
+        104
+      ]
+    },
+    "env": "The current states in the home are as follows: \nThe apple (101) and is INSIDE the kitchen (900).\nThe fridge (102) is OPEN and and is INSIDE the kitchen (900).\nThe lightswitch (103) is OFF and and is INSIDE the kitchen (900).\nThe kitchentable (104) and is INSIDE the kitchen (900).\nYou are INSIDE the kitchen (900).\nYou are close to the apple (101) and the fridge (102) and the lightswitch (103) and the kitchentable (104).\n",
+    "action": "[OPEN] <fridge> (102)",
+    "gold": "false",
+    "oracle": {
+      "label": "false",
+      "atoms": [
+        true,
+        false
+      ],
+      "violations": [
+        "<fridge> (102) is CLOSED."
+      ]
+    },
+    "messages": [
+      [
+        "user",
+        "The current states in the home are as follows: \nThe apple (101) and is INSIDE the kitchen (900).\nThe fridge (102) is OPEN and and is INSIDE the kitchen (900).\nThe lightswitch (103) is OFF and and is INSIDE the kitchen (900).\nThe kitchentable (104) and is INSIDE the kitchen (900).\nYou are INSIDE the kitchen (900).\nYou are close to the apple (101) and the fridge (102) and the lightswitch (103) and the kitchentable (104).\n\nIf the current status satisfies the preconditions, output \"Yes\"; otherwise, output \"No\".\nPreconditions:\nYou are close to <fridge> (102).\n<fridge> (102) is CLOSED.\n"
+      ]
+    ]
+  },
+  {
+    "id": "pc_OPEN_unknown",
+    "kind": "precondition",
+    "origin": "synthetic",
+    "operation": "OPEN",
+    "variant": "unknown",
+    "facts": {
+      "states": {
+        "101": [],
+        "102": null,
+        "103": [
+          "OFF"
+        ],
+        "104": []
+      },
+      "held": [],
+      "close": [
+        101,
+        102,
+        103,
+        104
+      ]
+    },
+    "env": "The current states in the home are as follows: \nThe apple (101) and is INSIDE the kitchen (900).\nThe fridge (102) and is INSIDE the kitchen (900).\nThe lightswitch (103) is OFF and and is INSIDE the kitchen (900).\nThe kitchentable (104) and is INSIDE the kitchen (900).\nYou are INSIDE the kitchen (900).\nYou are close to the apple (101) and the fridge (102) and the lightswitch (103) and the kitchentable (104).\n",
+    "action": "[OPEN] <fridge> (102)",
+    "gold": "unknown",
+    "oracle": {
+      "label": "unknown",
+      "atoms": [
+        true,
+        null
+      ],
+      "violations": []
+    },
+    "messages": [
+      [
+        "user",
+        "The current states in the home are as follows: \nThe apple (101) and is INSIDE the kitchen (900).\nThe fridge (102) and is INSIDE the kitchen (900).\nThe lightswitch (103) is OFF and and is INSIDE the kitchen (900).\nThe kitchentable (104) and is INSIDE the kitchen (900).\nYou are INSIDE the kitchen (900).\nYou are close to the apple (101) and the fridge (102) and the lightswitch (103) and the kitchentable (104).\n\nIf the current status satisfies the preconditions, output \"Yes\"; otherwise, output \"No\".\nPreconditions:\nYou are close to <fridge> (102).\n<fridge> (102) is CLOSED.\n"
+      ]
+    ]
+  },
+  {
+    "id": "pc_CLOSE_valid",
+    "kind": "precondition",
+    "origin": "synthetic",
+    "operation": "CLOSE",
+    "variant": "valid",
+    "facts": {
+      "states": {
+        "101": [],
+        "102": [
+          "OPEN"
+        ],
+        "103": [
+          "OFF"
+        ],
+        "104": []
+      },
+      "held": [],
+      "close": [
+        101,
+        102,
+        103,
+        104
+      ]
+    },
+    "env": "The current states in the home are as follows: \nThe apple (101) and is INSIDE the kitchen (900).\nThe fridge (102) is OPEN and and is INSIDE the kitchen (900).\nThe lightswitch (103) is OFF and and is INSIDE the kitchen (900).\nThe kitchentable (104) and is INSIDE the kitchen (900).\nYou are INSIDE the kitchen (900).\nYou are close to the apple (101) and the fridge (102) and the lightswitch (103) and the kitchentable (104).\n",
+    "action": "[CLOSE] <fridge> (102)",
+    "gold": "true",
+    "oracle": {
+      "label": "true",
+      "atoms": [
+        true,
+        true
+      ],
+      "violations": []
+    },
+    "messages": [
+      [
+        "user",
+        "The current states in the home are as follows: \nThe apple (101) and is INSIDE the kitchen (900).\nThe fridge (102) is OPEN and and is INSIDE the kitchen (900).\nThe lightswitch (103) is OFF and and is INSIDE the kitchen (900).\nThe kitchentable (104) and is INSIDE the kitchen (900).\nYou are INSIDE the kitchen (900).\nYou are close to the apple (101) and the fridge (102) and the lightswitch (103) and the kitchentable (104).\n\nIf the current status satisfies the preconditions, output \"Yes\"; otherwise, output \"No\".\nPreconditions:\nYou are close to <fridge> (102).\n<fridge> (102) is OPEN.\n"
+      ]
+    ]
+  },
+  {
+    "id": "pc_CLOSE_violate_1",
+    "kind": "precondition",
+    "origin": "synthetic",
+    "operation": "CLOSE",
+    "variant": "violate_1",
+    "facts": {
+      "states": {
+        "101": [],
+        "102": [
+          "OPEN"
+        ],
+        "103": [
+          "OFF"
+        ],
+        "104": []
+      },
+      "held": [],
+      "close": []
+    },
+    "env": "The current states in the home are as follows: \nThe apple (101) and is INSIDE the kitchen (900).\nThe fridge (102) is OPEN and and is INSIDE the kitchen (900).\nThe lightswitch (103) is OFF and and is INSIDE the kitchen (900).\nThe kitchentable (104) and is INSIDE the kitchen (900).\nYou are INSIDE the kitchen (900).\n",
+    "action": "[CLOSE] <fridge> (102)",
+    "gold": "false",
+    "oracle": {
+      "label": "false",
+      "atoms": [
+        false,
+        true
+      ],
+      "violations": [
+        "You are close to <fridge> (102)."
+      ]
+    },
+    "messages": [
+      [
+        "user",
+        "The current states in the home are as follows: \nThe apple (101) and is INSIDE the kitchen (900).\nThe fridge (102) is OPEN and and is INSIDE the kitchen (900).\nThe lightswitch (103) is OFF and and is INSIDE the kitchen (900).\nThe kitchentable (104) and is INSIDE the kitchen (900).\nYou are INSIDE the kitchen (900).\n\nIf the current status satisfies the preconditions, output \"Yes\"; otherwise, output \"No\".\nPreconditions:\nYou are close to <fridge> (102).\n<fridge> (102) is OPEN.\n"
+      ]
+    ]
+  },
+  {
+    "id": "pc_CLOSE_violate_2",
+    "kind": "precondition",
+    "origin": "synthetic",
+    "operation": "CLOSE",
+    "variant": "violate_2",
+    "facts": {
+      "states": {
+        "101": [],
+        "102": [
+          "CLOSED"
+        ],
+        "103": [
+          "OFF"
+        ],
+        "104": []
+      },
+      "held": [],
+      "close": [
+        101,
+        102,
+        103,
+        104
+      ]
+    },
+    "env": "The current states in the home are as follows: \nThe apple (101) and is INSIDE the kitchen (900).\nThe fridge (102) is CLOSED and and is INSIDE the kitchen (900).\nThe lightswitch (103) is OFF and and is INSIDE the kitchen (900).\nThe kitchentable (104) and is INSIDE the kitchen (900).\nYou are INSIDE the kitchen (900).\nYou are close to the apple (101) and the fridge (102) and the lightswitch (103) and the kitchentable (104).\n",
+    "action": "[CLOSE] <fridge> (102)",
+    "gold": "false",
+    "oracle": {
+      "label": "false",
+      "atoms": [
+        true,
+        false
+      ],
+      "violations": [
+        "<fridge> (102) is OPEN."
+      ]
+    },
+    "messages": [
+      [
+        "user",
+        "The current states in the home are as follows: \nThe apple (101) and is INSIDE the kitchen (900).\nThe fridge (102) is CLOSED and and is INSIDE the kitchen (900).\nThe lightswitch (103) is OFF and and is INSIDE the kitchen (900).\nThe kitchentable (104) and is INSIDE the kitchen (900).\nYou are INSIDE the kitchen (900).\nYou are close to the apple (101) and the fridge (102) and the lightswitch (103) and the kitchentable (104).\n\nIf the current status satisfies the preconditions, output \"Yes\"; otherwise, output \"No\".\nPreconditions:\nYou are close to <fridge> (102).\n<fridge> (102) is OPEN.\n"
+      ]
+    ]
+  },
+  {
+    "id": "pc_CLOSE_unknown",
+    "kind": "precondition",
+    "origin": "synthetic",
+    "operation": "CLOSE",
+    "variant": "unknown",
+    "facts": {
+      "states": {
+        "101": [],
+        "102": null,
+        "103": [
+          "OFF"
+        ],
+        "104": []
+      },
+      "held": [],
+      "close": [
+        101,
+        102,
+        103,
+        104
+      ]
+    },
+    "env": "The current states in the home are as follows: \nThe apple (101) and is INSIDE the kitchen (900).\nThe fridge (102) and is INSIDE the kitchen (900).\nThe lightswitch (103) is OFF and and is INSIDE the kitchen (900).\nThe kitchentable (104) and is INSIDE the kitchen (900).\nYou are INSIDE the kitchen (900).\nYou are close to the apple (101) and the fridge (102) and the lightswitch (103) and the kitchentable (104).\n",
+    "action": "[CLOSE] <fridge> (102)",
+    "gold": "unknown",
+    "oracle": {
+      "label": "unknown",
+      "atoms": [
+        true,
+        null
+      ],
+      "violations": []
+    },
+    "messages": [
+      [
+        "user",
+        "The current states in the home are as follows: \nThe apple (101) and is INSIDE the kitchen (900).\nThe fridge (102) and is INSIDE the kitchen (900).\nThe lightswitch (103) is OFF and and is INSIDE the kitchen (900).\nThe kitchentable (104) and is INSIDE the kitchen (900).\nYou are INSIDE the kitchen (900).\nYou are close to the apple (101) and the fridge (102) and the lightswitch (103) and the kitchentable (104).\n\nIf the current status satisfies the preconditions, output \"Yes\"; otherwise, output \"No\".\nPreconditions:\nYou are close to <fridge> (102).\n<fridge> (102) is OPEN.\n"
+      ]
+    ]
+  },
+  {
+    "id": "pc_PUT_valid",
+    "kind": "precondition",
+    "origin": "synthetic",
+    "operation": "PUT",
+    "variant": "valid",
+    "facts": {
+      "states": {
+        "101": [],
+        "102": [
+          "CLOSED"
+        ],
+        "103": [
+          "OFF"
+        ],
+        "104": []
+      },
+      "held": [
+        101
+      ],
+      "close": [
+        101,
+        102,
+        103,
+        104
+      ]
+    },
+    "env": "The current states in the home are as follows: \nThe apple (101) and is INSIDE the kitchen (900).\nThe fridge (102) is CLOSED and and is INSIDE the kitchen (900).\nThe lightswitch (103) is OFF and and is INSIDE the kitchen (900).\nThe kitchentable (104) and is INSIDE the kitchen (900).\nYou are INSIDE the kitchen (900).\nYou are holding the apple (101) in your right hand.\nYou are close to the apple (101) and the fridge (102) and the lightswitch (103) and the kitchentable (104).\n",
+    "action": "[PUT] <apple> (101) <kitchentable> (104)",
+    "gold": "true",
+    "oracle": {
+      "label": "true",
+      "atoms": [
+        true,
+        true
+      ],
+      "violations": []
+    },
+    "messages": [
+      [
+        "user",
+        "The current states in the home are as follows: \nThe apple (101) and is INSIDE the kitchen (900).\nThe fridge (102) is CLOSED and and is INSIDE the kitchen (900).\nThe lightswitch (103) is OFF and and is INSIDE the kitchen (900).\nThe kitchentable (104) and is INSIDE the kitchen (900).\nYou are INSIDE the kitchen (900).\nYou are holding the apple (101) in your right hand.\nYou are close to the apple (101) and the fridge (102) and the lightswitch (103) and the kitchentable (104).\n\nIf the current status satisfies the preconditions, output \"Yes\"; otherwise, output \"No\".\nPreconditions:\nYou are holding <apple> (101) in your right hand or left hand.\nYou are close to <kitchentable> (104).\n"
+      ]
+    ]
+  },
+  {
+    "id": "pc_PUT_violate_1",
+    "kind": "precondition",
+    "origin": "synthetic",
+    "operation": "PUT",
+    "variant": "violate_1",
+    "facts": {
+      "states": {
+        "101": [],
+        "102": [
+          "CLOSED"
+        ],
+        "103": [
+          "OFF"
+        ],
+        "104": []
+      },
+      "held": [],
+      "close": [
+        101,
+        102,
+        103,
+        104
+      ]
+    },
+    "env": "The current states in the home are as follows: \nThe apple (101) and is INSIDE the kitchen (900).\nThe fridge (102) is CLOSED and and is INSIDE the kitchen (900).\nThe lightswitch (103) is OFF and and is INSIDE the kitchen (900).\nThe kitchentable (104) and is INSIDE the kitchen (900).\nYou are INSIDE the kitchen (900).\nYou are close to the apple (101) and the fridge (102) and the lightswitch (103) and the kitchentable (104).\n",
+    "action": "[PUT] <apple> (101) <kitchentable> (104)",
+    "gold": "false",
+    "oracle": {
+      "label": "false",
+      "atoms": [
+        false,
+        true
+      ],
+      "violations": [
+        "You are holding <apple> (101) in your right hand or left hand."
+      ]
+    },
+    "messages": [
+      [
+        "user",
+        "The current states in the home are as follows: \nThe apple (101) and is INSIDE the kitchen (900).\nThe fridge (102) is CLOSED and and is INSIDE the kitchen (900).\nThe lightswitch (103) is OFF and and is INSIDE the kitchen (900).\nThe kitchentable (104) and is INSIDE the kitchen (900).\nYou are INSIDE the kitchen (900).\nYou are close to the apple (101) and the fridge (102) and the lightswitch (103) and the kitchentable (104).\n\nIf the current status satisfies the preconditions, output \"Yes\"; otherwise, output \"No\".\nPreconditions:\nYou are holding <apple> (101) in your right hand or left hand.\nYou are close to <kitchentable> (104).\n"
+      ]
+    ]
+  },
+  {
+    "id": "pc_PUT_violate_2",
+    "kind": "precondition",
+    "origin": "synthetic",
+    "operation": "PUT",
+    "variant": "violate_2",
+    "facts": {
+      "states": {
+        "101": [],
+        "102": [
+          "CLOSED"
+        ],
+        "103": [
+          "OFF"
+        ],
+        "104": []
+      },
+      "held": [
+        101
+      ],
+      "close": []
+    },
+    "env": "The current states in the home are as follows: \nThe apple (101) and is INSIDE the kitchen (900).\nThe fridge (102) is CLOSED and and is INSIDE the kitchen (900).\nThe lightswitch (103) is OFF and and is INSIDE the kitchen (900).\nThe kitchentable (104) and is INSIDE the kitchen (900).\nYou are INSIDE the kitchen (900).\nYou are holding the apple (101) in your right hand.\n",
+    "action": "[PUT] <apple> (101) <kitchentable> (104)",
+    "gold": "false",
+    "oracle": {
+      "label": "false",
+      "atoms": [
+        true,
+        false
+      ],
+      "violations": [
+        "You are close to <kitchentable> (104)."
+      ]
+    },
+    "messages": [
+      [
+        "user",
+        "The current states in the home are as follows: \nThe apple (101) and is INSIDE the kitchen (900).\nThe fridge (102) is CLOSED and and is INSIDE the kitchen (900).\nThe lightswitch (103) is OFF and and is INSIDE the kitchen (900).\nThe kitchentable (104) and is INSIDE the kitchen (900).\nYou are INSIDE the kitchen (900).\nYou are holding the apple (101) in your right hand.\n\nIf the current status satisfies the preconditions, output \"Yes\"; otherwise, output \"No\".\nPreconditions:\nYou are holding <apple> (101) in your right hand or left hand.\nYou are close to <kitchentable> (104).\n"
+      ]
+    ]
+  },
+  {
+    "id": "pc_PUTIN_valid",
+    "kind": "precondition",
+    "origin": "synthetic",
+    "operation": "PUTIN",
+    "variant": "valid",
+    "facts": {
+      "states": {
+        "101": [],
+        "102": [
+          "OPEN"
+        ],
+        "103": [
+          "OFF"
+        ],
+        "104": []
+      },
+      "held": [
+        101
+      ],
+      "close": [
+        101,
+        102,
+        103,
+        104
+      ]
+    },
+    "env": "The current states in the home are as follows: \nThe apple (101) and is INSIDE the kitchen (900).\nThe fridge (102) is OPEN and and is INSIDE the kitchen (900).\nThe lightswitch (103) is OFF and and is INSIDE the kitchen (900).\nThe kitchentable (104) and is INSIDE the kitchen (900).\nYou are INSIDE the kitchen (900).\nYou are holding the apple (101) in your right hand.\nYou are close to the apple (101) and the fridge (102) and the lightswitch (103) and the kitchentable (104).\n",
+    "action": "[PUTIN] <apple> (101) <fridge> (102)",
+    "gold": "true",
+    "oracle": {
+      "label": "true",
+      "atoms": [
+        true,
+        true,
+        true
+      ],
+      "violations": []
+    },
+    "messages": [
+      [
+        "user",
+        "The current states in the home are as follows: \nThe apple (101) and is INSIDE the kitchen (900).\nThe fridge (102) is OPEN and and is INSIDE the kitchen (900).\nThe lightswitch (103) is OFF and and is INSIDE the kitchen (900).\nThe kitchentable (104) and is INSIDE the kitchen (900).\nYou are INSIDE the kitchen (900).\nYou are holding the apple (101) in your right hand.\nYou are close to the apple (101) and the fridge (102) and the lightswitch (103) and the kitchentable (104).\n\nIf the current status satisfies the preconditions, output \"Yes\"; otherwise, output \"No\".\nPreconditions:\nYou are holding <apple> (101) in your right hand or left hand.\nYou are close to <fridge> (102).\n<fridge> (102) is not CLOSED.\n"
+      ]
+    ]
+  },
+  {
+    "id": "pc_PUTIN_violate_1",
+    "kind": "precondition",
+    "origin": "synthetic",
+    "operation": "PUTIN",
+    "variant": "violate_1",
+    "facts": {
+      "states": {
+        "101": [],
+        "102": [
+          "OPEN"
+        ],
+        "103": [
+          "OFF"
+        ],
+        "104": []
+      },
+      "held": [],
+      "close": [
+        101,
+        102,
+        103,
+        104
+      ]
+    },
+    "env": "The current states in the home are as follows: \nThe apple (101) and is INSIDE the kitchen (900).\nThe fridge (102) is OPEN and and is INSIDE the kitchen (900).\nThe lightswitch (103) is OFF and and is INSIDE the kitchen (900).\nThe kitchentable (104) and is INSIDE the kitchen (900).\nYou are INSIDE the kitchen (900).\nYou are close to the apple (101) and the fridge (102) and the lightswitch (103) and the kitchentable (104).\n",
+    "action": "[PUTIN] <apple> (101) <fridge> (102)",
+    "gold": "false",
+    "oracle": {
+      "label": "false",
+      "atoms": [
+        false,
+        true,
+        true
+      ],
+      "violations": [
+        "You are holding <apple> (101) in your right hand or left hand."
+      ]
+    },
+    "messages": [
+      [
+        "user",
+        "The current states in the home are as follows: \nThe apple (101) and is INSIDE the kitchen (900).\nThe fridge (102) is OPEN and and is INSIDE the kitchen (900).\nThe lightswitch (103) is OFF and and is INSIDE the kitchen (900).\nThe kitchentable (104) and is INSIDE the kitchen (900).\nYou are INSIDE the kitchen (900).\nYou are close to the apple (101) and the fridge (102) and the lightswitch (103) and the kitchentable (104).\n\nIf the current status satisfies the preconditions, output \"Yes\"; otherwise, output \"No\".\nPreconditions:\nYou are holding <apple> (101) in your right hand or left hand.\nYou are close to <fridge> (102).\n<fridge> (102) is not CLOSED.\n"
+      ]
+    ]
+  },
+  {
+    "id": "pc_PUTIN_violate_2",
+    "kind": "precondition",
+    "origin": "synthetic",
+    "operation": "PUTIN",
+    "variant": "violate_2",
+    "facts": {
+      "states": {
+        "101": [],
+        "102": [
+          "OPEN"
+        ],
+        "103": [
+          "OFF"
+        ],
+        "104": []
+      },
+      "held": [
+        101
+      ],
+      "close": []
+    },
+    "env": "The current states in the home are as follows: \nThe apple (101) and is INSIDE the kitchen (900).\nThe fridge (102) is OPEN and and is INSIDE the kitchen (900).\nThe lightswitch (103) is OFF and and is INSIDE the kitchen (900).\nThe kitchentable (104) and is INSIDE the kitchen (900).\nYou are INSIDE the kitchen (900).\nYou are holding the apple (101) in your right hand.\n",
+    "action": "[PUTIN] <apple> (101) <fridge> (102)",
+    "gold": "false",
+    "oracle": {
+      "label": "false",
+      "atoms": [
+        true,
+        false,
+        true
+      ],
+      "violations": [
+        "You are close to <fridge> (102)."
+      ]
+    },
+    "messages": [
+      [
+        "user",
+        "The current states in the home are as follows: \nThe apple (101) and is INSIDE the kitchen (900).\nThe fridge (102) is OPEN and and is INSIDE the kitchen (900).\nThe lightswitch (103) is OFF and and is INSIDE the kitchen (900).\nThe kitchentable (104) and is INSIDE the kitchen (900).\nYou are INSIDE the kitchen (900).\nYou are holding the apple (101) in your right hand.\n\nIf the current status satisfies the preconditions, output \"Yes\"; otherwise, output \"No\".\nPreconditions:\nYou are holding <apple> (101) in your right hand or left hand.\nYou are close to <fridge> (102).\n<fridge> (102) is not CLOSED.\n"
+      ]
+    ]
+  },
+  {
+    "id": "pc_PUTIN_violate_3",
+    "kind": "precondition",
+    "origin": "synthetic",
+    "operation": "PUTIN",
+    "variant": "violate_3",
+    "facts": {
+      "states": {
+        "101": [],
+        "102": [
+          "CLOSED"
+        ],
+        "103": [
+          "OFF"
+        ],
+        "104": []
+      },
+      "held": [
+        101
+      ],
+      "close": [
+        101,
+        102,
+        103,
+        104
+      ]
+    },
+    "env": "The current states in the home are as follows: \nThe apple (101) and is INSIDE the kitchen (900).\nThe fridge (102) is CLOSED and and is INSIDE the kitchen (900).\nThe lightswitch (103) is OFF and and is INSIDE the kitchen (900).\nThe kitchentable (104) and is INSIDE the kitchen (900).\nYou are INSIDE the kitchen (900).\nYou are holding the apple (101) in your right hand.\nYou are close to the apple (101) and the fridge (102) and the lightswitch (103) and the kitchentable (104).\n",
+    "action": "[PUTIN] <apple> (101) <fridge> (102)",
+    "gold": "false",
+    "oracle": {
+      "label": "false",
+      "atoms": [
+        true,
+        true,
+        false
+      ],
+      "violations": [
+        "<fridge> (102) is not CLOSED."
+      ]
+    },
+    "messages": [
+      [
+        "user",
+        "The current states in the home are as follows: \nThe apple (101) and is INSIDE the kitchen (900).\nThe fridge (102) is CLOSED and and is INSIDE the kitchen (900).\nThe lightswitch (103) is OFF and and is INSIDE the kitchen (900).\nThe kitchentable (104) and is INSIDE the kitchen (900).\nYou are INSIDE the kitchen (900).\nYou are holding the apple (101) in your right hand.\nYou are close to the apple (101) and the fridge (102) and the lightswitch (103) and the kitchentable (104).\n\nIf the current status satisfies the preconditions, output \"Yes\"; otherwise, output \"No\".\nPreconditions:\nYou are holding <apple> (101) in your right hand or left hand.\nYou are close to <fridge> (102).\n<fridge> (102) is not CLOSED.\n"
+      ]
+    ]
+  },
+  {
+    "id": "end_state_test_task1",
+    "kind": "termination",
+    "origin": "dataset_state_only",
+    "task_id": "test_task1",
+    "task": "Turn on all lightswitches",
+    "initial_states": [
+      {
+        "id": 71,
+        "states": [
+          "ON"
+        ]
+      },
+      {
+        "id": 173,
+        "states": [
+          "ON"
+        ]
+      },
+      {
+        "id": 261,
+        "states": [
+          "ON"
+        ]
+      },
+      {
+        "id": 427,
+        "states": [
+          "ON"
+        ]
+      }
+    ],
+    "goal_states": [
+      {
+        "id": 71,
+        "states": [
+          "ON"
+        ]
+      },
+      {
+        "id": 173,
+        "states": [
+          "ON"
+        ]
+      },
+      {
+        "id": 261,
+        "states": [
+          "ON"
+        ]
+      },
+      {
+        "id": 427,
+        "states": [
+          "ON"
+        ]
+      }
+    ],
+    "gold": "End",
+    "env": "The current states in the home are as follows: \nThe lightswitches (71) is ON.\nThe lightswitches (173) is ON.\nThe lightswitches (261) is ON.\nThe lightswitches (427) is ON.\n",
+    "messages": [
+      [
+        "system",
+        "You are a life support robot."
+      ],
+      [
+        "user",
+        "The current states in the home are as follows: \nThe lightswitches (71) is ON.\nThe lightswitches (173) is ON.\nThe lightswitches (261) is ON.\nThe lightswitches (427) is ON.\n\nIf the following task has already completed based on the current status, output \"End\"; otherwise, output \"Continue\".\nTask: Turn on all lightswitches\n"
+      ]
+    ]
+  },
+  {
+    "id": "end_state_test_task2",
+    "kind": "termination",
+    "origin": "dataset_state_only",
+    "task_id": "test_task2",
+    "task": "Turn on all lightswitches",
+    "initial_states": [
+      {
+        "id": 71,
+        "states": [
+          "ON"
+        ]
+      },
+      {
+        "id": 173,
+        "states": [
+          "ON"
+        ]
+      },
+      {
+        "id": 261,
+        "states": [
+          "ON"
+        ]
+      },
+      {
+        "id": 427,
+        "states": [
+          "OFF"
+        ]
+      }
+    ],
+    "goal_states": [
+      {
+        "id": 71,
+        "states": [
+          "ON"
+        ]
+      },
+      {
+        "id": 173,
+        "states": [
+          "ON"
+        ]
+      },
+      {
+        "id": 261,
+        "states": [
+          "ON"
+        ]
+      },
+      {
+        "id": 427,
+        "states": [
+          "ON"
+        ]
+      }
+    ],
+    "gold": "Continue",
+    "env": "The current states in the home are as follows: \nThe lightswitches (71) is ON.\nThe lightswitches (173) is ON.\nThe lightswitches (261) is ON.\nThe lightswitches (427) is OFF.\n",
+    "messages": [
+      [
+        "system",
+        "You are a life support robot."
+      ],
+      [
+        "user",
+        "The current states in the home are as follows: \nThe lightswitches (71) is ON.\nThe lightswitches (173) is ON.\nThe lightswitches (261) is ON.\nThe lightswitches (427) is OFF.\n\nIf the following task has already completed based on the current status, output \"End\"; otherwise, output \"Continue\".\nTask: Turn on all lightswitches\n"
+      ]
+    ]
+  },
+  {
+    "id": "end_state_test_task17",
+    "kind": "termination",
+    "origin": "dataset_state_only",
+    "task_id": "test_task17",
+    "task": "Turn on all tvs",
+    "initial_states": [
+      {
+        "id": 264,
+        "states": [
+          "ON"
+        ]
+      },
+      {
+        "id": 426,
+        "states": [
+          "ON"
+        ]
+      }
+    ],
+    "goal_states": [
+      {
+        "id": 264,
+        "states": [
+          "ON"
+        ]
+      },
+      {
+        "id": 426,
+        "states": [
+          "ON"
+        ]
+      }
+    ],
+    "gold": "End",
+    "env": "The current states in the home are as follows: \nThe tvs (264) is ON.\nThe tvs (426) is ON.\n",
+    "messages": [
+      [
+        "system",
+        "You are a life support robot."
+      ],
+      [
+        "user",
+        "The current states in the home are as follows: \nThe tvs (264) is ON.\nThe tvs (426) is ON.\n\nIf the following task has already completed based on the current status, output \"End\"; otherwise, output \"Continue\".\nTask: Turn on all tvs\n"
+      ]
+    ]
+  },
+  {
+    "id": "end_state_test_task18",
+    "kind": "termination",
+    "origin": "dataset_state_only",
+    "task_id": "test_task18",
+    "task": "Turn on all tvs",
+    "initial_states": [
+      {
+        "id": 264,
+        "states": [
+          "ON"
+        ]
+      },
+      {
+        "id": 426,
+        "states": [
+          "OFF"
+        ]
+      }
+    ],
+    "goal_states": [
+      {
+        "id": 264,
+        "states": [
+          "ON"
+        ]
+      },
+      {
+        "id": 426,
+        "states": [
+          "ON"
+        ]
+      }
+    ],
+    "gold": "Continue",
+    "env": "The current states in the home are as follows: \nThe tvs (264) is ON.\nThe tvs (426) is OFF.\n",
+    "messages": [
+      [
+        "system",
+        "You are a life support robot."
+      ],
+      [
+        "user",
+        "The current states in the home are as follows: \nThe tvs (264) is ON.\nThe tvs (426) is OFF.\n\nIf the following task has already completed based on the current status, output \"End\"; otherwise, output \"Continue\".\nTask: Turn on all tvs\n"
+      ]
+    ]
+  },
+  {
+    "id": "end_state_test_task21",
+    "kind": "termination",
+    "origin": "dataset_state_only",
+    "task_id": "test_task21",
+    "task": "Turn off all lightswitches",
+    "initial_states": [
+      {
+        "id": 71,
+        "states": [
+          "ON"
+        ]
+      },
+      {
+        "id": 173,
+        "states": [
+          "ON"
+        ]
+      },
+      {
+        "id": 261,
+        "states": [
+          "ON"
+        ]
+      },
+      {
+        "id": 427,
+        "states": [
+          "ON"
+        ]
+      }
+    ],
+    "goal_states": [
+      {
+        "id": 71,
+        "states": [
+          "OFF"
+        ]
+      },
+      {
+        "id": 173,
+        "states": [
+          "OFF"
+        ]
+      },
+      {
+        "id": 261,
+        "states": [
+          "OFF"
+        ]
+      },
+      {
+        "id": 427,
+        "states": [
+          "OFF"
+        ]
+      }
+    ],
+    "gold": "Continue",
+    "env": "The current states in the home are as follows: \nThe lightswitches (71) is ON.\nThe lightswitches (173) is ON.\nThe lightswitches (261) is ON.\nThe lightswitches (427) is ON.\n",
+    "messages": [
+      [
+        "system",
+        "You are a life support robot."
+      ],
+      [
+        "user",
+        "The current states in the home are as follows: \nThe lightswitches (71) is ON.\nThe lightswitches (173) is ON.\nThe lightswitches (261) is ON.\nThe lightswitches (427) is ON.\n\nIf the following task has already completed based on the current status, output \"End\"; otherwise, output \"Continue\".\nTask: Turn off all lightswitches\n"
+      ]
+    ]
+  },
+  {
+    "id": "end_state_test_task36",
+    "kind": "termination",
+    "origin": "dataset_state_only",
+    "task_id": "test_task36",
+    "task": "Turn off all lightswitches",
+    "initial_states": [
+      {
+        "id": 71,
+        "states": [
+          "OFF"
+        ]
+      },
+      {
+        "id": 173,
+        "states": [
+          "OFF"
+        ]
+      },
+      {
+        "id": 261,
+        "states": [
+          "OFF"
+        ]
+      },
+      {
+        "id": 427,
+        "states": [
+          "OFF"
+        ]
+      }
+    ],
+    "goal_states": [
+      {
+        "id": 71,
+        "states": [
+          "OFF"
+        ]
+      },
+      {
+        "id": 173,
+        "states": [
+          "OFF"
+        ]
+      },
+      {
+        "id": 261,
+        "states": [
+          "OFF"
+        ]
+      },
+      {
+        "id": 427,
+        "states": [
+          "OFF"
+        ]
+      }
+    ],
+    "gold": "End",
+    "env": "The current states in the home are as follows: \nThe lightswitches (71) is OFF.\nThe lightswitches (173) is OFF.\nThe lightswitches (261) is OFF.\nThe lightswitches (427) is OFF.\n",
+    "messages": [
+      [
+        "system",
+        "You are a life support robot."
+      ],
+      [
+        "user",
+        "The current states in the home are as follows: \nThe lightswitches (71) is OFF.\nThe lightswitches (173) is OFF.\nThe lightswitches (261) is OFF.\nThe lightswitches (427) is OFF.\n\nIf the following task has already completed based on the current status, output \"End\"; otherwise, output \"Continue\".\nTask: Turn off all lightswitches\n"
+      ]
+    ]
+  },
+  {
+    "id": "end_state_test_task37",
+    "kind": "termination",
+    "origin": "dataset_state_only",
+    "task_id": "test_task37",
+    "task": "Turn off all tablelamps",
+    "initial_states": [
+      {
+        "id": 102,
+        "states": [
+          "ON"
+        ]
+      },
+      {
+        "id": 103,
+        "states": [
+          "ON"
+        ]
+      }
+    ],
+    "goal_states": [
+      {
+        "id": 102,
+        "states": [
+          "OFF"
+        ]
+      },
+      {
+        "id": 103,
+        "states": [
+          "OFF"
+        ]
+      }
+    ],
+    "gold": "Continue",
+    "env": "The current states in the home are as follows: \nThe tablelamps (102) is ON.\nThe tablelamps (103) is ON.\n",
+    "messages": [
+      [
+        "system",
+        "You are a life support robot."
+      ],
+      [
+        "user",
+        "The current states in the home are as follows: \nThe tablelamps (102) is ON.\nThe tablelamps (103) is ON.\n\nIf the following task has already completed based on the current status, output \"End\"; otherwise, output \"Continue\".\nTask: Turn off all tablelamps\n"
+      ]
+    ]
+  },
+  {
+    "id": "end_state_test_task40",
+    "kind": "termination",
+    "origin": "dataset_state_only",
+    "task_id": "test_task40",
+    "task": "Turn off all tablelamps",
+    "initial_states": [
+      {
+        "id": 102,
+        "states": [
+          "OFF"
+        ]
+      },
+      {
+        "id": 103,
+        "states": [
+          "OFF"
+        ]
+      }
+    ],
+    "goal_states": [
+      {
+        "id": 102,
+        "states": [
+          "OFF"
+        ]
+      },
+      {
+        "id": 103,
+        "states": [
+          "OFF"
+        ]
+      }
+    ],
+    "gold": "End",
+    "env": "The current states in the home are as follows: \nThe tablelamps (102) is OFF.\nThe tablelamps (103) is OFF.\n",
+    "messages": [
+      [
+        "system",
+        "You are a life support robot."
+      ],
+      [
+        "user",
+        "The current states in the home are as follows: \nThe tablelamps (102) is OFF.\nThe tablelamps (103) is OFF.\n\nIf the following task has already completed based on the current status, output \"End\"; otherwise, output \"Continue\".\nTask: Turn off all tablelamps\n"
+      ]
+    ]
+  },
+  {
+    "id": "end_state_test_task41",
+    "kind": "termination",
+    "origin": "dataset_state_only",
+    "task_id": "test_task41",
+    "task": "Turn off all computers",
+    "initial_states": [
+      {
+        "id": 174,
+        "states": [
+          "ON"
+        ]
+      },
+      {
+        "id": 433,
+        "states": [
+          "ON"
+        ]
+      }
+    ],
+    "goal_states": [
+      {
+        "id": 174,
+        "states": [
+          "OFF"
+        ]
+      },
+      {
+        "id": 433,
+        "states": [
+          "OFF"
+        ]
+      }
+    ],
+    "gold": "Continue",
+    "env": "The current states in the home are as follows: \nThe computers (174) is ON.\nThe computers (433) is ON.\n",
+    "messages": [
+      [
+        "system",
+        "You are a life support robot."
+      ],
+      [
+        "user",
+        "The current states in the home are as follows: \nThe computers (174) is ON.\nThe computers (433) is ON.\n\nIf the following task has already completed based on the current status, output \"End\"; otherwise, output \"Continue\".\nTask: Turn off all computers\n"
+      ]
+    ]
+  },
+  {
+    "id": "end_state_test_task44",
+    "kind": "termination",
+    "origin": "dataset_state_only",
+    "task_id": "test_task44",
+    "task": "Turn off all computers",
+    "initial_states": [
+      {
+        "id": 174,
+        "states": [
+          "OFF"
+        ]
+      },
+      {
+        "id": 433,
+        "states": [
+          "OFF"
+        ]
+      }
+    ],
+    "goal_states": [
+      {
+        "id": 174,
+        "states": [
+          "OFF"
+        ]
+      },
+      {
+        "id": 433,
+        "states": [
+          "OFF"
+        ]
+      }
+    ],
+    "gold": "End",
+    "env": "The current states in the home are as follows: \nThe computers (174) is OFF.\nThe computers (433) is OFF.\n",
+    "messages": [
+      [
+        "system",
+        "You are a life support robot."
+      ],
+      [
+        "user",
+        "The current states in the home are as follows: \nThe computers (174) is OFF.\nThe computers (433) is OFF.\n\nIf the following task has already completed based on the current status, output \"End\"; otherwise, output \"Continue\".\nTask: Turn off all computers\n"
+      ]
+    ]
+  },
+  {
+    "id": "end_state_test_task45",
+    "kind": "termination",
+    "origin": "dataset_state_only",
+    "task_id": "test_task45",
+    "task": "Turn off all tvs",
+    "initial_states": [
+      {
+        "id": 264,
+        "states": [
+          "ON"
+        ]
+      },
+      {
+        "id": 426,
+        "states": [
+          "ON"
+        ]
+      }
+    ],
+    "goal_states": [
+      {
+        "id": 264,
+        "states": [
+          "OFF"
+        ]
+      },
+      {
+        "id": 426,
+        "states": [
+          "OFF"
+        ]
+      }
+    ],
+    "gold": "Continue",
+    "env": "The current states in the home are as follows: \nThe tvs (264) is ON.\nThe tvs (426) is ON.\n",
+    "messages": [
+      [
+        "system",
+        "You are a life support robot."
+      ],
+      [
+        "user",
+        "The current states in the home are as follows: \nThe tvs (264) is ON.\nThe tvs (426) is ON.\n\nIf the following task has already completed based on the current status, output \"End\"; otherwise, output \"Continue\".\nTask: Turn off all tvs\n"
+      ]
+    ]
+  },
+  {
+    "id": "end_state_test_task48",
+    "kind": "termination",
+    "origin": "dataset_state_only",
+    "task_id": "test_task48",
+    "task": "Turn off all tvs",
+    "initial_states": [
+      {
+        "id": 264,
+        "states": [
+          "OFF"
+        ]
+      },
+      {
+        "id": 426,
+        "states": [
+          "OFF"
+        ]
+      }
+    ],
+    "goal_states": [
+      {
+        "id": 264,
+        "states": [
+          "OFF"
+        ]
+      },
+      {
+        "id": 426,
+        "states": [
+          "OFF"
+        ]
+      }
+    ],
+    "gold": "End",
+    "env": "The current states in the home are as follows: \nThe tvs (264) is OFF.\nThe tvs (426) is OFF.\n",
+    "messages": [
+      [
+        "system",
+        "You are a life support robot."
+      ],
+      [
+        "user",
+        "The current states in the home are as follows: \nThe tvs (264) is OFF.\nThe tvs (426) is OFF.\n\nIf the following task has already completed based on the current status, output \"End\"; otherwise, output \"Continue\".\nTask: Turn off all tvs\n"
+      ]
+    ]
+  },
+  {
+    "id": "end_placement_0",
+    "kind": "termination",
+    "origin": "synthetic",
+    "task": "Put all apples in the fridge",
+    "relations": [
+      "INSIDE",
+      "INSIDE"
+    ],
+    "fridge_closed": false,
+    "gold": "End",
+    "env": "The current states in the home are as follows: \nThe apple (101) is INSIDE the fridge (102).\nThe apple (105) is INSIDE the fridge (102).\nThe fridge (102) is OPEN.\n",
+    "messages": [
+      [
+        "system",
+        "You are a life support robot."
+      ],
+      [
+        "user",
+        "The current states in the home are as follows: \nThe apple (101) is INSIDE the fridge (102).\nThe apple (105) is INSIDE the fridge (102).\nThe fridge (102) is OPEN.\n\nIf the following task has already completed based on the current status, output \"End\"; otherwise, output \"Continue\".\nTask: Put all apples in the fridge\n"
+      ]
+    ]
+  },
+  {
+    "id": "end_placement_1",
+    "kind": "termination",
+    "origin": "synthetic",
+    "task": "Put all apples in the fridge",
+    "relations": [
+      "INSIDE",
+      "ON"
+    ],
+    "fridge_closed": false,
+    "gold": "Continue",
+    "env": "The current states in the home are as follows: \nThe apple (101) is INSIDE the fridge (102).\nThe apple (105) is ON the fridge (102).\nThe fridge (102) is OPEN.\n",
+    "messages": [
+      [
+        "system",
+        "You are a life support robot."
+      ],
+      [
+        "user",
+        "The current states in the home are as follows: \nThe apple (101) is INSIDE the fridge (102).\nThe apple (105) is ON the fridge (102).\nThe fridge (102) is OPEN.\n\nIf the following task has already completed based on the current status, output \"End\"; otherwise, output \"Continue\".\nTask: Put all apples in the fridge\n"
+      ]
+    ]
+  },
+  {
+    "id": "end_placement_2",
+    "kind": "termination",
+    "origin": "synthetic",
+    "task": "Put all apples in the fridge",
+    "relations": [
+      "ON",
+      "ON"
+    ],
+    "fridge_closed": false,
+    "gold": "Continue",
+    "env": "The current states in the home are as follows: \nThe apple (101) is ON the fridge (102).\nThe apple (105) is ON the fridge (102).\nThe fridge (102) is OPEN.\n",
+    "messages": [
+      [
+        "system",
+        "You are a life support robot."
+      ],
+      [
+        "user",
+        "The current states in the home are as follows: \nThe apple (101) is ON the fridge (102).\nThe apple (105) is ON the fridge (102).\nThe fridge (102) is OPEN.\n\nIf the following task has already completed based on the current status, output \"End\"; otherwise, output \"Continue\".\nTask: Put all apples in the fridge\n"
+      ]
+    ]
+  },
+  {
+    "id": "end_placement_3",
+    "kind": "termination",
+    "origin": "synthetic",
+    "task": "Put all apples in the fridge",
+    "relations": [
+      "INSIDE",
+      "INSIDE"
+    ],
+    "fridge_closed": true,
+    "gold": "End",
+    "env": "The current states in the home are as follows: \nThe apple (101) is INSIDE the fridge (102).\nThe apple (105) is INSIDE the fridge (102).\nThe fridge (102) is CLOSED.\n",
+    "messages": [
+      [
+        "system",
+        "You are a life support robot."
+      ],
+      [
+        "user",
+        "The current states in the home are as follows: \nThe apple (101) is INSIDE the fridge (102).\nThe apple (105) is INSIDE the fridge (102).\nThe fridge (102) is CLOSED.\n\nIf the following task has already completed based on the current status, output \"End\"; otherwise, output \"Continue\".\nTask: Put all apples in the fridge\n"
+      ]
+    ]
+  }
+]

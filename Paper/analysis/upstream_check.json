@@ -1,0 +1,18 @@
+{
+  "checked_date": "2026-09-06",
+  "kind": "read_only_public_repository_inspection_summary",
+  "repository": "https://github.com/ke-lab-it-agu/Precheck-LLM-Planner",
+  "queries": [
+    "https://api.github.com/repos/ke-lab-it-agu/Precheck-LLM-Planner/commits?per_page=100",
+    "https://api.github.com/repos/ke-lab-it-agu/Precheck-LLM-Planner/branches?per_page=100",
+    "https://api.github.com/repos/ke-lab-it-agu/Precheck-LLM-Planner/tags?per_page=100"
+  ],
+  "commits": [
+    {"sha": "de1fc8d31e0c96ded37b5517bae36203cc2fd6a5", "date": "2025-03-30T15:10:36Z", "subject": "README修正"},
+    {"sha": "2761158d3c7d55d755d68f89fd1aa6cff5d3cc6a", "date": "2025-03-30T15:03:18Z", "subject": "Initial commit"}
+  ],
+  "branches": {"main": "de1fc8d31e0c96ded37b5517bae36203cc2fd6a5"},
+  "tags": [],
+  "matches_local_head": true,
+  "limitations": "No author-private archives, deleted remote refs, pull-request-only refs or other repositories were inspected. This summary is not the original raw API response."
+}

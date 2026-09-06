@@ -1,0 +1,3 @@
+model,successful_requests,failed_requests,input_tokens,output_tokens,estimated_usd_uncached,failed_request_reserved_usd,sum_request_seconds
+gpt-4o-mini-2024-07-18,154,1,26413,1514,0.00487035,0.0002865,113.24775331599085
+gpt-4o-2024-08-06,156,0,26814,444,0.071475,0,107.40441790503246
