@@ -1,0 +1,9 @@
+no,run_id,step,action,review_label,evidence,evaluator,date
+1,state_change_task_test_task6_C1_llm_precheck_gpt-4o-2024-08-06_r0,4,"SWITCHON lightswitch 261",判断不能,情報が不十分,ugai,2026/09/07
+2,state_change_task_test_task6_C1_llm_precheck_gpt-4o-mini-2024-07-18_r0,4,"SWITCHON lightswitch 261",判断不能,情報が不十分,ugai,2026/09/07
+3,state_change_task_test_task6_R_fixed_gpt-4o-2024-08-06_r0,1,"SWITCHON lightswitch 261",判断不能,情報が不十分,ugai,2026/09/07
+4,placement_task_test_task1_R_fixed_gpt-4o-mini-2024-07-18_r1,7,"PUTIN cupcake 195 -> kitchencounter 238",判断不能,情報が不十分,ugai,2026/09/07
+5,placement_task_test_task1_R_random_gpt-4o-mini-2024-07-18_r2,2,"OPEN desk 108",判断不能,情報が不十分,ugai,2026/09/07
+6,placement_task_test_task65_C1_llm_precheck_gpt-4o-2024-08-06_r0,2,"OPEN fridge 103",判断不能,情報が不十分,ugai,2026/09/07
+7,placement_task_test_task65_C1_llm_precheck_gpt-4o-mini-2024-07-18_r0,1,"WALK kitchencounter 92",判断不能,情報が不十分,ugai,2026/09/07
+8,placement_task_test_task65_R_fixed_gpt-4o-2024-08-06_r0,2,"OPEN fridge 103",判断不能,情報が不十分,ugai,2026/09/07
