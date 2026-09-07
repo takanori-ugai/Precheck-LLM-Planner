@@ -1,0 +1,16 @@
+{
+  "utc": "2026-09-06T14:09:43.876504+00:00",
+  "observed_runtime_directory": "/mnt/c/Users/ugai/Downloads/VH/windows_exec.v2.3.0",
+  "binary_sha256": {
+    "VirtualHome.exe": "d3167b80c756f292e74292d16cebcd39174afe0c6dd2b7c2c43f704c1e35b1f1",
+    "UnityPlayer.dll": "d892ec7bebf61b5993f1e151d6055ed70f2b315b2c0e4549c0310fe6ad38bb13",
+    "VirtualHome_Data/Managed/Assembly-CSharp.dll": "38465325c54a25eab840060986856ab82050b82dee20150364a51150dddd2bf2"
+  },
+  "version_evidence": "User-provided directory name v2.3.0 and Player.log data path, not independently attested build version",
+  "execution_platform": "Windows, WSL2 client via 172.26.224.1:8080",
+  "player_log_path": "C:/Users/ugai/AppData/LocalLow/VirtualHome/VirtualHome/Player.log",
+  "gpu_log_observation": "Direct3D 11 / NVIDIA GeForce RTX 2060",
+  "previous_player_log_sha256": "246c85792de23b9a7e4db0ebdb1bfcd004a19bd4af1f080a170199ff7050b28b",
+  "previous_player_log_archive": "diagnostics/windows_player_previous_246c85792de23b9a7e4db0ebdb1bfcd004a19bd4af1f080a170199ff7050b28b.log.gz",
+  "local_linux_executable_used": false
+}

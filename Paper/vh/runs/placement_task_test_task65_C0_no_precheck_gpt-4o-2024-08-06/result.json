@@ -1,0 +1,55 @@
+{
+  "run_id": "placement_task_test_task65_C0_no_precheck_gpt-4o-2024-08-06",
+  "kind": "placement_task",
+  "task_id": "test_task65",
+  "task": "Put all plums in the fridge",
+  "arm": "C0_no_precheck",
+  "model": "gpt-4o-2024-08-06",
+  "score_original_rule": 0.0,
+  "outcome": "Execution Failure",
+  "actions": [],
+  "reference_length": 9,
+  "execution_attempts": 1,
+  "initial": {
+    "graph_file": "graph_0002.json.gz",
+    "full_hash": "b0c34a1fc7d04ff26006abc3ed48893cb0305d803ae4643391c792d1a26a46b5",
+    "symbolic_hash": "2ecc4c6f73d4fec88a7bd2c9ad1069c97861fa002d6c90b4e9d3292af459d7ab",
+    "agent_transform": {
+      "position": [
+        8.065774,
+        1.25,
+        -4.585384
+      ],
+      "rotation": [
+        0.0,
+        0.848645,
+        0.0,
+        0.528962851
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ]
+    },
+    "goal": {
+      "all_satisfied": false,
+      "per_goal": [
+        false,
+        false
+      ]
+    }
+  },
+  "final_goal": {
+    "all_satisfied": false,
+    "per_goal": [
+      false,
+      false
+    ]
+  },
+  "final_graph": "graph_0006.json.gz",
+  "elapsed_seconds": 3.5090689070057124,
+  "runner_sha256": "a63166938ad1c0d6500e5d9ab766d566a88e144fe76d5b80e72d92d07f7e5f2f",
+  "utc": "2026-09-06T14:00:03.219522+00:00",
+  "config_sha256": "17d23d271a12260f9635c10b1916db823e4d61f087108969d9d9c6dd8e9de7d9"
+}

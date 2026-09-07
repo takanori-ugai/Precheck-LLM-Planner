@@ -1,0 +1,19 @@
+{
+  "planned": 240,
+  "completed": 240,
+  "missing": [],
+  "costs": {
+    "successful_requests": 3047,
+    "failed_requests": 0,
+    "input_tokens": 1052576,
+    "output_tokens": 30594,
+    "cached_input_tokens_reported": 61824,
+    "output_length_limited_requests": 0,
+    "estimated_usd": 1.6817656
+  },
+  "aligned_initial_states": 240,
+  "zero_reference_length_episodes": 60,
+  "success_label_final_goal_disagreements": 0,
+  "author_review_completed": true,
+  "latex_executed": false
+}

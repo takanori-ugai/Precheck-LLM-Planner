@@ -1,0 +1,63 @@
+{
+  "run_id": "state_change_task_test_task6_saved_replay_gpt-4o_r0",
+  "kind": "state_change_task",
+  "task_id": "test_task6",
+  "model": "gpt-4o",
+  "original_result": "Success",
+  "original_saved_length": 4,
+  "historical_prefix_replayed_in_full": true,
+  "execution_attempts": 4,
+  "successful_actions": [
+    "[WALK] <lightswitch> (173)",
+    "[SWITCHON] <lightswitch> (173)",
+    "[WALK] <lightswitch> (427)",
+    "[SWITCHON] <lightswitch> (427)"
+  ],
+  "initial": {
+    "graph_file": "graph_0002.json.gz",
+    "full_hash": "4dd0b4c78d6eeead00d61f17bd7427da28f5a2d0beec3663351bac85b26dbb45",
+    "symbolic_hash": "a023ab2d7ca1d4175f3e7cdaf9ca4dfc1c1695180aeeb000b64e23568fd091c8",
+    "agent_transform": {
+      "position": [
+        -2.41545,
+        1.25,
+        -7.44353151
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ]
+    },
+    "goal": {
+      "all_satisfied": false,
+      "per_goal": [
+        true,
+        false,
+        true,
+        false
+      ]
+    }
+  },
+  "final_goal": {
+    "all_satisfied": true,
+    "per_goal": [
+      true,
+      true,
+      true,
+      true
+    ]
+  },
+  "final_graph": "graph_0011.json.gz",
+  "elapsed_seconds": 6.724129490999985,
+  "utc": "2026-09-07T00:31:38.962974+00:00",
+  "runner_sha256": "c1a2e38ff64d35ae52dcf34e9385141915b38174a7f62ffa34e670ed4ca7c8c0",
+  "config_sha256": "ce483b816c761c72fa55463c2bc48807fffc2e3359f57d560dc723bcf1e02881",
+  "api_requests": 0
+}

@@ -1,0 +1,6 @@
+{
+  "utc": "2026-09-06T14:19:40.461761+00:00",
+  "connected": true,
+  "graph_requested": false,
+  "note": "Graph retrieval is only allowed after reset in an episode"
+}

@@ -1,0 +1,13 @@
+{
+  "observation_date_jst": "2026-09-07",
+  "observed_directory": "/mnt/c/Users/ugai/Downloads/VH/windows_exec.v2.3.0",
+  "binary_sha256": {
+    "VirtualHome.exe": "d3167b80c756f292e74292d16cebcd39174afe0c6dd2b7c2c43f704c1e35b1f1",
+    "UnityPlayer.dll": "d892ec7bebf61b5993f1e151d6055ed70f2b315b2c0e4549c0310fe6ad38bb13",
+    "VirtualHome_Data/Managed/Assembly-CSharp.dll": "38465325c54a25eab840060986856ab82050b82dee20150364a51150dddd2bf2"
+  },
+  "matches_preceding_pilot_receipt": true,
+  "scope": "Observed file hashes; not independent attestation of the running process memory or publisher build version",
+  "host": "172.26.224.1",
+  "port": 8080
+}

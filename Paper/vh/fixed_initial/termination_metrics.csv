@@ -1,0 +1,7 @@
+model,arm,n,correct,false_end,false_continue,strict_format,accuracy
+gpt-4o-2024-08-06,C0_no_precheck,21,21,0,0,21,1.0
+gpt-4o-mini-2024-07-18,C0_no_precheck,18,17,1,0,18,0.9444444444444444
+gpt-4o-2024-08-06,C1_llm_precheck,21,21,0,0,21,1.0
+gpt-4o-mini-2024-07-18,C1_llm_precheck,17,17,0,0,17,1.0
+gpt-4o-2024-08-06,C2_symbolic_precheck,24,24,0,0,23,1.0
+gpt-4o-mini-2024-07-18,C2_symbolic_precheck,17,16,1,0,17,0.9411764705882353

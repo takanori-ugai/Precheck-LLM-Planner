@@ -1,0 +1,5 @@
+model,arm,changed_executed_actions,json_condition_true,json_condition_unknown,vh_success
+gpt-4o-mini-2024-07-18,C1_llm_precheck,5,3,1,4
+gpt-4o-2024-08-06,C2_symbolic_precheck,5,5,0,5
+gpt-4o-mini-2024-07-18,C2_symbolic_precheck,4,3,0,4
+gpt-4o-2024-08-06,C1_llm_precheck,1,1,0,1

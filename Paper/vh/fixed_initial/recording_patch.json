@@ -1,0 +1,8 @@
+{
+  "original_runner_sha256": "8a5ea0108beb5def940531f05dca585d54315f654ac2fb032e1a876f7d63f745",
+  "patched_runner_sha256": "44f9ae0d1f63083a863c9f1c3cefbafb782a05ca338043b98b0c841e015eca55",
+  "change": "Short unique recording prefix and explicit incomplete-run recovery only",
+  "reason": "Windows Recorder.CreateTextualGTs DirectoryNotFoundException with long path",
+  "experimental_conditions_changed": false,
+  "incomplete_attempt_preserved": true
+}

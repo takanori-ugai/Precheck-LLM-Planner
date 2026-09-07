@@ -1,0 +1,38 @@
+run_id,step,model,action,gold_json_conditions,accepted,response,correct_when_known,not_vh_executability_label
+placement_task_test_task1_C1_llm_precheck_gpt-4o-2024-08-06,1,gpt-4o-2024-08-06,[WALK] <bedroom> (73),true,True,Yes,True,True
+placement_task_test_task1_C1_llm_precheck_gpt-4o-2024-08-06,2,gpt-4o-2024-08-06,[GRAB] <cupcake> (195),false,True,Yes,False,True
+placement_task_test_task1_C1_llm_precheck_gpt-4o-2024-08-06,3,gpt-4o-2024-08-06,[WALK] <kitchencounter> (238),true,True,Yes,True,True
+placement_task_test_task1_C1_llm_precheck_gpt-4o-2024-08-06,4,gpt-4o-2024-08-06,[PUT] <cupcake> (195) <kitchencounter> (238),true,True,Yes,True,True
+placement_task_test_task1_C1_llm_precheck_gpt-4o-mini-2024-07-18,1,gpt-4o-mini-2024-07-18,[WALK] <desk> (108),true,True,Yes,True,True
+placement_task_test_task1_C1_llm_precheck_gpt-4o-mini-2024-07-18,2,gpt-4o-mini-2024-07-18,[OPEN] <desk> (108),true,False,No,False,True
+placement_task_test_task65_C1_llm_precheck_gpt-4o-2024-08-06,1,gpt-4o-2024-08-06,[WALK] <kitchen> (11),true,True,Yes,True,True
+placement_task_test_task65_C1_llm_precheck_gpt-4o-mini-2024-07-18,1,gpt-4o-mini-2024-07-18,[WALK] <kitchencounter> (92),true,False,No,False,True
+placement_task_test_task65_C1_llm_precheck_gpt-4o-mini-2024-07-18,2,gpt-4o-mini-2024-07-18,[WALK] <fridge> (103),true,True,Yes,True,True
+placement_task_test_task65_C1_llm_precheck_gpt-4o-mini-2024-07-18,3,gpt-4o-mini-2024-07-18,[PUTIN] <plum> (53) <fridge> (103),false,False,No,True,True
+placement_task_test_task65_C1_llm_precheck_gpt-4o-mini-2024-07-18,4,gpt-4o-mini-2024-07-18,[PUTIN] <plum> (53) <fridge> (103),true,True,Yes,True,True
+placement_task_test_task65_C1_llm_precheck_gpt-4o-mini-2024-07-18,5,gpt-4o-mini-2024-07-18,[GRAB] <plum> (54),false,False,No,True,True
+placement_task_test_task65_C1_llm_precheck_gpt-4o-mini-2024-07-18,6,gpt-4o-mini-2024-07-18,[GRAB] <plum> (54),true,True,Yes,True,True
+placement_task_test_task65_C1_llm_precheck_gpt-4o-mini-2024-07-18,7,gpt-4o-mini-2024-07-18,[PUTIN] <plum> (54) <fridge> (103),false,True,"To determine if the preconditions are satisfied, let's analyze each one:
+
+1. **You are holding <plum> (54) in your right hand or left hand.**  
+   - You are holding the plum (54) in your right hand. This condition is satisfied.
+
+2. **You are close to <fridge> (103).**  
+   - You are inside the kitchen (11), and the fridge (103) is also inside the kitchen (11). Therefore, you are close to the fridge (103). This condition is satisfied.
+
+3. **<fridge> (103) is not CLOSED.**  
+   - The fridge (103) is OPEN. This condition is satisfied.
+
+Since all the preconditions are satisfied, the output is:
+
+**Yes**",False,True
+state_change_task_test_task6_C1_llm_precheck_gpt-4o-2024-08-06,1,gpt-4o-2024-08-06,[WALK] <lightswitch> (173),true,True,Yes,True,True
+state_change_task_test_task6_C1_llm_precheck_gpt-4o-2024-08-06,2,gpt-4o-2024-08-06,[SWITCHON] <lightswitch> (173),true,True,Yes,True,True
+state_change_task_test_task6_C1_llm_precheck_gpt-4o-2024-08-06,3,gpt-4o-2024-08-06,[WALK] <lightswitch> (261),true,True,Yes,True,True
+state_change_task_test_task6_C1_llm_precheck_gpt-4o-2024-08-06,4,gpt-4o-2024-08-06,[SWITCHON] <lightswitch> (261),false,False,No,True,True
+state_change_task_test_task6_C1_llm_precheck_gpt-4o-2024-08-06,5,gpt-4o-2024-08-06,[SWITCHON] <lightswitch> (427),true,True,Yes,True,True
+state_change_task_test_task6_C1_llm_precheck_gpt-4o-mini-2024-07-18,1,gpt-4o-mini-2024-07-18,[WALK] <lightswitch> (173),true,True,Yes,True,True
+state_change_task_test_task6_C1_llm_precheck_gpt-4o-mini-2024-07-18,2,gpt-4o-mini-2024-07-18,[SWITCHON] <lightswitch> (173),true,True,Yes,True,True
+state_change_task_test_task6_C1_llm_precheck_gpt-4o-mini-2024-07-18,3,gpt-4o-mini-2024-07-18,[WALK] <lightswitch> (261),true,True,Yes,True,True
+state_change_task_test_task6_C1_llm_precheck_gpt-4o-mini-2024-07-18,4,gpt-4o-mini-2024-07-18,[SWITCHON] <lightswitch> (261),false,False,No,True,True
+state_change_task_test_task6_C1_llm_precheck_gpt-4o-mini-2024-07-18,5,gpt-4o-mini-2024-07-18,[SWITCHON] <lightswitch> (427),true,True,Yes,True,True

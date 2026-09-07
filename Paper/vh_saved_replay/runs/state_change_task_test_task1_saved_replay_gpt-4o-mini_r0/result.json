@@ -1,0 +1,58 @@
+{
+  "run_id": "state_change_task_test_task1_saved_replay_gpt-4o-mini_r0",
+  "kind": "state_change_task",
+  "task_id": "test_task1",
+  "model": "gpt-4o-mini",
+  "original_result": "Success",
+  "original_saved_length": 0,
+  "historical_prefix_replayed_in_full": true,
+  "execution_attempts": 0,
+  "successful_actions": [],
+  "initial": {
+    "graph_file": "graph_0002.json.gz",
+    "full_hash": "1f3a6432f756a066a4cb007fa60b94c72da9c062f31064647d38ebdec039eee6",
+    "symbolic_hash": "a52b0604ce180bea3f0de817b3eb9e8ed8e01b6ab4d91f5871b262f1afe53159",
+    "agent_transform": {
+      "position": [
+        2.90539312,
+        1.25,
+        -5.62809753
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ]
+    },
+    "goal": {
+      "all_satisfied": true,
+      "per_goal": [
+        true,
+        true,
+        true,
+        true
+      ]
+    }
+  },
+  "final_goal": {
+    "all_satisfied": true,
+    "per_goal": [
+      true,
+      true,
+      true,
+      true
+    ]
+  },
+  "final_graph": "graph_0003.json.gz",
+  "elapsed_seconds": 2.9764542830000664,
+  "utc": "2026-09-07T00:31:22.091326+00:00",
+  "runner_sha256": "c1a2e38ff64d35ae52dcf34e9385141915b38174a7f62ffa34e670ed4ca7c8c0",
+  "config_sha256": "ce483b816c761c72fa55463c2bc48807fffc2e3359f57d560dc723bcf1e02881",
+  "api_requests": 0
+}

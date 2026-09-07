@@ -1,0 +1,61 @@
+{
+  "run_id": "placement_task_test_task65_C2_symbolic_precheck_gpt-4o-mini-2024-07-18_r1",
+  "kind": "placement_task",
+  "task_id": "test_task65",
+  "task": "Put all plums in the fridge",
+  "arm": "C2_symbolic_precheck",
+  "model": "gpt-4o-mini-2024-07-18",
+  "repeat": 1,
+  "outcome": "Erroneous Terminate",
+  "score_original_rule": 0,
+  "actions": [
+    "[WALK] <kitchencounter> (92)",
+    "[GRAB] <plum> (53)",
+    "[WALK] <fridge> (103)",
+    "[PUT] <plum> (53) <fridge> (103)"
+  ],
+  "reference_length": 9,
+  "execution_attempts": 4,
+  "initial": {
+    "graph_file": "graph_0002.json.gz",
+    "full_hash": "dc97afb63d1fadabf4d91f540fc270e92f70bbd3cdffd19986b932dc92d8f597",
+    "symbolic_hash": "46efa16a685aa31bd3dbaa582779f821eb306410b0b1c54ea4e41a620b68cd08",
+    "agent_transform": {
+      "position": [
+        9.582918,
+        1.25,
+        -4.21981239
+      ],
+      "rotation": [
+        0.0,
+        -0.7071068,
+        0.0,
+        0.7071067
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ]
+    },
+    "goal": {
+      "all_satisfied": false,
+      "per_goal": [
+        false,
+        false
+      ]
+    }
+  },
+  "final_goal": {
+    "all_satisfied": false,
+    "per_goal": [
+      false,
+      false
+    ]
+  },
+  "final_graph": "graph_0016.json.gz",
+  "elapsed_seconds": 14.074005627997394,
+  "utc": "2026-09-06T14:48:01.251422+00:00",
+  "runner_sha256": "90dd0d6b9cbed0c3fe7713c00a9c916812278a7dae175bbea5c49737f3677500",
+  "config_sha256": "91ea958e9c3e8bc280132e0966fc74d8efdacb174abb66b0b352e0b7a34b712f"
+}

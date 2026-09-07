@@ -1,0 +1,19 @@
+{
+  "source_run_id": "placement_task_test_task1_R_random_gpt-4o-mini-2024-07-18_r2",
+  "source_step": 2,
+  "source_label": "False",
+  "action": "[OPEN] <desk> (108)",
+  "vh_success": false,
+  "initial_graph": "graph_0002.json.gz",
+  "before_graph": "graph_0008.json.gz",
+  "goal_after": {
+    "all_satisfied": false,
+    "per_goal": [
+      false,
+      false
+    ]
+  },
+  "successful_prefix_length": 1,
+  "utc": "2026-09-07T00:44:17.715804+00:00",
+  "api_requests": 0
+}

@@ -1,0 +1,21 @@
+{
+  "source_run_id": "state_change_task_test_task6_R_fixed_gpt-4o-2024-08-06_r0",
+  "source_step": 1,
+  "source_label": "False",
+  "action": "[SWITCHON] <lightswitch> (261)",
+  "vh_success": true,
+  "initial_graph": "graph_0002.json.gz",
+  "before_graph": "graph_0006.json.gz",
+  "goal_after": {
+    "all_satisfied": false,
+    "per_goal": [
+      true,
+      false,
+      true,
+      false
+    ]
+  },
+  "successful_prefix_length": 0,
+  "utc": "2026-09-07T00:44:05.020657+00:00",
+  "api_requests": 0
+}

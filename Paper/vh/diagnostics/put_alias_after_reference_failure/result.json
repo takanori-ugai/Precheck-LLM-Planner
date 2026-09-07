@@ -1,0 +1,28 @@
+{
+  "diagnostic_only": true,
+  "action": "<char0> [PUTBACK] <cupcake> (195) <kitchencounter> (238)",
+  "response": [
+    false,
+    {
+      "0": {
+        "message": "ScriptExcutor 0: EXECUTION_GENERAL: Script is impossible to execute\n\n"
+      }
+    }
+  ],
+  "before_goal": {
+    "all_satisfied": false,
+    "per_goal": [
+      false,
+      false
+    ]
+  },
+  "after_goal": {
+    "all_satisfied": false,
+    "per_goal": [
+      false,
+      false
+    ]
+  },
+  "before_hash": "299d07d883b3d01ecfa8d02732c2032cf9798b4232060a30eca3d93fc01c3475",
+  "after_hash": "3875508e921b6b66df9aa7190417d59c1c7739999392a4d5f142450994cc031b"
+}

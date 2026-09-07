@@ -1,0 +1,8 @@
+{
+  "successful_requests": 240,
+  "failed_requests": 0,
+  "input_tokens": 77984,
+  "output_tokens": 1647,
+  "estimated_usd_uncached": 0.1038423,
+  "failed_call_reservation_usd": 0
+}

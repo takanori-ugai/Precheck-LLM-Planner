@@ -1,0 +1,59 @@
+{
+  "run_id": "state_change_task_test_task1_C1_llm_precheck_gpt-4o-2024-08-06",
+  "kind": "state_change_task",
+  "task_id": "test_task1",
+  "task": "Turn on all lightswitches",
+  "arm": "C1_llm_precheck",
+  "model": "gpt-4o-2024-08-06",
+  "score_original_rule": 1.0,
+  "outcome": "Success",
+  "actions": [],
+  "reference_length": 0,
+  "execution_attempts": 0,
+  "initial": {
+    "graph_file": "graph_0002.json.gz",
+    "full_hash": "8f5d447fd52874374b228926fd3e316d65fda6499a0aae2780aaf06cfe84fe9c",
+    "symbolic_hash": "0e90c8c46ffd9c21c52d7261c710eaa9a8f9a2c4fddaad957167709df53a0210",
+    "agent_transform": {
+      "position": [
+        4.386044,
+        1.25,
+        -6.80444527
+      ],
+      "rotation": [
+        0.0,
+        0.7212031,
+        0.0,
+        0.6927237
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ]
+    },
+    "goal": {
+      "all_satisfied": true,
+      "per_goal": [
+        true,
+        true,
+        true,
+        true
+      ]
+    }
+  },
+  "final_goal": {
+    "all_satisfied": true,
+    "per_goal": [
+      true,
+      true,
+      true,
+      true
+    ]
+  },
+  "final_graph": "graph_0004.json.gz",
+  "elapsed_seconds": 3.0143602329990244,
+  "runner_sha256": "a63166938ad1c0d6500e5d9ab766d566a88e144fe76d5b80e72d92d07f7e5f2f",
+  "utc": "2026-09-06T13:55:04.019356+00:00",
+  "config_sha256": "17d23d271a12260f9635c10b1916db823e4d61f087108969d9d9c6dd8e9de7d9"
+}

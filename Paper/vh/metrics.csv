@@ -1,0 +1,13 @@
+model,arm,subset,n,success_original_rule,final_goal_satisfied,mean_successful_action_count,failed_execution_attempts,api_requests,estimated_usd_uncached
+gpt-4o-2024-08-06,C0_no_precheck,all_four_diagnostic,4,3,3,2.75,1,27,0.023322500000000003
+gpt-4o-mini-2024-07-18,C0_no_precheck,all_four_diagnostic,4,2,2,3.25,1,31,0.0015852
+gpt-4o-2024-08-06,C1_llm_precheck,all_four_diagnostic,4,2,2,2.0,2,34,0.0244875
+gpt-4o-mini-2024-07-18,C1_llm_precheck,all_four_diagnostic,4,3,3,3.25,1,55,0.00277335
+gpt-4o-2024-08-06,C2_symbolic_precheck,all_four_diagnostic,4,3,3,5.0,1,50,0.049165
+gpt-4o-mini-2024-07-18,C2_symbolic_precheck,all_four_diagnostic,4,2,2,4.25,1,43,0.00250875
+gpt-4o-2024-08-06,C0_no_precheck,reference_passed_only,3,2,2,1.0,1,10,0.0073075
+gpt-4o-mini-2024-07-18,C0_no_precheck,reference_passed_only,3,2,2,4.0,0,27,0.00137295
+gpt-4o-2024-08-06,C1_llm_precheck,reference_passed_only,3,2,2,1.6666666666666667,1,22,0.015265
+gpt-4o-mini-2024-07-18,C1_llm_precheck,reference_passed_only,3,3,3,4.0,0,47,0.0023696999999999998
+gpt-4o-2024-08-06,C2_symbolic_precheck,reference_passed_only,3,3,3,5.333333333333333,0,39,0.038274999999999997
+gpt-4o-mini-2024-07-18,C2_symbolic_precheck,reference_passed_only,3,2,2,4.0,0,30,0.0017538

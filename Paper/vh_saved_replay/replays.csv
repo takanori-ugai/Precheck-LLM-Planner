@@ -1,0 +1,9 @@
+run_id,kind,task_id,model,original_result,original_saved_length,historical_prefix_replayed_in_full,execution_attempts,successful_actions,final_goal
+placement_task_test_task1_saved_replay_gpt-4o-mini_r0,placement_task,test_task1,gpt-4o-mini,Execution Failure,1,True,1,1,False
+placement_task_test_task1_saved_replay_gpt-4o_r0,placement_task,test_task1,gpt-4o,Execution Failure,4,True,4,4,False
+placement_task_test_task65_saved_replay_gpt-4o-mini_r0,placement_task,test_task65,gpt-4o-mini,Erroneous Terminate,5,True,5,5,False
+placement_task_test_task65_saved_replay_gpt-4o_r0,placement_task,test_task65,gpt-4o,Success,10,True,10,10,True
+state_change_task_test_task1_saved_replay_gpt-4o-mini_r0,state_change_task,test_task1,gpt-4o-mini,Success,0,True,0,0,True
+state_change_task_test_task1_saved_replay_gpt-4o_r0,state_change_task,test_task1,gpt-4o,Success,0,True,0,0,True
+state_change_task_test_task6_saved_replay_gpt-4o-mini_r0,state_change_task,test_task6,gpt-4o-mini,Success,5,True,5,5,True
+state_change_task_test_task6_saved_replay_gpt-4o_r0,state_change_task,test_task6,gpt-4o,Success,4,True,4,4,True

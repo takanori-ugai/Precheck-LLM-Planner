@@ -1,0 +1,19 @@
+{
+  "source_run_id": "placement_task_test_task65_R_fixed_gpt-4o-2024-08-06_r0",
+  "source_step": 2,
+  "source_label": "False",
+  "action": "[OPEN] <fridge> (103)",
+  "vh_success": true,
+  "initial_graph": "graph_0002.json.gz",
+  "before_graph": "graph_0008.json.gz",
+  "goal_after": {
+    "all_satisfied": false,
+    "per_goal": [
+      false,
+      false
+    ]
+  },
+  "successful_prefix_length": 1,
+  "utc": "2026-09-07T00:44:30.744421+00:00",
+  "api_requests": 0
+}

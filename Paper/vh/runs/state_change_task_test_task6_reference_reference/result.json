@@ -1,0 +1,64 @@
+{
+  "run_id": "state_change_task_test_task6_reference_reference",
+  "kind": "state_change_task",
+  "task_id": "test_task6",
+  "task": "Turn on all lightswitches",
+  "arm": "reference",
+  "model": null,
+  "score_original_rule": 1,
+  "outcome": "Reference Success",
+  "actions": [
+    "[WALK] <lightswitch> (173)",
+    "[SWITCHON] <lightswitch> (173)",
+    "[WALK] <lightswitch> (427)",
+    "[SWITCHON] <lightswitch> (427)"
+  ],
+  "reference_length": 4,
+  "execution_attempts": 4,
+  "initial": {
+    "graph_file": "graph_0002.json.gz",
+    "full_hash": "7c8b89ed5059764f7e2784f2b34aab92e8c5027bb3406994966726287f1fa1b7",
+    "symbolic_hash": "5c5732299f27d0465e675143304db114381fbbb9ecff26b3599f624f94838ac1",
+    "agent_transform": {
+      "position": [
+        -2.41545,
+        1.25,
+        -7.44353151
+      ],
+      "rotation": [
+        0.0,
+        -0.9261086,
+        0.0,
+        0.377257019
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ]
+    },
+    "goal": {
+      "all_satisfied": false,
+      "per_goal": [
+        true,
+        false,
+        true,
+        false
+      ]
+    }
+  },
+  "final_goal": {
+    "all_satisfied": true,
+    "per_goal": [
+      true,
+      true,
+      true,
+      true
+    ]
+  },
+  "final_graph": "graph_0011.json.gz",
+  "elapsed_seconds": 7.254277651998564,
+  "runner_sha256": "74acee19d19c50a9022da21658766311e75f3ea035d937f899a1ec4231f9e064",
+  "utc": "2026-09-06T13:51:10.423887+00:00",
+  "config_sha256": "17d23d271a12260f9635c10b1916db823e4d61f087108969d9d9c6dd8e9de7d9"
+}

@@ -1,3 +1,9 @@
 # Local API credentials must never be committed.
 .env
 .env.local
+
+# Local VirtualHome runtime, dependency checkout, and generated recordings.
+/VH/
+/linux_exec.zip
+/.vh-deps/
+/Output/

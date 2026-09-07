@@ -1,0 +1,1830 @@
+{
+  "design": "step4_four_tasks_ten_conditions_three_repeats",
+  "selected_tasks": [
+    [
+      "state_change_task",
+      "test_task1"
+    ],
+    [
+      "state_change_task",
+      "test_task6"
+    ],
+    [
+      "placement_task",
+      "test_task1"
+    ],
+    [
+      "placement_task",
+      "test_task65"
+    ]
+  ],
+  "models": [
+    "gpt-4o-mini-2024-07-18",
+    "gpt-4o-2024-08-06"
+  ],
+  "arms": [
+    "C0_no_precheck",
+    "C1_llm_precheck",
+    "C2_symbolic_precheck",
+    "C3_execution_feedback",
+    "C1_budgeted",
+    "C4_budgeted",
+    "C5_full_graph",
+    "R_random",
+    "R_fixed",
+    "R_none"
+  ],
+  "repeats": 3,
+  "host": "172.26.224.1",
+  "port": "8080",
+  "temperature": 0,
+  "max_completion_tokens": 256,
+  "max_estimated_usd": 5.0,
+  "find_solution": false,
+  "recording": true,
+  "camera_mode": [
+    "PERSON_FROM_BACK"
+  ],
+  "skip_animation": false,
+  "randomize_execution": false,
+  "time_scale": 1.0,
+  "source_sha256": {
+    "multi-prompts.ipynb": "68cc07437abb4d80bde06bd900b108497ff3a33548427d63abdfd9eb8111506f",
+    "precondition.json": "427e1bec1a52df0f59f024335dc4bba8bd41dd8cab966694ba53fe606d19018d",
+    "Paper/listings/knowledge_extraction.py": "c1343e8d010e68a65e4612cdfe1cb5839d45422b7e0f172aaf186b0100bfd273",
+    "Paper/listings/prompt_spec.py": "0bbe871ee8c6e339b07660caa94b517e04da95bf0392a00154eca803c356c57f",
+    "Paper/analysis/retrieval_by_instance.csv": "e61b5e0783908c39e30fc358222a16748c9cc924d0c0da508e4b1e3b684516b5",
+    "dataset/placement_task/example.json": "5f22e51905f3f6a907b1ff92a5da2ca6a8bc94a78bcee814c5c1125318fac74e",
+    "dataset/placement_task/test.json": "7cd51148ec9133878247f1e105cf5737f6ac7bc1e01900afe94a9d385347a43b",
+    "dataset/state_change_task/example.json": "8a81f3f5db8ffce3651783418bb8ed518620341abf5405eba44c03ec7666be16",
+    "dataset/state_change_task/test.json": "9917b2db79d86dd16756fce3e4acaac2f5c1fc62107a4e82cd42186bd038e128",
+    "scripts/vh_step4.py": "90dd0d6b9cbed0c3fe7713c00a9c916812278a7dae175bbea5c49737f3677500",
+    "scripts/vh_experiment.py": "a63166938ad1c0d6500e5d9ab766d566a88e144fe76d5b80e72d92d07f7e5f2f",
+    "scripts/vh_fixed_initial.py": "44f9ae0d1f63083a863c9f1c3cefbafb782a05ca338043b98b0c841e015eca55",
+    "scripts/nonvh_analysis.py": "4b91df7287d98c4eb8a24269e19d02b2416a8dcd424460c597e9cdc75dc61ee8",
+    "scripts/run_nonvh_api.py": "512d00f6c138245ad68fc549cdd1ddbb5573805fb7a8dbb8ca8e0b9ba6580d4c",
+    "Paper/nonvh/retrieval_selections.csv": "560134a13af31989c033048d420fe845194ebb91dc7f37cf521653221ec8521f",
+    "Paper/vh/fixed_initial/config.json": "f4e4064f8b2f1bd5fb49432dd5d27d482760a5d016cae6d27560cfecf3d91de9",
+    "Paper/vh/fixed_initial/runs/state_change_task_test_task1_reference_reference/result.json": "36a846a54c3ca5cfa87b5212c16090d9d0f5efe80f730ccf883705de30e26a5c",
+    "Paper/vh/fixed_initial/runs/state_change_task_test_task6_reference_reference/result.json": "8869a4f921a7660cad8f48a6abcc10d822b8c46771234f11e2d0c47191d03f0c",
+    "Paper/vh/fixed_initial/runs/placement_task_test_task1_reference_reference/result.json": "0ce956f97c0350ace2cf778fa401ae5ba21de78f4b5bc3b6175e19c9f9583534",
+    "Paper/vh/fixed_initial/runs/placement_task_test_task65_reference_reference/result.json": "a61925b31d9e7fd5e3ce2d398932e6e447756d68a78f5551ea9cf9b446e0d449"
+  },
+  "client_commit": "58970fd80951c2eaa1af713e0917d1a105353ad8",
+  "client_files_sha256": {
+    "__init__.py": "f42660772bdab07f6f19e16a59aebe83508a71b98ff4c736545cfcb54597b767",
+    "comm_unity.py": "df18e045f6c973925b6338389aed3580340866a862c789b9571c0bc90eb93a6a",
+    "utils_viz.py": "1618ed02d61423ed7d1ad2c443b0ada14237bfe7606ace7eda26061d00192c31",
+    "communication.py": "e77bab89cad645106e6fe069135c54ba30f90a3cd2621875da4f5531975f1cd2"
+  },
+  "python": "3.12.3",
+  "platform": "Linux-6.18.33.2-microsoft-standard-WSL2-x86_64-with-glibc2.39",
+  "versions": {
+    "spacy": "3.7.5",
+    "en-core-web-sm": "3.7.1",
+    "inflection": "0.5.1",
+    "requests": "2.32.4",
+    "numpy": "1.26.4"
+  },
+  "remote_simulator_version": "not independently retrieved; scene/ID compatibility tested",
+  "local_reference_binary_sha256": "d31b1f585786efb1269aee25b13fb1558a625616e04b22f2e1f722e799b5e279",
+  "prices_usd_per_million": {
+    "gpt-4o-mini-2024-07-18": [
+      0.15,
+      0.6
+    ],
+    "gpt-4o-2024-08-06": [
+      2.5,
+      10
+    ]
+  },
+  "fixed_positions": {
+    "state_change_task/test_task1": [
+      2.90539312,
+      1.25,
+      -5.62809753
+    ],
+    "state_change_task/test_task6": [
+      -2.41545,
+      1.25,
+      -7.44353151
+    ],
+    "placement_task/test_task1": [
+      -6.287474,
+      1.247,
+      0.1396097
+    ],
+    "placement_task/test_task65": [
+      9.582918,
+      1.25,
+      -4.21981239
+    ]
+  },
+  "position_source_result_sha256": {
+    "Paper/vh/runs/state_change_task_test_task1_reference_reference/result.json": "5f5688c9b3130cc82645d4573bfa1443349429525fef8b4ad9eb725a2a2ebff0",
+    "Paper/vh/runs/state_change_task_test_task6_reference_reference/result.json": "96fffa8efba0fc6e6a72e57e59773fdc890200c79f40031295a1c6fbe8e108f5",
+    "Paper/vh/runs/placement_task_test_task1_reference_reference/result.json": "ef82919162c788c50ca5e7c343bcde51f2282a32a4a3f09a45015f94b6c4237d",
+    "Paper/vh/runs/placement_task_test_task65_reference_reference/result.json": "8d16217817ce0be36fa21a464420ed4e03f52933505816a2ed72fa4831be8fba"
+  },
+  "output_directory": "Paper/vh_step4",
+  "reference_outcomes": {
+    "state_change_task/test_task1": "Reference Success",
+    "state_change_task/test_task6": "Reference Success",
+    "placement_task/test_task1": "Reference Failure",
+    "placement_task/test_task65": "Reference Success"
+  },
+  "protocol": {
+    "reference_failures": "Retain all four tasks, report successful-reference subset separately",
+    "initialization": "Same fixed positions as prior pilot; compare to its reference before any API request",
+    "C3": "No precheck; one repair after a returned VH failure per decision; reextract changed state; count failed executions against 2L total execution budget; not CAPE reproduction",
+    "C1_budgeted_C4_budgeted": "Each nonterminal decision: generate + review + reason + regenerate, always; 4 calls each capped at 256 output tokens; input/actual output tokens NOT matched; separate from original C1",
+    "C5": "Only checker reads full graph. Same JSON rules and regeneration/planner knowledge as C2; known empty states are closed-world empty, not unknown. No geometry/affordance oracle",
+    "retrieval": "R_random/fixed/none use original C1; semantic baseline C1. Frozen nonvh selections, random repeat 0/1/2 shared across models",
+    "budget": "Original 2*reference length cap; C3 failed attempts consume it. Original zero-length and strict End rules retained",
+    "ordering": "Seed 20260907; shuffled task/model blocks per repeat and arms per block",
+    "stop": "No automatic API/VH retry; infrastructure errors separate; successful prior episodes skipped",
+    "scope": "Four diagnostic tasks, not all 415; no human/author confirmation implied"
+  },
+  "schedule": [
+    {
+      "kind": "state_change_task",
+      "task_id": "test_task1",
+      "model": "gpt-4o-mini-2024-07-18",
+      "arm": "C0_no_precheck",
+      "repeat": 0
+    },
+    {
+      "kind": "state_change_task",
+      "task_id": "test_task1",
+      "model": "gpt-4o-mini-2024-07-18",
+      "arm": "C5_full_graph",
+      "repeat": 0
+    },
+    {
+      "kind": "state_change_task",
+      "task_id": "test_task1",
+      "model": "gpt-4o-mini-2024-07-18",
+      "arm": "R_random",
+      "repeat": 0
+    },
+    {
+      "kind": "state_change_task",
+      "task_id": "test_task1",
+      "model": "gpt-4o-mini-2024-07-18",
+      "arm": "C4_budgeted",
+      "repeat": 0
+    },
+    {
+      "kind": "state_change_task",
+      "task_id": "test_task1",
+      "model": "gpt-4o-mini-2024-07-18",
+      "arm": "C1_budgeted",
+      "repeat": 0
+    },
+    {
+      "kind": "state_change_task",
+      "task_id": "test_task1",
+      "model": "gpt-4o-mini-2024-07-18",
+      "arm": "C2_symbolic_precheck",
+      "repeat": 0
+    },
+    {
+      "kind": "state_change_task",
+      "task_id": "test_task1",
+      "model": "gpt-4o-mini-2024-07-18",
+      "arm": "R_none",
+      "repeat": 0
+    },
+    {
+      "kind": "state_change_task",
+      "task_id": "test_task1",
+      "model": "gpt-4o-mini-2024-07-18",
+      "arm": "C3_execution_feedback",
+      "repeat": 0
+    },
+    {
+      "kind": "state_change_task",
+      "task_id": "test_task1",
+      "model": "gpt-4o-mini-2024-07-18",
+      "arm": "C1_llm_precheck",
+      "repeat": 0
+    },
+    {
+      "kind": "state_change_task",
+      "task_id": "test_task1",
+      "model": "gpt-4o-mini-2024-07-18",
+      "arm": "R_fixed",
+      "repeat": 0
+    },
+    {
+      "kind": "state_change_task",
+      "task_id": "test_task6",
+      "model": "gpt-4o-mini-2024-07-18",
+      "arm": "C1_llm_precheck",
+      "repeat": 0
+    },
+    {
+      "kind": "state_change_task",
+      "task_id": "test_task6",
+      "model": "gpt-4o-mini-2024-07-18",
+      "arm": "C2_symbolic_precheck",
+      "repeat": 0
+    },
+    {
+      "kind": "state_change_task",
+      "task_id": "test_task6",
+      "model": "gpt-4o-mini-2024-07-18",
+      "arm": "R_fixed",
+      "repeat": 0
+    },
+    {
+      "kind": "state_change_task",
+      "task_id": "test_task6",
+      "model": "gpt-4o-mini-2024-07-18",
+      "arm": "C1_budgeted",
+      "repeat": 0
+    },
+    {
+      "kind": "state_change_task",
+      "task_id": "test_task6",
+      "model": "gpt-4o-mini-2024-07-18",
+      "arm": "R_none",
+      "repeat": 0
+    },
+    {
+      "kind": "state_change_task",
+      "task_id": "test_task6",
+      "model": "gpt-4o-mini-2024-07-18",
+      "arm": "R_random",
+      "repeat": 0
+    },
+    {
+      "kind": "state_change_task",
+      "task_id": "test_task6",
+      "model": "gpt-4o-mini-2024-07-18",
+      "arm": "C5_full_graph",
+      "repeat": 0
+    },
+    {
+      "kind": "state_change_task",
+      "task_id": "test_task6",
+      "model": "gpt-4o-mini-2024-07-18",
+      "arm": "C4_budgeted",
+      "repeat": 0
+    },
+    {
+      "kind": "state_change_task",
+      "task_id": "test_task6",
+      "model": "gpt-4o-mini-2024-07-18",
+      "arm": "C3_execution_feedback",
+      "repeat": 0
+    },
+    {
+      "kind": "state_change_task",
+      "task_id": "test_task6",
+      "model": "gpt-4o-mini-2024-07-18",
+      "arm": "C0_no_precheck",
+      "repeat": 0
+    },
+    {
+      "kind": "placement_task",
+      "task_id": "test_task1",
+      "model": "gpt-4o-2024-08-06",
+      "arm": "R_random",
+      "repeat": 0
+    },
+    {
+      "kind": "placement_task",
+      "task_id": "test_task1",
+      "model": "gpt-4o-2024-08-06",
+      "arm": "C1_llm_precheck",
+      "repeat": 0
+    },
+    {
+      "kind": "placement_task",
+      "task_id": "test_task1",
+      "model": "gpt-4o-2024-08-06",
+      "arm": "C1_budgeted",
+      "repeat": 0
+    },
+    {
+      "kind": "placement_task",
+      "task_id": "test_task1",
+      "model": "gpt-4o-2024-08-06",
+      "arm": "C5_full_graph",
+      "repeat": 0
+    },
+    {
+      "kind": "placement_task",
+      "task_id": "test_task1",
+      "model": "gpt-4o-2024-08-06",
+      "arm": "C4_budgeted",
+      "repeat": 0
+    },
+    {
+      "kind": "placement_task",
+      "task_id": "test_task1",
+      "model": "gpt-4o-2024-08-06",
+      "arm": "C3_execution_feedback",
+      "repeat": 0
+    },
+    {
+      "kind": "placement_task",
+      "task_id": "test_task1",
+      "model": "gpt-4o-2024-08-06",
+      "arm": "R_fixed",
+      "repeat": 0
+    },
+    {
+      "kind": "placement_task",
+      "task_id": "test_task1",
+      "model": "gpt-4o-2024-08-06",
+      "arm": "C2_symbolic_precheck",
+      "repeat": 0
+    },
+    {
+      "kind": "placement_task",
+      "task_id": "test_task1",
+      "model": "gpt-4o-2024-08-06",
+      "arm": "C0_no_precheck",
+      "repeat": 0
+    },
+    {
+      "kind": "placement_task",
+      "task_id": "test_task1",
+      "model": "gpt-4o-2024-08-06",
+      "arm": "R_none",
+      "repeat": 0
+    },
+    {
+      "kind": "placement_task",
+      "task_id": "test_task1",
+      "model": "gpt-4o-mini-2024-07-18",
+      "arm": "C4_budgeted",
+      "repeat": 0
+    },
+    {
+      "kind": "placement_task",
+      "task_id": "test_task1",
+      "model": "gpt-4o-mini-2024-07-18",
+      "arm": "C0_no_precheck",
+      "repeat": 0
+    },
+    {
+      "kind": "placement_task",
+      "task_id": "test_task1",
+      "model": "gpt-4o-mini-2024-07-18",
+      "arm": "C3_execution_feedback",
+      "repeat": 0
+    },
+    {
+      "kind": "placement_task",
+      "task_id": "test_task1",
+      "model": "gpt-4o-mini-2024-07-18",
+      "arm": "C1_budgeted",
+      "repeat": 0
+    },
+    {
+      "kind": "placement_task",
+      "task_id": "test_task1",
+      "model": "gpt-4o-mini-2024-07-18",
+      "arm": "C5_full_graph",
+      "repeat": 0
+    },
+    {
+      "kind": "placement_task",
+      "task_id": "test_task1",
+      "model": "gpt-4o-mini-2024-07-18",
+      "arm": "C2_symbolic_precheck",
+      "repeat": 0
+    },
+    {
+      "kind": "placement_task",
+      "task_id": "test_task1",
+      "model": "gpt-4o-mini-2024-07-18",
+      "arm": "R_random",
+      "repeat": 0
+    },
+    {
+      "kind": "placement_task",
+      "task_id": "test_task1",
+      "model": "gpt-4o-mini-2024-07-18",
+      "arm": "R_fixed",
+      "repeat": 0
+    },
+    {
+      "kind": "placement_task",
+      "task_id": "test_task1",
+      "model": "gpt-4o-mini-2024-07-18",
+      "arm": "C1_llm_precheck",
+      "repeat": 0
+    },
+    {
+      "kind": "placement_task",
+      "task_id": "test_task1",
+      "model": "gpt-4o-mini-2024-07-18",
+      "arm": "R_none",
+      "repeat": 0
+    },
+    {
+      "kind": "placement_task",
+      "task_id": "test_task65",
+      "model": "gpt-4o-mini-2024-07-18",
+      "arm": "C1_llm_precheck",
+      "repeat": 0
+    },
+    {
+      "kind": "placement_task",
+      "task_id": "test_task65",
+      "model": "gpt-4o-mini-2024-07-18",
+      "arm": "C4_budgeted",
+      "repeat": 0
+    },
+    {
+      "kind": "placement_task",
+      "task_id": "test_task65",
+      "model": "gpt-4o-mini-2024-07-18",
+      "arm": "C5_full_graph",
+      "repeat": 0
+    },
+    {
+      "kind": "placement_task",
+      "task_id": "test_task65",
+      "model": "gpt-4o-mini-2024-07-18",
+      "arm": "R_none",
+      "repeat": 0
+    },
+    {
+      "kind": "placement_task",
+      "task_id": "test_task65",
+      "model": "gpt-4o-mini-2024-07-18",
+      "arm": "C3_execution_feedback",
+      "repeat": 0
+    },
+    {
+      "kind": "placement_task",
+      "task_id": "test_task65",
+      "model": "gpt-4o-mini-2024-07-18",
+      "arm": "C2_symbolic_precheck",
+      "repeat": 0
+    },
+    {
+      "kind": "placement_task",
+      "task_id": "test_task65",
+      "model": "gpt-4o-mini-2024-07-18",
+      "arm": "C0_no_precheck",
+      "repeat": 0
+    },
+    {
+      "kind": "placement_task",
+      "task_id": "test_task65",
+      "model": "gpt-4o-mini-2024-07-18",
+      "arm": "C1_budgeted",
+      "repeat": 0
+    },
+    {
+      "kind": "placement_task",
+      "task_id": "test_task65",
+      "model": "gpt-4o-mini-2024-07-18",
+      "arm": "R_random",
+      "repeat": 0
+    },
+    {
+      "kind": "placement_task",
+      "task_id": "test_task65",
+      "model": "gpt-4o-mini-2024-07-18",
+      "arm": "R_fixed",
+      "repeat": 0
+    },
+    {
+      "kind": "placement_task",
+      "task_id": "test_task65",
+      "model": "gpt-4o-2024-08-06",
+      "arm": "C1_llm_precheck",
+      "repeat": 0
+    },
+    {
+      "kind": "placement_task",
+      "task_id": "test_task65",
+      "model": "gpt-4o-2024-08-06",
+      "arm": "R_random",
+      "repeat": 0
+    },
+    {
+      "kind": "placement_task",
+      "task_id": "test_task65",
+      "model": "gpt-4o-2024-08-06",
+      "arm": "R_none",
+      "repeat": 0
+    },
+    {
+      "kind": "placement_task",
+      "task_id": "test_task65",
+      "model": "gpt-4o-2024-08-06",
+      "arm": "R_fixed",
+      "repeat": 0
+    },
+    {
+      "kind": "placement_task",
+      "task_id": "test_task65",
+      "model": "gpt-4o-2024-08-06",
+      "arm": "C5_full_graph",
+      "repeat": 0
+    },
+    {
+      "kind": "placement_task",
+      "task_id": "test_task65",
+      "model": "gpt-4o-2024-08-06",
+      "arm": "C2_symbolic_precheck",
+      "repeat": 0
+    },
+    {
+      "kind": "placement_task",
+      "task_id": "test_task65",
+      "model": "gpt-4o-2024-08-06",
+      "arm": "C1_budgeted",
+      "repeat": 0
+    },
+    {
+      "kind": "placement_task",
+      "task_id": "test_task65",
+      "model": "gpt-4o-2024-08-06",
+      "arm": "C0_no_precheck",
+      "repeat": 0
+    },
+    {
+      "kind": "placement_task",
+      "task_id": "test_task65",
+      "model": "gpt-4o-2024-08-06",
+      "arm": "C4_budgeted",
+      "repeat": 0
+    },
+    {
+      "kind": "placement_task",
+      "task_id": "test_task65",
+      "model": "gpt-4o-2024-08-06",
+      "arm": "C3_execution_feedback",
+      "repeat": 0
+    },
+    {
+      "kind": "state_change_task",
+      "task_id": "test_task1",
+      "model": "gpt-4o-2024-08-06",
+      "arm": "C2_symbolic_precheck",
+      "repeat": 0
+    },
+    {
+      "kind": "state_change_task",
+      "task_id": "test_task1",
+      "model": "gpt-4o-2024-08-06",
+      "arm": "R_random",
+      "repeat": 0
+    },
+    {
+      "kind": "state_change_task",
+      "task_id": "test_task1",
+      "model": "gpt-4o-2024-08-06",
+      "arm": "C1_budgeted",
+      "repeat": 0
+    },
+    {
+      "kind": "state_change_task",
+      "task_id": "test_task1",
+      "model": "gpt-4o-2024-08-06",
+      "arm": "C3_execution_feedback",
+      "repeat": 0
+    },
+    {
+      "kind": "state_change_task",
+      "task_id": "test_task1",
+      "model": "gpt-4o-2024-08-06",
+      "arm": "C5_full_graph",
+      "repeat": 0
+    },
+    {
+      "kind": "state_change_task",
+      "task_id": "test_task1",
+      "model": "gpt-4o-2024-08-06",
+      "arm": "C0_no_precheck",
+      "repeat": 0
+    },
+    {
+      "kind": "state_change_task",
+      "task_id": "test_task1",
+      "model": "gpt-4o-2024-08-06",
+      "arm": "R_fixed",
+      "repeat": 0
+    },
+    {
+      "kind": "state_change_task",
+      "task_id": "test_task1",
+      "model": "gpt-4o-2024-08-06",
+      "arm": "C1_llm_precheck",
+      "repeat": 0
+    },
+    {
+      "kind": "state_change_task",
+      "task_id": "test_task1",
+      "model": "gpt-4o-2024-08-06",
+      "arm": "R_none",
+      "repeat": 0
+    },
+    {
+      "kind": "state_change_task",
+      "task_id": "test_task1",
+      "model": "gpt-4o-2024-08-06",
+      "arm": "C4_budgeted",
+      "repeat": 0
+    },
+    {
+      "kind": "state_change_task",
+      "task_id": "test_task6",
+      "model": "gpt-4o-2024-08-06",
+      "arm": "C4_budgeted",
+      "repeat": 0
+    },
+    {
+      "kind": "state_change_task",
+      "task_id": "test_task6",
+      "model": "gpt-4o-2024-08-06",
+      "arm": "C5_full_graph",
+      "repeat": 0
+    },
+    {
+      "kind": "state_change_task",
+      "task_id": "test_task6",
+      "model": "gpt-4o-2024-08-06",
+      "arm": "C3_execution_feedback",
+      "repeat": 0
+    },
+    {
+      "kind": "state_change_task",
+      "task_id": "test_task6",
+      "model": "gpt-4o-2024-08-06",
+      "arm": "R_random",
+      "repeat": 0
+    },
+    {
+      "kind": "state_change_task",
+      "task_id": "test_task6",
+      "model": "gpt-4o-2024-08-06",
+      "arm": "R_none",
+      "repeat": 0
+    },
+    {
+      "kind": "state_change_task",
+      "task_id": "test_task6",
+      "model": "gpt-4o-2024-08-06",
+      "arm": "C1_llm_precheck",
+      "repeat": 0
+    },
+    {
+      "kind": "state_change_task",
+      "task_id": "test_task6",
+      "model": "gpt-4o-2024-08-06",
+      "arm": "C0_no_precheck",
+      "repeat": 0
+    },
+    {
+      "kind": "state_change_task",
+      "task_id": "test_task6",
+      "model": "gpt-4o-2024-08-06",
+      "arm": "R_fixed",
+      "repeat": 0
+    },
+    {
+      "kind": "state_change_task",
+      "task_id": "test_task6",
+      "model": "gpt-4o-2024-08-06",
+      "arm": "C2_symbolic_precheck",
+      "repeat": 0
+    },
+    {
+      "kind": "state_change_task",
+      "task_id": "test_task6",
+      "model": "gpt-4o-2024-08-06",
+      "arm": "C1_budgeted",
+      "repeat": 0
+    },
+    {
+      "kind": "placement_task",
+      "task_id": "test_task65",
+      "model": "gpt-4o-mini-2024-07-18",
+      "arm": "R_random",
+      "repeat": 1
+    },
+    {
+      "kind": "placement_task",
+      "task_id": "test_task65",
+      "model": "gpt-4o-mini-2024-07-18",
+      "arm": "C1_budgeted",
+      "repeat": 1
+    },
+    {
+      "kind": "placement_task",
+      "task_id": "test_task65",
+      "model": "gpt-4o-mini-2024-07-18",
+      "arm": "C5_full_graph",
+      "repeat": 1
+    },
+    {
+      "kind": "placement_task",
+      "task_id": "test_task65",
+      "model": "gpt-4o-mini-2024-07-18",
+      "arm": "C2_symbolic_precheck",
+      "repeat": 1
+    },
+    {
+      "kind": "placement_task",
+      "task_id": "test_task65",
+      "model": "gpt-4o-mini-2024-07-18",
+      "arm": "C3_execution_feedback",
+      "repeat": 1
+    },
+    {
+      "kind": "placement_task",
+      "task_id": "test_task65",
+      "model": "gpt-4o-mini-2024-07-18",
+      "arm": "C0_no_precheck",
+      "repeat": 1
+    },
+    {
+      "kind": "placement_task",
+      "task_id": "test_task65",
+      "model": "gpt-4o-mini-2024-07-18",
+      "arm": "C1_llm_precheck",
+      "repeat": 1
+    },
+    {
+      "kind": "placement_task",
+      "task_id": "test_task65",
+      "model": "gpt-4o-mini-2024-07-18",
+      "arm": "R_none",
+      "repeat": 1
+    },
+    {
+      "kind": "placement_task",
+      "task_id": "test_task65",
+      "model": "gpt-4o-mini-2024-07-18",
+      "arm": "R_fixed",
+      "repeat": 1
+    },
+    {
+      "kind": "placement_task",
+      "task_id": "test_task65",
+      "model": "gpt-4o-mini-2024-07-18",
+      "arm": "C4_budgeted",
+      "repeat": 1
+    },
+    {
+      "kind": "placement_task",
+      "task_id": "test_task1",
+      "model": "gpt-4o-2024-08-06",
+      "arm": "C2_symbolic_precheck",
+      "repeat": 1
+    },
+    {
+      "kind": "placement_task",
+      "task_id": "test_task1",
+      "model": "gpt-4o-2024-08-06",
+      "arm": "R_random",
+      "repeat": 1
+    },
+    {
+      "kind": "placement_task",
+      "task_id": "test_task1",
+      "model": "gpt-4o-2024-08-06",
+      "arm": "C1_llm_precheck",
+      "repeat": 1
+    },
+    {
+      "kind": "placement_task",
+      "task_id": "test_task1",
+      "model": "gpt-4o-2024-08-06",
+      "arm": "C5_full_graph",
+      "repeat": 1
+    },
+    {
+      "kind": "placement_task",
+      "task_id": "test_task1",
+      "model": "gpt-4o-2024-08-06",
+      "arm": "R_none",
+      "repeat": 1
+    },
+    {
+      "kind": "placement_task",
+      "task_id": "test_task1",
+      "model": "gpt-4o-2024-08-06",
+      "arm": "R_fixed",
+      "repeat": 1
+    },
+    {
+      "kind": "placement_task",
+      "task_id": "test_task1",
+      "model": "gpt-4o-2024-08-06",
+      "arm": "C3_execution_feedback",
+      "repeat": 1
+    },
+    {
+      "kind": "placement_task",
+      "task_id": "test_task1",
+      "model": "gpt-4o-2024-08-06",
+      "arm": "C1_budgeted",
+      "repeat": 1
+    },
+    {
+      "kind": "placement_task",
+      "task_id": "test_task1",
+      "model": "gpt-4o-2024-08-06",
+      "arm": "C4_budgeted",
+      "repeat": 1
+    },
+    {
+      "kind": "placement_task",
+      "task_id": "test_task1",
+      "model": "gpt-4o-2024-08-06",
+      "arm": "C0_no_precheck",
+      "repeat": 1
+    },
+    {
+      "kind": "state_change_task",
+      "task_id": "test_task6",
+      "model": "gpt-4o-mini-2024-07-18",
+      "arm": "R_random",
+      "repeat": 1
+    },
+    {
+      "kind": "state_change_task",
+      "task_id": "test_task6",
+      "model": "gpt-4o-mini-2024-07-18",
+      "arm": "C1_llm_precheck",
+      "repeat": 1
+    },
+    {
+      "kind": "state_change_task",
+      "task_id": "test_task6",
+      "model": "gpt-4o-mini-2024-07-18",
+      "arm": "C3_execution_feedback",
+      "repeat": 1
+    },
+    {
+      "kind": "state_change_task",
+      "task_id": "test_task6",
+      "model": "gpt-4o-mini-2024-07-18",
+      "arm": "C5_full_graph",
+      "repeat": 1
+    },
+    {
+      "kind": "state_change_task",
+      "task_id": "test_task6",
+      "model": "gpt-4o-mini-2024-07-18",
+      "arm": "C0_no_precheck",
+      "repeat": 1
+    },
+    {
+      "kind": "state_change_task",
+      "task_id": "test_task6",
+      "model": "gpt-4o-mini-2024-07-18",
+      "arm": "C1_budgeted",
+      "repeat": 1
+    },
+    {
+      "kind": "state_change_task",
+      "task_id": "test_task6",
+      "model": "gpt-4o-mini-2024-07-18",
+      "arm": "R_none",
+      "repeat": 1
+    },
+    {
+      "kind": "state_change_task",
+      "task_id": "test_task6",
+      "model": "gpt-4o-mini-2024-07-18",
+      "arm": "R_fixed",
+      "repeat": 1
+    },
+    {
+      "kind": "state_change_task",
+      "task_id": "test_task6",
+      "model": "gpt-4o-mini-2024-07-18",
+      "arm": "C4_budgeted",
+      "repeat": 1
+    },
+    {
+      "kind": "state_change_task",
+      "task_id": "test_task6",
+      "model": "gpt-4o-mini-2024-07-18",
+      "arm": "C2_symbolic_precheck",
+      "repeat": 1
+    },
+    {
+      "kind": "state_change_task",
+      "task_id": "test_task1",
+      "model": "gpt-4o-2024-08-06",
+      "arm": "C5_full_graph",
+      "repeat": 1
+    },
+    {
+      "kind": "state_change_task",
+      "task_id": "test_task1",
+      "model": "gpt-4o-2024-08-06",
+      "arm": "C4_budgeted",
+      "repeat": 1
+    },
+    {
+      "kind": "state_change_task",
+      "task_id": "test_task1",
+      "model": "gpt-4o-2024-08-06",
+      "arm": "C3_execution_feedback",
+      "repeat": 1
+    },
+    {
+      "kind": "state_change_task",
+      "task_id": "test_task1",
+      "model": "gpt-4o-2024-08-06",
+      "arm": "R_fixed",
+      "repeat": 1
+    },
+    {
+      "kind": "state_change_task",
+      "task_id": "test_task1",
+      "model": "gpt-4o-2024-08-06",
+      "arm": "C2_symbolic_precheck",
+      "repeat": 1
+    },
+    {
+      "kind": "state_change_task",
+      "task_id": "test_task1",
+      "model": "gpt-4o-2024-08-06",
+      "arm": "C1_llm_precheck",
+      "repeat": 1
+    },
+    {
+      "kind": "state_change_task",
+      "task_id": "test_task1",
+      "model": "gpt-4o-2024-08-06",
+      "arm": "C1_budgeted",
+      "repeat": 1
+    },
+    {
+      "kind": "state_change_task",
+      "task_id": "test_task1",
+      "model": "gpt-4o-2024-08-06",
+      "arm": "C0_no_precheck",
+      "repeat": 1
+    },
+    {
+      "kind": "state_change_task",
+      "task_id": "test_task1",
+      "model": "gpt-4o-2024-08-06",
+      "arm": "R_random",
+      "repeat": 1
+    },
+    {
+      "kind": "state_change_task",
+      "task_id": "test_task1",
+      "model": "gpt-4o-2024-08-06",
+      "arm": "R_none",
+      "repeat": 1
+    },
+    {
+      "kind": "state_change_task",
+      "task_id": "test_task6",
+      "model": "gpt-4o-2024-08-06",
+      "arm": "C1_llm_precheck",
+      "repeat": 1
+    },
+    {
+      "kind": "state_change_task",
+      "task_id": "test_task6",
+      "model": "gpt-4o-2024-08-06",
+      "arm": "C3_execution_feedback",
+      "repeat": 1
+    },
+    {
+      "kind": "state_change_task",
+      "task_id": "test_task6",
+      "model": "gpt-4o-2024-08-06",
+      "arm": "C1_budgeted",
+      "repeat": 1
+    },
+    {
+      "kind": "state_change_task",
+      "task_id": "test_task6",
+      "model": "gpt-4o-2024-08-06",
+      "arm": "C5_full_graph",
+      "repeat": 1
+    },
+    {
+      "kind": "state_change_task",
+      "task_id": "test_task6",
+      "model": "gpt-4o-2024-08-06",
+      "arm": "R_fixed",
+      "repeat": 1
+    },
+    {
+      "kind": "state_change_task",
+      "task_id": "test_task6",
+      "model": "gpt-4o-2024-08-06",
+      "arm": "R_random",
+      "repeat": 1
+    },
+    {
+      "kind": "state_change_task",
+      "task_id": "test_task6",
+      "model": "gpt-4o-2024-08-06",
+      "arm": "R_none",
+      "repeat": 1
+    },
+    {
+      "kind": "state_change_task",
+      "task_id": "test_task6",
+      "model": "gpt-4o-2024-08-06",
+      "arm": "C4_budgeted",
+      "repeat": 1
+    },
+    {
+      "kind": "state_change_task",
+      "task_id": "test_task6",
+      "model": "gpt-4o-2024-08-06",
+      "arm": "C2_symbolic_precheck",
+      "repeat": 1
+    },
+    {
+      "kind": "state_change_task",
+      "task_id": "test_task6",
+      "model": "gpt-4o-2024-08-06",
+      "arm": "C0_no_precheck",
+      "repeat": 1
+    },
+    {
+      "kind": "placement_task",
+      "task_id": "test_task65",
+      "model": "gpt-4o-2024-08-06",
+      "arm": "C5_full_graph",
+      "repeat": 1
+    },
+    {
+      "kind": "placement_task",
+      "task_id": "test_task65",
+      "model": "gpt-4o-2024-08-06",
+      "arm": "C1_budgeted",
+      "repeat": 1
+    },
+    {
+      "kind": "placement_task",
+      "task_id": "test_task65",
+      "model": "gpt-4o-2024-08-06",
+      "arm": "C2_symbolic_precheck",
+      "repeat": 1
+    },
+    {
+      "kind": "placement_task",
+      "task_id": "test_task65",
+      "model": "gpt-4o-2024-08-06",
+      "arm": "R_random",
+      "repeat": 1
+    },
+    {
+      "kind": "placement_task",
+      "task_id": "test_task65",
+      "model": "gpt-4o-2024-08-06",
+      "arm": "C1_llm_precheck",
+      "repeat": 1
+    },
+    {
+      "kind": "placement_task",
+      "task_id": "test_task65",
+      "model": "gpt-4o-2024-08-06",
+      "arm": "C3_execution_feedback",
+      "repeat": 1
+    },
+    {
+      "kind": "placement_task",
+      "task_id": "test_task65",
+      "model": "gpt-4o-2024-08-06",
+      "arm": "R_fixed",
+      "repeat": 1
+    },
+    {
+      "kind": "placement_task",
+      "task_id": "test_task65",
+      "model": "gpt-4o-2024-08-06",
+      "arm": "C4_budgeted",
+      "repeat": 1
+    },
+    {
+      "kind": "placement_task",
+      "task_id": "test_task65",
+      "model": "gpt-4o-2024-08-06",
+      "arm": "R_none",
+      "repeat": 1
+    },
+    {
+      "kind": "placement_task",
+      "task_id": "test_task65",
+      "model": "gpt-4o-2024-08-06",
+      "arm": "C0_no_precheck",
+      "repeat": 1
+    },
+    {
+      "kind": "placement_task",
+      "task_id": "test_task1",
+      "model": "gpt-4o-mini-2024-07-18",
+      "arm": "C2_symbolic_precheck",
+      "repeat": 1
+    },
+    {
+      "kind": "placement_task",
+      "task_id": "test_task1",
+      "model": "gpt-4o-mini-2024-07-18",
+      "arm": "C0_no_precheck",
+      "repeat": 1
+    },
+    {
+      "kind": "placement_task",
+      "task_id": "test_task1",
+      "model": "gpt-4o-mini-2024-07-18",
+      "arm": "C1_llm_precheck",
+      "repeat": 1
+    },
+    {
+      "kind": "placement_task",
+      "task_id": "test_task1",
+      "model": "gpt-4o-mini-2024-07-18",
+      "arm": "C5_full_graph",
+      "repeat": 1
+    },
+    {
+      "kind": "placement_task",
+      "task_id": "test_task1",
+      "model": "gpt-4o-mini-2024-07-18",
+      "arm": "C4_budgeted",
+      "repeat": 1
+    },
+    {
+      "kind": "placement_task",
+      "task_id": "test_task1",
+      "model": "gpt-4o-mini-2024-07-18",
+      "arm": "R_none",
+      "repeat": 1
+    },
+    {
+      "kind": "placement_task",
+      "task_id": "test_task1",
+      "model": "gpt-4o-mini-2024-07-18",
+      "arm": "R_fixed",
+      "repeat": 1
+    },
+    {
+      "kind": "placement_task",
+      "task_id": "test_task1",
+      "model": "gpt-4o-mini-2024-07-18",
+      "arm": "R_random",
+      "repeat": 1
+    },
+    {
+      "kind": "placement_task",
+      "task_id": "test_task1",
+      "model": "gpt-4o-mini-2024-07-18",
+      "arm": "C3_execution_feedback",
+      "repeat": 1
+    },
+    {
+      "kind": "placement_task",
+      "task_id": "test_task1",
+      "model": "gpt-4o-mini-2024-07-18",
+      "arm": "C1_budgeted",
+      "repeat": 1
+    },
+    {
+      "kind": "state_change_task",
+      "task_id": "test_task1",
+      "model": "gpt-4o-mini-2024-07-18",
+      "arm": "C0_no_precheck",
+      "repeat": 1
+    },
+    {
+      "kind": "state_change_task",
+      "task_id": "test_task1",
+      "model": "gpt-4o-mini-2024-07-18",
+      "arm": "C1_llm_precheck",
+      "repeat": 1
+    },
+    {
+      "kind": "state_change_task",
+      "task_id": "test_task1",
+      "model": "gpt-4o-mini-2024-07-18",
+      "arm": "C5_full_graph",
+      "repeat": 1
+    },
+    {
+      "kind": "state_change_task",
+      "task_id": "test_task1",
+      "model": "gpt-4o-mini-2024-07-18",
+      "arm": "R_random",
+      "repeat": 1
+    },
+    {
+      "kind": "state_change_task",
+      "task_id": "test_task1",
+      "model": "gpt-4o-mini-2024-07-18",
+      "arm": "R_none",
+      "repeat": 1
+    },
+    {
+      "kind": "state_change_task",
+      "task_id": "test_task1",
+      "model": "gpt-4o-mini-2024-07-18",
+      "arm": "C3_execution_feedback",
+      "repeat": 1
+    },
+    {
+      "kind": "state_change_task",
+      "task_id": "test_task1",
+      "model": "gpt-4o-mini-2024-07-18",
+      "arm": "C1_budgeted",
+      "repeat": 1
+    },
+    {
+      "kind": "state_change_task",
+      "task_id": "test_task1",
+      "model": "gpt-4o-mini-2024-07-18",
+      "arm": "R_fixed",
+      "repeat": 1
+    },
+    {
+      "kind": "state_change_task",
+      "task_id": "test_task1",
+      "model": "gpt-4o-mini-2024-07-18",
+      "arm": "C2_symbolic_precheck",
+      "repeat": 1
+    },
+    {
+      "kind": "state_change_task",
+      "task_id": "test_task1",
+      "model": "gpt-4o-mini-2024-07-18",
+      "arm": "C4_budgeted",
+      "repeat": 1
+    },
+    {
+      "kind": "placement_task",
+      "task_id": "test_task1",
+      "model": "gpt-4o-mini-2024-07-18",
+      "arm": "C0_no_precheck",
+      "repeat": 2
+    },
+    {
+      "kind": "placement_task",
+      "task_id": "test_task1",
+      "model": "gpt-4o-mini-2024-07-18",
+      "arm": "C2_symbolic_precheck",
+      "repeat": 2
+    },
+    {
+      "kind": "placement_task",
+      "task_id": "test_task1",
+      "model": "gpt-4o-mini-2024-07-18",
+      "arm": "R_none",
+      "repeat": 2
+    },
+    {
+      "kind": "placement_task",
+      "task_id": "test_task1",
+      "model": "gpt-4o-mini-2024-07-18",
+      "arm": "C3_execution_feedback",
+      "repeat": 2
+    },
+    {
+      "kind": "placement_task",
+      "task_id": "test_task1",
+      "model": "gpt-4o-mini-2024-07-18",
+      "arm": "C5_full_graph",
+      "repeat": 2
+    },
+    {
+      "kind": "placement_task",
+      "task_id": "test_task1",
+      "model": "gpt-4o-mini-2024-07-18",
+      "arm": "C1_budgeted",
+      "repeat": 2
+    },
+    {
+      "kind": "placement_task",
+      "task_id": "test_task1",
+      "model": "gpt-4o-mini-2024-07-18",
+      "arm": "C4_budgeted",
+      "repeat": 2
+    },
+    {
+      "kind": "placement_task",
+      "task_id": "test_task1",
+      "model": "gpt-4o-mini-2024-07-18",
+      "arm": "R_fixed",
+      "repeat": 2
+    },
+    {
+      "kind": "placement_task",
+      "task_id": "test_task1",
+      "model": "gpt-4o-mini-2024-07-18",
+      "arm": "C1_llm_precheck",
+      "repeat": 2
+    },
+    {
+      "kind": "placement_task",
+      "task_id": "test_task1",
+      "model": "gpt-4o-mini-2024-07-18",
+      "arm": "R_random",
+      "repeat": 2
+    },
+    {
+      "kind": "state_change_task",
+      "task_id": "test_task1",
+      "model": "gpt-4o-mini-2024-07-18",
+      "arm": "R_random",
+      "repeat": 2
+    },
+    {
+      "kind": "state_change_task",
+      "task_id": "test_task1",
+      "model": "gpt-4o-mini-2024-07-18",
+      "arm": "R_fixed",
+      "repeat": 2
+    },
+    {
+      "kind": "state_change_task",
+      "task_id": "test_task1",
+      "model": "gpt-4o-mini-2024-07-18",
+      "arm": "C1_llm_precheck",
+      "repeat": 2
+    },
+    {
+      "kind": "state_change_task",
+      "task_id": "test_task1",
+      "model": "gpt-4o-mini-2024-07-18",
+      "arm": "C4_budgeted",
+      "repeat": 2
+    },
+    {
+      "kind": "state_change_task",
+      "task_id": "test_task1",
+      "model": "gpt-4o-mini-2024-07-18",
+      "arm": "C2_symbolic_precheck",
+      "repeat": 2
+    },
+    {
+      "kind": "state_change_task",
+      "task_id": "test_task1",
+      "model": "gpt-4o-mini-2024-07-18",
+      "arm": "R_none",
+      "repeat": 2
+    },
+    {
+      "kind": "state_change_task",
+      "task_id": "test_task1",
+      "model": "gpt-4o-mini-2024-07-18",
+      "arm": "C3_execution_feedback",
+      "repeat": 2
+    },
+    {
+      "kind": "state_change_task",
+      "task_id": "test_task1",
+      "model": "gpt-4o-mini-2024-07-18",
+      "arm": "C0_no_precheck",
+      "repeat": 2
+    },
+    {
+      "kind": "state_change_task",
+      "task_id": "test_task1",
+      "model": "gpt-4o-mini-2024-07-18",
+      "arm": "C1_budgeted",
+      "repeat": 2
+    },
+    {
+      "kind": "state_change_task",
+      "task_id": "test_task1",
+      "model": "gpt-4o-mini-2024-07-18",
+      "arm": "C5_full_graph",
+      "repeat": 2
+    },
+    {
+      "kind": "placement_task",
+      "task_id": "test_task65",
+      "model": "gpt-4o-2024-08-06",
+      "arm": "C0_no_precheck",
+      "repeat": 2
+    },
+    {
+      "kind": "placement_task",
+      "task_id": "test_task65",
+      "model": "gpt-4o-2024-08-06",
+      "arm": "C5_full_graph",
+      "repeat": 2
+    },
+    {
+      "kind": "placement_task",
+      "task_id": "test_task65",
+      "model": "gpt-4o-2024-08-06",
+      "arm": "C1_budgeted",
+      "repeat": 2
+    },
+    {
+      "kind": "placement_task",
+      "task_id": "test_task65",
+      "model": "gpt-4o-2024-08-06",
+      "arm": "C3_execution_feedback",
+      "repeat": 2
+    },
+    {
+      "kind": "placement_task",
+      "task_id": "test_task65",
+      "model": "gpt-4o-2024-08-06",
+      "arm": "C4_budgeted",
+      "repeat": 2
+    },
+    {
+      "kind": "placement_task",
+      "task_id": "test_task65",
+      "model": "gpt-4o-2024-08-06",
+      "arm": "R_none",
+      "repeat": 2
+    },
+    {
+      "kind": "placement_task",
+      "task_id": "test_task65",
+      "model": "gpt-4o-2024-08-06",
+      "arm": "C1_llm_precheck",
+      "repeat": 2
+    },
+    {
+      "kind": "placement_task",
+      "task_id": "test_task65",
+      "model": "gpt-4o-2024-08-06",
+      "arm": "C2_symbolic_precheck",
+      "repeat": 2
+    },
+    {
+      "kind": "placement_task",
+      "task_id": "test_task65",
+      "model": "gpt-4o-2024-08-06",
+      "arm": "R_fixed",
+      "repeat": 2
+    },
+    {
+      "kind": "placement_task",
+      "task_id": "test_task65",
+      "model": "gpt-4o-2024-08-06",
+      "arm": "R_random",
+      "repeat": 2
+    },
+    {
+      "kind": "placement_task",
+      "task_id": "test_task1",
+      "model": "gpt-4o-2024-08-06",
+      "arm": "C5_full_graph",
+      "repeat": 2
+    },
+    {
+      "kind": "placement_task",
+      "task_id": "test_task1",
+      "model": "gpt-4o-2024-08-06",
+      "arm": "C1_budgeted",
+      "repeat": 2
+    },
+    {
+      "kind": "placement_task",
+      "task_id": "test_task1",
+      "model": "gpt-4o-2024-08-06",
+      "arm": "R_random",
+      "repeat": 2
+    },
+    {
+      "kind": "placement_task",
+      "task_id": "test_task1",
+      "model": "gpt-4o-2024-08-06",
+      "arm": "C3_execution_feedback",
+      "repeat": 2
+    },
+    {
+      "kind": "placement_task",
+      "task_id": "test_task1",
+      "model": "gpt-4o-2024-08-06",
+      "arm": "R_fixed",
+      "repeat": 2
+    },
+    {
+      "kind": "placement_task",
+      "task_id": "test_task1",
+      "model": "gpt-4o-2024-08-06",
+      "arm": "C0_no_precheck",
+      "repeat": 2
+    },
+    {
+      "kind": "placement_task",
+      "task_id": "test_task1",
+      "model": "gpt-4o-2024-08-06",
+      "arm": "R_none",
+      "repeat": 2
+    },
+    {
+      "kind": "placement_task",
+      "task_id": "test_task1",
+      "model": "gpt-4o-2024-08-06",
+      "arm": "C2_symbolic_precheck",
+      "repeat": 2
+    },
+    {
+      "kind": "placement_task",
+      "task_id": "test_task1",
+      "model": "gpt-4o-2024-08-06",
+      "arm": "C1_llm_precheck",
+      "repeat": 2
+    },
+    {
+      "kind": "placement_task",
+      "task_id": "test_task1",
+      "model": "gpt-4o-2024-08-06",
+      "arm": "C4_budgeted",
+      "repeat": 2
+    },
+    {
+      "kind": "state_change_task",
+      "task_id": "test_task6",
+      "model": "gpt-4o-2024-08-06",
+      "arm": "R_none",
+      "repeat": 2
+    },
+    {
+      "kind": "state_change_task",
+      "task_id": "test_task6",
+      "model": "gpt-4o-2024-08-06",
+      "arm": "C1_budgeted",
+      "repeat": 2
+    },
+    {
+      "kind": "state_change_task",
+      "task_id": "test_task6",
+      "model": "gpt-4o-2024-08-06",
+      "arm": "C0_no_precheck",
+      "repeat": 2
+    },
+    {
+      "kind": "state_change_task",
+      "task_id": "test_task6",
+      "model": "gpt-4o-2024-08-06",
+      "arm": "C2_symbolic_precheck",
+      "repeat": 2
+    },
+    {
+      "kind": "state_change_task",
+      "task_id": "test_task6",
+      "model": "gpt-4o-2024-08-06",
+      "arm": "C4_budgeted",
+      "repeat": 2
+    },
+    {
+      "kind": "state_change_task",
+      "task_id": "test_task6",
+      "model": "gpt-4o-2024-08-06",
+      "arm": "C1_llm_precheck",
+      "repeat": 2
+    },
+    {
+      "kind": "state_change_task",
+      "task_id": "test_task6",
+      "model": "gpt-4o-2024-08-06",
+      "arm": "R_fixed",
+      "repeat": 2
+    },
+    {
+      "kind": "state_change_task",
+      "task_id": "test_task6",
+      "model": "gpt-4o-2024-08-06",
+      "arm": "R_random",
+      "repeat": 2
+    },
+    {
+      "kind": "state_change_task",
+      "task_id": "test_task6",
+      "model": "gpt-4o-2024-08-06",
+      "arm": "C3_execution_feedback",
+      "repeat": 2
+    },
+    {
+      "kind": "state_change_task",
+      "task_id": "test_task6",
+      "model": "gpt-4o-2024-08-06",
+      "arm": "C5_full_graph",
+      "repeat": 2
+    },
+    {
+      "kind": "state_change_task",
+      "task_id": "test_task1",
+      "model": "gpt-4o-2024-08-06",
+      "arm": "C3_execution_feedback",
+      "repeat": 2
+    },
+    {
+      "kind": "state_change_task",
+      "task_id": "test_task1",
+      "model": "gpt-4o-2024-08-06",
+      "arm": "R_fixed",
+      "repeat": 2
+    },
+    {
+      "kind": "state_change_task",
+      "task_id": "test_task1",
+      "model": "gpt-4o-2024-08-06",
+      "arm": "R_none",
+      "repeat": 2
+    },
+    {
+      "kind": "state_change_task",
+      "task_id": "test_task1",
+      "model": "gpt-4o-2024-08-06",
+      "arm": "C0_no_precheck",
+      "repeat": 2
+    },
+    {
+      "kind": "state_change_task",
+      "task_id": "test_task1",
+      "model": "gpt-4o-2024-08-06",
+      "arm": "C5_full_graph",
+      "repeat": 2
+    },
+    {
+      "kind": "state_change_task",
+      "task_id": "test_task1",
+      "model": "gpt-4o-2024-08-06",
+      "arm": "C1_budgeted",
+      "repeat": 2
+    },
+    {
+      "kind": "state_change_task",
+      "task_id": "test_task1",
+      "model": "gpt-4o-2024-08-06",
+      "arm": "C4_budgeted",
+      "repeat": 2
+    },
+    {
+      "kind": "state_change_task",
+      "task_id": "test_task1",
+      "model": "gpt-4o-2024-08-06",
+      "arm": "R_random",
+      "repeat": 2
+    },
+    {
+      "kind": "state_change_task",
+      "task_id": "test_task1",
+      "model": "gpt-4o-2024-08-06",
+      "arm": "C1_llm_precheck",
+      "repeat": 2
+    },
+    {
+      "kind": "state_change_task",
+      "task_id": "test_task1",
+      "model": "gpt-4o-2024-08-06",
+      "arm": "C2_symbolic_precheck",
+      "repeat": 2
+    },
+    {
+      "kind": "placement_task",
+      "task_id": "test_task65",
+      "model": "gpt-4o-mini-2024-07-18",
+      "arm": "C3_execution_feedback",
+      "repeat": 2
+    },
+    {
+      "kind": "placement_task",
+      "task_id": "test_task65",
+      "model": "gpt-4o-mini-2024-07-18",
+      "arm": "C4_budgeted",
+      "repeat": 2
+    },
+    {
+      "kind": "placement_task",
+      "task_id": "test_task65",
+      "model": "gpt-4o-mini-2024-07-18",
+      "arm": "R_fixed",
+      "repeat": 2
+    },
+    {
+      "kind": "placement_task",
+      "task_id": "test_task65",
+      "model": "gpt-4o-mini-2024-07-18",
+      "arm": "C0_no_precheck",
+      "repeat": 2
+    },
+    {
+      "kind": "placement_task",
+      "task_id": "test_task65",
+      "model": "gpt-4o-mini-2024-07-18",
+      "arm": "R_none",
+      "repeat": 2
+    },
+    {
+      "kind": "placement_task",
+      "task_id": "test_task65",
+      "model": "gpt-4o-mini-2024-07-18",
+      "arm": "R_random",
+      "repeat": 2
+    },
+    {
+      "kind": "placement_task",
+      "task_id": "test_task65",
+      "model": "gpt-4o-mini-2024-07-18",
+      "arm": "C2_symbolic_precheck",
+      "repeat": 2
+    },
+    {
+      "kind": "placement_task",
+      "task_id": "test_task65",
+      "model": "gpt-4o-mini-2024-07-18",
+      "arm": "C5_full_graph",
+      "repeat": 2
+    },
+    {
+      "kind": "placement_task",
+      "task_id": "test_task65",
+      "model": "gpt-4o-mini-2024-07-18",
+      "arm": "C1_budgeted",
+      "repeat": 2
+    },
+    {
+      "kind": "placement_task",
+      "task_id": "test_task65",
+      "model": "gpt-4o-mini-2024-07-18",
+      "arm": "C1_llm_precheck",
+      "repeat": 2
+    },
+    {
+      "kind": "state_change_task",
+      "task_id": "test_task6",
+      "model": "gpt-4o-mini-2024-07-18",
+      "arm": "C0_no_precheck",
+      "repeat": 2
+    },
+    {
+      "kind": "state_change_task",
+      "task_id": "test_task6",
+      "model": "gpt-4o-mini-2024-07-18",
+      "arm": "C4_budgeted",
+      "repeat": 2
+    },
+    {
+      "kind": "state_change_task",
+      "task_id": "test_task6",
+      "model": "gpt-4o-mini-2024-07-18",
+      "arm": "R_none",
+      "repeat": 2
+    },
+    {
+      "kind": "state_change_task",
+      "task_id": "test_task6",
+      "model": "gpt-4o-mini-2024-07-18",
+      "arm": "C1_budgeted",
+      "repeat": 2
+    },
+    {
+      "kind": "state_change_task",
+      "task_id": "test_task6",
+      "model": "gpt-4o-mini-2024-07-18",
+      "arm": "C5_full_graph",
+      "repeat": 2
+    },
+    {
+      "kind": "state_change_task",
+      "task_id": "test_task6",
+      "model": "gpt-4o-mini-2024-07-18",
+      "arm": "R_fixed",
+      "repeat": 2
+    },
+    {
+      "kind": "state_change_task",
+      "task_id": "test_task6",
+      "model": "gpt-4o-mini-2024-07-18",
+      "arm": "C2_symbolic_precheck",
+      "repeat": 2
+    },
+    {
+      "kind": "state_change_task",
+      "task_id": "test_task6",
+      "model": "gpt-4o-mini-2024-07-18",
+      "arm": "C3_execution_feedback",
+      "repeat": 2
+    },
+    {
+      "kind": "state_change_task",
+      "task_id": "test_task6",
+      "model": "gpt-4o-mini-2024-07-18",
+      "arm": "C1_llm_precheck",
+      "repeat": 2
+    },
+    {
+      "kind": "state_change_task",
+      "task_id": "test_task6",
+      "model": "gpt-4o-mini-2024-07-18",
+      "arm": "R_random",
+      "repeat": 2
+    }
+  ]
+}

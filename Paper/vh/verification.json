@@ -1,0 +1,27 @@
+{
+  "utc": "2026-09-06T15:24:31.124675+00:00",
+  "reports": [
+    {
+      "folder": "Paper/vh",
+      "completed_episodes": 28,
+      "api_successful_requests": 240,
+      "all_checks_passed": true,
+      "interrupted_attempts_preserved": 1,
+      "unarchived_early_reference_runner_hashes": [
+        "74acee19d19c50a9022da21658766311e75f3ea035d937f899a1ec4231f9e064"
+      ],
+      "note": "Early probe/reference runner versions were hashed but not archived before edits; no exact source recovery claimed"
+    },
+    {
+      "folder": "Paper/vh/fixed_initial",
+      "completed_episodes": 28,
+      "api_successful_requests": 274,
+      "all_checks_passed": true,
+      "interrupted_attempts_preserved": 1,
+      "unarchived_early_reference_runner_hashes": [],
+      "note": "Early probe/reference runner versions were hashed but not archived before edits; no exact source recovery claimed"
+    }
+  ],
+  "exact_key_absent_in_all_vh_artifacts": true,
+  "latex_executed": false
+}

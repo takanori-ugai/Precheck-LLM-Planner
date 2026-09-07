@@ -1,0 +1,12 @@
+{
+  "allow_completed_reference_failures": true,
+  "reference_outcomes": {
+    "state_change_task/test_task1": "Reference Success",
+    "state_change_task/test_task6": "Reference Success",
+    "placement_task/test_task1": "Reference Failure",
+    "placement_task/test_task65": "Reference Success"
+  },
+  "interpretation": "Reference failures retained and reported separately; no claim all reference plans reproduced",
+  "action_name_conversion": false,
+  "runner_sha256": "a63166938ad1c0d6500e5d9ab766d566a88e144fe76d5b80e72d92d07f7e5f2f"
+}

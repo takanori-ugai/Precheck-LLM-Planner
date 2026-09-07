@@ -1,0 +1,7 @@
+{
+  "utc": "2026-09-06T13:48:03.573813+00:00",
+  "error_type": "RuntimeError",
+  "message": "VH communication failure; do not retry a stateful request blindly",
+  "actions": [],
+  "execution_attempts": 0
+}

@@ -1,0 +1,8 @@
+{
+  "planned": 12,
+  "selected": 8,
+  "completed": 8,
+  "api_requests": 0,
+  "vh_successes": 6,
+  "unselected_rejected_candidates": "reported by count in source precondition_labels.csv"
+}

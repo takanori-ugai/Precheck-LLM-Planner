@@ -1,0 +1,60 @@
+{
+  "run_id": "placement_task_test_task65_saved_replay_gpt-4o-mini_r0",
+  "kind": "placement_task",
+  "task_id": "test_task65",
+  "model": "gpt-4o-mini",
+  "original_result": "Erroneous Terminate",
+  "original_saved_length": 5,
+  "historical_prefix_replayed_in_full": true,
+  "execution_attempts": 5,
+  "successful_actions": [
+    "[GRAB] <plum> (53)",
+    "[WALK] <fridge> (103)",
+    "[OPEN] <fridge> (103)",
+    "[PUTIN] <plum> (53) <fridge> (103)",
+    "[WALK] <plum> (54)"
+  ],
+  "initial": {
+    "graph_file": "graph_0002.json.gz",
+    "full_hash": "dc97afb63d1fadabf4d91f540fc270e92f70bbd3cdffd19986b932dc92d8f597",
+    "symbolic_hash": "46efa16a685aa31bd3dbaa582779f821eb306410b0b1c54ea4e41a620b68cd08",
+    "agent_transform": {
+      "position": [
+        9.582918,
+        1.25,
+        -4.21981239
+      ],
+      "rotation": [
+        0.0,
+        -0.7071068,
+        0.0,
+        0.7071067
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ]
+    },
+    "goal": {
+      "all_satisfied": false,
+      "per_goal": [
+        false,
+        false
+      ]
+    }
+  },
+  "final_goal": {
+    "all_satisfied": false,
+    "per_goal": [
+      true,
+      false
+    ]
+  },
+  "final_graph": "graph_0013.json.gz",
+  "elapsed_seconds": 7.562084731999903,
+  "utc": "2026-09-07T00:31:56.807815+00:00",
+  "runner_sha256": "c1a2e38ff64d35ae52dcf34e9385141915b38174a7f62ffa34e670ed4ca7c8c0",
+  "config_sha256": "ce483b816c761c72fa55463c2bc48807fffc2e3359f57d560dc723bcf1e02881",
+  "api_requests": 0
+}

@@ -1,0 +1,59 @@
+{
+  "run_id": "placement_task_test_task1_C1_llm_precheck_gpt-4o-2024-08-06",
+  "kind": "placement_task",
+  "task_id": "test_task1",
+  "task": "Put all cupcakes on the kitchencounter",
+  "arm": "C1_llm_precheck",
+  "model": "gpt-4o-2024-08-06",
+  "score_original_rule": 0.0,
+  "outcome": "Execution Failure",
+  "actions": [
+    "[WALK] <bedroom> (73)",
+    "[GRAB] <cupcake> (195)",
+    "[WALK] <kitchencounter> (238)"
+  ],
+  "reference_length": 8,
+  "execution_attempts": 4,
+  "initial": {
+    "graph_file": "graph_0002.json.gz",
+    "full_hash": "f0480a04f4b3e61d1e2e9078bef7a737c37d8fed93f123800ae7b8c257d8d1cf",
+    "symbolic_hash": "115ca569ea043f29513ba1890a7e42553a593128afa062b864ecdaf5dd6376ba",
+    "agent_transform": {
+      "position": [
+        -4.930101,
+        1.247,
+        -0.800162852
+      ],
+      "rotation": [
+        0.0,
+        -0.9982711,
+        0.0,
+        0.058777485
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ]
+    },
+    "goal": {
+      "all_satisfied": false,
+      "per_goal": [
+        false,
+        false
+      ]
+    }
+  },
+  "final_goal": {
+    "all_satisfied": false,
+    "per_goal": [
+      false,
+      false
+    ]
+  },
+  "final_graph": "graph_0015.json.gz",
+  "elapsed_seconds": 16.25948820100166,
+  "runner_sha256": "a63166938ad1c0d6500e5d9ab766d566a88e144fe76d5b80e72d92d07f7e5f2f",
+  "utc": "2026-09-06T13:58:14.532076+00:00",
+  "config_sha256": "17d23d271a12260f9635c10b1916db823e4d61f087108969d9d9c6dd8e9de7d9"
+}

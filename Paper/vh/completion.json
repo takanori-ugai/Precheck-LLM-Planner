@@ -1,0 +1,18 @@
+{
+  "planned_comparison_episodes": 24,
+  "completed_comparison_episodes": 24,
+  "missing_comparison_episodes": [],
+  "reference_episodes": 4,
+  "reference_successes": 3,
+  "recorded_execution_attempts_in_reference_and_comparison": 106,
+  "api": {
+    "successful_requests": 240,
+    "failed_requests": 0,
+    "input_tokens": 77984,
+    "output_tokens": 1647,
+    "estimated_usd_uncached": 0.1038423,
+    "failed_call_reservation_usd": 0
+  },
+  "human_participants": 0,
+  "latex_executed": false
+}

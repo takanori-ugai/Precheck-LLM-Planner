@@ -1,0 +1,12 @@
+{
+  "confirmation_date_jst": "2026-09-06",
+  "confirmer": "ユーザー（氏名未提供）",
+  "message": "Cases.mdの内容確認しました。",
+  "scope": "Paper/vh/Cases.mdの4ケースの説明内容",
+  "reviewed_document_sha256": "854ab34f300e74d6d2a33e3b2c73d6255d4d84b0b371af2a9ff989b23d0c90ff",
+  "reviewed_document_archive": "reviewed_Cases_20260906.md",
+  "requested_corrections": [],
+  "case_body_changed_after_confirmation": false,
+  "human_performance_experiment": false,
+  "independent_simulator_replay_by_confirmer_claimed": false
+}
