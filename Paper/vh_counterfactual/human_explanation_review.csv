@@ -1,0 +1,9 @@
+run_id,step,action,review_label,review_basis,reviewer_scope
+state_change_task_test_task6_C1_llm_precheck_gpt-4o-2024-08-06_r0,4,"[SWITCHON] <lightswitch> (261)",判断不能,"応答がNoのみで違反理由の説明がない",assistant-assisted-manual
+state_change_task_test_task6_C1_llm_precheck_gpt-4o-mini-2024-07-18_r0,4,"[SWITCHON] <lightswitch> (261)",判断不能,"応答がNoのみで違反理由の説明がない",assistant-assisted-manual
+state_change_task_test_task6_R_fixed_gpt-4o-2024-08-06_r0,1,"[SWITCHON] <lightswitch> (261)",判断不能,"応答がNoのみで違反理由の説明がない",assistant-assisted-manual
+placement_task_test_task1_R_fixed_gpt-4o-mini-2024-07-18_r1,7,"[PUTIN] <cupcake> (195) <kitchencounter> (238)",一部正しい,"保持条件の不充足と近接・容器状態の説明は区別できるが、状態グラフとの厳密な対応を確認できない",assistant-assisted-manual
+placement_task_test_task1_R_random_gpt-4o-mini-2024-07-18_r2,2,"[OPEN] <desk> (108)",判断不能,"応答がNoのみで違反理由の説明がない",assistant-assisted-manual
+placement_task_test_task65_C1_llm_precheck_gpt-4o-2024-08-06_r0,2,"[OPEN] <fridge> (103)",判断不能,"応答がNoのみで違反理由の説明がない",assistant-assisted-manual
+placement_task_test_task65_C1_llm_precheck_gpt-4o-mini-2024-07-18_r0,1,"[WALK] <kitchencounter> (92)",判断不能,"応答がNoのみで違反理由の説明がない",assistant-assisted-manual
+placement_task_test_task65_R_fixed_gpt-4o-2024-08-06_r0,2,"[OPEN] <fridge> (103)",判断不能,"応答がNoのみで違反理由の説明がない",assistant-assisted-manual
