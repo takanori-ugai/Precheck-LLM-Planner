@@ -1,0 +1,117 @@
+{
+  "date": "2026-09-07",
+  "tex_executed": false,
+  "new_api_requests": 0,
+  "offline_tests_passed": 61,
+  "preserved_verbatim_prompt_trailing_space_lines": 18,
+  "csv_crlf_preserved": true,
+  "other_staged_whitespace_errors": 0,
+  "test_environment": "/home/ugai/venv/bin/python",
+  "input_tex_files": 14,
+  "unique_labels": 109,
+  "resolved_references": 163,
+  "paper_metric_values_matched": 90,
+  "dataset_instances": 618,
+  "result_rows": 3735,
+  "reply_responses": 18,
+  "original_audit_source_hashes_unchanged": 49,
+  "human_unmet_review": {
+    "target_phase": "unmet",
+    "review_file": "review.csv",
+    "validation_scope": "form completeness only; not semantic correctness",
+    "author_confirmed_rubric": "現在状態との一致",
+    "unmet_semantic_review_complete": false,
+    "semantic_review_file": "Paper/human-unmet-review/semantic_review.csv",
+    "semantic_form_completed": 8,
+    "semantic_review_identical_to_prior_form": false,
+    "semantic_confirmation_status": "author records incorporated with assisted-review and rationale limitations; not semantic ground truth",
+    "completed": 8,
+    "pending_cases": [],
+    "labels": {
+      "誤り": 6,
+      "正しい": 2
+    },
+    "complete": true,
+    "human_ratings_generated_by_script": false,
+    "semantic_review_sha256": "01a1f11ce33be652f6bba32ebea4a322e4a89f7c53de5c339ba2939c1969951e",
+    "semantic_labels": {
+      "正しい": 1,
+      "誤り": 7
+    },
+    "author_record_incorporation_complete": true,
+    "semantic_gold_standard_established": false,
+    "semantic_record_manifest": "Paper/human-unmet-review/recorded_results.json"
+  },
+  "vh_restoration": {
+    "selected": 8,
+    "recorded": 1,
+    "executed_aligned": 0,
+    "vh_successes": 0,
+    "unselected": 51,
+    "api_requests": 0,
+    "status_counts": {
+      "infrastructure_or_initialization_error": 1
+    }
+  },
+  "files_sha256": {
+    "Paper/appendix-evaluation.tex": "72ad62514164802d97a2097957499d982715d33509f2bb8db066918023abbe28",
+    "Paper/appendix-human-review.tex": "c7fec07abefa7caeb58464a2689cc976b07bccd59d0c29fa4197217462ef973c",
+    "Paper/appendix-implementation.tex": "69c192325c3757a5ae0bfb176a7904819d07ad83d64f14278a3af48f984f9fcd",
+    "Paper/appendix-real-inputs.tex": "c8a4c24fbe9dfa6fbdc8c599846fcac523bff9d1e58f1645a51f7bd92a6ffc16",
+    "Paper/appendix-statistics.tex": "ecaa9525183603b757008eb6bf5cb766abf565b4814665d4e6443886a42c5520",
+    "Paper/main.tex": "a3509ecd4f2cb2dde698533a39ea7a3164d1e640e6afa4d6e449083d50a17a73",
+    "Paper/sec1.tex": "d92d687a8d936881f41e31957d59139afc17d2ac15f26cd661472edabed5972c",
+    "Paper/sec2.tex": "1006a5b2221331b07e6b717acec0c971a911e780e108178c58b77aaf6150c238",
+    "Paper/sec3.tex": "8ecb867ab830b5bd36f9ee56eb5bafe059c7df34420de7188970fa01df5c1dc7",
+    "Paper/sec4.tex": "171b6bf20d7f02b30c221f38310b40fecfbd3d99251f1178e4e151299ee1a836",
+    "Paper/sec5-additional-experiment.tex": "f6bd35288a6bd02286078a7c3d9613266de7463687e48072f820957afd5aea67",
+    "Paper/sec5-author-cases.tex": "e61e187cef63c233cc95a9cdcb2454a326d0ac8661fe3a7a61a5173f2916d5cd",
+    "Paper/sec5.tex": "9247a5f9118619cc4894462f29fed5e7e400b8b21f62893e20c4048e6d899f82",
+    "Paper/sec6.tex": "59f9f47c861c6aeff37eac1920238311faa285a70f342ad1f842004a7113f690"
+  },
+  "vh_prefix_replay": {
+    "selected": 8,
+    "recorded": 8,
+    "executed_aligned": 2,
+    "vh_successes": 2,
+    "unselected": 51,
+    "api_requests": 0,
+    "status_counts": {
+      "executed": 2,
+      "state_not_restored": 6
+    }
+  },
+  "vh_prefix_replay_audit": "Paper/vh_aligned_prefix/verification.json",
+  "todo_items_complete_under_approved_scope": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6
+  ],
+  "approved_scope_changes": {
+    "item_2": "4 strictly gated candidates; disclose 4 not reproduced and 51 unselected; scope narrowed after results",
+    "item_4": "author confirms no archives; disclose unrecoverable conditions and comparison limitations; no new baseline reimplementation"
+  },
+  "remaining_scientific_limits": [
+    "Four selected candidate states not reproduced with tested methods",
+    "Historical experiment conditions not fully reproducible",
+    "Author explanation review is assisted and not an independently established semantic gold standard"
+  ],
+  "vh_clean_snapshot": {
+    "targeted": 6,
+    "recorded": 6,
+    "executed_aligned": 2,
+    "vh_successes": 2,
+    "api_requests": 0,
+    "status_counts": {
+      "executed": 2,
+      "state_not_restored": 4
+    }
+  },
+  "vh_unique_gated_candidates": 4,
+  "vh_unique_gated_successes": 4,
+  "vh_clean_snapshot_audit": "Paper/vh_clean_restore/verification.json",
+  "archive_resolution": "Paper/revision-completion/Archive-Resolution.md"
+}

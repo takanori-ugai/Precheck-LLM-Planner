@@ -1,0 +1,21 @@
+{
+  "run_id": "placement_task_test_task65_C1_llm_precheck_gpt-4o-mini-2024-07-18_r0",
+  "step": 1,
+  "action": "[WALK] <kitchencounter> (92)",
+  "api_requests": 0,
+  "expected_graph": "Paper/vh_step4/runs/placement_task_test_task65_C1_llm_precheck_gpt-4o-mini-2024-07-18_r0/graph_0003.json.gz",
+  "prefix": [],
+  "candidate_executed": true,
+  "restoration_attempted": false,
+  "status": "executed",
+  "alignment": {
+    "symbolic_equal": true,
+    "max_position_distance": 0.0,
+    "max_quaternion_distance": 0.0,
+    "full_graph_equal": true,
+    "passed": true
+  },
+  "before_graph": "graph_0004.json.gz",
+  "after_graph": "graph_0005.json.gz",
+  "vh_success": true
+}

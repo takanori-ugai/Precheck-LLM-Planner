@@ -1,0 +1,3 @@
+{"utc": "2026-09-07T03:43:07.598798+00:00", "phase": "character_free_scene", "graph_file": "graph_0001.json.gz"}
+{"utc": "2026-09-07T03:43:07.787145+00:00", "phase": "clean_snapshot_restore", "expected_graph": "Paper/vh_step4/runs/state_change_task_test_task6_C1_llm_precheck_gpt-4o-mini-2024-07-18_r0/graph_0012.json.gz", "simulator_result": [true, {}]}
+{"utc": "2026-09-07T03:43:07.895650+00:00", "phase": "candidate_gate", "before_graph": "graph_0002.json.gz", "symbolic_equal": false, "max_position_distance": 1.90999999993835e-06, "max_quaternion_distance": 0.0, "full_graph_equal": false, "passed": false}

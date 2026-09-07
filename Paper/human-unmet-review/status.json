@@ -1,0 +1,13 @@
+{
+  "target_phase": "unmet",
+  "review_file": "review.csv",
+  "validation_scope": "form completeness only; not semantic correctness",
+  "completed": 8,
+  "pending_cases": [],
+  "labels": {
+    "誤り": 6,
+    "正しい": 2
+  },
+  "complete": true,
+  "human_ratings_generated_by_script": false
+}

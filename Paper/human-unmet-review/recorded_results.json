@@ -1,0 +1,24 @@
+{
+  "target_phase": "unmet",
+  "author_records_received": 8,
+  "label_counts": {
+    "正しい": 1,
+    "誤り": 7
+  },
+  "evaluator": [
+    "ugai"
+  ],
+  "recorded_dates": [
+    "20260907"
+  ],
+  "assessment_type": "same-author review after AI-assisted rubric clarification",
+  "independent_or_blinded": false,
+  "semantic_gold_standard_established": false,
+  "human_labels_generated_or_changed_by_exporter": false,
+  "sources_sha256": {
+    "Paper/human-unmet-review/semantic_review.csv": "01a1f11ce33be652f6bba32ebea4a322e4a89f7c53de5c339ba2939c1969951e",
+    "Paper/human-unmet-review/review_blank.csv": "6d56cb9cffe4913a111062564c2f87820f55503c64819b4a640c637cd726ca39",
+    "scripts/summarize_semantic_review.py": "7cbed2dadd22be6008b681c7250c6e37c8da122dd3878692185412519f553b3a",
+    "scripts/validate_unmet_review.py": "4a6b9901557e9298407b3324f9fbcd6d7b95d77780939c10b27357632bcd353f"
+  }
+}

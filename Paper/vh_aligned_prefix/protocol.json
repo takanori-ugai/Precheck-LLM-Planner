@@ -1,0 +1,11 @@
+{
+  "selected": 8,
+  "unselected": 51,
+  "source_candidates": 59,
+  "position_tolerance": 0.001,
+  "quaternion_tolerance": 0.0001,
+  "api_requests": 0,
+  "policy": "Replay successful prefix only; never transfer mid-trajectory graph; gate immediately before candidate; mismatch is not executed",
+  "script_sha256": "b21f6392ada4772fbb0e078a76096dc014d9770ce350c5e6f10647390aeea56c",
+  "selection_sha256": "f23b33890ad6bcb4a921eb9d2b1084de7628938f7e210d2ae6299a2a9d2aba84"
+}

@@ -1,0 +1,21 @@
+{
+  "run_id": "placement_task_test_task1_R_random_gpt-4o-mini-2024-07-18_r2",
+  "step": 2,
+  "action": "[OPEN] <desk> (108)",
+  "api_requests": 0,
+  "expected_graph": "Paper/vh_step4/runs/placement_task_test_task1_R_random_gpt-4o-mini-2024-07-18_r2/graph_0006.json.gz",
+  "prefix": [
+    "[WALK] <desk> (108)"
+  ],
+  "candidate_executed": false,
+  "restoration_attempted": false,
+  "status": "state_not_restored",
+  "alignment": {
+    "symbolic_equal": true,
+    "max_position_distance": 0.04122752254635815,
+    "max_quaternion_distance": 0.025619912094303254,
+    "full_graph_equal": false,
+    "passed": false
+  },
+  "before_graph": "graph_0006.json.gz"
+}

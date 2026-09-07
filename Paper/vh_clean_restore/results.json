@@ -1,0 +1,114 @@
+[
+  {
+    "run_id": "placement_task_test_task65_R_fixed_gpt-4o-2024-08-06_r0",
+    "step": 2,
+    "action": "[OPEN] <fridge> (103)",
+    "expected_graph": "Paper/vh_step4/runs/placement_task_test_task65_R_fixed_gpt-4o-2024-08-06_r0/graph_0006.json.gz",
+    "api_requests": 0,
+    "candidate_executed": true,
+    "restore_reply_success": true,
+    "status": "executed",
+    "alignment": {
+      "symbolic_equal": true,
+      "max_position_distance": 0.0,
+      "max_quaternion_distance": 7.021395880542849e-08,
+      "full_graph_equal": false,
+      "passed": true
+    },
+    "before_graph": "graph_0002.json.gz",
+    "after_graph": "graph_0003.json.gz",
+    "vh_success": true
+  },
+  {
+    "run_id": "placement_task_test_task1_R_random_gpt-4o-mini-2024-07-18_r2",
+    "step": 2,
+    "action": "[OPEN] <desk> (108)",
+    "expected_graph": "Paper/vh_step4/runs/placement_task_test_task1_R_random_gpt-4o-mini-2024-07-18_r2/graph_0006.json.gz",
+    "api_requests": 0,
+    "candidate_executed": false,
+    "restore_reply_success": true,
+    "status": "state_not_restored",
+    "alignment": {
+      "symbolic_equal": false,
+      "max_position_distance": 2.000000000279556e-06,
+      "max_quaternion_distance": 2.9999999984209325e-08,
+      "full_graph_equal": false,
+      "passed": false
+    },
+    "before_graph": "graph_0002.json.gz"
+  },
+  {
+    "run_id": "state_change_task_test_task6_C1_llm_precheck_gpt-4o-mini-2024-07-18_r0",
+    "step": 4,
+    "action": "[SWITCHON] <lightswitch> (261)",
+    "expected_graph": "Paper/vh_step4/runs/state_change_task_test_task6_C1_llm_precheck_gpt-4o-mini-2024-07-18_r0/graph_0012.json.gz",
+    "api_requests": 0,
+    "candidate_executed": false,
+    "restore_reply_success": true,
+    "status": "state_not_restored",
+    "alignment": {
+      "symbolic_equal": false,
+      "max_position_distance": 1.90999999993835e-06,
+      "max_quaternion_distance": 0.0,
+      "full_graph_equal": false,
+      "passed": false
+    },
+    "before_graph": "graph_0002.json.gz"
+  },
+  {
+    "run_id": "placement_task_test_task1_R_fixed_gpt-4o-mini-2024-07-18_r1",
+    "step": 7,
+    "action": "[PUTIN] <cupcake> (195) <kitchencounter> (238)",
+    "expected_graph": "Paper/vh_step4/runs/placement_task_test_task1_R_fixed_gpt-4o-mini-2024-07-18_r1/graph_0021.json.gz",
+    "api_requests": 0,
+    "candidate_executed": false,
+    "restore_reply_success": true,
+    "status": "state_not_restored",
+    "alignment": {
+      "symbolic_equal": false,
+      "max_position_distance": 1.237801503244891,
+      "max_quaternion_distance": 0.9102227819633109,
+      "full_graph_equal": false,
+      "passed": false
+    },
+    "before_graph": "graph_0002.json.gz"
+  },
+  {
+    "run_id": "state_change_task_test_task6_C1_llm_precheck_gpt-4o-2024-08-06_r0",
+    "step": 4,
+    "action": "[SWITCHON] <lightswitch> (261)",
+    "expected_graph": "Paper/vh_step4/runs/state_change_task_test_task6_C1_llm_precheck_gpt-4o-2024-08-06_r0/graph_0012.json.gz",
+    "api_requests": 0,
+    "candidate_executed": false,
+    "restore_reply_success": true,
+    "status": "state_not_restored",
+    "alignment": {
+      "symbolic_equal": false,
+      "max_position_distance": 1.90999999993835e-06,
+      "max_quaternion_distance": 0.0,
+      "full_graph_equal": false,
+      "passed": false
+    },
+    "before_graph": "graph_0002.json.gz"
+  },
+  {
+    "run_id": "placement_task_test_task65_C1_llm_precheck_gpt-4o-2024-08-06_r0",
+    "step": 2,
+    "action": "[OPEN] <fridge> (103)",
+    "expected_graph": "Paper/vh_step4/runs/placement_task_test_task65_C1_llm_precheck_gpt-4o-2024-08-06_r0/graph_0006.json.gz",
+    "api_requests": 0,
+    "candidate_executed": true,
+    "restore_reply_success": true,
+    "status": "executed",
+    "alignment": {
+      "symbolic_equal": true,
+      "max_position_distance": 0.0,
+      "max_quaternion_distance": 0.0,
+      "full_graph_equal": false,
+      "passed": true
+    },
+    "before_graph": "graph_0002.json.gz",
+    "after_graph": "graph_0003.json.gz",
+    "vh_success": true
+  }
+]

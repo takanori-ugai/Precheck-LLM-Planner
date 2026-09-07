@@ -1,0 +1,11 @@
+{
+  "targeted": 6,
+  "recorded": 6,
+  "executed_aligned": 2,
+  "vh_successes": 2,
+  "api_requests": 0,
+  "status_counts": {
+    "executed": 2,
+    "state_not_restored": 4
+  }
+}

@@ -1,0 +1,22 @@
+run_id,step,action,source_events,supplied_review_phase,precondition_response,unmet_response,unmet_present,review_label,evidence,evaluator,date
+state_change_task_test_task6_C1_llm_precheck_gpt-4o-2024-08-06_r0,4,[SWITCHON] <lightswitch> (261),Paper/vh_step4/runs/state_change_task_test_task6_C1_llm_precheck_gpt-4o-2024-08-06_r0/events.jsonl,precondition,No.,<lightswitch> (261) is OFF.,True,判断不能,情報が不十分,ugai,2026/09/07
+state_change_task_test_task6_C1_llm_precheck_gpt-4o-mini-2024-07-18_r0,4,[SWITCHON] <lightswitch> (261),Paper/vh_step4/runs/state_change_task_test_task6_C1_llm_precheck_gpt-4o-mini-2024-07-18_r0/events.jsonl,precondition,No,<lightswitch> (261) is ON.,True,判断不能,情報が不十分,ugai,2026/09/07
+state_change_task_test_task6_R_fixed_gpt-4o-2024-08-06_r0,1,[SWITCHON] <lightswitch> (261),Paper/vh_step4/runs/state_change_task_test_task6_R_fixed_gpt-4o-2024-08-06_r0/events.jsonl,precondition,No,<lightswitch> (261) is OFF.,True,判断不能,情報が不十分,ugai,2026/09/07
+placement_task_test_task1_R_fixed_gpt-4o-mini-2024-07-18_r1,7,[PUTIN] <cupcake> (195) <kitchencounter> (238),Paper/vh_step4/runs/placement_task_test_task1_R_fixed_gpt-4o-mini-2024-07-18_r1/events.jsonl,precondition,"To determine if the preconditions are satisfied, let's analyze each one:
+
+1. **You are holding <cupcake> (195) in your right hand or left hand.**
+   - The current states do not indicate that you are holding any cupcakes. Therefore, this condition is **not satisfied**.
+
+2. **You are close to <kitchencounter> (238).**
+   - The current states indicate that you are close to the kitchencounter (238). This condition is **satisfied**.
+
+3. **<kitchencounter> (238) is not CLOSED.**
+   - The current states indicate that the kitchencounter (238) is OPEN. This condition is **satisfied**.
+
+Since the first precondition is not satisfied, the overall result is:
+
+**No**",You are holding <cupcake> (195) in your right hand or left hand.,True,判断不能,情報が不十分,ugai,2026/09/07
+placement_task_test_task1_R_random_gpt-4o-mini-2024-07-18_r2,2,[OPEN] <desk> (108),Paper/vh_step4/runs/placement_task_test_task1_R_random_gpt-4o-mini-2024-07-18_r2/events.jsonl,precondition,No,<desk> (108) is CLOSED.,True,判断不能,情報が不十分,ugai,2026/09/07
+placement_task_test_task65_C1_llm_precheck_gpt-4o-2024-08-06_r0,2,[OPEN] <fridge> (103),Paper/vh_step4/runs/placement_task_test_task65_C1_llm_precheck_gpt-4o-2024-08-06_r0/events.jsonl,precondition,No.,You are close to <fridge> (103).,True,判断不能,情報が不十分,ugai,2026/09/07
+placement_task_test_task65_C1_llm_precheck_gpt-4o-mini-2024-07-18_r0,1,[WALK] <kitchencounter> (92),Paper/vh_step4/runs/placement_task_test_task65_C1_llm_precheck_gpt-4o-mini-2024-07-18_r0/events.jsonl,precondition,No,The precondition that <kitchencounter> (92) is not held in your right hand or left hand is not satisfied.,True,判断不能,情報が不十分,ugai,2026/09/07
+placement_task_test_task65_R_fixed_gpt-4o-2024-08-06_r0,2,[OPEN] <fridge> (103),Paper/vh_step4/runs/placement_task_test_task65_R_fixed_gpt-4o-2024-08-06_r0/events.jsonl,precondition,No.,You are close to <fridge> (103).,True,判断不能,情報が不十分,ugai,2026/09/07

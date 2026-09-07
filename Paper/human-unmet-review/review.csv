@@ -1,0 +1,9 @@
+case,run_id,step,phase,action,unmet_response,review_label,evidence,evaluator,date
+1,state_change_task_test_task6_C1_llm_precheck_gpt-4o-2024-08-06_r0,4,unmet,[SWITCHON] <lightswitch> (261),<lightswitch> (261) is OFF.,誤り,The lightswitch (261) is ON and and is INSIDE the kitchen (205).,ugai,20260907
+2,state_change_task_test_task6_C1_llm_precheck_gpt-4o-mini-2024-07-18_r0,4,unmet,[SWITCHON] <lightswitch> (261),<lightswitch> (261) is ON.,誤り,The lightswitch (261) is ON and and is INSIDE the kitchen (205).,ugai,20260907,,
+3,state_change_task_test_task6_R_fixed_gpt-4o-2024-08-06_r0,1,unmet,[SWITCHON] <lightswitch> (261),<lightswitch> (261) is OFF.,誤り,The lightswitch (261) is ON and and is INSIDE the kitchen (205).,ugai,20260907,,,
+4,placement_task_test_task1_R_fixed_gpt-4o-mini-2024-07-18_r1,7,unmet,[PUTIN] <cupcake> (195) <kitchencounter> (238),You are holding <cupcake> (195) in your right hand or left hand.,誤り,cupcake (196) and cupcake (195) are ON the desk (108).,ugai,20260907,,
+5,placement_task_test_task1_R_random_gpt-4o-mini-2024-07-18_r2,2,unmet,[OPEN] <desk> (108),<desk> (108) is CLOSED.,正しい,The desk (108) is CLOSED and and is INSIDE the bedroom (73).,ugai,20260907,
+6,placement_task_test_task65_C1_llm_precheck_gpt-4o-2024-08-06_r0,2,unmet,[OPEN] <fridge> (103),You are close to <fridge> (103).,正しい,You are INSIDE the kitchen (11). しかし、冷蔵庫に近いことはわからない,ugai,20260907,
+7,placement_task_test_task65_C1_llm_precheck_gpt-4o-mini-2024-07-18_r0,1,unmet,[WALK] <kitchencounter> (92),The precondition that <kitchencounter> (92) is not held in your right hand or left hand is not satisfied.,誤り,The precondition that <kitchencounter> (92) is not held in your right hand or left hand is not satisfied. ではなく、プラムがキッチンにあるのでキッチンに歩く,ugai,20260907
+8,placement_task_test_task65_R_fixed_gpt-4o-2024-08-06_r0,2,unmet,[OPEN] <fridge> (103),You are close to <fridge> (103).,誤り,You are INSIDE the kitchen (11).だが冷蔵庫に近いかどうかはわからない,ugai,20260907

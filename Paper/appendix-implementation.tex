@@ -1,7 +1,7 @@
 \appendix
 \section{公開実装のプロンプトと知識変換}\label{app:implementation}
 
-本付録は公開Notebookの入力と処理を再構成する仕様であり，過去の実験の会話ログではない．参照したコード版と未回収の情報は\ref{sec5.provenance}に示した．以下のPython表記では\texttt{\textbackslash n}を改行とし，roleと文字列の組を順に並べたものをメッセージ配列とする．元の英語表現・余分な空白も，条件を変えないため修正していない．
+本付録は，提案手法の公開Notebookに対応する入力と処理の仕様を示す．テンプレートと実際の送信ログを区別し，比較条件による入力の違いは\ref{app:evidence}，実行資料の確認範囲は\ref{app:reproducibility}に示す．以下のPython表記では\texttt{\textbackslash n}を改行とし，roleと文字列の組を順に並べたものをメッセージ配列とする．英語表現・空白は実装と一致させている．
 
 \subsection{全メッセージの組立て}\label{app:prompts}
 Listing~\ref{lst:prompt_spec}に，終了判定，行動生成，前提条件判定，違反条件特定，再生成の全入力を構成する関数を示す．\texttt{mode}はsingleまたはmulti，\texttt{env}は\ref{app:knowledge}の変換結果全文，\texttt{history}は成功実行した行動の列である．\texttt{example}は\texttt{example\_text}で得た選択事例の文字列であり，\texttt{pc}は\ref{app:conditions}の辞書とする．プロンプトにゴールJSONを渡す引数はない．
@@ -23,7 +23,7 @@ Listing~\ref{lst:prompt_spec}に，終了判定，行動生成，前提条件判
 \end{tabular}
 \end{table*}
 
-通常の未完了周回では，検証なしは完了判定と生成の2回，条件を充足する検証ありは3回，違反条件特定と再生成を行う場合は5回のLLM呼び出しとなる．操作名が条件辞書にない形式不正では，条件判定・違反特定を呼ばず再生成を行うため3回である．最初の完了判定で終了する周回は1回である．これは公開コードの呼び出し経路から数えた値で，通信層の再試行や過去結果の実測コストではない．
+通常の未完了周回では，検証なしは完了判定と生成の2回，条件を充足する検証ありは3回，違反条件特定と再生成を行う場合は5回のLLM呼び出しとなる．操作名が条件辞書にない形式不正では，条件判定・違反特定を呼ばず再生成を行うため3回である．最初の完了判定で終了する周回は1回である．これはコードの呼び出し経路から数えた値であり，通信層の再試行や個々のエピソードの実測費用を含まない．
 
 本文のListing~\ref{prompt1}～\ref{prompt5}は構成要素を説明する表示である．正確なメッセージ境界・改行・単語は以下を参照する．特に違反理由と再生成指示は別々のuserメッセージとなり，前提条件の違反特定には行動生成時の履歴を渡していない．
 
@@ -35,6 +35,27 @@ Listing~\ref{lst:conditions}は公開JSONそのものである．操作文字列
 この辞書の条件は固定した自然言語表現である．元資料からの作成手順やシミュレータとの網羅的な対応は未確認であり，規則の完全性を保証しない．
 
 \lstinputlisting[basicstyle=\ttfamily\scriptsize,columns=fullflexible,caption={公開されている8操作の前提条件辞書},label=lst:conditions]{../precondition.json}
+
+\subsubsection{参照可能なVHコードとの条件の照合}
+作成時の転記記録とは別に，VHの公開Pythonグラフ実行器（コミット\texttt{58970fd80951c2eaa1af713e0917d1a105353ad8}）の条件検査を現在の辞書と照合した．表\ref{tab:condition_source_scope}は当該コードで確認できる差であり，辞書をその版から作成した証拠でも，接続先Unityバイナリの内部実装との一致を示すものでもない．作業者・作成日・転記手順は依然として記録未回収である．
+\begin{table*}[tb]
+\caption{自然言語条件辞書と公開Pythonグラフ実行器の照合範囲}\label{tab:condition_source_scope}
+\centering\scriptsize\setlength{\tabcolsep}{3pt}
+\begin{tabular}{p{.14\textwidth}p{.27\textwidth}p{.49\textwidth}}
+\hline
+辞書の操作 & 該当する検査 & 照合で確認できる追加条件・差 \\
+\hline
+WALK & WalkExecutor.check\_walk & 辞書は非保持のみ．実行器は人物の座位・臥位や部屋情報も検査する． \\
+GRAB & GrabExecutor & 近接に加え，GRABBABLE属性等，閉じた容器内か，空いた手の有無などを検査する． \\
+SWITCHON／SWITCHOFF & SwitchExecutor.check\_switchable & 近接とOFF／ONに加え，HAS\_SWITCH属性を要求する． \\
+OPEN／CLOSE & OpenExecutor.check\_openable & 近接とCLOSED／OPENに加え，開閉可能性（desk・windowの例外あり）を検査．OPENでは空いた手とON状態でないことも検査する． \\
+PUT & \_check\_puttable（ON） & 保持と配置先への近接を検査．この実行器の対応操作名はPUTBACKであり，本データのPUTとの別名同一性をUnityの実行仕様として仮定しない． \\
+PUTIN & \_check\_puttable（INSIDE） & 保持・近接に加え，CAN\_OPENを持つ配置先にはOPENを要求する．辞書の単なる「not CLOSED」と同値とは限らない． \\
+\hline
+\end{tabular}
+\end{table*}
+
+この差からも，条件辞書の充足をシミュレータ全制約の充足とみなすことはできない．Python実行器の条件をUnityでの実行可能性ラベルとして代用せず，実行成否は実際のVH応答で評価する．
 
 \subsection{知識抽出と自然言語化}\label{app:knowledge}
 抽出の処理順はAlgorithm~\ref{alg:extract}に示す．物体記録は状態配列，単一の支持物・容器・所属部屋，保持対象のリストを持つ．グラフのnodes・edgesの順序で走査し，単一値の欄は後から見つかった辺で上書きする．追加ノードが元の抽出集合にある場合にも，その記録を初期化して再走査する．エージェントの保持物は名前・IDの取得対象となるが，保持物を新たな抽出の起点として再帰展開するわけではない．
@@ -62,10 +83,27 @@ Listing~\ref{lst:conditions}は公開JSONそのものである．操作文字列
 \end{algorithmic}
 \end{algorithm*}
 
-自然言語化の全関数をListing~\ref{lst:serialization}に示す．\texttt{objId\_dic}はIDからクラス名への辞書，\texttt{objProp\_dic}はIDから属性配列への辞書であり，初期化後のグラフから作成する．公開資料にはListing~\ref{state-change-task}・\ref{placement-task}の完全な実験時グラフと各時刻のプロンプトがないため，例えばID 173の所属部屋を本データJSONだけから確定することはできない．
+自然言語化の全関数をListing~\ref{lst:serialization}に示す．\texttt{objId\_dic}はIDからクラス名への辞書，\texttt{objProp\_dic}はIDから属性配列への辞書であり，初期化後のグラフから作成する．Listing~\ref{state-change-task}・\ref{placement-task}のタスクJSONだけでは，例えばID 173の所属部屋を確定できず，実行時のグラフが必要となる．基本性能評価には各時刻の完全グラフ・プロンプトの記録がないため，構成要素比較やケース分析のグラフを，基本性能評価の個別試行の入力として代用しない．
 
-Listing~\ref{lst:knowledge_state}・\ref{lst:knowledge_placement}は，変換関数の振る舞いを示すために作成した\textbf{説明用の入力}に対する出力である．実際のVHシーンや過去実験を復元したものではなく，IDも9000番台の仮の値を用いる．入力は\texttt{knowledge\_example\_inputs.json}として公開する．状態例はキッチンのOFFのスイッチへの近接を，配置例はキッチンのテーブル上のplumと閉じたfridge，エージェントの近接関係を仮定する．ここには座標・壁面・同じ床面といった追加情報はない．出力中の重複した``and''等も公開変換関数の出力をそのまま保持した．
+Listing~\ref{lst:knowledge_state}・\ref{lst:knowledge_placement}は，変換関数の振る舞いを示す\textbf{説明用の合成入力}に対する出力である．実際のVHシーンの観測ではなく，IDも9000番台の仮の値を用いる．入力全文はListing~\ref{lst:knowledge_inputs}に示す．状態例はキッチンのOFFのスイッチへの近接を，配置例はキッチンのテーブル上のplumと閉じたfridge，エージェントの近接関係を仮定する．ここには座標・壁面・同じ床面といった追加情報はない．出力中の重複した``and''等も変換関数の出力をそのまま保持した．
+
+\lstinputlisting[basicstyle=\ttfamily\scriptsize,columns=fullflexible,caption={知識変換の説明用合成入力の全文},label=lst:knowledge_inputs]{listings/knowledge_example_inputs.json}
 
 \lstinputlisting[basicstyle=\ttfamily\scriptsize,columns=fullflexible,caption={説明用の状態知識の出力（実験ログではない）},label=lst:knowledge_state]{listings/knowledge_example_state.txt}
 \lstinputlisting[basicstyle=\ttfamily\scriptsize,columns=fullflexible,caption={説明用の配置知識の出力（実験ログではない）},label=lst:knowledge_placement]{listings/knowledge_example_placement.txt}
 \lstinputlisting[basicstyle=\ttfamily\scriptsize,columns=fullflexible,caption={両Notebookで共通する自然言語化関数の全文},label=lst:serialization]{listings/knowledge_serialization.py}
+
+\subsection{過程別の記録と状態照合}\label{app:evidence}
+実シーンでの状態変化task6と配置task65の環境知識全文，物体の所属部屋，人物位置，行動前後の状態・関係差分は\ref{app:real_inputs}に示す．構成要素比較のC1・GPT-4o・反復0に対応する例であり，合成例や基本性能評価の未保存入力とは区別する．
+構成要素比較では，候補判定に使う完全グラフと抽出辞書，前提条件判定の入力・応答，別要求の未充足条件，再生成の入力・応答，実行前後のグラフとVH応答を，タスク・モデル・条件・反復・ステップに対応付けて記録した．C1-budget等の条件に固有のメッセージ構成は\ref{app:comparison_prompts}に示す．
+
+棄却候補の状態照合では，候補判定時のグラフと，再実行イベントに付随する候補実行直前のグラフを比較した．結果要約の前状態欄は実装上，候補実行後の最後のグラフ取得を指していたため，照合対象として用いなかった．照合はノードID・クラス・状態・属性と関係辺の一致を確認した上で，全ノードの位置差と四元数距離を評価する．具体的な距離の定義と候補別結果は\ref{app:review_conditions}に示す．VH成否や人手ラベルはこの照合によって変更していない．
+
+\subsection{実験資料と再現性}\label{app:reproducibility}
+基本性能評価のコード・データ・結果JSONはGitコミット\texttt{2761158}に含まれ，READMEのみが異なる\texttt{de1fc8d}を照合対象とした．各結果とテスト集合のIDは一致し，結果JSONから計算した全18条件のSR・3失敗率・平均列長の90値は掲載値と小数第3位まで一致する．ただし，実行ごとのコード版・日時・API応答メタデータは記録されていない．
+
+公開Notebookは\texttt{gpt-4o-mini}というモデル別名とtemperature 0.0を指定する．Multiの評価ループは1件で停止する\texttt{break}を含み，Notebookの出力キーは\texttt{action\_script}，基本性能評価の結果JSONのキーは\texttt{action script}である．したがって，Notebookの無変更実行で全モデル・全条件の結果を再生成できるとはいえない．本文の処理仕様はこのコードに基づくもので，各試行の実装との完全な一致は確認できない．
+
+基本性能評価の各タスク種別には，ベースライン1条件とSingle／Multi・2モデル・検証あり／なしの8条件の結果が対応する．ベースラインには結果JSONがあるが，Action Translation・Dynamic Exampleを含む実行コード，自動探索設定の具体値，停止設定を確認できない．VHのバイナリ・シーンの固定版や，前提条件の各文と参照資料の対応にも記録がない．構成要素比較の設定や提案実装の検索・停止規則を，これらの不明な設定の代わりに用いない．構成要素比較で確認できる実行設定は\ref{app:execution_conditions}に示す．
+
+著者への確認でも，これらを補う保有資料はなかった．利用できない範囲は，ベースラインの実行コードと設定，各試行とコード版・日時の対応，モデル・生成設定・依存環境の実行記録，データの構築・除外・分割履歴，前提条件の原資料と転記・整形記録，途中候補・判定・グラフ，検索の実採択・重み版・候補順序，実験時VHバイナリ・シーン・プラットフォームの対応である．本評価では文献ベースのベースライン再実装は行わず，回収できた結果と確認不能な範囲の開示にとどめる．保存結果の集計再現と，実験時条件の完全な再実行可能性は異なり，後者を達成したとは主張しない．

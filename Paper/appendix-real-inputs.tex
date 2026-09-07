@@ -1,0 +1,148 @@
+\section{実シーンでの入力と行動前後の変化}\label{app:real_inputs}
+構成要素比較のC1・GPT-4o・反復0から，状態変化task6と配置task65を固定して示す．結果の良否による選び直しは行わない．これは基本性能評価の未保存入力を復元したものではなく，付録の合成例とも異なる実際の観測である．以下の環境文は最初の終了判定へ送信した全文から末尾の判定指示のみを除いたもので，重複したand等も保持した．
+
+\subsection{状態変化task6}
+人物の初期位置は[-2.41545, 1.25, -7.44353151]である．
+\begin{lstlisting}[basicstyle=\ttfamily\scriptsize,breaklines=true,caption={最初の判定へ送信した環境知識全文}]
+The current states in the home are as follows: 
+The lightswitch (71) is ON and and is INSIDE the bathroom (11).
+The lightswitch (173) is OFF and and is INSIDE the bedroom (73).
+The lightswitch (261) is ON and and is INSIDE the kitchen (205).
+The lightswitch (427) is OFF and and is INSIDE the livingroom (335).
+You are INSIDE the kitchen (205).
+
+\end{lstlisting}
+{\scriptsize\setlength{\tabcolsep}{3pt}
+\begin{longtable}{lllll}
+\caption{初期グラフの対象・人物からの関係抜粋}\label{tab:real_edges_test_task6}\\
+\hline
+始点ID & クラス & 関係 & 終点ID & クラス\\\hline\endfirsthead
+始点ID & クラス & 関係 & 終点ID & クラス\\\hline\endhead
+\hline\endfoot
+71 & lightswitch & INSIDE & 11 & bathroom \\
+173 & lightswitch & INSIDE & 73 & bedroom \\
+261 & lightswitch & INSIDE & 205 & kitchen \\
+427 & lightswitch & INSIDE & 335 & livingroom \\
+1 & character & INSIDE & 205 & kitchen \\
+1 & character & CLOSE & 175 & cpuscreen \\
+1 & character & CLOSE & 230 & tvstand \\
+1 & character & CLOSE & 232 & bench \\
+1 & character & CLOSE & 249 & bookshelf \\
+1 & character & CLOSE & 253 & rug \\
+1 & character & CLOSE & 260 & orchid \\
+1 & character & CLOSE & 264 & tv \\
+1 & character & CLOSE & 286 & clothespile \\
+1 & character & CLOSE & 287 & box \\
+1 & character & CLOSE & 288 & dishbowl \\
+1 & character & CLOSE & 289 & book \\
+1 & character & CLOSE & 290 & book \\
+1 & character & CLOSE & 291 & book \\
+1 & character & CLOSE & 292 & book \\
+1 & character & CLOSE & 293 & book \\
+1 & character & CLOSE & 294 & condimentbottle \\
+1 & character & CLOSE & 295 & condimentbottle \\
+1 & character & CLOSE & 296 & condimentshaker \\
+1 & character & CLOSE & 297 & condimentshaker \\
+1 & character & CLOSE & 298 & wineglass \\
+1 & character & CLOSE & 302 & paper \\
+1 & character & CLOSE & 303 & paper \\
+1 & character & CLOSE & 315 & bananas \\
+1 & character & CLOSE & 316 & bananas \\
+1 & character & CLOSE & 317 & dishbowl \\
+\end{longtable}}
+
+関係変化の$+$/$-$は追加／削除を表し，対象辞書内の物体と人物を始点とするON・INSIDE・保持・CLOSEに限定する．座標変化そのものや無関係な辺は省略する．
+{\scriptsize\setlength{\tabcolsep}{3pt}
+\begin{longtable}{rp{.28\linewidth}lp{.48\linewidth}}
+\caption{行動と状態・関係の変化}\label{tab:real_changes_test_task6}\\
+\hline
+step & 実行行動 & VH & 変化\\\hline\endfirsthead
+step & 実行行動 & VH & 変化\\\hline\endhead
+\hline\endfoot
+1 & [WALK] \textless{}lightswitch\textgreater{} (173) & 成功 & - (1, 'CLOSE', 230); - (1, 'CLOSE', 232); - (1, 'CLOSE', 253); - (1, 'CLOSE', 260); - (1, 'CLOSE', 264); - (1, 'CLOSE', 287); - (1, 'CLOSE', 298); - (1, 'CLOSE', 303); - (1, 'CLOSE', 315); - (1, 'CLOSE', 316); - (1, 'CLOSE', 317); - (1, 'INSIDE', 205); + (1, 'CLOSE', 107); + (1, 'CLOSE', 108); + (1, 'CLOSE', 172); + (1, 'CLOSE', 173); + (1, 'CLOSE', 174); + (1, 'CLOSE', 193); + (1, 'CLOSE', 194); + (1, 'CLOSE', 195); + (1, 'CLOSE', 196); + (1, 'CLOSE', 261); + (1, 'CLOSE', 262); + (1, 'CLOSE', 263); + (1, 'CLOSE', 265); + (1, 'INSIDE', 73); + (173, 'CLOSE', 1); + (261, 'CLOSE', 1) \\
+2 & [SWITCHON] \textless{}lightswitch\textgreater{} (173) & 成功 & 173: OFF -\textgreater{} ON \\
+3 & [WALK] \textless{}lightswitch\textgreater{} (261) & 成功 & - (1, 'CLOSE', 107); - (1, 'CLOSE', 108); - (1, 'CLOSE', 172); - (1, 'CLOSE', 174); - (1, 'CLOSE', 175); - (1, 'CLOSE', 193); - (1, 'CLOSE', 194); - (1, 'CLOSE', 195); - (1, 'CLOSE', 196); - (1, 'CLOSE', 249); - (1, 'CLOSE', 286); - (1, 'CLOSE', 288); - (1, 'CLOSE', 289); - (1, 'CLOSE', 290); - (1, 'CLOSE', 291); - (1, 'CLOSE', 292); - (1, 'CLOSE', 293); - (1, 'CLOSE', 294); - (1, 'CLOSE', 295); - (1, 'CLOSE', 296); - (1, 'CLOSE', 297); - (1, 'CLOSE', 302); - (1, 'INSIDE', 73); + (1, 'CLOSE', 178); + (1, 'CLOSE', 229); + (1, 'CLOSE', 231); + (1, 'CLOSE', 233); + (1, 'CLOSE', 252); + (1, 'CLOSE', 253); + (1, 'CLOSE', 254); + (1, 'CLOSE', 255); + (1, 'CLOSE', 256); + (1, 'CLOSE', 268); + (1, 'CLOSE', 270); + (1, 'CLOSE', 271); + (1, 'CLOSE', 272); + (1, 'CLOSE', 273); + (1, 'CLOSE', 278); + (1, 'CLOSE', 279); + (1, 'CLOSE', 280); + (1, 'CLOSE', 281); + (1, 'CLOSE', 319); + (1, 'INSIDE', 205) \\
+4 & [WALK] \textless{}lightswitch\textgreater{} (427) & 成功 & - (1, 'CLOSE', 173); - (1, 'CLOSE', 178); - (1, 'CLOSE', 229); - (1, 'CLOSE', 231); - (1, 'CLOSE', 233); - (1, 'CLOSE', 252); - (1, 'CLOSE', 253); - (1, 'CLOSE', 254); - (1, 'CLOSE', 255); - (1, 'CLOSE', 256); - (1, 'CLOSE', 261); - (1, 'CLOSE', 262); - (1, 'CLOSE', 263); - (1, 'CLOSE', 265); - (1, 'CLOSE', 268); - (1, 'CLOSE', 270); - (1, 'CLOSE', 271); - (1, 'CLOSE', 272); - (1, 'CLOSE', 273); - (1, 'CLOSE', 278); - (1, 'CLOSE', 279); - (1, 'CLOSE', 280); - (1, 'CLOSE', 281); - (1, 'CLOSE', 319); - (1, 'INSIDE', 205); - (173, 'CLOSE', 1); - (261, 'CLOSE', 1); + (1, 'CLOSE', 251); + (1, 'CLOSE', 332); + (1, 'CLOSE', 333); + (1, 'CLOSE', 334); + (1, 'CLOSE', 415); + (1, 'CLOSE', 418); + (1, 'CLOSE', 420); + (1, 'CLOSE', 427); + (1, 'CLOSE', 428); + (1, 'CLOSE', 453); + (1, 'INSIDE', 335); + (427, 'CLOSE', 1) \\
+5 & [SWITCHON] \textless{}lightswitch\textgreater{} (427) & 成功 & 427: OFF -\textgreater{} ON; + (1, 'CLOSE', 258) \\
+\end{longtable}}
+
+\subsection{配置task65}
+人物の初期位置は[9.582918, 1.25, -4.21981239]である．
+\begin{lstlisting}[basicstyle=\ttfamily\scriptsize,breaklines=true,caption={最初の判定へ送信した環境知識全文}]
+The current states in the home are as follows: 
+The plum (53) is ON the kitchencounter (92) and and is INSIDE the kitchen (11).
+The plum (54) is ON the kitchencounter (92) and and is INSIDE the kitchen (11).
+The fridge (103) is CLOSED and and is INSIDE the kitchen (11).
+The kitchencounter (92) is CLOSED and is INSIDE the dishwasher (104) and and is INSIDE the kitchen (11).
+plum (53) and plum (54) are ON the kitchencounter (92).
+You are INSIDE the bedroom (211).
+
+\end{lstlisting}
+{\scriptsize\setlength{\tabcolsep}{3pt}
+\begin{longtable}{lllll}
+\caption{初期グラフの対象・人物からの関係抜粋}\label{tab:real_edges_test_task65}\\
+\hline
+始点ID & クラス & 関係 & 終点ID & クラス\\\hline\endfirsthead
+始点ID & クラス & 関係 & 終点ID & クラス\\\hline\endhead
+\hline\endfoot
+53 & plum & INSIDE & 11 & kitchen \\
+54 & plum & INSIDE & 11 & kitchen \\
+92 & kitchencounter & INSIDE & 11 & kitchen \\
+103 & fridge & INSIDE & 11 & kitchen \\
+1 & character & INSIDE & 211 & bedroom \\
+53 & plum & ON & 92 & kitchencounter \\
+54 & plum & ON & 92 & kitchencounter \\
+92 & kitchencounter & ON & 19 & floor \\
+92 & kitchencounter & INSIDE & 104 & dishwasher \\
+1 & character & CLOSE & 214 & desk \\
+1 & character & CLOSE & 217 & cabinet \\
+1 & character & CLOSE & 218 & lightswitch \\
+1 & character & CLOSE & 231 & apple \\
+1 & character & CLOSE & 232 & apple \\
+1 & character & CLOSE & 233 & apple \\
+1 & character & CLOSE & 234 & apple \\
+1 & character & CLOSE & 235 & apple \\
+1 & character & CLOSE & 236 & apple \\
+1 & character & CLOSE & 237 & apple \\
+1 & character & CLOSE & 238 & apple \\
+1 & character & CLOSE & 239 & apple \\
+1 & character & CLOSE & 240 & apple \\
+1 & character & CLOSE & 241 & apple \\
+1 & character & CLOSE & 242 & dishbowl \\
+1 & character & CLOSE & 245 & cupcake \\
+1 & character & CLOSE & 246 & plate \\
+1 & character & CLOSE & 249 & cellphone \\
+1 & character & CLOSE & 270 & bookshelf \\
+1 & character & CLOSE & 299 & powersocket \\
+1 & character & CLOSE & 300 & lightswitch \\
+1 & character & CLOSE & 301 & rug \\
+1 & character & CLOSE & 313 & clothespile \\
+1 & character & CLOSE & 316 & facecream \\
+1 & character & CLOSE & 317 & deodorant \\
+1 & character & CLOSE & 318 & hairproduct \\
+1 & character & CLOSE & 319 & hairproduct \\
+1 & character & CLOSE & 321 & box \\
+1 & character & CLOSE & 327 & folder \\
+1 & character & CLOSE & 328 & folder \\
+1 & character & CLOSE & 329 & folder \\
+1 & character & CLOSE & 330 & folder \\
+\end{longtable}}
+
+関係変化の$+$/$-$は追加／削除を表し，対象辞書内の物体と人物を始点とするON・INSIDE・保持・CLOSEに限定する．座標変化そのものや無関係な辺は省略する．
+{\scriptsize\setlength{\tabcolsep}{3pt}
+\begin{longtable}{rp{.28\linewidth}lp{.48\linewidth}}
+\caption{行動と状態・関係の変化}\label{tab:real_changes_test_task65}\\
+\hline
+step & 実行行動 & VH & 変化\\\hline\endfirsthead
+step & 実行行動 & VH & 変化\\\hline\endhead
+\hline\endfoot
+1 & [WALK] \textless{}kitchen\textgreater{} (11) & 成功 & - (1, 'CLOSE', 214); - (1, 'CLOSE', 217); - (1, 'CLOSE', 218); - (1, 'CLOSE', 231); - (1, 'CLOSE', 232); - (1, 'CLOSE', 233); - (1, 'CLOSE', 234); - (1, 'CLOSE', 235); - (1, 'CLOSE', 236); - (1, 'CLOSE', 237); - (1, 'CLOSE', 238); - (1, 'CLOSE', 239); - (1, 'CLOSE', 240); - (1, 'CLOSE', 241); - (1, 'CLOSE', 242); - (1, 'CLOSE', 245); - (1, 'CLOSE', 246); - (1, 'CLOSE', 249); - (1, 'CLOSE', 270); - (1, 'CLOSE', 299); - (1, 'CLOSE', 300); - (1, 'CLOSE', 301); - (1, 'CLOSE', 313); - (1, 'CLOSE', 316); - (1, 'CLOSE', 317); - (1, 'CLOSE', 318); - (1, 'CLOSE', 319); - (1, 'CLOSE', 321); - (1, 'CLOSE', 327); - (1, 'CLOSE', 328); - (1, 'CLOSE', 329); - (1, 'CLOSE', 330); - (1, 'INSIDE', 211); + (1, 'CLOSE', 46); + (1, 'CLOSE', 57); + (1, 'CLOSE', 58); + (1, 'CLOSE', 59); + (1, 'CLOSE', 62); + (1, 'CLOSE', 64); + (1, 'CLOSE', 65); + (1, 'CLOSE', 68); + (1, 'CLOSE', 69); + (1, 'CLOSE', 70); + (1, 'CLOSE', 71); + (1, 'CLOSE', 72); + (1, 'CLOSE', 116); + (1, 'CLOSE', 117); + (1, 'CLOSE', 123); + (1, 'CLOSE', 124); + (1, 'CLOSE', 125); + (1, 'CLOSE', 126); + (1, 'CLOSE', 127); + (1, 'CLOSE', 128); + (1, 'CLOSE', 129); + (1, 'CLOSE', 130); + (1, 'CLOSE', 131); + (1, 'CLOSE', 132); + (1, 'CLOSE', 133); + (1, 'CLOSE', 134); + (1, 'CLOSE', 135); + (1, 'CLOSE', 136); + (1, 'CLOSE', 137); + (1, 'CLOSE', 138); + (1, 'CLOSE', 139); + (1, 'CLOSE', 140); + (1, 'CLOSE', 141); + (1, 'CLOSE', 142); + (1, 'CLOSE', 158); + (1, 'INSIDE', 11) \\
+2 & [WALK] \textless{}fridge\textgreater{} (103) & 成功 & - (1, 'CLOSE', 46); - (1, 'CLOSE', 57); - (1, 'CLOSE', 58); - (1, 'CLOSE', 59); - (1, 'CLOSE', 62); - (1, 'CLOSE', 64); - (1, 'CLOSE', 65); - (1, 'CLOSE', 68); - (1, 'CLOSE', 69); - (1, 'CLOSE', 70); - (1, 'CLOSE', 71); - (1, 'CLOSE', 72); - (1, 'CLOSE', 116); - (1, 'CLOSE', 117); - (1, 'CLOSE', 123); - (1, 'CLOSE', 124); - (1, 'CLOSE', 125); - (1, 'CLOSE', 126); - (1, 'CLOSE', 127); - (1, 'CLOSE', 128); - (1, 'CLOSE', 129); - (1, 'CLOSE', 130); - (1, 'CLOSE', 131); - (1, 'CLOSE', 132); - (1, 'CLOSE', 133); - (1, 'CLOSE', 134); - (1, 'CLOSE', 135); - (1, 'CLOSE', 136); - (1, 'CLOSE', 137); - (1, 'CLOSE', 138); - (1, 'CLOSE', 139); - (1, 'CLOSE', 140); - (1, 'CLOSE', 141); - (1, 'CLOSE', 142); + (1, 'CLOSE', 96); + (1, 'CLOSE', 103); + (1, 'CLOSE', 155); + (1, 'CLOSE', 156); + (1, 'CLOSE', 169); + (1, 'CLOSE', 170); + (103, 'CLOSE', 1) \\
+3 & [OPEN] \textless{}fridge\textgreater{} (103) & 成功 & 103: CLOSED -\textgreater{} OPEN; + (1, 'CLOSE', 94) \\
+4 & [WALK] \textless{}kitchencounter\textgreater{} (92) & 成功 & - (1, 'CLOSE', 94); - (1, 'CLOSE', 96); - (1, 'CLOSE', 103); - (1, 'CLOSE', 155); - (1, 'CLOSE', 156); - (1, 'CLOSE', 158); - (1, 'CLOSE', 169); - (1, 'CLOSE', 170); - (103, 'CLOSE', 1); + (1, 'CLOSE', 47); + (1, 'CLOSE', 48); + (1, 'CLOSE', 49); + (1, 'CLOSE', 50); + (1, 'CLOSE', 51); + (1, 'CLOSE', 52); + (1, 'CLOSE', 53); + (1, 'CLOSE', 54); + (1, 'CLOSE', 55); + (1, 'CLOSE', 56); + (1, 'CLOSE', 60); + (1, 'CLOSE', 61); + (1, 'CLOSE', 63); + (1, 'CLOSE', 70); + (1, 'CLOSE', 71); + (1, 'CLOSE', 73); + (1, 'CLOSE', 74); + (1, 'CLOSE', 75); + (1, 'CLOSE', 92); + (1, 'CLOSE', 102); + (1, 'CLOSE', 104); + (1, 'CLOSE', 105); + (1, 'CLOSE', 106); + (1, 'CLOSE', 107); + (1, 'CLOSE', 108); + (1, 'CLOSE', 118); + (1, 'CLOSE', 119); + (1, 'CLOSE', 120); + (1, 'CLOSE', 121); + (1, 'CLOSE', 122); + (1, 'CLOSE', 125); + (1, 'CLOSE', 126); + (1, 'CLOSE', 134); + (1, 'CLOSE', 135); + (1, 'CLOSE', 136); + (1, 'CLOSE', 157); + (53, 'CLOSE', 1); + (54, 'CLOSE', 1); + (92, 'CLOSE', 1) \\
+5 & [GRAB] \textless{}plum\textgreater{} (53) & 成功 & - (53, 'ON', 92); + (1, 'HOLDS\_RH', 53) \\
+6 & [PUTIN] \textless{}plum\textgreater{} (53) \textless{}fridge\textgreater{} (103) & 成功 & - (1, 'CLOSE', 47); - (1, 'CLOSE', 48); - (1, 'CLOSE', 49); - (1, 'CLOSE', 50); - (1, 'CLOSE', 51); - (1, 'CLOSE', 52); - (1, 'CLOSE', 54); - (1, 'CLOSE', 55); - (1, 'CLOSE', 56); - (1, 'CLOSE', 60); - (1, 'CLOSE', 61); - (1, 'CLOSE', 63); - (1, 'CLOSE', 70); - (1, 'CLOSE', 71); - (1, 'CLOSE', 73); - (1, 'CLOSE', 74); - (1, 'CLOSE', 75); - (1, 'CLOSE', 92); - (1, 'CLOSE', 102); - (1, 'CLOSE', 104); - (1, 'CLOSE', 105); - (1, 'CLOSE', 106); - (1, 'CLOSE', 107); - (1, 'CLOSE', 108); - (1, 'CLOSE', 118); - (1, 'CLOSE', 119); - (1, 'CLOSE', 120); - (1, 'CLOSE', 121); - (1, 'CLOSE', 122); - (1, 'CLOSE', 125); - (1, 'CLOSE', 126); - (1, 'CLOSE', 134); - (1, 'CLOSE', 135); - (1, 'CLOSE', 136); - (1, 'CLOSE', 157); - (1, 'HOLDS\_RH', 53); - (53, 'INSIDE', 11); - (54, 'CLOSE', 1); - (92, 'CLOSE', 1); + (1, 'CLOSE', 96); + (1, 'CLOSE', 103); + (1, 'CLOSE', 116); + (1, 'CLOSE', 117); + (1, 'CLOSE', 155); + (1, 'CLOSE', 158); + (1, 'CLOSE', 169); + (1, 'CLOSE', 170); + (53, 'INSIDE', 103); + (103, 'CLOSE', 1) \\
+7 & [WALK] \textless{}plum\textgreater{} (54) & 成功 & - (1, 'CLOSE', 53); - (1, 'CLOSE', 96); - (1, 'CLOSE', 103); - (1, 'CLOSE', 116); - (1, 'CLOSE', 117); - (1, 'CLOSE', 155); - (1, 'CLOSE', 158); - (1, 'CLOSE', 169); - (1, 'CLOSE', 170); - (53, 'CLOSE', 1); - (103, 'CLOSE', 1); + (1, 'CLOSE', 47); + (1, 'CLOSE', 48); + (1, 'CLOSE', 49); + (1, 'CLOSE', 50); + (1, 'CLOSE', 51); + (1, 'CLOSE', 52); + (1, 'CLOSE', 54); + (1, 'CLOSE', 55); + (1, 'CLOSE', 56); + (1, 'CLOSE', 61); + (1, 'CLOSE', 63); + (1, 'CLOSE', 73); + (1, 'CLOSE', 74); + (1, 'CLOSE', 75); + (1, 'CLOSE', 76); + (1, 'CLOSE', 92); + (1, 'CLOSE', 93); + (1, 'CLOSE', 104); + (1, 'CLOSE', 107); + (1, 'CLOSE', 108); + (1, 'CLOSE', 118); + (1, 'CLOSE', 119); + (1, 'CLOSE', 157); + (54, 'CLOSE', 1); + (92, 'CLOSE', 1) \\
+8 & [GRAB] \textless{}plum\textgreater{} (54) & 成功 & - (54, 'ON', 92); + (1, 'HOLDS\_RH', 54) \\
+9 & [PUTIN] \textless{}plum\textgreater{} (54) \textless{}fridge\textgreater{} (103) & 成功 & - (1, 'CLOSE', 47); - (1, 'CLOSE', 48); - (1, 'CLOSE', 49); - (1, 'CLOSE', 50); - (1, 'CLOSE', 51); - (1, 'CLOSE', 52); - (1, 'CLOSE', 55); - (1, 'CLOSE', 56); - (1, 'CLOSE', 61); - (1, 'CLOSE', 63); - (1, 'CLOSE', 73); - (1, 'CLOSE', 74); - (1, 'CLOSE', 75); - (1, 'CLOSE', 76); - (1, 'CLOSE', 92); - (1, 'CLOSE', 93); - (1, 'CLOSE', 104); - (1, 'CLOSE', 107); - (1, 'CLOSE', 108); - (1, 'CLOSE', 118); - (1, 'CLOSE', 119); - (1, 'CLOSE', 157); - (1, 'HOLDS\_RH', 54); - (54, 'INSIDE', 11); - (92, 'CLOSE', 1); + (1, 'CLOSE', 53); + (1, 'CLOSE', 96); + (1, 'CLOSE', 103); + (1, 'CLOSE', 155); + (1, 'CLOSE', 156); + (1, 'CLOSE', 158); + (1, 'CLOSE', 169); + (1, 'CLOSE', 170); + (53, 'CLOSE', 1); + (54, 'INSIDE', 103); + (103, 'CLOSE', 1) \\
+\end{longtable}}

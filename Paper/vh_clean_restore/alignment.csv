@@ -1,0 +1,7 @@
+case,run_id,step,symbolic_equal,max_position_distance,max_quaternion_distance,full_graph_equal,passed,candidate_executed,vh_success,missing_edges,extra_edges
+1,state_change_task_test_task6_C1_llm_precheck_gpt-4o-2024-08-06_r0,4,False,1.90999999993835e-06,0.0,False,False,False,,"[[1, ""FACING"", 265], [274, ""FACING"", 265], [278, ""FACING"", 265], [280, ""FACING"", 265], [281, ""FACING"", 265], [318, ""FACING"", 265], [319, ""FACING"", 265]]",[]
+2,state_change_task_test_task6_C1_llm_precheck_gpt-4o-mini-2024-07-18_r0,4,False,1.90999999993835e-06,0.0,False,False,False,,"[[232, ""FACING"", 265], [252, ""FACING"", 265], [268, ""FACING"", 265], [270, ""FACING"", 265], [272, ""FACING"", 265], [273, ""FACING"", 265], [274, ""FACING"", 265], [276, ""FACING"", 265], [277, ""FACING"", 265], [278, ""FACING"", 265], [280, ""FACING"", 265], [281, ""FACING"", 265], [318, ""FACING"", 265], [319, ""FACING"", 265]]",[]
+4,placement_task_test_task1_R_fixed_gpt-4o-mini-2024-07-18_r1,7,False,1.237801503244891,0.9102227819633109,False,False,False,,"[[195, ""ON"", 108]]",[]
+5,placement_task_test_task1_R_random_gpt-4o-mini-2024-07-18_r2,2,False,2.000000000279556e-06,2.9999999984209325e-08,False,False,False,,[],"[[1, ""FACING"", 174]]"
+6,placement_task_test_task65_C1_llm_precheck_gpt-4o-2024-08-06_r0,2,True,0.0,0.0,False,True,True,True,[],[]
+8,placement_task_test_task65_R_fixed_gpt-4o-2024-08-06_r0,2,True,0.0,7.021395880542849e-08,False,True,True,True,[],[]

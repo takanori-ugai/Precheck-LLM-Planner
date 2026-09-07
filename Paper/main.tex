@@ -28,6 +28,7 @@
 \usepackage{amsmath}
 \usepackage{amssymb}
 \usepackage{array} 
+\usepackage{longtable}
 \usepackage{bm}
 \usepackage{xcolor}
 \usepackage{colortbl}
@@ -141,10 +142,11 @@ Task Planning, Large Language Model, Natural Language Processing, Embodied AI, S
 \begin{summary}
 % 「ショートノート」は 200 ワード，それ以外は200〜500 ワード
 % 以内の英文でsummaryを記す
-Advancements in artificial intelligence (AI) have driven increasing demand for Embodied AI agents capable of performing complex daily tasks in both real and virtual environments. A growing area of research explores using Large Language Models (LLMs) to enable these agents to generate action plans based on natural language instructions. LLMs offer several advantages, including interpreting diverse linguistic expressions, incorporating contextual understanding, and leveraging extensive knowledge and reasoning for high-quality task planning. Prior studies have demonstrated the effectiveness of LLM-based task planning; however, significant challenges remain in integrating environmental context, such as object states and their interrelationships.
-For instance, executing the instruction ``Turn on the TV'' typically involves approaching the TV and switching it on, an action often inferred through commonsense reasoning. However, more complex tasks, such as ``Turn on all lights,'' require identifying multiple objects, assessing their current states, and determining their unique identifiers - challenges that existing approaches fail to address adequately. Tasks requiring a detailed understanding of environmental states, such as object status and spatial relationships, remain largely unexplored.
-This study proposes a novel approach to household task planning that enhances LLM-based reasoning by explicitly incorporating the environmental state information. Unlike prior methods relying primarily on commonsense reasoning or visual inputs, this approach integrates object states and relationships to improve task execution accuracy. To evaluate the proposed approach, a specialized dataset of household tasks was developed to assess LLMs' reasoning capabilities regarding object states, identifiers, and spatial relationships. This dataset comprises two task categories: ``state change tasks,'' which require modifying the state of one or more objects, and ``placement tasks,'' which involve interpreting and reasoning about spatial configurations.  These tasks are intentionally designed with multiple objects and varied initial state conditions that cannot be resolved through commonsense reasoning alone.
-The proposed method combines simulator-derived environmental data with LLM-based planning to generate executable action sequences. It explicitly verifies action preconditions and can regenerate a step when the available state description indicates a violation. On the preserved benchmark results, GPT-4o achieved success rates of 89.4\% on state-change tasks and 81.6\% on placement tasks; these values are not an isolated causal estimate of verification because implementation and logging conditions differ across preserved experiments. A new 240-episode diagnostic comparison showed that the direction of the verification effect depended on the model and task, so a uniform improvement claim is not warranted. The results provide evidence about failure modes and state-aware planning, while broader generalization requires further evaluation.
+Household action planning requires identifying relevant objects and tracking their states and relations as actions are executed. This study examines a concrete implementation of sequential planning with large language models (LLMs) in VirtualHome. Code extracts object identifiers, states, support and containment relations, and agent relations from simulator graphs and converts them into text. An LLM generates an action, checks natural-language preconditions, and, when it rejects the candidate, identifies unmet conditions and regenerates the action once. The regenerated action is executed without another check. Verification and replanning are not claimed as new planning principles; the contribution is a documented implementation, a task collection, and diagnostic evidence about their limitations.
+
+The collection contains 618 instances with templated instructions and varied initial conditions: 312 state-change and 103 placement test instances, with 203 instances reserved as prompt examples. The evaluation links overall task performance, component comparisons, and case analysis. The overall evaluation covers 18 conditions across the two task categories. GPT-4o with Multi Prompts and verification achieved 279/312 (89.4\%) successes for state changes and 84/103 (81.6\%) for placement. Success- and failure-specific action lengths characterize execution outcomes, while retrieval analysis examines the similarity between instructions and selected examples.
+
+Component comparisons use four selected tasks, two models, ten conditions, and three repetitions, totaling 240 episodes with verified initial-state alignment. LLM verification versus no verification yielded 9/12 versus 8/12 successes for GPT-4o mini and 9/12 versus 9/12 for GPT-4o. Each count includes three successes on an initially completed task. Symbolic checks, post-failure repair, deliberation, and retrieval changes did not establish a uniform advantage. Process logs and case analyses distinguish precondition decisions, erroneous termination, and simulator execution failures. Of eight rejected-candidate replays, only two matched the corresponding decision state under symbolic and transform checks. Human ratings of decision responses did not assess the separately logged unmet-condition explanations. Differences in task coverage, execution settings, and available records limit comparisons across evaluation components. The findings provide diagnostic evidence, not general superiority, verified explanation quality, or real-world safety.
 
 \end{summary}
 
@@ -170,6 +172,10 @@ The proposed method combines simulator-derived environmental data with LLM-based
 \bibliographystyle{jsai}
 
 \input{appendix-implementation}
+\input{appendix-evaluation}
+\input{appendix-statistics}
+\input{appendix-real-inputs}
+\twocolumn
 
 % 著者の姓と名の間は半角スペースで区切る
 % 略歴は200字以内

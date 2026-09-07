@@ -1,0 +1,25 @@
+{
+  "policy": "One clean scene reset and character-free expansion per previously mismatched candidate; animate_character=True; gate last graph before render; no retries",
+  "targeted": 6,
+  "original_selected": 8,
+  "unselected": 51,
+  "position_tolerance": 0.001,
+  "quaternion_tolerance": 0.0001,
+  "api_requests": 0,
+  "sources_sha256": {
+    "scripts/replay_clean_snapshot.py": "91c3dc030b6cd6dddf3ce89976d20fc0adbae458378edd7d01fc63fc406be317",
+    "scripts/replay_aligned_candidates.py": "b21f6392ada4772fbb0e078a76096dc014d9770ce350c5e6f10647390aeea56c",
+    "scripts/vh_experiment.py": "a63166938ad1c0d6500e5d9ab766d566a88e144fe76d5b80e72d92d07f7e5f2f",
+    "scripts/vh_fixed_initial.py": "44f9ae0d1f63083a863c9f1c3cefbafb782a05ca338043b98b0c841e015eca55",
+    ".vh-deps/virtualhome/virtualhome/simulation/unity_simulator/comm_unity.py": "df18e045f6c973925b6338389aed3580340866a862c789b9571c0bc90eb93a6a",
+    "Paper/vh_counterfactual/selection.csv": "f23b33890ad6bcb4a921eb9d2b1084de7628938f7e210d2ae6299a2a9d2aba84",
+    "Paper/vh_aligned_prefix/results.json": "277fe2268f2ebc0245cecba9e4e9dfef560362d354fb3d10c0b83ac7c19d6f03",
+    "Paper/vh_step4/config.json": "91ea958e9c3e8bc280132e0966fc74d8efdacb174abb66b0b352e0b7a34b712f",
+    "Paper/vh_step4/runs/state_change_task_test_task6_C1_llm_precheck_gpt-4o-2024-08-06_r0/graph_0012.json.gz": "82a24f13ddeeaa1573c1a060b318ab30a927946c8def4bd7852616b77a15b603",
+    "Paper/vh_step4/runs/state_change_task_test_task6_C1_llm_precheck_gpt-4o-mini-2024-07-18_r0/graph_0012.json.gz": "4393621db0104f584d447a6e8ec1ba7e8326cba90252c991d610c1522e928c8c",
+    "Paper/vh_step4/runs/placement_task_test_task1_R_fixed_gpt-4o-mini-2024-07-18_r1/graph_0021.json.gz": "9816a8972a82bb4a6f3daf2fbca54d7c030c366a98614da6a70848ff76ecf7cf",
+    "Paper/vh_step4/runs/placement_task_test_task1_R_random_gpt-4o-mini-2024-07-18_r2/graph_0006.json.gz": "58fd09687a0a43d39c06c02919172d8a11fbe1584c08afe392d4f21c1ea3e299",
+    "Paper/vh_step4/runs/placement_task_test_task65_C1_llm_precheck_gpt-4o-2024-08-06_r0/graph_0006.json.gz": "f60e83e8c1fc9e4e6d1ab796bdf2ccbcca79de095bf221b8007787d193ec5563",
+    "Paper/vh_step4/runs/placement_task_test_task65_R_fixed_gpt-4o-2024-08-06_r0/graph_0006.json.gz": "f9387bd7c78bc33bc9ced74acd3af64de5147b8fc4f0a528efc96c5bc5052c63"
+  }
+}

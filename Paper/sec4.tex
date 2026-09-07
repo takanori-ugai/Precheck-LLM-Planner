@@ -1,5 +1,5 @@
 \section{提案手法} \label{sec4}
-本章では，五つのコンポーネントから構成される提案手法について述べる．提案手法は，LLMとシミュレータから取得した家庭環境知識を用いて，タスクを実行するためのアクションを逐次的に生成する．さらに，LLMを用いて生成されたアクションの前提条件を検証し，違反と判定した場合には代替アクションを1回再生成する．提案手法の構成図を~\ref{proposed_method}に示す．以下の詳細仕様は公開された\texttt{single-prompt.ipynb}および\texttt{multi-prompts.ipynb}のコードに基づく．このコードと過去の全実験条件との対応については\ref{sec5.provenance}に制約を述べる．
+本章では，五つのコンポーネントから構成される提案手法について述べる．提案手法は，LLMとシミュレータから取得した家庭環境知識を用いて，タスクを実行するためのアクションを逐次的に生成する．さらに，LLMを用いて生成されたアクションの前提条件を検証し，違反と判定した場合には代替アクションを1回再生成する．提案手法の構成図を~\ref{proposed_method}に示す．以下の詳細仕様は公開された\texttt{single-prompt.ipynb}および\texttt{multi-prompts.ipynb}のコードに基づく．このコードと各実験条件との対応については\ref{sec5.provenance}に制約を述べる．
 
 \begin{figure}[t]
   \begin{center}
@@ -65,7 +65,7 @@ Listing~\ref{prompt1}はMulti Promptsにおける入力の内容を示す．実�
 
 本コンポーネントで用いるプロンプトテンプレートをListing~\ref{prompt2}に示す．本プロンプトテンプレートは，「実行可能なアクションとその出力形式（Listing~\ref{prompt2}の3行目と4行目）」，「One-shot学習用の例（タスクと行動計画）（Listing~\ref{prompt2}の6行目と7行目）」，「家庭環境知識（Listing~\ref{prompt2}の10行目）」，「タスクとアクションの実行履歴（Listing~\ref{prompt2}の13，14行目）」の四つの要素から構成される．
 
-これらに冒頭の役割指示を加えた5要素を，Single Promptでは一つのuserメッセージに連結し，Multi Promptsでは順序を保った五つのuserメッセージとして渡す．どちらも，次の行動を生成する呼び出しは1回である．Multi Promptsは，要素ごとにLLMの応答を得てから次を提示する方式ではない．各周回で更新した環境知識と，それまでに実行成功した行動履歴からメッセージを作り直す．修正前の候補行動や過去の前提条件判定は次周回の実行履歴には追加しない．
+これらに冒頭の生成指示を加えた5要素を，Single Promptでは一つのuserメッセージに連結し，Multi Promptsでは順序を保った五つのuserメッセージとして渡す．これとは別に，両方式ともsystemメッセージ1件を付ける．どちらも，次の行動を生成する呼び出しは1回である．Multi Promptsは，要素ごとにLLMの応答を得てから次を提示する方式ではない．各周回で更新した環境知識と，それまでに実行成功した行動履歴からメッセージを作り直す．修正前の候補行動や過去の前提条件判定は次周回の実行履歴には追加しない．
 
 事例検索には\texttt{sentence-transformers/all-MiniLM-L6-v2}を用いる．事例集合の異なるタスク名を埋め込み，入力タスク名とのコサイン類似度が最大の1名を選ぶ．同名の事例が複数ある場合は最長の参照行動列を採択する．長さ同点はJSON中で先に現れる事例を選ぶ．検索の候補名は公開コードで\texttt{set}からリストへ変換されるため，類似度同点時の候補順序は固定されていない．シーン，初期状態，ゴールIDは検索に用いない．
 
@@ -102,6 +102,8 @@ Preconditions: @\textcolor{red}{\textit{[ Preconditions ]}}@
 
 初めに，Listing~\ref{prompt3}の環境知識，判定指示，前提条件文を一つのuserメッセージで与える．この呼び出しにsystemメッセージは付けない．前提条件文は\texttt{precondition.json}から操作名をキーとして選び，対象名・IDを代入する．公開コードは出力に大文字小文字を区別した部分文字列``Yes''が含まれれば充足とし，それ以外は違反条件の特定へ進む．厳密な二値応答の検証ではない．違反条件の特定には判定時のuser入力とassistant出力を履歴として与え，Listing~\ref{prompt4}の問い合わせを追加する．実際の連結では``Output only that.''と条件文の間に改行を追加しない．
 
+条件辞書がJSON形式で保存されていることと，条件をコードで真偽評価することは異なる．本節の提案手法はLLM判定であり，\ref{sec5.additional}のC2／C5で用いる記号検証と診断用ラベル生成は比較条件と診断用評価の仕様である．また，判定応答と未充足条件の応答は別の要求であり，説明内容を評価する際にも区別する（\ref{sec5.review}）．
+
 違反条件の特定後は，Listing~\ref{prompt5}の内容で再生成を行う．行動生成時のuser入力，候補行動のassistant出力，違反理由のuser入力を履歴とし，タスク・実行履歴・次のステップ番号を含む指示の``Generate''を``Regenerate''へ置換したuser入力を追加する．前提条件判定用の履歴全体を再生成へ引き継ぐ処理ではない．
 
 操作名が条件辞書にない場合は，違反条件の特定を行わず，形式不正というフィードバックで再生成する．空白区切りの引数解析は単純であり，不正な引数数等による例外を包括的に捕捉する実装ではない．いずれの再生成経路も1回で終了し，得られた行動を再検証せず実行する．従って，すべての実行行動について前提条件充足を保証する機構ではない．
@@ -135,13 +137,14 @@ Step n:
 \State 指示中の関連名詞$R$と検索事例$E$を取得
 \State $M\gets 2|T.action\_scripts|$，$n\gets1$，成功実行履歴$H\gets[]$
 \While{true}
+  \State $G\gets\operatorname{GetEnvironmentGraph}()$
   \State $K\gets\operatorname{Serialize}(\operatorname{Extract}(G,R))$
   \State $c\gets\operatorname{LLMEndCheck}(K,T.task)$
   \If{$c$が文字列Endと完全一致}
     \If{$n=1$かつ$M=0$}
       \State \Return Success，$H$ \Comment{グラフの採点を省略する特例}
     \EndIf
-    \State 通常のゴール採点を行い，SuccessまたはErroneous Terminateと$H$を返す
+    \State グラフを再取得して通常のゴール採点を行い，SuccessまたはErroneous Terminateと$H$を返す
   \ElsIf{$c$がContinueと完全一致，かつ$M=0$}
     \State \Return Reaching Maximum Attempts，$H$
   \EndIf
@@ -189,4 +192,4 @@ VHは，仮想家庭内で活動をシミュレートすることを目的とし
 
 VHでは，一連のアクションステップを記述したアクションスクリプトに基づいて，エージェントを行動させることができる．各ステップは操作，対象名，対象IDで構成される（例：[WALK] $\langle livingroom\rangle$ (336)）．公開された\texttt{precondition.json}は8操作の自然言語条件を保持する．例えばSWITCHONでは対象への近接とOFF状態，PUTINでは対象物の保持，配置先への近接，配置先がCLOSEDでないことを要求する．全条件を\ref{app:conditions}に示す．
 
-元原稿では条件の参考資料としてVHのDocumentationとGitHubソースを挙げているが，公開資料には資料の固定版・該当箇所と各条件の対応，転記・整形・省略の手順は記録されていない．従って，自動抽出した，あるいはシミュレータの全実行条件を網羅するとは主張しない．例えば状態がOFFであるというSWITCHONの条件は，冗長操作を避ける目的と実行可能性を判定する目的を併せ持ち得る．自然言語条件の充足と，VHによる実行の成否は区別する必要がある．
+前提条件は\texttt{precondition.json}の固定した自然言語条件を用いる．参考資料としてVHのDocumentationとGitHubソースが実装資料に挙げられているが，固定版・該当箇所と各条件の対応，転記・整形・省略の手順は記録されていない．従って，自動抽出した，あるいはシミュレータの全実行条件を網羅するとは主張しない．例えば状態がOFFであるというSWITCHONの条件は，冗長操作を避ける目的と実行可能性を判定する目的を併せ持ち得る．自然言語条件の充足と，VHによる実行の成否は区別する必要がある．

@@ -1,0 +1,9 @@
+case,run_id,step,action,prefix_actions,symbolic_equal,max_position_distance,max_quaternion_distance,full_graph_equal,passed,candidate_executed,vh_success,status
+1,state_change_task_test_task6_C1_llm_precheck_gpt-4o-2024-08-06_r0,4,[SWITCHON] <lightswitch> (261),3,False,0.4199285286602587,0.035789388241140314,False,False,False,,state_not_restored
+2,state_change_task_test_task6_C1_llm_precheck_gpt-4o-mini-2024-07-18_r0,4,[SWITCHON] <lightswitch> (261),3,True,0.09174236690280566,0.020617253844655535,False,False,False,,state_not_restored
+3,state_change_task_test_task6_R_fixed_gpt-4o-2024-08-06_r0,1,[SWITCHON] <lightswitch> (261),0,True,0.0,0.0,True,True,True,True,executed
+4,placement_task_test_task1_R_fixed_gpt-4o-mini-2024-07-18_r1,7,[PUTIN] <cupcake> (195) <kitchencounter> (238),6,True,0.24718140681811798,0.045964763286801436,False,False,False,,state_not_restored
+5,placement_task_test_task1_R_random_gpt-4o-mini-2024-07-18_r2,2,[OPEN] <desk> (108),1,True,0.04122752254635815,0.025619912094303254,False,False,False,,state_not_restored
+6,placement_task_test_task65_C1_llm_precheck_gpt-4o-2024-08-06_r0,2,[OPEN] <fridge> (103),1,True,0.1015017436885007,0.9204257351814619,False,False,False,,state_not_restored
+7,placement_task_test_task65_C1_llm_precheck_gpt-4o-mini-2024-07-18_r0,1,[WALK] <kitchencounter> (92),0,True,0.0,0.0,True,True,True,True,executed
+8,placement_task_test_task65_R_fixed_gpt-4o-2024-08-06_r0,2,[OPEN] <fridge> (103),1,True,0.0585731341787554,0.20602395761036926,False,False,False,,state_not_restored

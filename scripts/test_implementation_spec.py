@@ -239,8 +239,16 @@ class ManuscriptTests(unittest.TestCase):
                     self.assertIn(f"{row['value']} ({row['n']})", text)
 
     def test_reference_targets_and_environments(self):
-        files = [ROOT / 'Paper/main.tex'] + sorted((ROOT / 'Paper').glob('sec*.tex'))
-        files.append(ROOT / 'Paper/appendix-implementation.tex')
+        files = []
+        def visit(path):
+            if path in files:
+                return
+            files.append(path)
+            source = re.sub(r'(?m)^\s*%.*$', '', path.read_text())
+            for name in re.findall(r'\\input\{([^}]+)\}', source):
+                child = ROOT / 'Paper' / name
+                visit(child if child.suffix else child.with_suffix('.tex'))
+        visit(ROOT / 'Paper/main.tex')
         text = '\n'.join(re.sub(r'(?m)^\s*%.*$', '', p.read_text()) for p in files)
         labels = re.findall(r'\\label\{([^}]+)\}', text)
         labels += re.findall(r'\blabel\s*=\s*([A-Za-z0-9:._-]+)', text)

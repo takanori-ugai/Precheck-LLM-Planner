@@ -1,0 +1,18 @@
+{
+  "run_id": "state_change_task_test_task6_C1_llm_precheck_gpt-4o-2024-08-06_r0",
+  "step": 4,
+  "action": "[SWITCHON] <lightswitch> (261)",
+  "expected_graph": "Paper/vh_step4/runs/state_change_task_test_task6_C1_llm_precheck_gpt-4o-2024-08-06_r0/graph_0012.json.gz",
+  "api_requests": 0,
+  "candidate_executed": false,
+  "restore_reply_success": true,
+  "status": "state_not_restored",
+  "alignment": {
+    "symbolic_equal": false,
+    "max_position_distance": 1.90999999993835e-06,
+    "max_quaternion_distance": 0.0,
+    "full_graph_equal": false,
+    "passed": false
+  },
+  "before_graph": "graph_0002.json.gz"
+}

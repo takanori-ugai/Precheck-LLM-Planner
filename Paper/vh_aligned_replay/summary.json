@@ -1,0 +1,11 @@
+{
+  "selected": 8,
+  "recorded": 1,
+  "executed_aligned": 0,
+  "vh_successes": 0,
+  "unselected": 51,
+  "api_requests": 0,
+  "status_counts": {
+    "infrastructure_or_initialization_error": 1
+  }
+}

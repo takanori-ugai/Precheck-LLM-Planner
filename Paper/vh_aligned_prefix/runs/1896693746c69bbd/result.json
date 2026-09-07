@@ -1,0 +1,21 @@
+{
+  "run_id": "placement_task_test_task65_R_fixed_gpt-4o-2024-08-06_r0",
+  "step": 2,
+  "action": "[OPEN] <fridge> (103)",
+  "api_requests": 0,
+  "expected_graph": "Paper/vh_step4/runs/placement_task_test_task65_R_fixed_gpt-4o-2024-08-06_r0/graph_0006.json.gz",
+  "prefix": [
+    "[WALK] <kitchen> (11)"
+  ],
+  "candidate_executed": false,
+  "restoration_attempted": false,
+  "status": "state_not_restored",
+  "alignment": {
+    "symbolic_equal": true,
+    "max_position_distance": 0.0585731341787554,
+    "max_quaternion_distance": 0.20602395761036926,
+    "full_graph_equal": false,
+    "passed": false
+  },
+  "before_graph": "graph_0006.json.gz"
+}

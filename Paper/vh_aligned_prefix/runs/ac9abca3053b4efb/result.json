@@ -1,0 +1,26 @@
+{
+  "run_id": "placement_task_test_task1_R_fixed_gpt-4o-mini-2024-07-18_r1",
+  "step": 7,
+  "action": "[PUTIN] <cupcake> (195) <kitchencounter> (238)",
+  "api_requests": 0,
+  "expected_graph": "Paper/vh_step4/runs/placement_task_test_task1_R_fixed_gpt-4o-mini-2024-07-18_r1/graph_0021.json.gz",
+  "prefix": [
+    "[WALK] <cupcake> (195)",
+    "[GRAB] <cupcake> (195)",
+    "[WALK] <desk> (108)",
+    "[PUT] <cupcake> (195) <desk> (108)",
+    "[WALK] <kitchencounter> (238)",
+    "[OPEN] <kitchencounter> (238)"
+  ],
+  "candidate_executed": false,
+  "restoration_attempted": false,
+  "status": "state_not_restored",
+  "alignment": {
+    "symbolic_equal": true,
+    "max_position_distance": 0.24718140681811798,
+    "max_quaternion_distance": 0.045964763286801436,
+    "full_graph_equal": false,
+    "passed": false
+  },
+  "before_graph": "graph_0016.json.gz"
+}

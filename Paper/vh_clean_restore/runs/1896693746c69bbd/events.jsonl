@@ -1,0 +1,4 @@
+{"utc": "2026-09-07T03:43:14.990118+00:00", "phase": "character_free_scene", "graph_file": "graph_0001.json.gz"}
+{"utc": "2026-09-07T03:43:15.135021+00:00", "phase": "clean_snapshot_restore", "expected_graph": "Paper/vh_step4/runs/placement_task_test_task65_R_fixed_gpt-4o-2024-08-06_r0/graph_0006.json.gz", "simulator_result": [true, {}]}
+{"utc": "2026-09-07T03:43:15.230519+00:00", "phase": "candidate_gate", "before_graph": "graph_0002.json.gz", "symbolic_equal": true, "max_position_distance": 0.0, "max_quaternion_distance": 7.021395880542849e-08, "full_graph_equal": false, "passed": true}
+{"utc": "2026-09-07T03:43:16.246129+00:00", "phase": "candidate_execution", "action": "[OPEN] <fridge> (103)", "before_graph": "graph_0002.json.gz", "after_graph": "graph_0003.json.gz", "simulator_result": [true, {"0": {"message": "Success"}}]}

@@ -1,0 +1,305 @@
+\section{実験条件と詳細結果}\label{app:evaluation}
+本付録では，S1・S6を状態変化のtest\_task1・test\_task6，P1・P65を配置のtest\_task1・test\_task65の略記とする．miniはGPT-4o mini，4oはGPT-4oを表す．
+
+\subsection{データの分布と行動列長}
+表\ref{tab:coverage_internal}にシーン・初期部屋の周辺分布を示す．各区分の合計は状態変化のテスト312・事例152，配置のテスト103・事例51となる．部屋は人物の初期配置先であり，物体検索の範囲ではない．周辺分布を組合せの全網羅と解釈しない．
+\begin{table*}[tb]
+\caption{シーン・初期部屋別のインスタンス数}\label{tab:coverage_internal}
+\centering\small
+\setlength{\tabcolsep}{3pt}
+\begin{tabular}{llrrrr}
+\hline
+区分 & 値 & 状態テスト & 状態事例 & 配置テスト & 配置事例 \\
+\hline
+シーン & 1 & 48 & 36 & 25 & 14 \\
+シーン & 2 & 40 & 28 & 17 & 8 \\
+シーン & 3 & 72 & 28 & 14 & 7 \\
+シーン & 4 & 32 & 12 & 18 & 12 \\
+シーン & 5 & 44 & 16 & 8 & 4 \\
+シーン & 6 & 40 & 12 & 5 & 3 \\
+シーン & 7 & 36 & 20 & 16 & 3 \\
+初期部屋 & bathroom & 69 & 34 & 26 & 8 \\
+初期部屋 & bedroom & 72 & 52 & 24 & 13 \\
+初期部屋 & kitchen & 86 & 35 & 29 & 17 \\
+初期部屋 & livingroom & 85 & 31 & 24 & 13 \\
+\hline
+\end{tabular}
+\end{table*}
+
+表\ref{tab:all_outcome_lengths}では成功集合と失敗集合を分け，参照平均も各行と同じ集合から計算した．件数0の平均は「--」とする．表\ref{tab:common_success_internal}は検証あり／なしの両条件で成功したインスタンスだけを対応付けた平均である．成功集合の違いを除く記述的比較であり，成功率や失敗試行を含む総コストの比較ではない．
+\begin{table*}[tb]
+\caption{全18条件の成功・失敗別行動列長（参照平均も各行と同じ集合で計算）}\label{tab:all_outcome_lengths}
+\centering\small
+\setlength{\tabcolsep}{3pt}
+\begin{tabular}{llllrrrrrr}
+\hline
+タスク & 提示 & モデル & 検証 & 成功数 & 成功平均 & 参照平均 & 失敗数 & 失敗平均 & 参照平均 \\
+\hline
+状態 & Baseline & 4o & -- & 10 & 0.000 & 0.000 & 302 & 10.828 & 4.000 \\
+状態 & Single & mini & あり & 195 & 3.969 & 3.662 & 117 & 6.043 & 4.222 \\
+状態 & Single & 4o & あり & 246 & 3.923 & 3.927 & 66 & 6.091 & 3.667 \\
+状態 & Multi & mini & あり & 234 & 4.179 & 3.735 & 78 & 7.128 & 4.282 \\
+状態 & Multi & 4o & あり & 279 & 3.584 & 3.878 & 33 & 1.758 & 3.818 \\
+状態 & Single & mini & なし & 192 & 4.203 & 3.792 & 120 & 5.942 & 4.000 \\
+状態 & Single & 4o & なし & 237 & 3.979 & 3.932 & 75 & 5.933 & 3.680 \\
+状態 & Multi & mini & なし & 217 & 4.558 & 4.028 & 95 & 6.274 & 3.516 \\
+状態 & Multi & 4o & なし & 272 & 3.673 & 3.882 & 40 & 2.150 & 3.800 \\
+配置 & Baseline & 4o & -- & 0 & -- & -- & 103 & 15.398 & 9.175 \\
+配置 & Single & mini & あり & 48 & 8.625 & 8.771 & 55 & 6.109 & 9.527 \\
+配置 & Single & 4o & あり & 76 & 8.868 & 9.329 & 27 & 5.852 & 8.741 \\
+配置 & Multi & mini & あり & 42 & 7.929 & 8.548 & 61 & 5.426 & 9.607 \\
+配置 & Multi & 4o & あり & 84 & 8.976 & 9.333 & 19 & 5.158 & 8.474 \\
+配置 & Single & mini & なし & 49 & 7.490 & 8.286 & 54 & 5.778 & 9.981 \\
+配置 & Single & 4o & なし & 70 & 8.671 & 9.029 & 33 & 4.455 & 9.485 \\
+配置 & Multi & mini & なし & 45 & 7.578 & 8.400 & 58 & 5.017 & 9.776 \\
+配置 & Multi & 4o & なし & 82 & 8.390 & 9.305 & 21 & 5.333 & 8.667 \\
+\hline
+\end{tabular}
+\end{table*}
+\begin{table*}[tb]
+\caption{検証あり／なしの共通成功集合における平均行動列長}\label{tab:common_success_internal}
+\centering\small
+\setlength{\tabcolsep}{3pt}
+\begin{tabular}{lllrrrr}
+\hline
+タスク & 提示 & モデル & 共通成功数 & 検証あり & 検証なし & 参照 \\
+\hline
+状態 & Single & mini & 161 & 3.826 & 3.919 & 3.627 \\
+状態 & Single & 4o & 220 & 3.777 & 3.886 & 3.909 \\
+状態 & Multi & mini & 186 & 4.027 & 4.220 & 3.796 \\
+状態 & Multi & 4o & 267 & 3.584 & 3.678 & 3.888 \\
+配置 & Single & mini & 42 & 8.119 & 7.571 & 8.333 \\
+配置 & Single & 4o & 64 & 8.734 & 8.703 & 9.078 \\
+配置 & Multi & mini & 36 & 7.694 & 7.306 & 8.000 \\
+配置 & Multi & 4o & 78 & 8.872 & 8.397 & 9.346 \\
+\hline
+\end{tabular}
+\end{table*}
+
+\subsection{構成要素比較の実行設定}\label{app:execution_conditions}
+実行制御側はPython 3.12.3，spaCy 3.7.5，en\_core\_web\_sm 3.7.1，inflection 0.5.1，NumPy 1.26.4，requests 2.32.4を用いた．Windows上のVHへ接続し，シーン番号から1を引いて初期化し，タスクの状態配列を上書きした後，表\ref{tab:fixed_positions_internal}の座標に人物を配置した．同じ位置の参照列実行を比較基準とし，API要求前に記号状態と全ノードの位置・姿勢を照合した．通信クライアントのコミットは\texttt{58970fd80951c2eaa1af713e0917d1a105353ad8}である．接続先VHのバイナリ版は独立には確認できておらず，シーン・IDの互換性と状態照合を確認した範囲の評価である．
+
+実行時には\texttt{find\_solution=False}，録画あり，カメラは\texttt{PERSON\_FROM\_BACK}とした．アニメーション省略と実行順ランダム化は要求の引数に指定せず，通信APIの既定設定を用いた．インフラ障害をタスク失敗と区別し，API・VH要求の自動再試行は行わない．構成要素比較の240件には通信失敗はなかった．参照列長の2倍を実行予算とし，C3では失敗実行も消費する．C3の失敗後修復は予算が残る場合に限り1回行い，修復後の再失敗では終了する．
+
+モデルIDは\texttt{gpt-4o-mini-2024-07-18}と\texttt{gpt-4o-2024-08-06}，temperatureは0，要求ごとの出力上限は256トークンである．反復ごとにタスク・モデルの8ブロックを並べ替え，各ブロック内の10条件も並べ替える．Pythonの疑似乱数生成器をseed 20260907で初期化し，同じ生成器を3反復にわたって用いる．並べ替え前の列挙順はS1，S6，P1，P65，モデルはmini，4o，条件はC0，C1，C2，C3，C1-budget，C4-budget，C5，R-random，R-fixed，R-noneである．
+
+費用は入力・出力トークン数に記録時点の通常単価を掛けて計算した．100万トークン当たりminiは入力0.15・出力0.60米ドル，4oは入力2.50・出力10.00米ドルで，キャッシュ割引を適用しない推定値である．240件の合計は入力1052576・出力30594トークン，1.681766米ドルであり，研究全体の費用ではない．
+\begin{table}[tb]
+\caption{固定した人物位置（VH座標）}\label{tab:fixed_positions_internal}
+\centering\small
+\setlength{\tabcolsep}{3pt}
+\begin{tabular}{lrrr}
+\hline
+タスク & x & y & z \\
+\hline
+S1 & 2.90539312 & 1.25 & -5.62809753 \\
+S6 & -2.41545 & 1.25 & -7.44353151 \\
+P1 & -6.287474 & 1.247 & 0.1396097 \\
+P65 & 9.582918 & 1.25 & -4.21981239 \\
+\hline
+\end{tabular}
+\end{table}
+
+表\ref{tab:repeat_internal}の各反復の分母は4である．参照成功集合の分母9はP1を除く3タスクの各3反復からなる．各モデル・条件について，反復別成功数の和は本文の分母12の成功数と一致する．
+\begin{table*}[tb]
+\caption{反復別の成功数と参照成功タスクに限定した成功数}\label{tab:repeat_internal}
+\centering\small
+\setlength{\tabcolsep}{3pt}
+\begin{tabular}{lrrrrrrrr}
+\hline
+条件 & mini r0 & r1 & r2 & 参照成功/9 & 4o r0 & r1 & r2 & 参照成功/9 \\
+\hline
+C0 & 2 & 3 & 3 & 8 & 3 & 3 & 3 & 9 \\
+C1 & 3 & 3 & 3 & 9 & 3 & 3 & 3 & 9 \\
+C2 & 1 & 1 & 2 & 4 & 3 & 4 & 3 & 9 \\
+C3 & 2 & 2 & 1 & 5 & 3 & 3 & 3 & 9 \\
+C1-budget & 2 & 1 & 1 & 4 & 4 & 3 & 4 & 9 \\
+C4-budget & 2 & 2 & 2 & 6 & 4 & 3 & 3 & 9 \\
+C5 & 1 & 2 & 2 & 5 & 3 & 3 & 3 & 9 \\
+R-random & 3 & 2 & 3 & 5 & 3 & 3 & 3 & 9 \\
+R-fixed & 2 & 2 & 3 & 6 & 3 & 3 & 3 & 9 \\
+R-none & 1 & 1 & 1 & 3 & 1 & 1 & 1 & 3 \\
+\hline
+\end{tabular}
+\end{table*}
+
+\subsection{検索条件と選択事例}\label{app:retrieval_conditions}
+意味類似検索はMiniLMによるタスク名のコサイン類似度を用い，選択名に属する事例のうち最長の行動列を採用する．長さ同点ではデータの格納順で先の事例を選ぶ．表\ref{tab:semantic_internal}の上位差は第1位と第2位のコサイン類似度の差である．固定検索は候補名を辞書順に並べた最初の名前を使い，状態変化では「Turn off all candles」，配置では「Put all apples in the fridge」となる．noneは事例のuserメッセージを空文字列にする．
+
+ランダム検索は異なる候補名から一様に1名選び，その名前の最長列を採用する．反復別に，文字列 \texttt{20260906/種別/タスクID/反復} のUTF-8バイト列のSHA-256の先頭16桁を16進整数としてseedにする．種別は\texttt{state\_change\_task}または\texttt{placement\_task}，タスクIDは\texttt{test\_task1}等，反復は0，1，2である．Pythonの\texttt{random.Random(seed).choice}を辞書順の候補名リストへ適用する．選択は両モデルで共通とし，表\ref{tab:random_internal}に具体的な名前を示す．
+\begin{table*}[tb]
+\caption{意味類似検索で選択した事例}\label{tab:semantic_internal}
+\centering\small
+\setlength{\tabcolsep}{3pt}
+\begin{tabular}{lp{.46\textwidth}rrr}
+\hline
+タスク & 選択した指示 & 類似度 & 上位差 & 列長 \\
+\hline
+S1 & Turn on all tablelamps & 0.611 & 0.066 & 6 \\
+S6 & Turn on all tablelamps & 0.611 & 0.066 & 6 \\
+P1 & Put all cupcakes on the kitchentable & 0.854 & 0.049 & 8 \\
+P65 & Put all plums on the kitchentable & 0.761 & 0.098 & 8 \\
+\hline
+\end{tabular}
+\end{table*}
+\begin{table*}[tb]
+\caption{ランダム検索で選択した指示（両モデル共通）}\label{tab:random_internal}
+\centering\small
+\setlength{\tabcolsep}{3pt}
+\begin{tabular}{lp{.27\textwidth}p{.27\textwidth}p{.27\textwidth}}
+\hline
+タスク & 反復0 & 反復1 & 反復2 \\
+\hline
+S1 & Turn on all tablelamps & Turn off all faucets & Turn off all faucets \\
+S6 & Turn on all computers & Turn off all faucets & Turn on all tablelamps \\
+P1 & Put all bananas on the kitchentable & Put all crackers on the coffeetable & Put all plums on the coffeetable \\
+P65 & Put all plums on the coffeetable & Put all bananas on the kitchentable & Put all chips on the coffeetable \\
+\hline
+\end{tabular}
+\end{table*}
+
+\subsection{記号判定とラベルの定義}\label{app:symbolic_rules}
+条件辞書の8操作を原子条件に分解する．WALKは非保持，GRABは近接と非保持，SWITCHONは近接とOFF，SWITCHOFFは近接とON，OPENは近接とCLOSED，CLOSEは近接とOPEN，PUTは対象の保持と配置先への近接，PUTINはそれらと配置先がCLOSEDでないことを要求する．いずれかの原子がfalseならfalse，falseがなくunknownがあればunknown，全原子がtrueならtrueとする．
+
+C2は抽出辞書を入力とする．近接は抽出対象にIDがなければunknown，保持は左右の手のIDとの一致，状態は配列が空または欠落ならunknownとして判定する．C5は全ノードと人物ID 1のCLOSE・HOLDS\_RH・HOLDS\_LH関係を使う．完全グラフの空状態集合は既知の空集合として扱うため，例えばCLOSEDでないという否定条件をtrueとできる点がC2と異なる．形式不正と条件の情報不足は区別する．
+
+C2／C5はtrueのみを受理し，それ以外は1回の再生成へ進む．C2ではfalseの条件文に続けてunknownの条件を\texttt{Cannot determine from the available knowledge: }という接頭辞付きで列挙する．C5はfalseとunknownの条件文をそのまま列挙する．その文字列をListing~\ref{prompt5}の理由へ代入する．これは物理形状や操作適合性を含むVHの全制約の検査ではない．
+
+LLMの正答数はYesを含む受理と上記true／falseの一致を数え，unknownを分母から除く．誤受理はfalseに対する受理，誤棄却はtrueに対する棄却である．終了判定は厳密なEndとゴール充足を照合し，非EndとEnd/Continue以外の書式違反も区別する．
+
+\subsection{比較条件固有のプロンプト}\label{app:comparison_prompts}
+C0・C1・C2・C5および検索条件の生成・終了・再生成メッセージは\ref{app:prompts}を基礎とする．C3は失敗後のグラフを再抽出して生成時の環境メッセージを置換し，次の固定文，改行，VHが返した失敗応答のJSON文字列を理由として再生成へ渡す．
+\begin{lstlisting}[basicstyle=\ttfamily\scriptsize,columns=fullflexible]
+The simulator returned failure for this action. The environment knowledge has been refreshed. Revise once.
+\end{lstlisting}
+
+C1-budgetは候補生成の後，Listing~\ref{prompt3}のuser入力だけで条件をレビューする．操作が条件辞書にない場合はsystemを付け，環境文，改行，\texttt{Candidate: }と候補，改行，\texttt{Check the output format. Reply Yes or No.}をuser入力にする．続いて，レビュー時のメッセージ，そのassistant応答，次のuser文を送る．
+\begin{lstlisting}[basicstyle=\ttfamily\scriptsize,columns=fullflexible]
+Briefly explain the satisfied, violated or unknown conditions. If all are satisfied, say so.
+\end{lstlisting}
+
+C4-budgetはsystemを付け，環境文に続けて改行ごとに\texttt{Task: }と指示，\texttt{Candidate: }と候補，次のレビュー文をuser入力とする．
+\begin{lstlisting}[basicstyle=\ttfamily\scriptsize,columns=fullflexible]
+Review whether this candidate is a sensible next step for the task. Reply Yes or No. Do not use a supplied precondition checklist.
+\end{lstlisting}
+そのメッセージとassistant応答に，次のuser文を追加する．
+\begin{lstlisting}[basicstyle=\ttfamily\scriptsize,columns=fullflexible]
+Briefly explain whether to retain or revise this candidate based on the task and current knowledge.
+\end{lstlisting}
+両budget条件はレビューがYesでも再生成する．再生成はsystem，生成時の5個のuser，候補assistant，説明応答をそのまま入れたuser，最後の生成指示のGenerateをRegenerateへ置換したuserの順とする．レビューのsystemはListing~\ref{lst:prompt_spec}のSYSTEM，再生成のsystemは末尾空白付きのCHAT\_SYSTEMを用いる．条件違反を断定する追加文は説明に付けない．生成・レビュー・説明・再生成の4要求を各256トークン上限とし，終了判定の要求は別に数える．
+
+\subsection{固定入力による前提条件評価}\label{app:static_conditions}
+静的評価は8操作の充足例各1件と，16原子条件を一つずつ違反させた16件の計24入力を用いる．さらにSWITCHON，SWITCHOFF，OPEN，CLOSEについて対象の状態を欠落させた4入力を用い，unknownとして精度の分母から除く．各入力を2モデルで3反復し，temperature 0，出力上限160トークン，自動再試行なしで問い合わせる．既知ラベルは各モデル72判定，除外は12判定となる．
+
+物体はapple 101，fridge 102，lightswitch 103，kitchentable 104，部屋はkitchen 900とする．基本状態は全物体に近接，両手は空，fridgeはCLOSED，lightswitchはOFF，appleとkitchentableの状態配列は空で，すべてkitchenに所属する．fridgeだけにCONTAINERS属性を与える．充足例ではSWITCHOFFのみlightswitchをON，CLOSEとPUTINではfridgeをOPEN，PUTとPUTINではappleを保持に変更する．対象はWALK・GRABではapple，SWITCHON・SWITCHOFFではlightswitch，OPEN・CLOSEではfridge，PUTではappleとkitchentable，PUTINではappleとfridgeとする．
+
+各違反例は対応する充足例から，非保持違反ならappleを保持，保持違反なら保持を空，近接違反なら近接集合を空，状態違反ならON/OFFまたはOPEN/CLOSEDを反転する．unknown例では対象状態を欠落させ，自然言語化では状態を述べない．支持・包含関係は付与しない．\ref{app:knowledge}の変換とListing~\ref{prompt3}の要求を用いる．既知の正解はtrue 8入力・false 16入力であり，3反復の正答はminiでtrue 24・false 27の51/72，4oでtrue 24・false 29の53/72だった．
+
+\subsection{棄却候補の状態照合と人手確認}\label{app:review_conditions}
+表\ref{tab:replay_internal}のrは反復番号，stepは候補を判定したステップを表す．C1はLLM検証，RfはR-fixed，RrはR-randomである．同じID集合の各ノードについてクラス・状態・属性と関係辺を比較し，順序だけの違いを除いた一致を記号一致とする．位置差は全ノードのユークリッド距離の最大，姿勢差は四元数の符号同値を考慮した $\min(\|q_1-q_2\|,\|q_1+q_2\|)$ の全ノード最大である．全ノードに位置・姿勢があり，記号一致，位置差0.001以下，姿勢差0.0001以下の場合だけ状態一致とする．距離は表示桁へ丸める前に判定する．候補実行前にこの検査を行ったものではなく，記録グラフの事後比較である．
+\begin{table*}[tb]
+\caption{棄却候補8件の再実行と状態照合（○：一致または成功，×：不一致または失敗）}\label{tab:replay_internal}
+\centering\small
+\setlength{\tabcolsep}{3pt}
+\begin{tabular}{rlllllp{.28\textwidth}lrrll}
+\hline
+番号 & タスク & モデル & 条件 & r & step & 候補 & 記号 & 位置差 & 姿勢差 & 状態 & VH \\
+\hline
+1 & S6 & 4o & C1 & 0 & 4 & [SWITCHON] \textless{}lightswitch\textgreater{} (261) & × & 0.506386 & 0.076625 & × & ○ \\
+2 & S6 & mini & C1 & 0 & 4 & [SWITCHON] \textless{}lightswitch\textgreater{} (261) & × & 0.119574 & 0.007552 & × & ○ \\
+3 & S6 & 4o & Rf & 0 & 1 & [SWITCHON] \textless{}lightswitch\textgreater{} (261) & ○ & 0.000000 & 0.000000 & ○ & ○ \\
+4 & P1 & mini & Rf & 1 & 7 & [PUTIN] \textless{}cupcake\textgreater{} (195) \textless{}kitchencounter\textgreater{} (238) & ○ & 0.010881 & 0.003474 & × & × \\
+5 & P1 & mini & Rr & 2 & 2 & [OPEN] \textless{}desk\textgreater{} (108) & ○ & 0.074607 & 0.042299 & × & × \\
+6 & P65 & 4o & C1 & 0 & 2 & [OPEN] \textless{}fridge\textgreater{} (103) & ○ & 0.037343 & 1.297491 & × & ○ \\
+7 & P65 & mini & C1 & 0 & 1 & [WALK] \textless{}kitchencounter\textgreater{} (92) & ○ & 0.000000 & 0.000000 & ○ & ○ \\
+8 & P65 & 4o & Rf & 0 & 2 & [OPEN] \textless{}fridge\textgreater{} (103) & ○ & 0.095187 & 0.543762 & × & ○ \\
+\hline
+\end{tabular}
+\end{table*}
+
+実行直前照合を条件とする評価を表\ref{tab:replay_gated}に示す．候補の番号・行動・モデル・条件・反復は表\ref{tab:replay_internal}と同じである．各候補につき1回だけ初期化と成功接頭列の再生を行い，記号一致・位置差0.001以下・姿勢差0.0001以下を実行の条件とした．候補判定に用いたグラフの取得を実行前の最後のRPCとし，通過時だけ候補を実行して実行後グラフを取得した．人物追加後の途中グラフ転送や自動再試行は行わない．全8件で初期化照合が通過し，接頭列の計15行動はすべて成功した．候補は2件だけ実行し，6件は状態不一致のため未実行だった．通信エラーとAPI要求は0件で，API費用は0米ドルである．照合通過した2件は接頭行動数0の候補であり，途中状態を復元できたとは結論しない．グラフで観測できない物理内部状態の一致も保証しない．
+\begin{table}[tb]
+\caption{実行直前照合を条件とした代表候補評価（番号は表\ref{tab:replay_internal}に対応）}\label{tab:replay_gated}
+\centering\small
+\begin{tabular}{rrlrrl}
+\hline
+番号 & 接頭数 & 記号 & 位置差 & 姿勢差 & 候補結果 \\
+\hline
+1 & 3 & × & 0.419929 & 0.035789 & 未実行 \\
+2 & 3 & ○ & 0.091742 & 0.020617 & 未実行 \\
+3 & 0 & ○ & 0.000000 & 0.000000 & 成功 \\
+4 & 6 & ○ & 0.247181 & 0.045965 & 未実行 \\
+5 & 1 & ○ & 0.041228 & 0.025620 & 未実行 \\
+6 & 1 & ○ & 0.101502 & 0.920426 & 未実行 \\
+7 & 0 & ○ & 0.000000 & 0.000000 & 成功 \\
+8 & 1 & ○ & 0.058573 & 0.206024 & 未実行 \\
+\hline
+\end{tabular}
+\end{table}
+
+判定応答の人手確認では，上記8候補について同じステップの抽出知識・完全グラフ・条件辞書と判定応答を照合するよう依頼した．ラベルは，主要主張が状態と一致し重要な見落としがない場合を「正しい」，一部は一致するが重要な誤り・見落としがある場合を「一部正しい」，中心的理由が状態と反対または存在しない事実に基づく場合を「誤り」，応答・状態情報が不足して検証できない場合を「判断不能」とした．著者ugaiによる2026年9月7日のこの票への記入は全8件「判断不能」，根拠「情報が不十分」である．未充足条件応答の確認記録とは区別する．
+
+表\ref{tab:unmet_internal}は判定応答と，別要求で得られた未充足条件の応答を区別して示す．4番の判定応答は，cupcakeの保持が入力から確認できない一方，配置先への近接とOPENは確認できると述べ，最後にNoと結論する文章だった．表の「条件別説明付きNo」はこの応答の要約である．他7件の判定はNoまたはNo.のみだった．未充足条件応答は全文を示し，この応答を対象とする著者の確認記録とその制約を\ref{app:author_unmet_review}に示す．
+\begin{table*}[tb]
+\caption{代表候補の判定応答と未充足条件応答（番号は表\ref{tab:replay_internal}と共通）}\label{tab:unmet_internal}
+\centering\small
+\setlength{\tabcolsep}{3pt}
+\begin{tabular}{rp{.20\textwidth}p{.64\textwidth}}
+\hline
+番号 & 判定応答 & 別要求の未充足条件応答（全文） \\
+\hline
+1 & No. & \textless{}lightswitch\textgreater{} (261) is OFF. \\
+2 & No & \textless{}lightswitch\textgreater{} (261) is ON. \\
+3 & No & \textless{}lightswitch\textgreater{} (261) is OFF. \\
+4 & 条件別説明付きNo & You are holding \textless{}cupcake\textgreater{} (195) in your right hand or left hand. \\
+5 & No & \textless{}desk\textgreater{} (108) is CLOSED. \\
+6 & No. & You are close to \textless{}fridge\textgreater{} (103). \\
+7 & No & The precondition that \textless{}kitchencounter\textgreater{} (92) is not held in your right hand or left hand is not satisfied. \\
+8 & No. & You are close to \textless{}fridge\textgreater{} (103). \\
+\hline
+\end{tabular}
+\end{table*}
+
+接頭列方式で不一致だった6件を対象とする，人物のいないシーンへの保存グラフ復元を表\ref{tab:clean_restore}に示す．元タスクのシーンへリセットし，人物がいないことを確認してから，候補時点の完全グラフを\texttt{animate\_character=True, transfer\_transform=True, randomize=False}で1回だけ転送した．実行直前の最後のグラフ取得で表\ref{tab:replay_gated}と同じ照合を行い，通過時だけ候補を実行した．全6件の初期化と転送要求は応答成功で，通信エラー・API要求は0件だったが，転送の成功応答だけを復元成功とは扱わない．4件は状態不一致のため候補未実行である．
+\begin{table*}[tb]
+\caption{人物のいないシーンへの候補時点グラフ復元（番号は表\ref{tab:replay_internal}と共通）}\label{tab:clean_restore}
+\centering\small
+\begin{tabular}{rlrrlp{.43\textwidth}}
+\hline
+番号 & 記号 & 最大位置差 & 最大姿勢差 & 候補結果 & 不一致の観測 \\
+\hline
+1 & × & $1.910\times10^{-6}$ & 0 & 未実行 & 保存グラフにあったFACING辺7本が欠落 \\
+2 & × & $1.910\times10^{-6}$ & 0 & 未実行 & 保存グラフにあったFACING辺14本が欠落 \\
+4 & × & 1.237802 & 0.910223 & 未実行 & cupcake 195の位置・姿勢とON desk 108関係が不一致 \\
+5 & × & $2.000\times10^{-6}$ & $3.000\times10^{-8}$ & 未実行 & FACING辺1本が追加 \\
+6 & ○ & 0 & 0 & 成功 & 許容差内で一致 \\
+8 & ○ & 0 & $7.021\times10^{-8}$ & 成功 & 許容差内で一致 \\
+\hline
+\end{tabular}
+\end{table*}
+
+接頭列方式で通過した3・7番と復元方式で通過した6・8番を合わせ，異なる4候補で実行直前の照合が通過し，4件ともVH成功だった．8件の接頭列方式と不一致6件の復元方式は同じ候補を含む段階的な診断であり，14件の独立試行として合算しない．試行結果の確認後に，評価範囲を照合通過4件と本手順で未再現だった1・2・4・5番の開示に限定した．照合基準を緩めたりFACING辺を除外したりして通過数を増やしていない．全8件の同一状態復元や，未選択51候補の評価を達成したとはせず，通過4件の成功を母集団の誤棄却率とは解釈しない．接頭列方式では人物の位置・姿勢が変化した例があり，同じ行動列の再生だけでは状態一致を保証できない．一方，今回の全差異をアバター動作の変動のみで因果的に説明したものではなく，グラフに現れない内部状態の一致も未確認である．
+
+\input{appendix-human-review}
+
+\subsection{記録行動列の再生}
+表\ref{tab:saved_replay_internal}は，基本性能評価のMulti・検証ありで得た8列の固定位置再生である．表\ref{tab:replay_internal}の未実行候補の再実行とは区別する．列長0の2件も行動を要しない再生として含め，8列すべてを末尾まで再生できた．失敗した最後の未記録行動と生成時の人物位置は再生対象に含めない．
+\begin{table}[tb]
+\caption{記録行動列8本の再生と最終ゴール（全列の再生は成功）}\label{tab:saved_replay_internal}
+\centering\small
+\setlength{\tabcolsep}{3pt}
+\begin{tabular}{llrl}
+\hline
+タスク & モデル & 列長 & 最終ゴール \\
+\hline
+P1 & mini & 1 & 未達 \\
+P1 & 4o & 4 & 未達 \\
+P65 & mini & 5 & 未達 \\
+P65 & 4o & 10 & 充足 \\
+S1 & mini & 0 & 充足 \\
+S1 & 4o & 0 & 充足 \\
+S6 & mini & 5 & 充足 \\
+S6 & 4o & 4 & 充足 \\
+\hline
+\end{tabular}
+\end{table}
