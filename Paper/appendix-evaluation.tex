@@ -2,7 +2,7 @@
 本付録では，S1・S6を状態変化のtest\_task1・test\_task6，P1・P65を配置のtest\_task1・test\_task65の略記とする．miniはGPT-4o mini，4oはGPT-4oを表す．
 
 \subsection{データの分布と行動列長}
-表\ref{tab:coverage_internal}にシーン・初期部屋の周辺分布を示す．各区分の合計は状態変化のテスト312・事例152，配置のテスト103・事例51となる．部屋は人物の初期配置先であり，物体検索の範囲ではない．周辺分布を組合せの全網羅と解釈しない．
+表\ref{tab:coverage_internal}にシーン・初期部屋の周辺分布を示す．各区分の合計は状態変化のテスト312・事例152，配置のテスト103・事例51となる．部屋は人物の初期配置先であり，物体検索の範囲ではない．
 \begin{table*}[tb]
 \caption{シーン・初期部屋別のインスタンス数}\label{tab:coverage_internal}
 \centering\small
@@ -26,7 +26,7 @@
 \end{tabular}
 \end{table*}
 
-表\ref{tab:all_outcome_lengths}では成功集合と失敗集合を分け，参照平均も各行と同じ集合から計算した．件数0の平均は「--」とする．表\ref{tab:common_success_internal}は検証あり／なしの両条件で成功したインスタンスだけを対応付けた平均である．成功集合の違いを除く記述的比較であり，成功率や失敗試行を含む総コストの比較ではない．
+表\ref{tab:all_outcome_lengths}では成功集合と失敗集合を分け，参照平均も各行と同じ集合から計算した．件数0の平均は「--」とする．表\ref{tab:common_success_internal}は検証あり／なしの両条件で成功したインスタンスだけを対応付けた平均である．成功集合の違いを除く記述的比較である．
 \begin{table*}[tb]
 \caption{全18条件の成功・失敗別行動列長（参照平均も各行と同じ集合で計算）}\label{tab:all_outcome_lengths}
 \centering\small
@@ -83,7 +83,7 @@
 
 モデルIDは\texttt{gpt-4o-mini-2024-07-18}と\texttt{gpt-4o-2024-08-06}，temperatureは0，要求ごとの出力上限は256トークンである．反復ごとにタスク・モデルの8ブロックを並べ替え，各ブロック内の10条件も並べ替える．Pythonの疑似乱数生成器をseed 20260907で初期化し，同じ生成器を3反復にわたって用いる．並べ替え前の列挙順はS1，S6，P1，P65，モデルはmini，4o，条件はC0，C1，C2，C3，C1-budget，C4-budget，C5，R-random，R-fixed，R-noneである．
 
-費用は入力・出力トークン数に記録時点の通常単価を掛けて計算した．100万トークン当たりminiは入力0.15・出力0.60米ドル，4oは入力2.50・出力10.00米ドルで，キャッシュ割引を適用しない推定値である．240件の合計は入力1052576・出力30594トークン，1.681766米ドルであり，研究全体の費用ではない．
+費用は入力・出力トークン数に記録時点の通常単価を掛けて計算した．100万トークン当たりminiは入力0.15・出力0.60米ドル，4oは入力2.50・出力10.00米ドルで，キャッシュ割引を適用しない推定値である．240件の合計は入力1052576・出力30594トークン，1.681766米ドルである．
 \begin{table}[tb]
 \caption{固定した人物位置（VH座標）}\label{tab:fixed_positions_internal}
 \centering\small
@@ -163,7 +163,7 @@ P65 & Put all plums on the coffeetable & Put all bananas on the kitchentable & P
 
 C2は抽出辞書を入力とする．近接は抽出対象にIDがなければunknown，保持は左右の手のIDとの一致，状態は配列が空または欠落ならunknownとして判定する．C5は全ノードと人物ID 1のCLOSE・HOLDS\_RH・HOLDS\_LH関係を使う．完全グラフの空状態集合は既知の空集合として扱うため，例えばCLOSEDでないという否定条件をtrueとできる点がC2と異なる．形式不正と条件の情報不足は区別する．
 
-C2／C5はtrueのみを受理し，それ以外は1回の再生成へ進む．C2ではfalseの条件文に続けてunknownの条件を\texttt{Cannot determine from the available knowledge: }という接頭辞付きで列挙する．C5はfalseとunknownの条件文をそのまま列挙する．その文字列をListing~\ref{prompt5}の理由へ代入する．これは物理形状や操作適合性を含むVHの全制約の検査ではない．
+C2／C5はtrueのみを受理し，それ以外は1回の再生成へ進む．C2ではfalseの条件文に続けてunknownの条件を\texttt{Cannot determine from the available knowledge: }という接頭辞付きで列挙する．C5はfalseとunknownの条件文をそのまま列挙する．その文字列をListing~\ref{prompt5}の理由へ代入する．
 
 LLMの正答数はYesを含む受理と上記true／falseの一致を数え，unknownを分母から除く．誤受理はfalseに対する受理，誤棄却はtrueに対する棄却である．終了判定は厳密なEndとゴール充足を照合し，非EndとEnd/Continue以外の書式違反も区別する．
 
@@ -217,7 +217,7 @@ Briefly explain whether to retain or revise this candidate based on the task and
 \end{tabular}
 \end{table*}
 
-実行直前照合を条件とする評価を表\ref{tab:replay_gated}に示す．候補の番号・行動・モデル・条件・反復は表\ref{tab:replay_internal}と同じである．各候補につき1回だけ初期化と成功接頭列の再生を行い，記号一致・位置差0.001以下・姿勢差0.0001以下を実行の条件とした．候補判定に用いたグラフの取得を実行前の最後のRPCとし，通過時だけ候補を実行して実行後グラフを取得した．人物追加後の途中グラフ転送や自動再試行は行わない．全8件で初期化照合が通過し，接頭列の計15行動はすべて成功した．候補は2件だけ実行し，6件は状態不一致のため未実行だった．通信エラーとAPI要求は0件で，API費用は0米ドルである．照合通過した2件は接頭行動数0の候補であり，途中状態を復元できたとは結論しない．グラフで観測できない物理内部状態の一致も保証しない．
+実行直前照合を条件とする評価を表\ref{tab:replay_gated}に示す．候補の番号・行動・モデル・条件・反復は表\ref{tab:replay_internal}と同じである．各候補につき1回だけ初期化と成功接頭列の再生を行い，記号一致・位置差0.001以下・姿勢差0.0001以下を実行の条件とした．候補判定に用いたグラフの取得を実行前の最後のRPCとし，通過時だけ候補を実行して実行後グラフを取得した．人物追加後の途中グラフ転送や自動再試行は行わない．全8件で初期化照合が通過し，接頭列の計15行動はすべて成功した．候補は2件だけ実行し，6件は状態不一致のため未実行だった．通信エラーとAPI要求は0件で，API費用は0米ドルである．照合通過した2件は接頭行動数0の候補である．
 \begin{table}[tb]
 \caption{実行直前照合を条件とした代表候補評価（番号は表\ref{tab:replay_internal}に対応）}\label{tab:replay_gated}
 \centering\small
@@ -260,7 +260,7 @@ Briefly explain whether to retain or revise this candidate based on the task and
 \end{tabular}
 \end{table*}
 
-接頭列方式で不一致だった6件を対象とする，人物のいないシーンへの保存グラフ復元を表\ref{tab:clean_restore}に示す．元タスクのシーンへリセットし，人物がいないことを確認してから，候補時点の完全グラフを\texttt{animate\_character=True, transfer\_transform=True, randomize=False}で1回だけ転送した．実行直前の最後のグラフ取得で表\ref{tab:replay_gated}と同じ照合を行い，通過時だけ候補を実行した．全6件の初期化と転送要求は応答成功で，通信エラー・API要求は0件だったが，転送の成功応答だけを復元成功とは扱わない．4件は状態不一致のため候補未実行である．
+接頭列方式で不一致だった6件を対象とする，人物のいないシーンへの保存グラフ復元を表\ref{tab:clean_restore}に示す．元タスクのシーンへリセットし，人物がいないことを確認してから，候補時点の完全グラフを\texttt{animate\_character=True, transfer\_transform=True, randomize=False}で1回だけ転送した．実行直前の最後のグラフ取得で表\ref{tab:replay_gated}と同じ照合を行い，通過時だけ候補を実行した．全6件の初期化と転送要求は応答成功で，通信エラー・API要求は0件だった．4件は状態不一致のため候補未実行である．
 \begin{table*}[tb]
 \caption{人物のいないシーンへの候補時点グラフ復元（番号は表\ref{tab:replay_internal}と共通）}\label{tab:clean_restore}
 \centering\small
@@ -278,7 +278,7 @@ Briefly explain whether to retain or revise this candidate based on the task and
 \end{tabular}
 \end{table*}
 
-接頭列方式で通過した3・7番と復元方式で通過した6・8番を合わせ，異なる4候補で実行直前の照合が通過し，4件ともVH成功だった．8件の接頭列方式と不一致6件の復元方式は同じ候補を含む段階的な診断であり，14件の独立試行として合算しない．試行結果の確認後に，評価範囲を照合通過4件と本手順で未再現だった1・2・4・5番の開示に限定した．照合基準を緩めたりFACING辺を除外したりして通過数を増やしていない．全8件の同一状態復元や，未選択51候補の評価を達成したとはせず，通過4件の成功を母集団の誤棄却率とは解釈しない．接頭列方式では人物の位置・姿勢が変化した例があり，同じ行動列の再生だけでは状態一致を保証できない．一方，今回の全差異をアバター動作の変動のみで因果的に説明したものではなく，グラフに現れない内部状態の一致も未確認である．
+接頭列方式で通過した3・7番と復元方式で通過した6・8番を合わせ，異なる4候補で実行直前の照合が通過し，4件ともVH成功だった．8件の接頭列方式と不一致6件の復元方式は同じ候補を含む段階的な診断であり，14件の独立試行として合算しない．試行結果の確認後に，評価範囲を照合通過4件と本手順で未再現だった1・2・4・5番の開示に限定した．接頭列方式では，同じ行動列の再生時に人物の位置・姿勢が変化した例があった．グラフに現れない内部状態の一致は未確認である．
 
 \input{appendix-human-review}
 
