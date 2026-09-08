@@ -238,6 +238,8 @@ GPT-4o・Multi Promptsの既存結果は次の通り。長さは保存済みの 
 
 ### B-4-4：Huangらのベースライン実装
 
+2026-09-07の後続確認：BaselineはHuangらの著者公開実装 `https://github.com/huangwl18/language-planner` を本研究のデータセットで実行した結果であり、原著の数値の転載ではない。実装の出所は確認済みで、以下の回収不能・未確認範囲は実験時の版・変更点・詳細設定に限定する。原稿・回答書へ反映し、数値は変更しない。[来歴訂正](revision-completion/Baseline-Provenance.md)。
+
 修正先：2.1節、5.2節、付録、再現手順。
 
 - 実験時のコードを回収し、Planning LM、Action Translationのモデル・候補集合・選択規則、Dynamic Exampleの検索入力・埋め込み・候補集合・採択規則を明記する。

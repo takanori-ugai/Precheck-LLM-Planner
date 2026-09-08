@@ -27,6 +27,7 @@ Listing~\ref{lst:prompt_spec}に，終了判定，行動生成，前提条件判
 
 本文のListing~\ref{prompt1}～\ref{prompt5}は構成要素を説明する表示である．正確なメッセージ境界・改行・単語は以下を参照する．特に違反理由と再生成指示は別々のuserメッセージとなり，前提条件の違反特定には行動生成時の履歴を渡していない．
 
+\capwidth=\linewidth
 \lstinputlisting[basicstyle=\ttfamily\scriptsize,columns=fullflexible,caption={公開コードと照合した完全なプロンプト組立て仕様},label=lst:prompt_spec]{listings/prompt_spec.py}
 
 \subsection{前提条件辞書と代入規則}\label{app:conditions}
@@ -100,7 +101,7 @@ Listing~\ref{lst:knowledge_state}・\ref{lst:knowledge_placement}は，変換関
 棄却候補の状態照合では，候補判定時のグラフと，再実行イベントに付随する候補実行直前のグラフを比較した．結果要約の前状態欄は実装上，候補実行後の最後のグラフ取得を指していたため，照合対象として用いなかった．照合はノードID・クラス・状態・属性と関係辺の一致を確認した上で，全ノードの位置差と四元数距離を評価する．具体的な距離の定義と候補別結果は\ref{app:review_conditions}に示す．VH成否や人手ラベルはこの照合によって変更していない．
 
 \subsection{実験資料と再現性}\label{app:reproducibility}
-基本性能評価のコード・データ・結果JSONはGitコミット\texttt{2761158}に含まれ，READMEのみが異なる\texttt{de1fc8d}を照合対象とした．各結果とテスト集合のIDは一致し，結果JSONから計算した全18条件のSR・3失敗率・平均列長の90値は掲載値と小数第3位まで一致する．ただし，実行ごとのコード版・日時・API応答メタデータは記録されていない．
+基本性能評価に関する提案手法の公開コード・データ・結果JSONはGitコミット\texttt{2761158}に含まれ，READMEのみが異なる\texttt{de1fc8d}を照合対象とした．各結果とテスト集合のIDは一致し，結果JSONから計算した全18条件のSR・3失敗率・平均列長の90値は掲載値と小数第3位まで一致する．ただし，実行ごとのコード版・日時・API応答メタデータは記録されていない．
 
 公開Notebookは\texttt{gpt-4o-mini}というモデル別名とtemperature 0.0を指定する．Multiの評価ループは1件で停止する\texttt{break}を含み，Notebookの出力キーは\texttt{action\_script}，基本性能評価の結果JSONのキーは\texttt{action script}である．したがって，Notebookの無変更実行で全モデル・全条件の結果を再生成できるとはいえない．本文の処理仕様はこのコードに基づくもので，各試行の実装との完全な一致は確認できない．
 
