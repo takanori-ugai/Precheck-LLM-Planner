@@ -17,8 +17,41 @@
 
 エージェントについては，ID 1の出辺から所属部屋，左右の手の保持物，抽出対象へのCLOSE関係を取得する．エージェントのノード状態配列は自然言語化していない．物体が保持する対象の列挙も，走査時の抽出集合に含まれる物体に限られ，全内容物の列挙ではない．
 
-自然言語化では物体名とID，状態配列の先頭要素，ONまたはINSIDE関係，所属部屋を文章にする．ONとINSIDEの両方がある場合はONを優先する．所属部屋を得られない物体では基本の説明文を出力せず，保持対象の列挙があればその部分のみを出力する．保持対象が容器の中か支持物の上かは\texttt{CONTAINERS}属性の有無で記述する．位置座標，画像，壁面や床面の任意の関係は入力しない．正確な変換関数と説明用入力に対する出力例は\ref{app:knowledge}に示す．
+自然言語化では物体名とID，状態配列の先頭要素，ONまたはINSIDE関係，所属部屋を文章にする．ONとINSIDEの両方がある場合はONを優先する．所属部屋を得られない物体では基本の説明文を出力せず，保持対象の列挙があればその部分のみを出力する．保持対象が容器の中か支持物の上かは\texttt{CONTAINERS}属性の有無で記述する．位置座標，画像，壁面や床面の任意の関係は入力しない．変換関数の全文と合成入力の例は公開リポジトリの\path{Paper/listings/}に置く．
 
+
+
+\subsubsection{実環境知識の入力例}\label{sec4.real_inputs}
+\ref{sec5.additional}の構成要素比較C1・GPT-4o・反復0から，状態変化\texttt{test\_task6}と配置\texttt{test\_task65}の最初の終了判定へ送信した環境知識を示す．末尾の終了判定指示を除いた全文であり，重複したandも送信内容のままである．
+
+\begingroup
+\capwidth=\linewidth
+\begin{lstlisting}[basicstyle=\ttfamily\scriptsize,breaklines=true,caption={状態変化task6の環境知識全文},label=lst:real_state_input]
+The current states in the home are as follows:
+The lightswitch (71) is ON and and is INSIDE the bathroom (11).
+The lightswitch (173) is OFF and and is INSIDE the bedroom (73).
+The lightswitch (261) is ON and and is INSIDE the kitchen (205).
+The lightswitch (427) is OFF and and is INSIDE the livingroom (335).
+You are INSIDE the kitchen (205).
+
+\end{lstlisting}
+\endgroup
+人物の初期位置は$(-2.41545,1.25,-7.44353151)$である．WALKでlightswitch 173へ移動すると人物の所属がbedroom 73となり，対象へのCLOSE関係が付加された．続くSWITCHONで173はOFFからONへ変化した．部屋・物体ID・現在状態を併せて提示することで，同名物体の区別と部屋をまたぐ行動を扱う．
+
+\begingroup
+\capwidth=\linewidth
+\begin{lstlisting}[basicstyle=\ttfamily\scriptsize,breaklines=true,caption={配置task65の環境知識全文},label=lst:real_placement_input]
+The current states in the home are as follows:
+The plum (53) is ON the kitchencounter (92) and and is INSIDE the kitchen (11).
+The plum (54) is ON the kitchencounter (92) and and is INSIDE the kitchen (11).
+The fridge (103) is CLOSED and and is INSIDE the kitchen (11).
+The kitchencounter (92) is CLOSED and is INSIDE the dishwasher (104) and and is INSIDE the kitchen (11).
+plum (53) and plum (54) are ON the kitchencounter (92).
+You are INSIDE the bedroom (211).
+
+\end{lstlisting}
+\endgroup
+人物の初期位置は$(9.582918,1.25,-4.21981239)$である．この試行ではfridge 103へのOPENでCLOSEDがOPENへ変わり，plum 53へのGRABでON kitchencounter 92が削除されて人物のHOLDS\_RHが付加された．続くPUTINで保持関係が削除され，plum 53からfridge 103へのINSIDE関係が付加された．入力中のkitchencounter 92に関する記述は，取得グラフの状態とdishwasher 104へのINSIDE辺に基づく．抽出文と行動前後のグラフは，各試行の\path{Paper/vh_step4/runs/}内のログで対応付けられる．
 
 \subsection{タスク完了の判定} \label{sec4.2}
 \begin{figure*}[tb]
@@ -52,7 +85,7 @@ Step1:
 
 \ref{proposed_method}の「タスク完了の判定」では，LLMが家庭環境知識に基づき，タスクが完了しているかを判定する．
 
-Listing~\ref{prompt1}はMulti Promptsにおける入力の内容を示す．実装では環境知識に終了判定文を連結し，systemメッセージと一つのuserメッセージで問い合わせる．Single Promptでは終了判定文の文面が異なる．両方式の全文と空白・改行を含む組立て規則を\ref{app:prompts}に示す．
+Listing~\ref{prompt1}はMulti Promptsにおける入力の内容を示す．実装では環境知識に終了判定文を連結し，systemメッセージと一つのuserメッセージで問い合わせる．Single Promptでは終了判定文の文面が異なる．メッセージの構成を表\ref{tab:prompt_calls}に示す．空白・改行を含む組立てコードは\path{Paper/listings/prompt_spec.py}で公開する．
 
 出力が文字列``End''と完全一致した場合に通常の採点へ進む．前後の空白を除去する処理はない．参照列長が0の場合は，最初の出力が``End''ならゴールグラフを再確認せず成功，``Continue''なら上限到達による失敗として返す．これ以外の出力に対する専用の再問い合わせ処理はなく，行動生成へ進む．
 
@@ -124,6 +157,27 @@ Step n:
     \end{lstlisting}
 \end{figure*}
 
+
+\subsubsection{呼び出しごとの入力と履歴}\label{sec4.prompt_calls}
+表\ref{tab:prompt_calls}にrole・入力・履歴・分岐をまとめる．通常の未完了周回におけるLLM呼び出しは，検証なしで2回，検証を通過すれば3回，違反条件の特定と再生成まで進めば5回である．操作名が条件辞書にない場合は条件判定・違反特定を経ず再生成するため3回となる．最初の完了判定で終了する周回は1回である．
+
+\begin{table*}[tb]
+\caption{各呼び出しの役割・入力・履歴と分岐}\label{tab:prompt_calls}
+\centering\small
+\begin{tabular}{p{.17\textwidth}p{.47\textwidth}p{.25\textwidth}}
+\hline
+呼び出し & 入力メッセージ & 出力の利用 \\
+\hline
+完了判定 & system（末尾空白なし），user（環境＋判定指示＋タスク） & Endとの完全一致．参照列長0ではContinueとの完全一致も確認．\\
+行動生成Single & system（末尾空白なし），user（5要素を連結） & 生成した1行動を検証または実行．\\
+行動生成Multi & system（末尾空白あり），5個のuser（役割指示，許可操作・形式，事例，環境，タスク・成功履歴・次ステップ） & 1回の呼び出しから1行動を得る．\\
+前提条件判定 & user（環境＋判定文＋対象を代入した条件） & 部分文字列Yesを含めば充足．\\
+違反条件特定 & system（末尾空白あり），直前の判定入力userと出力assistant，追加問い合わせuser & 違反理由のフィードバックを作る．\\
+再生成 & system（末尾空白あり），行動生成時のuser群，候補assistant，理由user，再生成指示user & 1回だけ生成し，再検証せず実行．\\
+\hline
+\end{tabular}
+\end{table*}
+
 \subsection{アクション実行} \label{sec4.5}
 \ref{proposed_method}の「アクション実行」では，生成したアクションステップをシミュレータ上で実行する．また，実行に成功した場合には，実行したアクションステップを実行履歴として\ref{proposed_method}の「アクションステップ生成」で用いるプロンプトの末尾に追加する．その後「家庭環境知識の取得」を再度行い，処理が終了するまで一連のプロセスを繰り返す．なお，アクションの実行に失敗した場合も処理を終了する．
 
@@ -190,6 +244,30 @@ VHは，高レベルのコマンドが提供されているのが特徴的であ
 
 VHは，仮想家庭内で活動をシミュレートすることを目的としたシミュレータである．VHの環境は，JSON形式のグラフ構造として表されている．環境内に存在するオブジェクトのリストを``nodes''キーの値として記述し，部屋や物，またそれらに関する識別番号，位置座標，物の状態といったセマンティックデータを定義している．また，``nodes''キーの値として記述された各オブジェクトの識別番号を指定し，二つのオブジェクトの関係のリストを``edges''キーの値として定義している，
 
-VHでは，一連のアクションステップを記述したアクションスクリプトに基づいて，エージェントを行動させることができる．各ステップは操作，対象名，対象IDで構成される（例：[WALK] $\langle livingroom\rangle$ (336)）．公開された\texttt{precondition.json}は8操作の自然言語条件を保持する．例えばSWITCHONでは対象への近接とOFF状態，PUTINでは対象物の保持，配置先への近接，配置先がCLOSEDでないことを要求する．全条件を\ref{app:conditions}に示す．
+VHでは，一連のアクションステップを記述したアクションスクリプトに基づいて，エージェントを行動させることができる．各ステップは操作，対象名，対象IDで構成される（例：[WALK] $\langle livingroom\rangle$ (336)）．公開された\texttt{precondition.json}は8操作の自然言語条件を保持する．例えばSWITCHONでは対象への近接とOFF状態，PUTINでは対象物の保持，配置先への近接，配置先がCLOSEDでないことを要求する．全条件を表\ref{tab:condition_source_scope}に示す．
 
-前提条件は\texttt{precondition.json}の固定した自然言語条件を用いる．参考資料としてVHのDocumentationとGitHubソースが実装資料に挙げられているが，固定版・該当箇所と各条件の対応，転記・整形・省略の手順は記録されていない．例えば状態がOFFであるというSWITCHONの条件は，冗長操作を避ける目的と実行可能性を判定する目的を併せ持ち得る．自然言語条件の充足と，VHによる実行の成否は区別する必要がある．
+前提条件の説明と条件文の照合には，VH v2.3の公式Actions文書\footnote{\url{http://virtual-home.org/documentation/master/kb/actions.html}}と，公式リポジトリの\texttt{resources}\footnote{\url{https://github.com/xavierpuigf/virtualhome/tree/master/virtualhome/resources}}を参照資料として用いた．Actions文書は各操作の引数，前提条件，実行後の変化を示し，\texttt{resources}は物体の属性と取り得る状態を示す．本実装では，近接，左右の手による保持，ON／OFF，OPEN／CLOSEDを操作別の固定した自然言語条件として\texttt{precondition.json}に保持し，対象名・IDを代入してLLMへ提示する．例えばPUTINの保持・配置先への近接・配置先がCLOSEDでないという3条件は，同文書のPutInに対応する．GRABの非保持条件は公開Pythonグラフ実行器の重複把持検査とも照合した．各操作の採用条件と公式資料との対応を表\ref{tab:condition_source_scope}に示す．
+
+\subsubsection{公式資料と前提条件辞書の対応}\label{sec4.condition_sources}
+表\ref{tab:condition_source_scope}に8操作・16条件を示す．2026年9月8日に公式資料と照合し，リポジトリの固定版\texttt{58970fd80951c2eaa1af713e0917d1a105353ad8}を参照した．条件文は操作名で選び，空白区切りの操作文字列が5トークンならObject1／Object2に，それ以外ならObjectに対象名・IDを代入する．
+
+\begin{table*}[tb]
+\caption{8操作の前提条件辞書と公式資料の対応}\label{tab:condition_source_scope}
+\centering\scriptsize\setlength{\tabcolsep}{3pt}
+\begin{tabular}{p{.12\textwidth}p{.29\textwidth}p{.49\textwidth}}
+\hline
+操作 & 辞書が採用する条件 & 公式Actions文書および公開コードとの対応 \\
+\hline
+WALK & 対象を左右どちらの手にも保持していない & Walkの非把持条件に対応．同項には非座位と到達可能性も記載されている． \\
+GRAB & 対象に近接し，対象を保持していない & Grabに近接条件が記載されている．非保持は公開コードの\texttt{GrabExecutor.check\_grabbable}による重複把持の拒否と対応付けた．同項には把持可能属性，到達可能性，空いた手も記載されている． \\
+SWITCHON & 対象に近接し，対象がOFF & SwitchOnの近接・OFF条件に対応．同項にはスイッチ属性も記載されている． \\
+SWITCHOFF & 対象に近接し，対象がON & SwitchOffの近接・ON条件に対応．同項にはスイッチ属性も記載されている． \\
+OPEN & 対象に近接し，対象がCLOSED & Openの近接・CLOSED条件に対応．同項には開閉可能属性，到達可能性，空いた手も記載されている． \\
+CLOSE & 対象に近接し，対象がOPEN & Closeの近接・OPEN条件に対応．同項には開閉可能属性，到達可能性，空いた手も記載されている． \\
+PUT & 対象物を保持し，配置先に近接 & Putの2条件に対応．文書のプログラム構造では\texttt{put}，同項の例とPython実行器では\texttt{putback}という表記を用いる． \\
+PUTIN & 対象物を保持し，配置先に近接し，配置先がCLOSEDでない & PutInの3条件に対応．Python実行器の\texttt{\_check\_puttable}では，開閉可能属性のある配置先にOPENを要求する． \\
+\hline
+\end{tabular}
+\end{table*}
+
+\texttt{resources/properties\_data\_unity.json}はUnity側の物体属性，\texttt{properties\_data.json}はPythonグラフ実行器側の属性，\texttt{object\_states.json}は物体が取り得る状態の確認に用いた．例えばUnity側ではlightswitchに\texttt{HAS\_SWITCH}，fridgeに\texttt{CAN\_OPEN}と\texttt{CONTAINERS}，plumに\texttt{GRABBABLE}が定義されている．状態資料にはlightswitchのON／OFFとfridgeのOPEN／CLOSEDが含まれる．GRABの非保持条件の補足照合に用いた公開\texttt{execution.py}は実行履歴の把持記録を検査し，本辞書は左右の保持関係を用いる．各試行の現在状態は実行時グラフから抽出し，実行成否はVHの応答で評価する．資料と各条件の対応は\path{Paper/revision-completion/Precondition-Sources.md}に記録した．

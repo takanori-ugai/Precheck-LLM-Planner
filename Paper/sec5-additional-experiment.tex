@@ -2,9 +2,66 @@
 
 基本性能に関わる機構を検討するため，検証方式，修復のタイミング，再考，事例検索を変えて比較する．対象は状態変化の\texttt{test\_task1, test\_task6}と配置の\texttt{test\_task1, test\_task65}であり，4タスク，2モデル，10条件，各3反復の計240エピソードである．初期充足，未達対象の追跡，複数物体の配置，容器操作という異なる判断を扱うために選択した．モデルは\texttt{gpt-4o-mini-2024-07-18}と\texttt{gpt-4o-2024-08-06}，temperatureは0，各要求の出力上限は256トークンとした．初期位置を固定し，各試行のAPI呼出し前に参照グラフとの記号状態一致，全ノードの位置差0.001以下，四元数距離0.0001以下を確認した．全240件がこの照合を通過した．対象件数と初期化の統制は\ref{sec5.4}の基本性能評価と異なるため，本節内の条件間で比較する．
 
-C0は前提条件検証なし，C1は提案手法のLLM検証，C2は同じ抽出知識と条件辞書による記号検証である．C3は検証せず実行し，VH失敗後の最新知識とエラーに基づき1回修復する独自対照で，失敗実行も参照列長の2倍の実行予算に含める．C5は検証器だけに完全グラフを与え，計画器への知識は変えない．同じ8操作の条件を評価するが，既知の空状態集合と情報不足の区別もC2と異なる．
+C0は前提条件検証なし，C1は提案手法のLLM検証，C2は同じ抽出知識と条件辞書による記号検証である．C3は検証せず実行し，VH失敗後の最新知識とエラーに基づき1回修復する独自対照で，失敗実行も参照列長の2倍の実行予算に含める．修復は予算が残る場合に1回行い，再失敗すれば終了する．C5は検証器だけに完全グラフを与え，計画器への知識は変えない．同じ8操作の条件を評価するが，既知の空状態集合と情報不足の区別もC2と異なる．
 
 C1-budgetとC4-budgetは，毎回の行動決定で生成・レビュー・説明・再生成の4要求を行う専用対照である．前者は条件辞書，後者は条件辞書を提示しない一般的再考を用いる．両者の出力上限合計は1024トークンだが，入力長，実際の出力長，計画全体の要求数は一致しない．必要時のみ再生成するC1とは別仕様である．R-random，R-fixed，R-noneはC1の事例だけを，保存済みの反復別ランダム1例，固定1例，空の事例メッセージに変更する．C1が意味類似検索の基準となる．反復ごとにタスク・モデルのブロックと条件順をseed 20260907で並べ替え，事前に保存した．
+
+
+\subsubsection{実行設定と比較条件の詳細}\label{sec5.control_settings}
+実行制御側はPython 3.12.3，spaCy 3.7.5，\texttt{en\_core\_web\_sm} 3.7.1，inflection 0.5.1を用い，Windows上のVHへ接続した．通信クライアントのコミットは\texttt{58970fd80951c2eaa1af713e0917d1a105353ad8}である．シーン番号から1を引いて初期化し，状態配列を上書きした後，表\ref{tab:fixed_positions_internal}の位置へ人物を配置した．接続先バイナリの固定版は未確認であり，シーン・IDの互換性と状態照合を確認した．実行要求は\texttt{find\_solution=False}，録画あり，カメラ\texttt{PERSON\_FROM\_BACK}とし，API・VH要求の自動再試行は行わない．表中のS1・S6は状態変化の\texttt{test\_task1}・\texttt{test\_task6}，P1・P65は配置の\texttt{test\_task1}・\texttt{test\_task65}を表す．
+
+\begin{table}[tb]
+\caption{固定した人物位置（VH座標）}\label{tab:fixed_positions_internal}
+\centering\small
+\setlength{\tabcolsep}{3pt}
+\begin{tabular}{lrrr}
+\hline
+タスク & x & y & z \\
+\hline
+S1 & 2.90539312 & 1.25 & -5.62809753 \\
+S6 & -2.41545 & 1.25 & -7.44353151 \\
+P1 & -6.287474 & 1.247 & 0.1396097 \\
+P65 & 9.582918 & 1.25 & -4.21981239 \\
+\hline
+\end{tabular}
+\end{table}
+
+状態照合では，同じID集合のクラス・状態・属性・関係辺を順序に依存せず比較する．位置差は全ノードのユークリッド距離の最大，姿勢差は四元数の符号同値を考慮した$\min(\|q_1-q_2\|,\|q_1+q_2\|)$の全ノード最大とする．全ノードで位置・姿勢が得られ，記号一致と位置差0.001以下・姿勢差0.0001以下を満たすことを条件とした．以下の再実行でも同じ照合を用いる．
+
+条件順の乱数生成器はseed 20260907で初期化し，3反復で共用した．並べ替え前はタスクS1・S6・P1・P65，モデルmini・4o，条件C0・C1・C2・C3・C1-budget・C4-budget・C5・R-random・R-fixed・R-noneの順とし，タスク・モデルのブロックとブロック内の条件順を並べ替えた．
+
+検索条件では，選択した名前に属する最長の事例列を用い，長さ同点はデータの格納順で選ぶ．C1の選択事例は表\ref{tab:semantic_internal}に示す．R-fixedは候補名を辞書順に並べた最初の名前を用い，状態変化は``Turn off all candles''，配置は``Put all apples in the fridge''となる．R-randomは辞書順の異なる候補名から一様に選択する．文字列\texttt{20260906/種別/タスクID/反復}のUTF-8バイト列のSHA-256先頭16桁を整数seedとして，Pythonの\texttt{random.Random(seed).choice}を適用した．種別は\texttt{state\_change\_task}または\texttt{placement\_task}，反復は0・1・2とし，両モデルで同じ選択を共有する．
+
+\begin{table*}[tb]
+\caption{意味類似検索で選択した事例}\label{tab:semantic_internal}
+\centering\small
+\setlength{\tabcolsep}{3pt}
+\begin{tabular}{lp{.46\textwidth}rrr}
+\hline
+タスク & 選択した指示 & 類似度 & 上位差 & 列長 \\
+\hline
+S1 & Turn on all tablelamps & 0.611 & 0.066 & 6 \\
+S6 & Turn on all tablelamps & 0.611 & 0.066 & 6 \\
+P1 & Put all cupcakes on the kitchentable & 0.854 & 0.049 & 8 \\
+P65 & Put all plums on the kitchentable & 0.761 & 0.098 & 8 \\
+\hline
+\end{tabular}
+\end{table*}
+
+記号判定では表\ref{tab:condition_source_scope}の条件を原子に分け，いずれかがfalseならfalse，falseがなくunknownがあればunknown，全原子がtrueならtrueとする．C2では，近接の対象IDが抽出辞書にない場合と対象状態が欠落・空配列の場合をunknownとし，保持は左右の手のIDと照合する．C5は完全グラフのCLOSE・HOLDS\_RH・HOLDS\_LH辺を参照し，空の状態集合も既知として扱う．このためCLOSEDが存在しない場合の否定条件の扱いがC2と異なる．両条件ともtrueだけを受理し，それ以外は1回再生成する．C2はfalse条件に続けてunknown条件を\texttt{Cannot determine from the available knowledge: }付きで列挙し，C5はfalse・unknownの条件文をそのまま列挙して，再生成の理由へ渡す．
+
+C3ではVH失敗後の知識へ更新し，VHの失敗応答JSONを理由に添えて修復する．C1-budgetはListing~\ref{prompt3}で条件をレビューし，充足・違反・情報不足の説明を求める．条件辞書にない操作では形式判定を行う．C4-budgetは環境・タスク・候補を提示し，タスクの次行動として妥当かをレビューさせ，保持または修正の理由を求める．両budget条件ともレビューがYesでも再生成し，説明応答をそのまま理由として渡す．生成・レビュー・説明・再生成を各256トークン上限とし，終了判定は別要求とする．両条件のレビュー・説明文をListing~\ref{lst:control_reviews}に示す．
+\begingroup
+\capwidth=\linewidth
+\begin{lstlisting}[basicstyle=\ttfamily\scriptsize,columns=fullflexible,caption={budget条件のレビュー・説明指示},label=lst:control_reviews]
+C1-budget explanation:
+Briefly explain the satisfied, violated or unknown conditions. If all are satisfied, say so.
+C4-budget review:
+Review whether this candidate is a sensible next step for the task. Reply Yes or No. Do not use a supplied precondition checklist.
+C4-budget explanation:
+Briefly explain whether to retain or revise this candidate based on the task and current knowledge.
+\end{lstlisting}
+\endgroup
 
 \begin{table}[tb]
 \caption{構成要素比較の成功数（各条件4タスク$\times$3反復，分母12）}\label{tab:step4_pilot}
@@ -27,33 +84,68 @@ R-none & 3 & 3 \\
 \end{tabular}
 \end{table}
 
-\ref{tab:step4_pilot}には参照再生が失敗した配置1件も含めた．参照成功3件のみの成功数と反復別の成績は表\ref{tab:repeat_internal}に示す．初期充足の状態変化1件は全条件・全反復で行動せず成功し，表の各分子に3件ずつ含まれる．4タスクは3種類の指示名に対応する．C1とC0，C1-budgetとC4-budgetなどの差の方向はモデルによって異なる．
+\ref{tab:step4_pilot}には参照再生が失敗した配置1件も含めた．参照成功3件のみの成功数と反復別の成績は\path{Paper/vh_step4/repeat_metrics.csv}に示す．初期充足の状態変化1件は全条件・全反復で行動せず成功し，表の各分子に3件ずつ含まれる．4タスクは3種類の指示名に対応する．C1とC0，C1-budgetとC4-budgetなどの差の方向はモデルによって異なる．
 
 \subsubsection{対照条件と検索変更の結果}
 C1とC0の成功数の差はminiで1件，4oで0件だった．C2とC1ではminiで5件減，4oで1件増となり，LLM判定と記号判定の優劣も一様ではなかった．前提条件を明示するC1-budgetは一般的再考のC4-budgetに対してminiで2件少なく，4oで1件多かった．また，4oのC1とC3はともに9/12成功だが，途中を含む失敗実行数はC1で3回，C3で9回である．終端の成功数と途中の失敗実行数を分けて評価する必要がある．
 
-検索条件のnoneの成功3件はいずれも初期充足タスクだった．miniでは意味類似検索のC1が9/12，randomが8/12，fixedが7/12だが，同一タスク・反復の対応比較ではrandomだけが成功する組が3件，C1だけが成功する組が4件あった．4oは三つの検索条件とも9/12だった．意味類似検索が個々のケースで常に優位とはいえず，タスク名以外の状態を検索に用いる効果も測定していない．randomの保存済み反復別選択は両モデルで共有した．各反復の成功数は表\ref{tab:repeat_internal}，検索事例の選択規則は\ref{app:retrieval_conditions}に示す．
+検索条件のnoneの成功3件はいずれも初期充足タスクだった．miniでは意味類似検索のC1が9/12，randomが8/12，fixedが7/12だが，同一タスク・反復の対応比較ではrandomだけが成功する組が3件，C1だけが成功する組が4件あった．4oは三つの検索条件とも9/12だった．意味類似検索が個々のケースで常に優位とはいえず，タスク名以外の状態を検索に用いる効果も測定していない．randomの保存済み反復別選択は両モデルで共有した．検索事例の選択規則は\ref{sec5.control_settings}に示した．
 
 \subsubsection{判定・終了・実行の診断}
 
 判定過程について，C1の候補に対するLLM判定を，抽出辞書上のJSON条件のtrue/falseと照合した正答数は，miniで34/43（誤受理4，誤棄却5），4oで45/54（誤受理9，誤棄却0）だった．これらは異なる軌跡で観測された判定である．情報不足のラベルは分母から除く規則としたが，このC1集計には該当例がなかった．
 
-これとは別の固定入力による静的評価では，既知の前提条件24入力を各3反復し，miniは51/72，4oは53/72がJSONラベルと一致した．情報不足4入力の各3反復，計12判定を各モデルの分母から除いている．構造化事実から作った共通問題であり，VH実行可能性の正解率ではなく，実行中のC1の43・54判定と合算しない．入力の構成と判定規則は\ref{app:static_conditions}に示す．
+これとは別の固定入力による静的評価では，既知の前提条件24入力を各3反復し，miniは51/72，4oは53/72がJSONラベルと一致した．情報不足4入力の各3反復，計12判定を各モデルの分母から除いている．構造化事実から作った共通問題であり，VH実行可能性の正解率ではなく，実行中のC1の43・54判定と合算しない．入力は8操作の充足例各1件と，16原子条件を一つずつ違反させた16件である．情報不足例ではSWITCHON・SWITCHOFF・OPEN・CLOSEの対象状態を欠落させた．temperatureは0，出力上限は160トークン，自動再試行なしとし，\ref{sec4.1}の自然言語化とListing~\ref{prompt3}の判定を用いた．入力全文と条件別結果は\path{Paper/nonvh/}で公開する．
 
-全10条件を合わせた終了判定はminiで496回，4oで600回であり，未達なのに厳密な文字列Endを返した回数はそれぞれ26回，0回だった．達成済みなのに非Endは両モデル0回だが，4oにはEnd/Continue以外の応答が2回あり，書式違反として別記した．一方，完全グラフ上のJSON条件がtrueだった実行でも，miniは376回中28回，4oは447回中37回でVHが失敗を返した．この集計は各試行の途中時点の実行を含む．判定ラベルの定義は\ref{app:symbolic_rules}に示す．
+全10条件を合わせた終了判定はminiで496回，4oで600回であり，未達なのに厳密な文字列Endを返した回数はそれぞれ26回，0回だった．達成済みなのに非Endは両モデル0回だが，4oにはEnd/Continue以外の応答が2回あり，書式違反として別記した．一方，完全グラフ上のJSON条件がtrueだった実行でも，miniは376回中28回，4oは447回中37回でVHが失敗を返した．この集計は各試行の途中時点の実行を含む．LLMの受理は部分文字列Yesの有無で判定し，JSON条件がfalseの候補を受理すれば誤受理，trueの候補を棄却すれば誤棄却とする．unknownは正答数の分母から除外する．終了判定は厳密なEndとゴール充足を照合する．
 
-本比較では完全グラフ，抽出知識，全プロンプト・応答，生成候補，検証，再生成，実行前後の状態を記録した．評価用ドライバはEnd判定の入力となった直前グラフで成否を計算し，終了後にも独立に最終グラフを取得する．\ref{sec4.2}のNotebook実装はEnd後に再取得するため採点時点が異なるが，本比較の240件では成功ラベルと最終ゴール充足の不一致はなかった．成功API要求は3047件，入力1052576トークン，出力30594トークンであり，通常単価・キャッシュ割引なしの推定費用は1.681766米ドルだった．通信失敗と出力上限による打切りは0件である．この費用は本比較240件の推定値である．反復別の成績は表\ref{tab:repeat_internal}，実行設定・費用の算出方法は\ref{app:execution_conditions}に示す．
+本比較では完全グラフ，抽出知識，全プロンプト・応答，生成候補，検証，再生成，実行前後の状態を記録した．評価用ドライバはEnd判定の入力となった直前グラフで成否を計算し，終了後にも独立に最終グラフを取得する．\ref{sec4.2}のNotebook実装はEnd後に再取得するため採点時点が異なるが，本比較の240件では成功ラベルと最終ゴール充足の不一致はなかった．成功API要求は3047件，入力1052576トークン，出力30594トークンであり，通常単価・キャッシュ割引なしの推定費用は1.681766米ドルだった．通信失敗と出力上限による打切りは0件である．この費用は本比較240件の推定値である．費用は入力・出力トークン数に記録時点の通常単価を掛けて算出した．100万トークン当たりminiは入力0.15・出力0.60米ドル，4oは入力2.50・出力10.00米ドルとした．
 
 \subsubsection{棄却候補の再実行と状態再現の制約}\label{sec5.replay}
 棄却された行動の実行可能性を検討するため，構成要素比較でLLM判定が棄却した59候補から8件を選び，候補に先行する成功行動の接頭列を再生してから候補を実行した．選択対象は\texttt{precondition}段階で棄却された候補であり，保存順にタスクごとに異なるモデル・条件の組を最大3件選んだ．内訳は状態変化\texttt{test\_task6}が3件，配置\texttt{test\_task1}が2件，配置\texttt{test\_task65}が3件で，初期充足の状態変化\texttt{test\_task1}には該当候補がなかった．実際に選ばれたのはC1と検索変更条件だった．
 
-棄却候補8件の再実行はVH成功6件・失敗2件で，API要求は0件だった．ただし，元の候補判定入力のグラフと候補再実行直前のグラフを事後照合したところ，記号状態が一致したのは6/8件，さらに構成要素比較の240件と同じ位置・姿勢の許容差を満たしたのは2/8件だった．再生コードによる状態照合は実行後に行った．候補ごとの条件・行動・VH成否・状態照合値を表\ref{tab:replay_internal}に示す．
+棄却候補8件の再実行はVH成功6件・失敗2件で，API要求は0件だった．ただし，元の候補判定入力のグラフと候補再実行直前のグラフを事後照合したところ，記号状態が一致したのは6/8件，さらに構成要素比較の240件と同じ位置・姿勢の許容差を満たしたのは2/8件だった．再生コードによる状態照合は実行後に行った．候補ごとの条件・行動・各段階の結果を表\ref{tab:replay_summary}に示す．
 
-候補時点の状態一致を実行の条件とする評価では，同じ8候補について初期化と成功接頭列の再生を行い，候補実行直前の最後のグラフ取得で照合した．途中グラフの転送は行わず，不一致候補は実行しなかった．8件すべてで初期化照合と接頭列再生が完了し，記号一致は7件，位置・姿勢を含む照合通過は2件だった．通過した2件を実行し，いずれもVH成功だったが，両者は接頭行動を持たないstep 1の候補である．残る6件は状態不一致による未実行であり，失敗とも成功とも数えない．API要求は0件である．手順と個別値は表\ref{tab:replay_gated}に示す．
+候補時点の状態一致を実行の条件とする評価では，同じ8候補について初期化と成功接頭列の再生を行い，候補実行直前の最後のグラフ取得で照合した．途中グラフの転送は行わず，不一致候補は実行しなかった．8件すべてで初期化照合と接頭列再生が完了し，記号一致は7件，位置・姿勢を含む照合通過は2件だった．通過した2件を実行し，いずれもVH成功だったが，両者は接頭行動を持たないstep 1の候補である．残る6件は状態不一致による未実行であり，失敗とも成功とも数えない．API要求は0件である．照合は候補実行前の最後のグラフ取得で行い，通過時だけ候補を実行して実行後グラフを取得した．
 
-接頭列方式で不一致だった6件には，人物のいないシーンへ候補時点の保存グラフを1回転送する復元方式を適用し，同じ許容差で実行直前に照合した．配置\texttt{test\_task65}のC1・GPT-4oとR-fixed・GPT-4oの2件は照合を通過し，候補\texttt{[OPEN] <fridge> (103)}はともにVH成功だった．他4件は，3件でFACING関係，1件でcupcakeの位置・姿勢とON関係が一致せず，候補未実行とした．この方式のAPI要求と通信エラーは0件である．両方式を通じて異なる4候補を照合通過後に実行できた．試行結果を確認した上で，照合通過4件と未再現4件を評価結果として報告した．復元方式の個別値と対象範囲を表\ref{tab:clean_restore}に示す．
+接頭列方式で不一致だった6件には，人物のいないシーンへ候補時点の保存グラフを1回転送する復元方式を適用し，同じ許容差で実行直前に照合した．配置\texttt{test\_task65}のC1・GPT-4oとR-fixed・GPT-4oの2件は照合を通過し，候補\texttt{[OPEN] <fridge> (103)}はともにVH成功だった．他4件は，3件でFACING関係，1件でcupcakeの位置・姿勢とON関係が一致せず，候補未実行とした．この方式のAPI要求と通信エラーは0件である．両方式を通じて異なる4候補を照合通過後に実行できた．試行結果を確認した上で，照合通過4件と未再現4件を評価結果として報告した．保存グラフの転送は\texttt{animate\_character=True, transfer\_transform=True, randomize=False}で1回行った．
+
+
+\begin{table*}[tb]
+\caption{棄却候補8件の段階別再実行結果}\label{tab:replay_summary}
+\centering\scriptsize\setlength{\tabcolsep}{3pt}
+\begin{tabular}{rlllrrp{.28\textwidth}lll}
+\hline
+番号 & タスク & モデル & 条件 & 反復 & step & 棄却候補 & 事後照合方式 & 接頭列方式 & 復元方式 \\
+\hline
+1 & S6 & 4o & C1 & 0 & 4 & SWITCHON lightswitch 261 & 成功 & 未実行 & 未実行 \\
+2 & S6 & mini & C1 & 0 & 4 & SWITCHON lightswitch 261 & 成功 & 未実行 & 未実行 \\
+3 & S6 & 4o & R-fixed & 0 & 1 & SWITCHON lightswitch 261 & 成功 & 成功 & -- \\
+4 & P1 & mini & R-fixed & 1 & 7 & PUTIN cupcake 195 kitchencounter 238 & 失敗 & 未実行 & 未実行 \\
+5 & P1 & mini & R-random & 2 & 2 & OPEN desk 108 & 失敗 & 未実行 & 未実行 \\
+6 & P65 & 4o & C1 & 0 & 2 & OPEN fridge 103 & 成功 & 未実行 & 成功 \\
+7 & P65 & mini & C1 & 0 & 1 & WALK kitchencounter 92 & 成功 & 成功 & -- \\
+8 & P65 & 4o & R-fixed & 0 & 2 & OPEN fridge 103 & 成功 & 未実行 & 成功 \\
+\hline
+\end{tabular}
+\end{table*}
+事後照合方式は候補実行後に保存グラフを比較し，状態まで一致したのは3・7番だった．接頭列方式と復元方式の成功は，実行直前に状態照合を通過した候補のVH成功を表す．未実行は状態不一致，--は前段階で通過したため復元対象外である．未再現の1・2・5番はFACING関係，4番はcupcakeの位置・姿勢とON関係が不一致だった．状態差の個別値と記録グラフは\path{Paper/vh_aligned_prefix/}と\path{Paper/vh_clean_restore/}で公開する．
 
 \subsubsection{判定応答と違反説明の人手確認}\label{sec5.review}
 前提条件の判定応答と，未充足条件を列挙する別要求の応答を区別する．例えば状態変化\texttt{test\_task6}，C1・GPT-4o・反復0・step 4では，ON状態のlightswitch 261に対する候補\texttt{[SWITCHON] <lightswitch> (261)}にNoを返し，未充足条件の要求には\texttt{<lightswitch> (261) is OFF.}を返し，\texttt{[WALK] <lightswitch> (427)}へ再生成した．OFFという文は「満たされない条件」を列挙する要求への応答であり，現在状態をOFFと断定した文とは限らない．状態だけでなく，どの要求への応答かを踏まえて説明を評価する必要がある．
 
-判定応答を対象とした代表8件の票には，著者ugaiが2026年9月7日に全件「判断不能」，根拠「情報が不十分」と記入した．この票は\texttt{precondition}が対象であり，別要求\texttt{unmet}の違反説明の評価とは区別する．8件すべてに保存された\texttt{unmet}の応答全文・要求文・対応状態を示した著者確認では，最終記入は「正しい」1件・「誤り」7件だった．採点基準の説明と個別例の整合性照会をAI支援で複数回行った後の，同一著者による記入結果である．一部の根拠には未充足条件の列挙という評価対象との対応に曖昧さが残る．自動作成した仮ラベルも人手結果に含めない．採点対象と段階別応答は\ref{app:review_conditions}，ラベル・記入根拠全文と制約は\ref{app:author_unmet_review}に示す．これは\ref{sec5.cases}の4タスクの説明内容の確認とも別の作業である．
+判定応答を対象とした代表8件の票には，著者ugaiが2026年9月7日に全件「判断不能」，根拠「情報が不十分」と記入した．この票は\texttt{precondition}が対象であり，別要求\texttt{unmet}の違反説明の評価とは区別する．8件すべてに保存された\texttt{unmet}の応答全文・要求文・対応状態を示した著者確認では，最終記入は「正しい」1件・「誤り」7件だった．採点基準の説明と個別例の整合性照会をAI支援で複数回行った後の，同一著者による記入結果である．一部の根拠には未充足条件の列挙という評価対象との対応に曖昧さが残る．自動作成した仮ラベルも人手結果に含めない．採点基準は，未充足条件の列挙と網羅が妥当なら「正しい」，部分的な妥当性と誤り・欠落があれば「一部正しい」，主要説明が不適切なら「誤り」，資料不足なら「判断不能」とした．初回は現在状態との一致として正しい2件・誤り6件と採点されたため，別票で再確認した．例えば表\ref{tab:replay_summary}の4番では非保持を示す状態が「誤り」の根拠として記され，6・8番では近接が必要という根拠が記されたが，それらと未充足条件の列挙を採点する基準との対応に曖昧さが残る．応答と根拠の例を表\ref{tab:review_examples}に示す．応答全文と著者記入の根拠は\path{Paper/human-unmet-review/semantic_review.csv}で公開する．これは\ref{sec5.cases}の4タスクの説明内容の確認とも別の作業である．
+
+\begin{table*}[tb]
+\caption{違反説明と著者記入の根拠の例（番号は表\ref{tab:replay_summary}と共通）}\label{tab:review_examples}
+\centering\small
+\begin{tabular}{rlp{.36\textwidth}p{.43\textwidth}}
+\hline
+番号 & 著者ラベル & 未充足条件の応答 & 著者記入の根拠 \\
+\hline
+4 & 誤り & You are holding \textless{}cupcake\textgreater{} (195) in your right hand or left hand. & cupcake (196) and cupcake (195) are ON the desk (108). \\
+6 & 誤り & You are close to \textless{}fridge\textgreater{} (103). & You are INSIDE the kitchen (11). しかし、冷蔵庫に近いも必要 \\
+8 & 誤り & You are close to \textless{}fridge\textgreater{} (103). & You are INSIDE the kitchen (11).だが冷蔵庫に近いも必要 \\
+\hline
+\end{tabular}
+\end{table*}

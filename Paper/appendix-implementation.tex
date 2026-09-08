@@ -33,30 +33,35 @@ Listing~\ref{lst:prompt_spec}に，終了判定，行動生成，前提条件判
 \subsection{前提条件辞書と代入規則}\label{app:conditions}
 Listing~\ref{lst:conditions}は公開JSONそのものである．操作文字列を空白で分割し，先頭の角括弧を除いた操作名で辞書を参照する．トークン数が5ならObject1とObject2へ対象名・IDの組を代入し，それ以外ではObjectへ最初の対象名・IDを代入する．未定義の操作名なら形式不正の再生成へ進むが，必要なトークンがない場合等の例外を捕捉して必ず修正する処理はない．
 
-この辞書の条件は固定した自然言語表現である．元資料からの作成手順やシミュレータとの網羅的な対応は未確認である．
+この辞書の条件は固定した自然言語表現である．公式Actions文書の各操作の条件を，近接，保持，対象状態の項目ごとに照合した．条件文中のObject，Object1，Object2は対象名・IDを代入する箇所に対応する．
 
 \lstinputlisting[basicstyle=\ttfamily\scriptsize,columns=fullflexible,caption={公開されている8操作の前提条件辞書},label=lst:conditions]{../precondition.json}
 
-\subsubsection{参照可能なVHコードとの条件の照合}
-作成時の転記記録とは別に，VHの公開Pythonグラフ実行器（コミット\texttt{58970fd80951c2eaa1af713e0917d1a105353ad8}）の条件検査を現在の辞書と照合した．表\ref{tab:condition_source_scope}は当該コードで確認できる差であり，辞書をその版から作成した証拠でも，接続先Unityバイナリの内部実装との一致を示すものでもない．作業者・作成日・転記手順は依然として記録未回収である．
+\subsubsection{公式資料と前提条件辞書の対応}
+VH v2.3の公式Actions文書と\texttt{resources}を，前提条件の説明・照合に利用した．2026年9月8日に確認したリポジトリのコミットは\texttt{58970fd80951c2eaa1af713e0917d1a105353ad8}である．Actions文書はWalk，Grab，Open，Close，Put，PutIn，SwitchOn，SwitchOffの各項を参照した．表\ref{tab:condition_source_scope}に，現在の辞書が採用する条件と，公式資料で確認できる条件を整理する．
+
 \begin{table*}[tb]
-\caption{自然言語条件辞書と公開Pythonグラフ実行器の照合範囲}\label{tab:condition_source_scope}
+\caption{8操作の前提条件辞書と公式資料の対応}\label{tab:condition_source_scope}
 \centering\scriptsize\setlength{\tabcolsep}{3pt}
-\begin{tabular}{p{.14\textwidth}p{.27\textwidth}p{.49\textwidth}}
+\begin{tabular}{p{.12\textwidth}p{.29\textwidth}p{.49\textwidth}}
 \hline
-辞書の操作 & 該当する検査 & 照合で確認できる追加条件・差 \\
+操作 & 辞書が採用する条件 & 公式Actions文書および公開コードとの対応 \\
 \hline
-WALK & WalkExecutor.check\_walk & 辞書は非保持のみ．実行器は人物の座位・臥位や部屋情報も検査する． \\
-GRAB & GrabExecutor & 近接に加え，GRABBABLE属性等，閉じた容器内か，空いた手の有無などを検査する． \\
-SWITCHON／SWITCHOFF & SwitchExecutor.check\_switchable & 近接とOFF／ONに加え，HAS\_SWITCH属性を要求する． \\
-OPEN／CLOSE & OpenExecutor.check\_openable & 近接とCLOSED／OPENに加え，開閉可能性（desk・windowの例外あり）を検査．OPENでは空いた手とON状態でないことも検査する． \\
-PUT & \_check\_puttable（ON） & 保持と配置先への近接を検査．この実行器の対応操作名はPUTBACKであり，本データのPUTとの別名同一性をUnityの実行仕様として仮定しない． \\
-PUTIN & \_check\_puttable（INSIDE） & 保持・近接に加え，CAN\_OPENを持つ配置先にはOPENを要求する．辞書の単なる「not CLOSED」と同値とは限らない． \\
+WALK & 対象を左右どちらの手にも保持していない & Walkの非把持条件に対応．同項には非座位と到達可能性も記載されている． \\
+GRAB & 対象に近接し，対象を保持していない & Grabに近接条件が記載されている．非保持は公開コードの\texttt{GrabExecutor.check\_grabbable}による重複把持の拒否と対応付けた．同項には把持可能属性，到達可能性，空いた手も記載されている． \\
+SWITCHON & 対象に近接し，対象がOFF & SwitchOnの近接・OFF条件に対応．同項にはスイッチ属性も記載されている． \\
+SWITCHOFF & 対象に近接し，対象がON & SwitchOffの近接・ON条件に対応．同項にはスイッチ属性も記載されている． \\
+OPEN & 対象に近接し，対象がCLOSED & Openの近接・CLOSED条件に対応．同項には開閉可能属性，到達可能性，空いた手も記載されている． \\
+CLOSE & 対象に近接し，対象がOPEN & Closeの近接・OPEN条件に対応．同項には開閉可能属性，到達可能性，空いた手も記載されている． \\
+PUT & 対象物を保持し，配置先に近接 & Putの2条件に対応．文書のプログラム構造では\texttt{put}，同項の例とPython実行器では\texttt{putback}という表記を用いる． \\
+PUTIN & 対象物を保持し，配置先に近接し，配置先がCLOSEDでない & PutInの3条件に対応．Python実行器の\texttt{\_check\_puttable}では，開閉可能属性のある配置先にOPENを要求する． \\
 \hline
 \end{tabular}
 \end{table*}
 
-この差からも，条件辞書の充足をシミュレータ全制約の充足とみなすことはできない．Python実行器の条件をUnityでの実行可能性ラベルとして代用せず，実行成否は実際のVH応答で評価する．
+\texttt{resources/properties\_data\_unity.json}でUnity側の物体属性を，\texttt{properties\_data.json}でPythonグラフ実行器側の属性を，\texttt{object\_states.json}で物体が取り得る状態を確認した．例えばUnity側ではlightswitchに\texttt{HAS\_SWITCH}，fridgeに\texttt{CAN\_OPEN}と\texttt{CONTAINERS}，plumに\texttt{GRABBABLE}が定義されている．状態資料にはlightswitchのON／OFFとfridgeのOPEN／CLOSEDが含まれる．各試行の現在状態と保持・近接関係は，実行時に取得する環境グラフから抽出する．
+
+表の採用条件を自然言語で固定してLLMへ渡す処理と，候補の実行をVHに要求する処理を分けて実装している．公式文書には物体属性，到達可能性，空いた手などの条件もあり，実行成否はVHの応答で評価する．GRABの補足照合には，公開Pythonグラフ実行器の\texttt{execution.py}\footnote{\url{https://github.com/xavierpuigf/virtualhome/blob/58970fd80951c2eaa1af713e0917d1a105353ad8/virtualhome/simulation/evolving_graph/execution.py}}を用いた．同コードは実行履歴の把持記録を検査し，本辞書は左右の保持関係を条件に用いる．資料の取得日，固定版，各条件の対応は\path{Paper/revision-completion/Precondition-Sources.md}に記録した．
 
 \subsection{知識抽出と自然言語化}\label{app:knowledge}
 抽出の処理順はAlgorithm~\ref{alg:extract}に示す．物体記録は状態配列，単一の支持物・容器・所属部屋，保持対象のリストを持つ．グラフのnodes・edgesの順序で走査し，単一値の欄は後から見つかった辺で上書きする．追加ノードが元の抽出集合にある場合にも，その記録を初期化して再走査する．エージェントの保持物は名前・IDの取得対象となるが，保持物を新たな抽出の起点として再帰展開するわけではない．
@@ -105,6 +110,6 @@ Listing~\ref{lst:knowledge_state}・\ref{lst:knowledge_placement}は，変換関
 
 公開Notebookは\texttt{gpt-4o-mini}というモデル別名とtemperature 0.0を指定する．Multiの評価ループは1件で停止する\texttt{break}を含み，Notebookの出力キーは\texttt{action\_script}，基本性能評価の結果JSONのキーは\texttt{action script}である．したがって，Notebookの無変更実行で全モデル・全条件の結果を再生成できるとはいえない．本文の処理仕様はこのコードに基づくもので，各試行の実装との完全な一致は確認できない．
 
-基本性能評価の各タスク種別には，ベースライン1条件とSingle／Multi・2モデル・検証あり／なしの8条件の結果が対応する．ベースラインはHuangら~\cite{huang22}の著者公開実装（\url{https://github.com/huangwl18/language-planner}）を本研究のデータセットで実行したものである．この出所と実行対象は著者による確認に基づく．状態変化312件・配置103件のタスク別結果JSONは本研究のテスト集合に対応する．一方，実験時に使用した公開実装のコミット，変更差分，GPT-4oへの接続処理，Action Translation・Dynamic Exampleの具体的なモデル・候補集合・設定，自動探索・停止・結果記録処理の詳細は確認できない．公開リポジトリの現在のコードが入手可能であることと，実験時の実行コード・設定を特定できることは区別する．VHのバイナリ・シーンの固定版や，前提条件の各文と参照資料の対応にも記録がない．現在の公開実装の既定値，構成要素比較の設定や提案実装の検索・停止規則を，これらの不明な設定の代わりに用いない．構成要素比較で確認できる実行設定は\ref{app:execution_conditions}に示す．
+基本性能評価の各タスク種別には，ベースライン1条件とSingle／Multi・2モデル・検証あり／なしの8条件の結果が対応する．ベースラインはHuangら~\cite{huang22}の著者公開実装（\url{https://github.com/huangwl18/language-planner}）を本研究のデータセットで実行したものである．この出所と実行対象は著者による確認に基づく．状態変化312件・配置103件のタスク別結果JSONは本研究のテスト集合に対応する．一方，実験時に使用した公開実装のコミット，変更差分，GPT-4oへの接続処理，Action Translation・Dynamic Exampleの具体的なモデル・候補集合・設定，自動探索・停止・結果記録処理の詳細は確認できない．公開リポジトリの現在のコードが入手可能であることと，実験時の実行コード・設定を特定できることは区別する．VHのバイナリ・シーンの実験時の固定版には記録がない．前提条件の各文と現在参照できる公式資料の対応は表\ref{tab:condition_source_scope}に示す．現在の公開実装の既定値，構成要素比較の設定や提案実装の検索・停止規則を，これらの不明な設定の代わりに用いない．構成要素比較で確認できる実行設定は\ref{app:execution_conditions}に示す．
 
-著者への確認でも，これらの未確認事項を補う実験時の追加保有資料はなかった．利用できない範囲は，ベースラインの実験時コードの版・変更差分と詳細設定，各試行とコード版・日時の対応，モデル・生成設定・依存環境の実行記録，データの構築・除外・分割履歴，前提条件の原資料と転記・整形記録，途中候補・判定・グラフ，検索の実採択・重み版・候補順序，実験時VHバイナリ・シーン・プラットフォームの対応である．著者公開実装を用いて得た結果と確認不能な範囲を開示する．
+著者への確認でも，これらの未確認事項を補う実験時の追加保有資料はなかった．利用できない範囲は，ベースラインの実験時コードの版・変更差分と詳細設定，各試行とコード版・日時の対応，モデル・生成設定・依存環境の実行記録，データの構築・除外・分割履歴，前提条件辞書の作成時の転記・整形記録，途中候補・判定・グラフ，検索の実採択・重み版・候補順序，実験時VHバイナリ・シーン・プラットフォームの対応である．著者公開実装を用いて得た結果と確認不能な範囲を開示する．
