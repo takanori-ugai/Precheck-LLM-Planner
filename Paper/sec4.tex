@@ -102,6 +102,8 @@ Listing~\ref{prompt1}はMulti Promptsにおける入力の内容を示す．実�
 
 事例検索には\texttt{sentence-transformers/all-MiniLM-L6-v2}を用いる．事例集合の異なるタスク名を埋め込み，入力タスク名とのコサイン類似度が最大の1名を選ぶ．同名の事例が複数ある場合は最長の参照行動列を採択する．長さ同点はJSON中で先に現れる事例を選ぶ．検索の候補名は公開コードで\texttt{set}からリストへ変換されるため，類似度同点時の候補順序は固定されていない．シーン，初期状態，ゴールIDは検索に用いない．
 
+この選択処理では，タスク名の重複を除いて検索した後に，同名事例の行動列長を比較する．Huangらの公開実装は各事例のタスク名を検索して最大類似度の事例を直接取得するため，同名事例から最長列を選ぶ点が異なる．両方式の「タスク名」はいずれも自然言語の指示文そのものを指し，これをベクトル化して検索する点は共通である．ここでの選択手順の違いは，検索入力の種類ではなく，同名事例から最長の参照行動列を採択する処理にある．
+
 
 
 \subsection{前提条件の検証} \label{sec4.4}
@@ -246,7 +248,7 @@ VHは，仮想家庭内で活動をシミュレートすることを目的とし
 
 VHでは，一連のアクションステップを記述したアクションスクリプトに基づいて，エージェントを行動させることができる．各ステップは操作，対象名，対象IDで構成される（例：[WALK] $\langle livingroom\rangle$ (336)）．公開された\texttt{precondition.json}は8操作の自然言語条件を保持する．例えばSWITCHONでは対象への近接とOFF状態，PUTINでは対象物の保持，配置先への近接，配置先がCLOSEDでないことを要求する．全条件を表\ref{tab:condition_source_scope}に示す．
 
-前提条件の説明と条件文の照合には，VH v2.3の公式Actions文書\footnote{\url{http://virtual-home.org/documentation/master/kb/actions.html}}と，公式リポジトリの\texttt{resources}\footnote{\url{https://github.com/xavierpuigf/virtualhome/tree/master/virtualhome/resources}}を参照資料として用いた．Actions文書は各操作の引数，前提条件，実行後の変化を示し，\texttt{resources}は物体の属性と取り得る状態を示す．本実装では，近接，左右の手による保持，ON／OFF，OPEN／CLOSEDを操作別の固定した自然言語条件として\texttt{precondition.json}に保持し，対象名・IDを代入してLLMへ提示する．例えばPUTINの保持・配置先への近接・配置先がCLOSEDでないという3条件は，同文書のPutInに対応する．GRABの非保持条件は公開Pythonグラフ実行器の重複把持検査とも照合した．各操作の採用条件と公式資料との対応を表\ref{tab:condition_source_scope}に示す．
+前提条件辞書は，以下に示す公式資料を基に，操作ごとの前提条件を自然言語の条件文として手作業で作成した．参照資料には，VH v2.3の公式Actions文書\footnote{\url{http://virtual-home.org/documentation/master/kb/actions.html}}と，公式リポジトリの\texttt{resources}\footnote{\url{https://github.com/xavierpuigf/virtualhome/tree/master/virtualhome/resources}}を用いた．Actions文書は各操作の引数，前提条件，実行後の変化を示し，\texttt{resources}は物体の属性と取り得る状態を示す．本実装では，近接，左右の手による保持，ON／OFF，OPEN／CLOSEDを操作別の固定した自然言語条件として\texttt{precondition.json}に保持し，対象名・IDを代入してLLMへ提示する．例えばPUTINの保持・配置先への近接・配置先がCLOSEDでないという3条件は，同文書のPutInに対応する．GRABの非保持条件は公開Pythonグラフ実行器の重複把持検査とも照合した．各操作の採用条件と公式資料との対応を表\ref{tab:condition_source_scope}に示す．
 
 \subsubsection{公式資料と前提条件辞書の対応}\label{sec4.condition_sources}
 表\ref{tab:condition_source_scope}に8操作・16条件を示す．2026年9月8日に公式資料と照合し，リポジトリの固定版\texttt{58970fd80951c2eaa1af713e0917d1a105353ad8}を参照した．条件文は操作名で選び，空白区切りの操作文字列が5トークンならObject1／Object2に，それ以外ならObjectに対象名・IDを代入する．

@@ -50,4 +50,4 @@ Linら~\cite{lin2023grounded} & 目標，物体表，生成済みステップ & 
 \end{tabular}
 \end{table*}
 
-表\ref{tab:related_comparison}に評価対象と再現範囲を整理する．本方式もタスク名を埋め込みベクトル化して事例検索する．検索入力をタスク名だけに限ることの制約と，意味類似・random・fixed・noneの構成要素比較を\ref{sec5.additional}に示す．
+表\ref{tab:related_comparison}に評価対象と再現範囲を整理する．Huangらの公開実装\footnote{\url{https://github.com/huangwl18/language-planner/blob/main/src/demo.ipynb}}では，各事例の自然言語指示文（タスク名）を埋め込み，入力タスク名とのコサイン類似度が最大の事例を直接取得する．同名事例から最長の行動列を選択する処理は含まれない．両方式でタスク名は自然言語の指示文を指し，検索入力の種類は共通である．本方式もタスク名のベクトル表現による検索を用いるが，異なるタスク名から一つを選択した後，同名事例から最長の参照行動列を採択する二段階の処理である．したがって，タスク名を用いることによってHuangらの検索を簡易化したものではない．検索入力をタスク名だけに限ることの制約と，意味類似・random・fixed・noneの構成要素比較を\ref{sec5.additional}に示す．
